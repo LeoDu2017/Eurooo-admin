@@ -1,12 +1,24 @@
-import styles from './index.css';
+import { layout,main } from 'Styles/layouts.less';
+import LeftLayout from 'Components/layouts/left';
+import RightLayout from 'Components/layouts/right';
+import HeaderLayout from 'Components/layouts/header';
 
-function BasicLayout(props) {
-  return (
-    <div className={styles.normal}>
-      <h1 className={styles.title}>Yay! Welcome to umi!</h1>
-      { props.children }
-    </div>
-  );
-}
+
+const BasicLayout = ({children,location:{pathname}}) => (
+  <div className={layout}>
+    {
+      pathname === '/login' ? children :
+        <div>
+          <LeftLayout/>
+          <RightLayout>
+            <HeaderLayout/>
+            <div className={main}> { children }</div>
+          </RightLayout>
+        </div>
+    }
+  </div>
+);
+
+
 
 export default BasicLayout;
