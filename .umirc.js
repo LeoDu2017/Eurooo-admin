@@ -20,5 +20,7 @@ export default {
     Styles: path.resolve(__dirname, 'src/styles/'),
     Components: path.resolve(__dirname, 'src/components/'),
     Assets: path.resolve(__dirname, 'src/assets/'),
+    Actions: path.resolve(__dirname, 'src/actions/'),
+    Locale: path.resolve(__dirname, 'src/locale/'),
   }
 }

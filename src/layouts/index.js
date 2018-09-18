@@ -1,3 +1,4 @@
+import { connect } from 'dva';
 import { layout,main } from 'Styles/layouts.less';
 import LeftLayout from 'Components/layouts/left';
 import RightLayout from 'Components/layouts/right';
@@ -12,13 +13,15 @@ const BasicLayout = ({children,location:{pathname}}) => (
           <LeftLayout/>
           <RightLayout>
             <HeaderLayout/>
-            <div className={main}> { children }</div>
+            <div className={main}>{ children }</div>
           </RightLayout>
         </div>
     }
   </div>
 );
 
+function mapStateToProps(){
+  return{}
+}
 
-
-export default BasicLayout;
+export default connect(mapStateToProps)(BasicLayout);
