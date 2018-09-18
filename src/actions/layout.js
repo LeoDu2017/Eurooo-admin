@@ -202,22 +202,10 @@ export function toggleSubMeanu(dispatch,index,link,search,childLength,currentInd
   }
   let i = index !== currentIndex ? index : -1;
 
-  // let parent = event.target.parentNode;
-  // if(parent.nodeName !== 'LI'){
-  //   parent = parent.parentNode
-  // }
-  // let height = parent.style.height;
-
   dispatch({
     type:'left/toggleSubMeanu',
     payload:i
   })
 }
 
-// 选中二级菜单
-// export function selectSubMeanu(dispatch,index){
-//   dispatch({
-//     type:'left/selectSubMeanu',
-//     payload:index
-//   })
-// }
+
