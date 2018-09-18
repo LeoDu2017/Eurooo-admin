@@ -1,23 +1,34 @@
 import { connect } from 'dva';
-import { layout,main } from 'Styles/layouts.less';
+import { Layout } from 'antd';
+import { layout,main,right_side } from 'Styles/layouts.less';
 import LeftLayout from 'Components/layouts/left';
-import RightLayout from 'Components/layouts/right';
 import HeaderLayout from 'Components/layouts/header';
 
+const { Header, Footer, Sider, Content } = Layout;
 
 const BasicLayout = ({children,location:{pathname}}) => (
-  <div className={layout}>
+  <Layout className={layout}>
     {
-      pathname === '/login' ? children :
-        <div>
+      pathname === '/login' ?
+      <Content> { children } </Content> :
+      <Layout>
+        <Sider>
           <LeftLayout/>
-          <RightLayout>
+        </Sider>
+        <Layout>
+          <Header>
             <HeaderLayout/>
-            <div className={main}>{ children }</div>
-          </RightLayout>
-        </div>
+          </Header>
+          <Content className={main}>
+            { children }
+          </Content>
+          <Footer>
+            底部
+          </Footer>
+        </Layout>
+      </Layout>
     }
-  </div>
+  </Layout>
 );
 
 function mapStateToProps(){
