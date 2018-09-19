@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce957529-e50a-4792-90ac-21254aa7a8bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/styles/login-form.less" afterDir="false" />
+    <list default="true" id="ce957529-e50a-4792-90ac-21254aa7a8bb" name="Default Changelist" comment="登录功能">
+      <change afterPath="$PROJECT_DIR$/mock/albums.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mock/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mock/brand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mock/country.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mock/json/brands.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mock/json/countries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mock/json/mybrands.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mock/shop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/constant.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/dataProcessing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/request.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/common-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/common-modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.umirc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.umirc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/loginpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/loginpage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/modal/login-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/login-form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/login.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,7 +44,7 @@
           <entry key="MD" value="4" />
           <entry key="css" value="2" />
           <entry key="ejs" value="1" />
-          <entry key="js" value="45" />
+          <entry key="js" value="58" />
           <entry key="json" value="2" />
           <entry key="less" value="6" />
           <entry key="svg" value="1" />
@@ -41,7 +55,7 @@
           <entry key="CSS" value="2" />
           <entry key="EJS" value="1" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="45" />
+          <entry key="JavaScript" value="58" />
           <entry key="Less" value="6" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="SVG" value="1" />
@@ -50,18 +64,19 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="MD" value="101" />
+          <entry key="dummy" value="2" />
           <entry key="ejs" value="7" />
-          <entry key="js" value="2831" />
+          <entry key="js" value="3179" />
           <entry key="less" value="138" />
-          <entry key="txt" value="19" />
+          <entry key="txt" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="EJS" value="7" />
-          <entry key="JavaScript" value="2831" />
+          <entry key="JavaScript" value="3179" />
           <entry key="Less" value="138" />
-          <entry key="PLAIN_TEXT" value="120" />
+          <entry key="PLAIN_TEXT" value="129" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -71,76 +86,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/login/index.js">
+        <entry file="file://$PROJECT_DIR$/src/actions/loginpage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-                <element signature="e#4628#5126#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/common-modal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="32" selection-start-column="16" selection-end-column="32" />
+            <state relative-caret-position="467">
+              <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/modal/login-form.js">
+        <entry file="file://$PROJECT_DIR$/mock/brand.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1375">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/login-form.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="7" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/layouts.less">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/login.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/common-modal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layouts/TODO.MD">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="425">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -148,17 +106,84 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="-194">
+              <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/TODO.MD">
+        <entry file="file://$PROJECT_DIR$/mock/albums.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            <state relative-caret-position="186">
+              <caret line="254" column="25" selection-start-line="254" selection-start-column="25" selection-end-line="254" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/dataProcessing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mock/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="341" column="1" selection-start-line="341" selection-start-column="1" selection-end-line="341" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/request.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="120" column="22" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="22" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#20#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/modal/login-form.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="69" column="47" lean-forward="true" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -178,6 +203,8 @@
       <find>dropdownMenu</find>
       <find>showModelHandler</find>
       <find>header</find>
+      <find>handleSubmit</find>
+      <find>lodash</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,14 +221,11 @@
         <option value="$PROJECT_DIR$/src/layouts/TODO.MD" />
         <option value="$PROJECT_DIR$/src/models/lang.js" />
         <option value="$PROJECT_DIR$/src/pages/index.js" />
-        <option value="$PROJECT_DIR$/.umirc.js" />
         <option value="$PROJECT_DIR$/src/models/app.js" />
         <option value="$PROJECT_DIR$/src/actions/albums.js" />
         <option value="$PROJECT_DIR$/src/actions/brand.js" />
         <option value="$PROJECT_DIR$/src/actions/shop.js" />
         <option value="$PROJECT_DIR$/src/actions/trees.js" />
-        <option value="$PROJECT_DIR$/src/models/login.js" />
-        <option value="$PROJECT_DIR$/src/actions/loginpage.js" />
         <option value="$PROJECT_DIR$/src/pages/document.ejs" />
         <option value="$PROJECT_DIR$/src/actions/layout.js" />
         <option value="$PROJECT_DIR$/src/actions/common.js" />
@@ -213,7 +237,16 @@
         <option value="$PROJECT_DIR$/src/actions/common-modal.js" />
         <option value="$PROJECT_DIR$/src/styles/login.less" />
         <option value="$PROJECT_DIR$/src/styles/login-form.less" />
+        <option value="$PROJECT_DIR$/.umirc.js" />
+        <option value="$PROJECT_DIR$/src/services/login.js" />
+        <option value="$PROJECT_DIR$/src/actions/loginpage.js" />
+        <option value="$PROJECT_DIR$/src/models/login.js" />
+        <option value="$PROJECT_DIR$/mock/albums.js" />
+        <option value="$PROJECT_DIR$/src/utils/dataProcessing.js" />
+        <option value="$PROJECT_DIR$/mock/app.js" />
+        <option value="$PROJECT_DIR$/src/utils/request.js" />
         <option value="$PROJECT_DIR$/src/components/modal/login-form.js" />
+        <option value="$PROJECT_DIR$/mock/brand.js" />
       </list>
     </option>
   </component>
@@ -258,6 +291,11 @@
             <path>
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
+              <item name="mock" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -270,39 +308,25 @@
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="modal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="styles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -320,11 +344,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\umilearn\Eurooo_stock\mock" />
+      <recent name="G:\umilearn\Eurooo_stock\src" />
       <recent name="G:\umilearn\Eurooo_stock\src\models" />
       <recent name="G:\umilearn\Eurooo_stock\src\pages" />
       <recent name="G:\umilearn\Eurooo_stock\src\styles" />
-      <recent name="G:\umilearn\Eurooo_stock\src\components" />
-      <recent name="G:\umilearn\Eurooo_stock\src\actions" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -367,7 +391,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537238480023</updated>
-      <workItem from="1537238483420" duration="45366000" />
+      <workItem from="1537238483420" duration="51179000" />
     </task>
     <task id="LOCAL-00001" summary="Layout 设计">
       <created>1537248345534</created>
@@ -404,11 +428,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537321929835</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="内页布局">
+      <created>1537353094852</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1537353094853</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45366000" />
+    <option name="totallyTimeSpent" value="51179000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -425,16 +456,16 @@
     <layout>
       <window_info id="npm" sideWeight="0.31114328" side_tool="true" weight="0.1800948" />
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6898551" visible="true" weight="0.1800948" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.6898551" visible="true" weight="0.1800948" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" weight="0.3292683" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.3292683" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" weight="0.3292683" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.3292683" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.3292683" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.30155212" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.18181819" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -447,6 +478,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -454,7 +495,8 @@
     <MESSAGE value="Layout 设计" />
     <MESSAGE value="语言切换" />
     <MESSAGE value="内页布局" />
-    <option name="LAST_COMMIT_MESSAGE" value="内页布局" />
+    <MESSAGE value="登录功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录功能" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/leftLayout.js">
@@ -522,13 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/albums.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="49" selection-start-column="49" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/font/iconfont.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -580,13 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="19" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/loginpage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -678,20 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.umirc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/common-modal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -720,7 +734,7 @@
     <entry file="file://$PROJECT_DIR$/src/styles/login.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
-          <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -729,18 +743,108 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/login-form.less">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/constant.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.umirc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/albums.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/config.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="7" />
+          <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/loginpage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-194">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/albums.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="254" column="25" selection-start-line="254" selection-start-column="25" selection-end-line="254" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/dataProcessing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="341" column="1" selection-start-line="341" selection-start-column="1" selection-end-line="341" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="120" column="22" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#20#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/modal/login-form.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1375">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="134">
+          <caret line="69" column="47" lean-forward="true" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock/brand.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>

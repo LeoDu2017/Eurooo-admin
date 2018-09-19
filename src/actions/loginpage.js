@@ -16,13 +16,14 @@ export function handleMouseLeave(dispatch){
 // 登录框点击确定
 export function handleSubmit(dispatch,validateFieldsAndScroll,event){
   event.preventDefault();
-
-  validateFieldsAndScroll((errors, values) => {
+  validateFieldsAndScroll((errors,values) => {
     if (errors) {
       return
     }
-    dispatch({ type: 'login/login', payload: values })
-
+    dispatch({
+      type: 'login/loginHandler',
+      payload: values
+    });
   })
 }
 

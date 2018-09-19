@@ -10,31 +10,57 @@ const LoginForm = ({
    children,
    id,
    visible,
-   loginfail,
-   form: { getFieldDecorator, validateFieldsAndScroll, resetFields },
+   loginFail,
+   form: { getFieldDecorator,validateFieldsAndScroll,resetFields },
  }) => <span>
     <span onClick={showModelHandler.bind(null, dispatch, id)}>{children}</span>
     <Modal
-      closable={false}
-      footer={null}
+      closable={ false }
+      footer={ null }
       width="400px"
-      visible={visible[id]}
-      onCancel={hideModelHandler.bind(null, dispatch, resetFields, id)}>
-      <Form onSubmit={handleSubmit.bind(this, dispatch, validateFieldsAndScroll)}
-            className={login_form}>
-        <h1 className={`${header} ${center}`}>EUROOO ADMIN</h1>
+      visible={ visible[id] }
+      onCancel={ hideModelHandler.bind(null,dispatch,resetFields,id) }>
+      <Form onSubmit={ handleSubmit.bind(null,dispatch,validateFieldsAndScroll) }
+            className={ login_form }>
+        <h1 className={ `${header} ${center}`}>EUROOO ADMIN</h1>
         <FormItem>
           {getFieldDecorator('username', {
             rules: [{ required: true, message: 'Please input your username!' }],
           })(
-            <Input prefix={<Icon type="user" className={transparency}/>} placeholder="Username"/>,
+            <Input
+              prefix={<Icon type="user" className={transparency}/>}
+              placeholder="Username"
+              className=""
+              defaultValue=""
+              disabled=""
+              id=""
+              maxLength=""
+              onBlur=""
+              onFocus=""
+              onKeyDown=""
+              onKeyUp=""
+              type=""
+              value=""/>,
           )}
         </FormItem>
         <FormItem>
           {getFieldDecorator('password', {
             rules: [{ required: true, message: 'Please input your Password!' }],
           })(
-            <Input prefix={<Icon type="lock" className={transparency}/>} type="password" placeholder="Password"/>,
+            <Input
+              prefix={<Icon type="lock" className={transparency}/>}
+              type="password"
+              placeholder="Password"
+              className=""
+              defaultValue=""
+              disabled=""
+              id=""
+              maxLength=""
+              onBlur=""
+              onFocus=""
+              onKeyDown=""
+              onKeyUp=""
+              value=""/>,
           )}
         </FormItem>
         <FormItem>
@@ -48,7 +74,7 @@ const LoginForm = ({
           </Button>
         </FormItem>
         {
-          loginfail && <p>用户名或密码错误</p>
+          loginFail && <p>用户名或密码错误</p>
         }
       </Form>
     </Modal>
@@ -57,8 +83,8 @@ const LoginForm = ({
 
 function mapStateToProps(state){
   const { visible } = state.commonModal;
-  const { loginfail} = state.login;
-  return{ visible,loginfail }
+  const { loginFail} = state.login;
+  return{ visible,loginFail }
 }
 
 export default connect(mapStateToProps)(Form.create()(LoginForm))

@@ -22,5 +22,7 @@ export default {
     Assets: path.resolve(__dirname, 'src/assets/'),
     Actions: path.resolve(__dirname, 'src/actions/'),
     Locale: path.resolve(__dirname, 'src/locale/'),
+    Services: path.resolve(__dirname, 'src/services/'),
+    Utils: path.resolve(__dirname, 'src/utils/'),
   }
 }
