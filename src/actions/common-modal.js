@@ -1,5 +1,6 @@
 export function showModelHandler(dispatch,id,event){
   if (event) event.stopPropagation();
+
   dispatch({
     type:'commonModal/setVisible',
     payload:{[id]:true}

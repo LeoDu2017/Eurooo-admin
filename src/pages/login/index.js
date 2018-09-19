@@ -5,7 +5,7 @@ import { handleClick,handleMouseLeave} from 'Actions/loginpage';
 import styles from 'Styles/login.less';
 import Svg from 'Components/Svg';
 import DropdownMeanu from 'Components/Dropdown';
-
+import LoginForm from 'Components/modal/login-form';
 
 const LoginPage = ({ dispatch,currentIndex,languages,advantages,systemDate,copyRight }) => (
   <Layout className={ styles.main }>
@@ -14,12 +14,15 @@ const LoginPage = ({ dispatch,currentIndex,languages,advantages,systemDate,copyR
         <img alt="Eurooo Stock" src={require('Assets/euroooLogo.png')}/>
       </Col>
       <Col className={ styles.right}>
-        <Button
-          htmlType="button"
+        <LoginForm
           onClick={ handleClick.bind(null,1,dispatch) }
-          className={ currentIndex === 1 ? `${styles.btn} ${styles.active}` : styles.btn }>
-          { intl.get('LOGIN') }
-        </Button>
+          id="loginForm">
+          <Button
+            htmlType="button"
+            className={ currentIndex === 1 ? `${styles.btn} ${styles.active}` : styles.btn }>
+            { intl.get('LOGIN') }
+          </Button>
+        </LoginForm>
         <Col className={ styles.lang_box }>
           <Button
             htmlType="button"

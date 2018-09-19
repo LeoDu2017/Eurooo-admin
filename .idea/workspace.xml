@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce957529-e50a-4792-90ac-21254aa7a8bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/modal/login-form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/common-modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/login-form.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/common-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/common-modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/TODO.MD" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/TODO.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modal/login-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/login-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,25 +16,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/.umirc.js">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="575">
-                    <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1458670583">
@@ -52,7 +32,7 @@
           <entry key="ejs" value="1" />
           <entry key="js" value="45" />
           <entry key="json" value="2" />
-          <entry key="less" value="3" />
+          <entry key="less" value="6" />
           <entry key="svg" value="1" />
         </counts>
       </usages-collector>
@@ -62,7 +42,7 @@
           <entry key="EJS" value="1" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="45" />
-          <entry key="Less" value="3" />
+          <entry key="Less" value="6" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="SVG" value="1" />
         </counts>
@@ -71,16 +51,16 @@
         <counts>
           <entry key="MD" value="101" />
           <entry key="ejs" value="7" />
-          <entry key="js" value="2639" />
-          <entry key="less" value="104" />
+          <entry key="js" value="2831" />
+          <entry key="less" value="138" />
           <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="EJS" value="7" />
-          <entry key="JavaScript" value="2639" />
-          <entry key="Less" value="104" />
+          <entry key="JavaScript" value="2831" />
+          <entry key="Less" value="138" />
           <entry key="PLAIN_TEXT" value="120" />
         </counts>
       </usages-collector>
@@ -93,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/login/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+            <state relative-caret-position="244">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
                 <element signature="e#4628#5126#0" />
@@ -107,16 +87,16 @@
         <entry file="file://$PROJECT_DIR$/src/actions/common-modal.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="33" selection-start-column="33" selection-end-column="44" />
+              <caret column="32" selection-start-column="16" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/modal/login-form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="47" column="19" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="19" />
+            <state relative-caret-position="1375">
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -125,10 +105,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/login-form.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="7" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/layouts.less">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/styles/login.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/common-modal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="24" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="24" />
+            <state relative-caret-position="525">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -142,11 +145,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="500">
+              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -173,6 +176,8 @@
     <findStrings>
       <find>line-height</find>
       <find>dropdownMenu</find>
+      <find>showModelHandler</find>
+      <find>header</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,7 +200,6 @@
         <option value="$PROJECT_DIR$/src/actions/brand.js" />
         <option value="$PROJECT_DIR$/src/actions/shop.js" />
         <option value="$PROJECT_DIR$/src/actions/trees.js" />
-        <option value="$PROJECT_DIR$/src/styles/login.less" />
         <option value="$PROJECT_DIR$/src/models/login.js" />
         <option value="$PROJECT_DIR$/src/actions/loginpage.js" />
         <option value="$PROJECT_DIR$/src/pages/document.ejs" />
@@ -203,10 +207,12 @@
         <option value="$PROJECT_DIR$/src/actions/common.js" />
         <option value="$PROJECT_DIR$/src/styles/components.less" />
         <option value="$PROJECT_DIR$/src/components/Dropdown.js" />
-        <option value="$PROJECT_DIR$/src/pages/login/index.js" />
         <option value="$PROJECT_DIR$/src/layouts/index.js" />
         <option value="$PROJECT_DIR$/src/models/TODO.MD" />
+        <option value="$PROJECT_DIR$/src/pages/login/index.js" />
         <option value="$PROJECT_DIR$/src/actions/common-modal.js" />
+        <option value="$PROJECT_DIR$/src/styles/login.less" />
+        <option value="$PROJECT_DIR$/src/styles/login-form.less" />
         <option value="$PROJECT_DIR$/src/components/modal/login-form.js" />
       </list>
     </option>
@@ -272,12 +278,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="modal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
@@ -367,7 +367,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537238480023</updated>
-      <workItem from="1537238483420" duration="39586000" />
+      <workItem from="1537238483420" duration="45366000" />
     </task>
     <task id="LOCAL-00001" summary="Layout 设计">
       <created>1537248345534</created>
@@ -397,11 +397,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537276944576</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="内页布局">
+      <created>1537321929835</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1537321929835</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39586000" />
+    <option name="totallyTimeSpent" value="45366000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -450,9 +457,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="内页布局" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/styles/layouts.less">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/leftLayout.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -569,13 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.umirc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Svg.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -631,17 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/login.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
-          <folding>
-            <element signature="e#302#362#0" />
-            <element signature="e#371#2061#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/layouts/right.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -692,10 +678,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.umirc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/common-modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/login/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        <state relative-caret-position="244">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
             <element signature="e#4628#5126#0" />
@@ -706,31 +713,34 @@
     <entry file="file://$PROJECT_DIR$/src/actions/common-modal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="33" selection-start-column="33" selection-end-column="44" />
+          <caret column="32" selection-start-column="16" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/common-modal.js">
+    <entry file="file://$PROJECT_DIR$/src/styles/login.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="24" />
+        <state relative-caret-position="175">
+          <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/layouts.less">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/login-form.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/modal/login-form.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="47" column="19" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="19" />
+        <state relative-caret-position="1375">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
         </state>
       </provider>
     </entry>
