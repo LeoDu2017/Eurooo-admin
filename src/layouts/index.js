@@ -1,10 +1,10 @@
 import { connect } from 'dva';
 import { Layout } from 'antd';
-import { layout,main,left_side,right_side,header_layout } from 'Styles/layouts.less';
+import { layout,main,left_side,right_side,reset } from 'Styles/layouts.less';
 import LeftLayout from 'Components/layouts/left';
 import HeaderLayout from 'Components/layouts/header';
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header,Footer,Sider,Content } = Layout;
 
 const BasicLayout = ({children,collapsed,location:{pathname}}) => (
   <Layout className={layout}>
@@ -20,7 +20,7 @@ const BasicLayout = ({children,collapsed,location:{pathname}}) => (
           <LeftLayout/>
         </Sider>
         <Layout className={ right_side }>
-          <Header className={ header_layout }>
+          <Header className={ reset }>
             <HeaderLayout/>
           </Header>
           <Content className={main}>

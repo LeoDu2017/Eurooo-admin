@@ -197,14 +197,14 @@ ul,li{
     display: flex;
     flex-direction: column;
     background: #eff0f4;
-    .header_layout{
+    .header_wrap{
       padding: 0;
       background: #fff;
       border-bottom: 1px solid #eff0f4;
       height: 51px;
       line-height: 51px;
       display: flex;
-
+      justify-content: space-between;
       ._toggleBtn{
         width: 51px;
         height: 51px;
@@ -230,14 +230,14 @@ ul,li{
           border-left:1px solid #eff0f4;
         }
       }
-      li{
+
+      .header_item{
         position: relative;
         top:-2px;
+        height: 51px;
+        line-height: 51px;
         a{
-          display: flex;
-          align-items: center;
-          padding: 0 25px 0 15px;
-          z-index: 100;
+
           .iconfont{
             font-size: 26px;
             padding-right: 10px;
@@ -250,6 +250,10 @@ ul,li{
           &.toggleBtn{
             background: #fff;
             position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 25px 0 15px;
+            z-index: 100;
             &:hover{
               color:#fff;
               background: rgb(66, 79, 99);
@@ -316,7 +320,9 @@ ul,li{
 
 
 
-
+.W240{
+  width: 240px;
+}
 
 
 
@@ -342,4 +348,9 @@ ul,li{
   height:46px;
   color:#fff;
   align-items: center;
+}
+.reset{
+  margin: 0;
+  padding: 0;
+  height: 51px;
 }
