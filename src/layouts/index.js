@@ -1,22 +1,26 @@
 import { connect } from 'dva';
 import { Layout } from 'antd';
-import { layout,main,right_side } from 'Styles/layouts.less';
+import { layout,main,left_side,right_side,header_layout } from 'Styles/layouts.less';
 import LeftLayout from 'Components/layouts/left';
 import HeaderLayout from 'Components/layouts/header';
 
 const { Header, Footer, Sider, Content } = Layout;
 
-const BasicLayout = ({children,location:{pathname}}) => (
+const BasicLayout = ({children,collapsed,location:{pathname}}) => (
   <Layout className={layout}>
     {
       pathname === '/login' ?
       <Content> { children } </Content> :
       <Layout>
-        <Sider>
+        <Sider
+          trigger={null}
+          collapsible
+          collapsed={ collapsed }
+          className={ left_side }>
           <LeftLayout/>
         </Sider>
-        <Layout>
-          <Header>
+        <Layout className={ right_side }>
+          <Header className={ header_layout }>
             <HeaderLayout/>
           </Header>
           <Content className={main}>
@@ -31,8 +35,9 @@ const BasicLayout = ({children,location:{pathname}}) => (
   </Layout>
 );
 
-function mapStateToProps(){
-  return{}
+function mapStateToProps(state){
+  const { collapsed } = state.app;
+  return{ collapsed }
 }
 
 export default connect(mapStateToProps)(BasicLayout);

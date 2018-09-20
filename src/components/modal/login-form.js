@@ -29,18 +29,7 @@ const LoginForm = ({
           })(
             <Input
               prefix={<Icon type="user" className={transparency}/>}
-              placeholder="Username"
-              className=""
-              defaultValue=""
-              disabled=""
-              id=""
-              maxLength=""
-              onBlur=""
-              onFocus=""
-              onKeyDown=""
-              onKeyUp=""
-              type=""
-              value=""/>,
+              placeholder="Username"/>,
           )}
         </FormItem>
         <FormItem>
@@ -50,17 +39,7 @@ const LoginForm = ({
             <Input
               prefix={<Icon type="lock" className={transparency}/>}
               type="password"
-              placeholder="Password"
-              className=""
-              defaultValue=""
-              disabled=""
-              id=""
-              maxLength=""
-              onBlur=""
-              onFocus=""
-              onKeyDown=""
-              onKeyUp=""
-              value=""/>,
+              placeholder="Password"/>,
           )}
         </FormItem>
         <FormItem>

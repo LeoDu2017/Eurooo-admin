@@ -20,6 +20,12 @@ export function handleMouseLeave(dispatch){
 }
 
 // 点击侧边栏收起图标展开/收起侧边栏
+export function toggleHandler(dispatch,collapsed){
+  dispatch({
+    type: 'app/setCollapsed',
+    payload: collapsed,
+  });
+}
 export function handleToggle(dispatch,min){
   dispatch({
     type:'left/toggle',

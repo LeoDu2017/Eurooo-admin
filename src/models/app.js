@@ -1,7 +1,13 @@
 export default{
   namespace:'app',
-  state:{},
-  reducers:{},
+  state:{
+    collapsed:false
+  },
+  reducers:{
+    setCollapsed(state,{payload:collapsed}){
+      return{ ...state,collapsed }
+    }
+  },
   effects:{},
   subscriptions:{
     setup({ dispatch,history}){
