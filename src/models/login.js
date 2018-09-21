@@ -1,5 +1,7 @@
 import { loginService,logoutService } from 'Services/login';
 import { routerRedux } from 'dva/router';
+import appCookie from 'react-cookies';
+
 export default{
   namespace:'login',
   state:{
@@ -21,7 +23,8 @@ export default{
   effects:{
     *loginHandler({ payload },{ call,put }) {
       const data = yield call(loginService, payload);
-      const { administrator:{id,username,avatar}} = data;
+      const { administrator } = data;
+
       if (data && data.success) {
         yield put({
           type: 'checklogin',
@@ -34,7 +37,7 @@ export default{
           type:'app/setAdmin',
           payload:administrator
         })
-      }else{
+      } else {
         yield put({
           type: 'loginFail',
           payload:{
@@ -43,9 +46,12 @@ export default{
         });
       }
     },
-    *logoutHandler({ payload },{ call }){
+    *logoutHandler({ payload },{ call,put }){
       const data = yield call(logoutService,payload);
-      console.log(data)
+      if(data.success){
+        yield appCookie.remove('token');
+        yield put(window.location.reload())
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 import intl from 'react-intl-universal';
 import router from 'umi/router';
-
+import { dispatch } from 'dva';
 
 // 打开选项的下拉框
 export function handleToggleOpen(dispatch,i,n){
@@ -214,4 +214,14 @@ export function toggleSubMeanu(dispatch,index,link,search,childLength,currentInd
   })
 }
 
+export function changeHandeler(dispatch){
 
+}
+export function toUcenter(dispatch){
+
+}
+export function logoutHandeler(){
+  window.g_app._store.dispatch({
+    type:'login/logoutHandler'
+  })
+}

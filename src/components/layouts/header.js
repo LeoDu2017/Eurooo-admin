@@ -1,7 +1,7 @@
 import intl from 'react-intl-universal';
 import { connect } from 'dva';
 import { Icon,List } from 'antd';
-import { toggleHandler } from 'Actions/layout';
+import { toggleHandler,changeHandeler,toUcenter,logoutHandeler } from 'Actions/layout';
 import { _toggleBtn,toggleBtn,header_wrap,header_item,W240,avatar } from 'Styles/layouts.less';
 import DropdownMeanu from 'Components/Dropdown';
 import { handleToggleOpen,handleMouseLeave} from 'Actions/layout';
@@ -30,6 +30,8 @@ const HeaderLayout = ({ dispatch,collapsed,systemOperations,currentIndex }) => (
           </a>
           <DropdownMeanu
             list={ item.source }
+            type={ item.index }
+            dispatch={ dispatch }
             toggle={ currentIndex === item.index }/>
         </List.Item>
       )}/>
@@ -38,26 +40,25 @@ const HeaderLayout = ({ dispatch,collapsed,systemOperations,currentIndex }) => (
 
 function mapStateToProps(state){
   const { collapsed,currentIndex,administrator } = state.app;
-
   const { username,avatar } = administrator;
-
   const { languages } = state.lang;
   const options = [
     {
       name: intl.get('PWD'),
-      type:'xiugaimima'
-    },
-    {
+      type: 'xiugaimima',
+      action: changeHandeler
+    },{
       name:intl.get('INO'),
-      type:'zhanghu'
-    },
-    {
+      type:'zhanghu',
+      action: toUcenter
+    },{
       name:intl.get('OUT'),
-      type:'tuichu'
+      type:'tuichu',
+      action: logoutHandeler
     }
   ];
 
-  const  systemOperations = [
+  const systemOperations = [
     {
       index: 1,
       title: username ? username : 'username',
