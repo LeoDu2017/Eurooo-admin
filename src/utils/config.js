@@ -35,8 +35,8 @@ module.exports = {
     getCountryApi:`${APIV1}/country`,
 
 
-    userLogin: `${APIV1}/user/login`,
-    userLogout: `${APIV1}/user/logout`,
+    userLoginApi: `${APIV1}/user/login`,
+    userLogoutApi: `${APIV1}/user/logout`,
     userInfo: `${APIV1}/userInfo`,
     usersApi: `${APIV1}/users`,
     posts: `${APIV1}/posts`,

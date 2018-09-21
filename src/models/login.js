@@ -1,4 +1,4 @@
-import { loginService } from 'Services/login';
+import { loginService,logoutService } from 'Services/login';
 import { routerRedux } from 'dva/router';
 export default{
   namespace:'login',
@@ -21,6 +21,7 @@ export default{
   effects:{
     *loginHandler({ payload },{ call,put }) {
       const data = yield call(loginService, payload);
+      const { administrator:{id,username,avatar}} = data;
       if (data && data.success) {
         yield put({
           type: 'checklogin',
@@ -29,6 +30,10 @@ export default{
           }
         });
         yield put(routerRedux.push('/'));
+        yield put({
+          type:'app/setAdmin',
+          payload:administrator
+        })
       }else{
         yield put({
           type: 'loginFail',
@@ -37,7 +42,10 @@ export default{
           }
         });
       }
+    },
+    *logoutHandler({ payload },{ call }){
+      const data = yield call(logoutService,payload);
+      console.log(data)
     }
-  },
-  subscriptions:{}
+  }
 }

@@ -3,7 +3,6 @@ import { Layout } from 'antd';
 import { layout,main,left_side,right_side,reset } from 'Styles/layouts.less';
 import LeftLayout from 'Components/layouts/left';
 import HeaderLayout from 'Components/layouts/header';
-
 const { Header,Footer,Sider,Content } = Layout;
 
 const BasicLayout = ({children,collapsed,location:{pathname}}) => (

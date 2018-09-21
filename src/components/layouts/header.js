@@ -2,9 +2,12 @@ import intl from 'react-intl-universal';
 import { connect } from 'dva';
 import { Icon,List } from 'antd';
 import { toggleHandler } from 'Actions/layout';
-import { _toggleBtn,toggleBtn,header_wrap,header_item,W240 } from 'Styles/layouts.less';
+import { _toggleBtn,toggleBtn,header_wrap,header_item,W240,avatar } from 'Styles/layouts.less';
 import DropdownMeanu from 'Components/Dropdown';
-const HeaderLayout = ({ dispatch,collapsed,systemOperations }) => (
+import { handleToggleOpen,handleMouseLeave} from 'Actions/layout';
+
+
+const HeaderLayout = ({ dispatch,collapsed,systemOperations,currentIndex }) => (
   <header className={ header_wrap }>
     <Icon
       className={ _toggleBtn }
@@ -17,19 +20,27 @@ const HeaderLayout = ({ dispatch,collapsed,systemOperations }) => (
       className={ W240 }
       renderItem={ item => (
         <List.Item
+          onClick={ handleToggleOpen.bind(null,dispatch,item.index,currentIndex) }
           className={ header_item }>
           <a
             className={ toggleBtn }
-            href="javascript:;">
+            href="javascript:">
+            { item.avatar && <img className={ avatar } src={ item.avatar } alt="user avatar"/> }
             { item.title }
           </a>
+          <DropdownMeanu
+            list={ item.source }
+            toggle={ currentIndex === item.index }/>
         </List.Item>
       )}/>
   </header>
 );
 
 function mapStateToProps(state){
-  const { collapsed } = state.app;
+  const { collapsed,currentIndex,administrator } = state.app;
+
+  const { username,avatar } = administrator;
+
   const { languages } = state.lang;
   const options = [
     {
@@ -49,15 +60,17 @@ function mapStateToProps(state){
   const  systemOperations = [
     {
       index: 1,
-      title: 'Username',
-      source:options
+      title: username ? username : 'username',
+      avatar: avatar ? avatar : require('Assets/user-avatar.png'),
+      source: options
     },{
       index: 2,
       title: intl.get('LANG'),
-      source:languages
+      avatar: null,
+      source: languages
     }
   ];
-  return { collapsed,systemOperations }
+  return { collapsed,systemOperations,currentIndex }
 }
 
 export default connect(mapStateToProps)(HeaderLayout)

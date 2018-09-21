@@ -6,34 +6,6 @@ const { apiPrefix,NOTFOUND } = config;
 const process = require('../src/utils/dataProcessing');
 const { queryArray } = process;
 
-// let usersListData = Mock.mock({
-//   'data|80-100': [
-//     {
-//       id: '@id',
-//       name: '@name',
-//       nickName: '@last',
-//       phone: /^1[34578]\d{9}$/,
-//       'age|11-99': 1,
-//       address: '@county(true)',
-//       isMale: '@boolean',
-//       email: '@email',
-//       createTime: '@datetime',
-//       avatar () {
-//         return Mock.Random.image('100x100', Mock.Random.color(), '#757575', 'png', this.nickName.substr(0, 1))
-//       },
-//     },
-//   ],
-// });
-
-
-
-// let database = usersListData.data
-
-// const EnumRoleType = {
-//   ADMIN: 'admin',
-//   DEFAULT: 'guest',
-//   DEVELOPER: 'developer',
-// };
 const EnumRoleType = {
   ADMIN: 1,
   DEFAULT: 0,
@@ -137,27 +109,25 @@ const adminUsers = [
     avatar: Mock.Random.image('100x100', Mock.Random.color(), '#fff', 'png','J')
   }
 ];
-
-
 let database = adminUsers;
 module.exports = {
   // 登录
   [`POST ${apiPrefix}/user/login`] (req, res) {
     const { username, password } = req.body;
-
-    const user = adminUsers.filter(item => item.username === username);
-
-    if (user.length > 0 && user[0].password === password) {
+    const user = adminUsers.filter(item => item.username === username && item.password === password);
+    const administrator = user[0];
+    if (administrator) {
       const now = new Date();
+
       now.setDate(now.getDate() + 1);
-      res.cookie('token', JSON.stringify({ id: user[0].id, deadline: now.getTime() }), {
+      res.cookie('token', JSON.stringify({ administrator, deadline: now.getTime() }), {
         maxAge: 900000,
-        httpOnly: true,
+        httpOnly: false,
       });
-      res.json({ success: true, message: 'Ok' })
+      res.json({ success: true, administrator, message: 'Ok' })
     } else {
       res.json({ success: false, message: '登录失败' })
-      // res.status(400).end()
+
     }
   },
   // 退出

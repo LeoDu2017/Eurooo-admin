@@ -18,4 +18,5 @@
         yield put({type:'initLang',payload: data.default})
       }
     2、登录状态(loginhook)：
-      
+      进入页面前查找本地 session 判断是否登录， 如果登录进入页面，如果未登录 redirection 到登录页面；
+
