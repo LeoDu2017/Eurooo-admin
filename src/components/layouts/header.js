@@ -13,8 +13,7 @@ const HeaderLayout = ({ dispatch,collapsed,systemOperations,currentIndex }) => (
     <Icon
       className={ _toggleBtn }
       type={ collapsed ? 'menu-unfold' : 'menu-fold'}
-      onClick={ toggleHandler.bind(null,dispatch,!collapsed) }
-    />
+      onClick={ toggleHandler.bind(null,dispatch,!collapsed) }/>
     <List
       dataSource={ systemOperations }
       renderItem={ item => (
