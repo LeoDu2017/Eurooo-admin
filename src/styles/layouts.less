@@ -260,17 +260,25 @@ ul,li{
               color:#fff;
               background: rgb(66, 79, 99);
             }
+
+            &.current:after{
+              top: 27px;
+              border-bottom: none;
+              border-top: 4px solid;
+              border-right: 4px solid transparent;
+              border-left: 4px solid transparent;
+            }
             &:after{
               display: inline-block;
               position: absolute;
-              top: 27px;
+              top: 25px;
               right: 14px;
               content: ' ';
               width: 0;
               height: 0;
               margin-left: 2px;
               vertical-align: middle;
-              border-top: 4px solid;
+              border-bottom: 4px solid;
               border-right: 4px solid transparent;
               border-left: 4px solid transparent;
             }
