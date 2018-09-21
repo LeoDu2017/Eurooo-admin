@@ -18,9 +18,9 @@ const DropdownMeanu = ({ dispatch,list,onMouseLeave,toggle }) => (
         xs=""
         xxl=""
         column=""
-        className={no}>
+        className={ no }>
         {
-          item.type === 2 ?
+          Number(item.index) === 1 ?
           <Link
             to={ `?lang=${item.value}` }
             className={ item.selected ? selected : undefined }>

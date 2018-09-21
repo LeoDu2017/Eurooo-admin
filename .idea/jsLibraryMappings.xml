@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{font_624958_o4imgnuhvp}" />
+    <file url="PROJECT" libraries="{font_550577_0yfwjz6t90mr, font_624958_o4imgnuhvp}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

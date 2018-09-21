@@ -6,24 +6,28 @@ const lang = {
   state:{
     languages:[
       {
+        index: 1,
         name:'汉语',
         value: "zh-CN",
         type:'zhongguo',
         selected: false
       },
       {
+        index: 1,
         name:'English',
         value: "en-US",
         type:'yingguo',
         selected: false
       },
       {
+        index: 1,
         name:'Français',
         value: "fr-FR",
         type:'faguo',
         selected: false
       },
       {
+        index: 1,
         name:'Italiano',
         value: "it-IT",
         type:'yidali',
