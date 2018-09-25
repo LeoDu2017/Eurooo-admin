@@ -44,8 +44,8 @@ const HeaderLayout = ({ dispatch,collapsed,systemOperations,currentIndex }) => (
           </DropdownMeanu>
         </List.Item>
       )}/>
-    <AdminPWDForm id="adminPassword"/>
-    <AdminInfoForm id="adminInfo"/>
+    <AdminPWDForm   id="adminPassword"/>
+    <AdminInfoForm  id="adminInfo"/>
   </header>
 );
 
