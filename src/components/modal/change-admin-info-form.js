@@ -1,5 +1,5 @@
-import { connect } from 'dva';
-import intl from 'react-intl-universal';
+import { connect }          from 'dva';
+import intl                 from 'react-intl-universal';
 import { Modal,Form,Input } from 'antd';
 import { hideModelHandler } from 'Actions/common-modal';
 

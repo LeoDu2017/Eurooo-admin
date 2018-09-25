@@ -1,16 +1,16 @@
-import { connect } from 'dva';
-import intl from 'react-intl-universal';
+import { connect }          from 'dva';
+import intl                 from 'react-intl-universal';
 import { Modal,Form,Input } from 'antd';
-
-import { handleSubmit } from 'Actions/layout';
+import { transparency }     from 'Styles/login-form.less';
+import { handleSubmit }     from 'Actions/layout';
 import { hideModelHandler } from 'Actions/common-modal';
 import { unequalNext,unequalPrev,unequalPrevAndEqualNext,equalPrev } from 'Actions/change-admin-password-form';
 
-import { transparency } from 'Styles/login-form.less';
 const formItemLayout = {
   labelCol: { xs: { span: 24 },sm: { span: 6 } },
   wrapperCol: { xs: { span: 24 },sm: { span: 18 } },
 };
+
 const ChangePasswordForm = ({
   id,
   visible,

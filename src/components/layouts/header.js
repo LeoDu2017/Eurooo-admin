@@ -53,7 +53,6 @@ function mapStateToProps(state){
   const { collapsed,currentIndex,administrator } = state.app;
   const { username,avatar } = administrator;
   const { languages } = state.lang;
-
   const options = [
     {
       index: 2,
@@ -72,7 +71,6 @@ function mapStateToProps(state){
       action: logoutHandeler
     }
   ];
-
   const systemOperations = [
     {
       index: 1,

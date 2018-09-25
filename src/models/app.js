@@ -1,5 +1,5 @@
-import appCookie from 'react-cookies';
-import { routerRedux } from 'dva/router';
+import appCookie        from 'react-cookies';
+import { routerRedux }  from 'dva/router';
 
 export default{
   namespace:'app',
