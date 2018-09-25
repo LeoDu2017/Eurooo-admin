@@ -72,14 +72,12 @@ const LoginPage = ({ dispatch,currentIndex,languages,advantages,systemDate,copyR
               <Card
                 hoverable
                 style={{'height':'410px'}}
-                cover={<img alt={`advantage of ${item.title}`} src={item.album}/>}
-              >
+                cover={<img alt={`advantage of ${item.title}`} src={item.album}/>}>
                 <img className={styles.icon} src={item.icon}/>
                 <Card.Meta
                   title={item.title}
                   style={{'marginTop':'10px'}}
-                  description={item.details}
-                />
+                  description={item.details}/>
               </Card>
             </List.Item>
           )}

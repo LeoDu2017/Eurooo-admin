@@ -214,8 +214,11 @@ export function toggleSubMeanu(dispatch,index,link,search,childLength,currentInd
   })
 }
 
-export function changeHandeler(dispatch){
-
+export function changeHandeler(){
+  window.g_app._store.dispatch({
+    type:'commonModal/setVisible',
+    payload:{['adminPassword']:true}
+  })
 }
 export function toUcenter(dispatch){
 
@@ -223,5 +226,19 @@ export function toUcenter(dispatch){
 export function logoutHandeler(){
   window.g_app._store.dispatch({
     type:'login/logoutHandler'
+  })
+}
+
+// 登录框点击确定
+export function handleSubmit(dispatch,validateFieldsAndScroll,event){
+  event.preventDefault();
+  validateFieldsAndScroll((errors,values) => {
+    if (errors) {
+      return
+    }
+    dispatch({
+      type: 'app/changeAdminPassword',
+      payload: values
+    });
   })
 }

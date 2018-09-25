@@ -12,10 +12,5 @@ export default{
     setCurrentStep(state,{payload:currentStep}){
       return { ...state,currentStep}
     }
-  },
-  subscriptions:{
-    setup({ dispatch,history}){
-
-    }
   }
 }

@@ -6,6 +6,7 @@ import { toggleHandler,changeHandeler,toUcenter,logoutHandeler } from 'Actions/l
 import { _toggleBtn,toggleBtn,current,header_wrap,header_item,W240,avatar } from 'Styles/layouts.less';
 import DropdownMeanu from 'Components/Dropdown';
 import { handleToggleOpen,handleMouseLeave } from 'Actions/layout';
+import AdminPWDForm from 'Components/modal/change-admin-password-form';
 
 
 const HeaderLayout = ({ dispatch,collapsed,systemOperations,currentIndex }) => (
@@ -37,9 +38,11 @@ const HeaderLayout = ({ dispatch,collapsed,systemOperations,currentIndex }) => (
             list={ item.source }
             type={ item.index }
             dispatch={ dispatch }
-            toggle={ currentIndex === item.index }/>
+            toggle={ currentIndex === item.index }>
+          </DropdownMeanu>
         </List.Item>
       )}/>
+    <AdminPWDForm id="adminPassword"/>
   </header>
 );
 
