@@ -214,14 +214,17 @@ export function toggleSubMeanu(dispatch,index,link,search,childLength,currentInd
   })
 }
 
-export function changeHandeler(){
+export function changePasswordHandeler(){
   window.g_app._store.dispatch({
     type:'commonModal/setVisible',
     payload:{['adminPassword']:true}
   })
 }
-export function toUcenter(dispatch){
-
+export function changeInfoHandeler(dispatch){
+  window.g_app._store.dispatch({
+    type:'commonModal/setVisible',
+    payload:{['adminInfo']:true}
+  })
 }
 export function logoutHandeler(){
   window.g_app._store.dispatch({

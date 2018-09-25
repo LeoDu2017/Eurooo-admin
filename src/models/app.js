@@ -9,7 +9,9 @@ export default{
     administrator: {
       id:'',
       username:'',
-      avatar:''
+      avatar:'',
+      title:'',
+      contactNumber:'',
     }
   },
   reducers:{

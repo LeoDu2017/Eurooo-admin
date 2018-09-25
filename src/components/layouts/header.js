@@ -1,13 +1,15 @@
-import intl from 'react-intl-universal';
-import { connect } from 'dva';
-import { Icon,List } from 'antd';
-import Svg from 'Components/Svg';
-import { toggleHandler,changeHandeler,toUcenter,logoutHandeler } from 'Actions/layout';
-import { _toggleBtn,toggleBtn,current,header_wrap,header_item,W240,avatar } from 'Styles/layouts.less';
-import DropdownMeanu from 'Components/Dropdown';
-import { handleToggleOpen,handleMouseLeave } from 'Actions/layout';
-import AdminPWDForm from 'Components/modal/change-admin-password-form';
+import { connect }    from 'dva';
+import { Icon,List }  from 'antd';
+import intl           from 'react-intl-universal';
 
+import Svg            from 'Components/Svg';
+import DropdownMeanu  from 'Components/Dropdown';
+import AdminInfoForm  from 'Components/modal/change-admin-info-form';
+import AdminPWDForm   from 'Components/modal/change-admin-password-form';
+
+import { handleToggleOpen,handleMouseLeave }                                      from 'Actions/layout';
+import { toggleHandler,changePasswordHandeler,changeInfoHandeler,logoutHandeler } from 'Actions/layout';
+import { _toggleBtn,toggleBtn,current,header_wrap,header_item,W240,avatar }       from 'Styles/layouts.less';
 
 const HeaderLayout = ({ dispatch,collapsed,systemOperations,currentIndex }) => (
   <header className={ header_wrap }>
@@ -43,6 +45,7 @@ const HeaderLayout = ({ dispatch,collapsed,systemOperations,currentIndex }) => (
         </List.Item>
       )}/>
     <AdminPWDForm id="adminPassword"/>
+    <AdminInfoForm id="adminInfo"/>
   </header>
 );
 
@@ -56,12 +59,12 @@ function mapStateToProps(state){
       index: 2,
       name: intl.get('PWD'),
       type: 'xiugaimima',
-      action: changeHandeler
+      action: changePasswordHandeler
     },{
       index: 2,
       name: intl.get('INO'),
       type: 'zhanghu',
-      action: toUcenter
+      action: changeInfoHandeler
     },{
       index: 2,
       name: intl.get('OUT'),

@@ -18,6 +18,7 @@ export default{
     "INPUTRENEWPASSWORD":"Si prega di inserire nuovamente la nuova password",
     "INPUTSAME":"Les anciens et nouveaux mots de passe ne peuvent pas être les mêmes",
     "INPUTUNSAME":"Inserire una nuova password due volte non è la stessa cosa",
+    "ModifyAdminInfo":"Modifica le informazioni dell'amministratore",
 
 
 

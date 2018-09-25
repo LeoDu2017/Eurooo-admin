@@ -18,7 +18,7 @@ export default {
     "INPUTRENEWPASSWORD":"Please retype New Password",
     "INPUTSAME":"Old and new passwords cannot be identical",
     "INPUTUNSAME":"Old and new passwords must be identical",
-
+    "ModifyAdminInfo":"Modify administrator information",
 
 
 

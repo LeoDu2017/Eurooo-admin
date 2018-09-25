@@ -18,6 +18,7 @@ export default {
     "INPUTRENEWPASSWORD":"请再次输入新密码",
     "INPUTSAME":"新旧密码不可相同",
     "INPUTUNSAME":"两次输入新密码不相同",
+    "ModifyAdminInfo":"修改管理员信息",
 
 
 
