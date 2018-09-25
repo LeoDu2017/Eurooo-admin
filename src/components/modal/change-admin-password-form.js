@@ -1,16 +1,18 @@
 import { connect } from 'dva';
+import intl from 'react-intl-universal';
 import { hideModelHandler } from 'Actions/common-modal';
 import { handleSubmit } from 'Actions/layout';
+import { unequalNext,unequalPrev,unequalPrevAndEqualNext,equalPrev } from 'Actions/change-admin-password-form';
 import { Modal,Form,Input } from 'antd';
 import { transparency } from 'Styles/login-form.less';
 const formItemLayout = {
   labelCol: {
     xs: { span: 24 },
-    sm: { span: 8 },
+    sm: { span: 6 },
   },
   wrapperCol: {
     xs: { span: 24 },
-    sm: { span: 16 },
+    sm: { span: 18 },
   },
 };
 const ChangePasswordForm = ({
@@ -18,41 +20,47 @@ const ChangePasswordForm = ({
         visible,
         dispatch,
         children,
-        form:{getFieldDecorator,validateFieldsAndScroll,resetFields}}) => (
+        form:{getFieldDecorator,validateFields,getFieldValue,validateFieldsAndScroll,resetFields}}) => (
         <Modal
           onCancel={ hideModelHandler.bind(null,dispatch,resetFields,id) }
-          title="修改密码"
+          title= { intl.get('PWD') }
           visible={ visible[id] }>
           <Form
             onSubmit={ handleSubmit.bind(null,dispatch,validateFieldsAndScroll) }>
             <Form.Item
               {...formItemLayout}
-              label="旧密码">
+              label={ intl.get('OLDPASSWORD') }>
               {getFieldDecorator('originalPassword', {
-                rules: [{ required: true, message: 'Please input your original password!' }],
+                rules: [{ required: true, message: intl.get('INPUTOLDPASSWORD') },
+                        { validator: unequalNext.bind(null,validateFields) }],
               })(
                 <Input
-                  placeholder="Please input your original password!"/>,
+                  type="password"
+                  placeholder={ intl.get('INPUTOLDPASSWORD') }/>,
               )}
             </Form.Item>
             <Form.Item
               {...formItemLayout}
-              label="新密码">
+              label={ intl.get('NEWPASSWORD') }>
               {getFieldDecorator('newPassword', {
-                rules: [{ required: true, message: 'Please input your new password!' }],
+                rules: [{ required: true, message: intl.get('INPUTNEWPASSWORD') },
+                        { validator:unequalPrevAndEqualNext.bind(null,validateFields,getFieldValue,'新旧密码不可相同')}],
               })(
                 <Input
-                  placeholder="Please input your new password!"/>,
+                  type="password"
+                  placeholder={intl.get('INPUTNEWPASSWORD')}/>,
               )}
             </Form.Item>
             <Form.Item
               {...formItemLayout}
-              label="再次输入新密码">
+              label={ intl.get('RENEWPASSWORD')}>
               {getFieldDecorator('renewPassword', {
-                rules: [{ required: true, message: 'Please input your new password!' }],
+                rules: [{ required: true, message: intl.get('INPUTRENEWPASSWORD') },
+                        { validator: equalPrev.bind(null,getFieldValue,'两次输入密码不相同')}],
               })(
                 <Input
-                  placeholder="Please input your new password!"/>,
+                  type="password"
+                  placeholder={ intl.get('INPUTRENEWPASSWORD') }/>,
               )}
             </Form.Item>
           </Form>

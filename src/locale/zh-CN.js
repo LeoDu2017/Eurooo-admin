@@ -10,6 +10,36 @@ export default {
     "SELECT":"选择",
     "CREATE":"创建",
     "PWD":"修改密码",
+    "NEWPASSWORD":"新密码",
+    "INPUTNEWPASSWORD":"请填写您的新密码",
+    "OLDPASSWORD":"旧密码",
+    "INPUTOLDPASSWORD":"请填写您的旧密码",
+    "RENEWPASSWORD":"再次输入新密码",
+    "INPUTRENEWPASSWORD":"请再次输入新密码",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     "INO":"修改账户资料",
     "OUT":"退出",
     "HOME":"首页",
@@ -54,7 +84,7 @@ export default {
     "SELECTCOMPANYTYPE":"请选择您的公司类型",
     "EMAIL":"邮箱",
     "INPUTEMAIL":"请填写您的公司邮箱",
-    "ERROREMAIL":"请填写您的邮箱不正确",
+    "ERROREMAIL":"您的邮箱不正确",
     "CONTACTNUM":"联系电话",
     "INPUTCONTACTNUM":"请填写您的联系电话",
     "ADMINTITLE":"职称",

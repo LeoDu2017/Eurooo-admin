@@ -10,6 +10,30 @@ export default {
     "SELECT":"Select",
     "CREATE":"Create",
     "PWD":"Modify password",
+    "NEWPASSWORD":"New password",
+    "INPUTNEWPASSWORD":"Please fill in your new password",
+    "OLDPASSWORD":"Old password",
+    "INPUTOLDPASSWORD":"Please fill in your old password",
+    "RENEWPASSWORD":"Retype New Password",
+    "INPUTRENEWPASSWORD":"Please retype New Password",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     "INO":"Rectify the account information",
     "OUT":"Sign out",
     "HOME":"Home page",

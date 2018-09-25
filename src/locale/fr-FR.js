@@ -10,6 +10,36 @@ export default{
     "SELECT":"Sélection",
     "CREATE":"Créer",
     "PWD":"Modifier le mot de passe",
+    "NEWPASSWORD":"Nouveau mot de passe",
+    "INPUTNEWPASSWORD":"Veuillez remplir votre nouveau mot de passe",
+    "OLDPASSWORD":"Ancien mot de passe",
+    "INPUTOLDPASSWORD":"Si prega di inserire la vecchia password",
+    "RENEWPASSWORD":"Entrez à nouveau votre nouveau mot de passe",
+    "INPUTRENEWPASSWORD":"Veuillez entrer à nouveau votre nouveau mot de passe",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     "INO":"Modifier l’information de votre compte",
     "OUT":"Se déconnecter",
     "HOME":"Page d'accueil",

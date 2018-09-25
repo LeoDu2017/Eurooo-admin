@@ -10,6 +10,31 @@ export default{
     "SELECT":"La scelta di",
     "CREATE":"Creare",
     "PWD":"Modifica la password",
+    "NEWPASSWORD":"Nuova password",
+    "INPUTNEWPASSWORD":"Si prega di inserire la nuova password",
+    "OLDPASSWORD":"Vecchia password",
+    "INPUTOLDPASSWORD":"Veuillez remplir votre ancien mot de passe",
+    "RENEWPASSWORD":"Inserisci nuova password",
+    "INPUTRENEWPASSWORD":"Si prega di inserire nuovamente la nuova password",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     "INO":"Modificare lo profile di conto",
     "OUT":"Esci",
     "HOME":"Home page",
