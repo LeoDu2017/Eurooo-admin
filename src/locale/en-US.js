@@ -16,6 +16,8 @@ export default {
     "INPUTOLDPASSWORD":"Please fill in your old password",
     "RENEWPASSWORD":"Retype New Password",
     "INPUTRENEWPASSWORD":"Please retype New Password",
+    "INPUTSAME":"Old and new passwords cannot be identical",
+    "INPUTUNSAME":"Old and new passwords must be identical",
 
 
 

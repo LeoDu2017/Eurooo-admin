@@ -16,6 +16,8 @@ export default{
     "INPUTOLDPASSWORD":"Veuillez remplir votre ancien mot de passe",
     "RENEWPASSWORD":"Inserisci nuova password",
     "INPUTRENEWPASSWORD":"Si prega di inserire nuovamente la nuova password",
+    "INPUTSAME":"Les anciens et nouveaux mots de passe ne peuvent pas être les mêmes",
+    "INPUTUNSAME":"Inserire una nuova password due volte non è la stessa cosa",
 
 
 

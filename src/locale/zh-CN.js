@@ -16,6 +16,8 @@ export default {
     "INPUTOLDPASSWORD":"请填写您的旧密码",
     "RENEWPASSWORD":"再次输入新密码",
     "INPUTRENEWPASSWORD":"请再次输入新密码",
+    "INPUTSAME":"新旧密码不可相同",
+    "INPUTUNSAME":"两次输入新密码不相同",
 
 
 

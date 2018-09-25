@@ -44,7 +44,7 @@ const ChangePasswordForm = ({
               label={ intl.get('NEWPASSWORD') }>
               {getFieldDecorator('newPassword', {
                 rules: [{ required: true, message: intl.get('INPUTNEWPASSWORD') },
-                        { validator:unequalPrevAndEqualNext.bind(null,validateFields,getFieldValue,'新旧密码不可相同')}],
+                        { validator:unequalPrevAndEqualNext.bind(null,validateFields,getFieldValue,intl.get('INPUTSAME'))}],
               })(
                 <Input
                   type="password"
@@ -56,7 +56,7 @@ const ChangePasswordForm = ({
               label={ intl.get('RENEWPASSWORD')}>
               {getFieldDecorator('renewPassword', {
                 rules: [{ required: true, message: intl.get('INPUTRENEWPASSWORD') },
-                        { validator: equalPrev.bind(null,getFieldValue,'两次输入密码不相同')}],
+                        { validator: equalPrev.bind(null,getFieldValue,intl.get('INPUTUNSAME'))}],
               })(
                 <Input
                   type="password"
