@@ -1,17 +1,17 @@
-const qs = require('qs');
-const Mock = require('mockjs');
-const config = require('../src/utils/config');
-
-const { apiPrefix,NOTFOUND } = config;
-const process = require('../src/utils/dataProcessing');
-const { queryArray } = process;
-
-const EnumRoleType = {
+const qs              = require('qs');
+const Mock            = require('mockjs');
+const config          = require('../src/utils/config');
+const {
+  apiPrefix,
+  NOTFOUND }          = config;
+const process         = require('../src/utils/dataProcessing');
+const { queryArray }  = process;
+const EnumRoleType    = {
   ADMIN: 1,
   DEFAULT: 0,
   DEVELOPER: 1,
 };
-const userPermission = {
+const userPermission  = {
   DEFAULT: {
     visit: ['1', '2', '21', '7', '5', '51', '52', '53'],
     role: EnumRoleType.DEFAULT,
@@ -23,11 +23,11 @@ const userPermission = {
     role: EnumRoleType.DEVELOPER,
   },
 };
-const AccountState = {
+const AccountState    = {
     ON:1,
     OFF:0,
 };
-const adminUsers = [
+const adminUsers      = [
   {
     key:0,
     id: 0,
@@ -108,7 +108,8 @@ const adminUsers = [
     avatar: Mock.Random.image('100x100', Mock.Random.color(), '#fff', 'png','J')
   }
 ];
-let   database = adminUsers;
+let   database        = adminUsers;
+
 module.exports = {
   // 登录
   [`POST ${apiPrefix}/user/login`] (req, res) {
@@ -170,7 +171,7 @@ module.exports = {
     res.json({ success:true, administrator, msg:'修改成功' })
 
   },
-  [`GET ${apiPrefix}/user`] (req, res) {
+  [`GET ${apiPrefix}/user`]         (req, res) {
     const cookie = req.headers.cookie || '';
     const cookies = qs.parse(cookie.replace(/\s/g, ''), { delimiter: ';' });
     const response = {};
@@ -195,7 +196,7 @@ module.exports = {
     res.json(response)
   },
   // 管理员列表
-  [`GET ${apiPrefix}/users`] (req, res) {
+  [`GET ${apiPrefix}/users`]        (req, res) {
     const { query } = req;
     let { pageSize, page, ...other } = query;
     pageSize = pageSize || 10;
@@ -236,7 +237,7 @@ module.exports = {
     })
   },
   // 删除管理员
-  [`POST ${apiPrefix}/user/del`] (req, res) {
+  [`POST ${apiPrefix}/user/del`]    (req, res) {
     const { id } = req.body;
     const data = queryArray(database, id, 'id');
     if (data) {
@@ -248,7 +249,7 @@ module.exports = {
     }
   },
   // 添加管理员
-  [`POST ${apiPrefix}/user/add`] (req, res) {
+  [`POST ${apiPrefix}/user/add`]    (req, res) {
     const newData = req.body;
     const len = database.length;
     if(newData.hasOwnProperty('id')){
@@ -268,7 +269,7 @@ module.exports = {
     res.status(200).json({status:1,msg: '添加成功' })
   },
   // 重置管理员密码
-  [`POST ${apiPrefix}/user/reset`] (req, res) {
+  [`POST ${apiPrefix}/user/reset`]  (req, res) {
     const {id} = req.body;
     database = database.map((item) => {
       if (item.id === id) {
@@ -279,12 +280,12 @@ module.exports = {
     });
     res.status(200).json({status:1,msg: '重置成功' })
   },
-  [`DELETE ${apiPrefix}/users`] (req, res) {
+  [`DELETE ${apiPrefix}/users`]     (req, res) {
     const { ids } = req.body;
     database = database.filter(item => !ids.some(_ => _ === item.id));
     res.status(204).end()
   },
-  [`POST ${apiPrefix}/user`] (req, res) {
+  [`POST ${apiPrefix}/user`]        (req, res) {
     const newData = req.body;
     newData.createTime = Mock.mock('@now');
     newData.avatar = newData.avatar || Mock.Random.image('100x100', Mock.Random.color(), '#757575', 'png', newData.nickName.substr(0, 1));
@@ -295,7 +296,7 @@ module.exports = {
 
     res.status(200).end();
   },
-  [`GET ${apiPrefix}/user/:id`] (req, res) {
+  [`GET ${apiPrefix}/user/:id`]     (req, res) {
     const { id } = req.params;
     const data = queryArray(database, id, 'id');
     if (data) {
@@ -304,7 +305,7 @@ module.exports = {
       res.status(404).json(NOTFOUND)
     }
   },
-  [`DELETE ${apiPrefix}/user/:id`] (req, res) {
+  [`DELETE ${apiPrefix}/user/:id`]  (req, res) {
     const { id } = req.params;
     const data = queryArray(database, id, 'id');
     if (data) {
@@ -314,7 +315,7 @@ module.exports = {
       res.status(404).json(NOTFOUND)
     }
   },
-  [`PATCH ${apiPrefix}/user/:id`] (req, res) {
+  [`PATCH ${apiPrefix}/user/:id`]   (req, res) {
     const { id } = req.params;
     const editItem = req.body;
     let isExist = false;
