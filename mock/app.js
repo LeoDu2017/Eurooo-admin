@@ -137,8 +137,7 @@ module.exports = {
   // 修改管理员密码
   [`POST ${apiPrefix}/user/changePassword`] (req, res) {
     const { id,originalPassword,newPassword } = req.body;
-    const user = adminUsers.filter(item => item.id === id);
-
+    const user = database.filter(item => item.id === id);
     const administrator = user[0];
     if (administrator) {
       if (administrator.password === originalPassword) {
@@ -171,7 +170,7 @@ module.exports = {
       response.success = token.deadline > new Date().getTime()
     }
     if (response.success) {
-      const userItem = adminUsers.filter(_ => _.id === token.id);
+      const userItem = database.filter(_ => _.id === token.id);
       if (userItem.length > 0) {
         user.permissions = userItem[0].permissions;
         user.username = userItem[0].username;
@@ -282,7 +281,6 @@ module.exports = {
 
     res.status(200).end();
   },
-
   [`GET ${apiPrefix}/user/:id`] (req, res) {
     const { id } = req.params;
     const data = queryArray(database, id, 'id');
@@ -292,7 +290,6 @@ module.exports = {
       res.status(404).json(NOTFOUND)
     }
   },
-
   [`DELETE ${apiPrefix}/user/:id`] (req, res) {
     const { id } = req.params;
     const data = queryArray(database, id, 'id');
@@ -303,7 +300,6 @@ module.exports = {
       res.status(404).json(NOTFOUND)
     }
   },
-
   [`PATCH ${apiPrefix}/user/:id`] (req, res) {
     const { id } = req.params;
     const editItem = req.body;
