@@ -236,3 +236,10 @@ export function changePassword(dispatch,values){
     payload:values
   })
 }
+export function changeAdminInfoHandler(values){
+  const id = window.g_app._store.getState().app.administrator.id;
+  window.g_app._store.dispatch({
+    type:'login/changeUserInfo',
+    payload:{...values,id}
+  })
+}

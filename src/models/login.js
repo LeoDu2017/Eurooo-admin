@@ -1,7 +1,8 @@
 import {
   loginService,
   logoutService,
-  changePasswordService } from 'Services/login';
+  changePasswordService,
+  changeUserInfoService } from 'Services/login';
 import { routerRedux }    from 'dva/router';
 import appCookie          from 'react-cookies';
 import { message }        from 'antd';
@@ -71,6 +72,16 @@ export default{
         });
       }else if(data && data.status === -1){
         yield message.error('修改失败')
+      }
+    },
+    *changeUserInfo({ payload },{ call,put }){
+      const data = yield call(changeUserInfoService,payload);
+      if(data && data.success){
+        const administrator = data.administrator;
+        yield put({
+          type:'app/setAdmin',
+          payload:administrator
+        })
       }
     }
   }

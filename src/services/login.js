@@ -1,7 +1,7 @@
 import request from 'Utils/request';
 import { api } from 'Utils/config';
 
-const { userLoginApi,userLogoutApi,changePasswordApi } = api;
+const { userLoginApi,userLogoutApi,changePasswordApi,changeUserInfoApi } = api;
 
 export function loginService (data) {
   return request({
@@ -21,6 +21,14 @@ export function logoutService () {
 export function changePasswordService (data) {
   return request({
     url: changePasswordApi,
+    method: 'post',
+    data,
+  })
+}
+
+export function changeUserInfoService (data) {
+  return request({
+    url: changeUserInfoApi,
     method: 'post',
     data,
   })

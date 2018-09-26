@@ -1,7 +1,10 @@
-import { connect }          from 'dva';
-import intl                 from 'react-intl-universal';
-import { Modal,Form,Input } from 'antd';
-import { hideModelHandler } from 'Actions/common-modal';
+import {
+  okHandler,
+  hideModelHandler }              from 'Actions/common-modal';
+import intl                       from 'react-intl-universal';
+import { connect }                from 'dva';
+import { Modal,Form,Input }       from 'antd';
+import { changeAdminInfoHandler } from 'Actions/layout'
 
 const formItemLayout = {
   labelCol:{ xs:{span:24},sm:{span:4} },
@@ -13,16 +16,17 @@ const AdminInfoForm = ({
   id,
   visible,
   administrator,
-  form:{ resetFields,getFieldDecorator }}) => (
+  form:{ resetFields,getFieldDecorator,validateFields }}) => (
   <Modal
     visible={visible[id]}
     title={intl.get('ModifyAdminInfo')}
-    onCancel={ hideModelHandler.bind(null,dispatch,resetFields,id)} >
+    onOk={okHandler.bind(null,dispatch,validateFields,changeAdminInfoHandler,id,false)}
+    onCancel={ hideModelHandler.bind(null,dispatch,resetFields,id) }>
     <Form>
       <Form.Item
         {...formItemLayout}
         label={intl.get('NAME')}>
-        { getFieldDecorator('name',{
+        { getFieldDecorator('username',{
             initialValue:administrator.username,
             rules:[{required: true,message:intl.get('INPUTNAME')}]
           })(<Input placeholder={intl.get('INPUTNAME')}/>)

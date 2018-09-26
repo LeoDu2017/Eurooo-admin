@@ -34,6 +34,7 @@ module.exports = {
     udateBannedApi:`${APIV1}/brand/:id`,
     getCountryApi:`${APIV1}/country`,
 
+    changeUserInfoApi: `${APIV1}/user/changeUserInfo`,
     changePasswordApi: `${APIV1}/user/changePassword`,
     userLoginApi: `${APIV1}/user/login`,
     userLogoutApi: `${APIV1}/user/logout`,

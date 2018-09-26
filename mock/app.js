@@ -156,6 +156,21 @@ module.exports = {
       res.json({ success: false, status: -1 })
     }
   },
+  // 修改管理员信息
+  [`POST ${apiPrefix}/user/changeUserInfo`] (req,res) {
+    const newData = req.body;
+
+    database = database.map(item => {
+      if (item.id === newData.id) {
+        return Object.assign({}, item, newData)
+      }
+      return item
+    });
+    const user = database.filter(item => item.id === newData.id);
+    const administrator = user[0];
+    res.json({ success:true, administrator, msg:'修改成功' })
+
+  },
   [`GET ${apiPrefix}/user`] (req, res) {
     const cookie = req.headers.cookie || '';
     const cookies = qs.parse(cookie.replace(/\s/g, ''), { delimiter: ';' });
