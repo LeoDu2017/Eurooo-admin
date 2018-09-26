@@ -1,5 +1,5 @@
-import intl from 'react-intl-universal';
-import router from 'umi/router';
+import intl         from 'react-intl-universal';
+import router       from 'umi/router';
 import { dispatch } from 'dva';
 
 // 打开选项的下拉框
@@ -202,7 +202,6 @@ export function getList(linkType){
 
 // 展开二级菜单，如果有二级菜单则展开二级菜单反之进行跳转
 export function toggleSubMeanu(dispatch,index,link,search,childLength,currentIndex){
-
   if(childLength === 0){
     router.push(`${link}${search}`)
   }
@@ -231,17 +230,9 @@ export function logoutHandeler(){
     type:'login/logoutHandler'
   })
 }
-
-// 登录框点击确定
-export function handleSubmit(dispatch,validateFieldsAndScroll,event){
-  event.preventDefault();
-  validateFieldsAndScroll((errors,values) => {
-    if (errors) {
-      return
-    }
-    dispatch({
-      type: 'app/changeAdminPassword',
-      payload: values
-    });
+export function changePassword(dispatch,values){
+  dispatch({
+    type:'login/changePassword',
+    payload:values
   })
 }

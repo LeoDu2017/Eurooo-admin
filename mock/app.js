@@ -114,11 +114,10 @@ module.exports = {
   // 登录
   [`POST ${apiPrefix}/user/login`] (req, res) {
     const { username, password } = req.body;
-    const user = adminUsers.filter(item => item.username === username && item.password === password);
+    const user = database.filter(item => item.username === username && item.password === password );
     const administrator = user[0];
     if (administrator) {
       const now = new Date();
-
       now.setDate(now.getDate() + 1);
       res.cookie('token', JSON.stringify({ administrator, deadline: now.getTime() }), {
         maxAge: 900000,
@@ -127,15 +126,37 @@ module.exports = {
       res.json({ success: true, administrator, message: 'Ok' })
     } else {
       res.json({ success: false, message: '登录失败' })
-
     }
   },
   // 退出
   [`GET ${apiPrefix}/user/logout`] (req, res) {
     res.clearCookie('token');
-    res.status(200).end()
+    res.json({ success: true, message:'退出成功'});
+    // res.status(200).end()
   },
-  //
+  // 修改管理员密码
+  [`POST ${apiPrefix}/user/changePassword`] (req, res) {
+    const { id,originalPassword,newPassword } = req.body;
+    const user = adminUsers.filter(item => item.id === id);
+
+    const administrator = user[0];
+    if (administrator) {
+      if (administrator.password === originalPassword) {
+        database = database.map((item) => {
+          if (item.id === id) {
+            let password = newPassword;
+            return Object.assign({},item,{password})
+          }
+          return item
+        });
+        res.json({ success: true, status: 1})
+      } else {
+        res.json({ success: false, status: 0 })
+      }
+    } else {
+      res.json({ success: false, status: -1 })
+    }
+  },
   [`GET ${apiPrefix}/user`] (req, res) {
     const cookie = req.headers.cookie || '';
     const cookies = qs.parse(cookie.replace(/\s/g, ''), { delimiter: ';' });
@@ -194,7 +215,6 @@ module.exports = {
     }
     newData = newData.map(item => {
       const {password,...reset} = item;
-      console.log(password);
       return reset
     });
     res.status(200).json({
@@ -205,11 +225,9 @@ module.exports = {
   // 删除管理员
   [`POST ${apiPrefix}/user/del`] (req, res) {
     const { id } = req.body;
-    // let { admins } = database;
     const data = queryArray(database, id, 'id');
     if (data) {
       database = database.filter(item => item.id !== id);
-      // database = {...database,admins};
       res.status(200).json({status:1,msg: '删除成功' })
       // res.status(204).end()
     } else {
@@ -248,14 +266,11 @@ module.exports = {
     });
     res.status(200).json({status:1,msg: '重置成功' })
   },
-
   [`DELETE ${apiPrefix}/users`] (req, res) {
     const { ids } = req.body;
     database = database.filter(item => !ids.some(_ => _ === item.id));
     res.status(204).end()
   },
-
-
   [`POST ${apiPrefix}/user`] (req, res) {
     const newData = req.body;
     newData.createTime = Mock.mock('@now');
@@ -307,6 +322,5 @@ module.exports = {
     } else {
       res.status(404).json(NOTFOUND)
     }
-  },
-
+  }
 };

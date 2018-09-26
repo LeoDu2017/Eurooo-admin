@@ -1,15 +1,32 @@
-import { connect }    from 'dva';
-import { Icon,List }  from 'antd';
-import intl           from 'react-intl-universal';
+import { connect }          from 'dva';
+import { Icon,List }        from 'antd';
+import intl                 from 'react-intl-universal';
 
-import Svg            from 'Components/Svg';
-import DropdownMeanu  from 'Components/Dropdown';
-import AdminInfoForm  from 'Components/modal/change-admin-info-form';
-import AdminPWDForm   from 'Components/modal/change-admin-password-form';
+import {
+  W240,
+  avatar,
+  current,
+  toggleBtn,
+  _toggleBtn,
+  header_wrap,
+  header_item }             from 'Styles/layouts.less';
+import {
+  saveAdminInfo,
+  toggleHandler,
+  logoutHandeler,
+  handleToggleOpen,
+  handleMouseLeave,
+  saveAdminPassword,
+  changeInfoHandeler,
+  changePasswordHandeler }  from 'Actions/layout';
 
-import { handleToggleOpen,handleMouseLeave }                                      from 'Actions/layout';
-import { toggleHandler,changePasswordHandeler,changeInfoHandeler,logoutHandeler } from 'Actions/layout';
-import { _toggleBtn,toggleBtn,current,header_wrap,header_item,W240,avatar }       from 'Styles/layouts.less';
+
+import Svg                  from 'Components/Svg';
+import DropdownMeanu        from 'Components/Dropdown';
+import AdminInfoForm        from 'Components/modal/change-admin-info-form';
+import AdminPWDForm         from 'Components/modal/change-admin-password-form';
+
+
 
 const HeaderLayout = ({ dispatch,collapsed,systemOperations,currentIndex }) => (
   <header className={ header_wrap }>

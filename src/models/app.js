@@ -1,5 +1,6 @@
-import appCookie        from 'react-cookies';
-import { routerRedux }  from 'dva/router';
+import appCookie                  from 'react-cookies';
+import { routerRedux }            from 'dva/router';
+import { changePasswordService }  from 'Services/app';
 
 export default{
   namespace:'app',
@@ -31,11 +32,13 @@ export default{
       return history.listen(({ pathname,query }) => {
         const token = appCookie.load('token');
         dispatch({ type:'lang/setLocale',payload:{query} });
-        !token ? dispatch(routerRedux.push('/login')) :
-          dispatch({
-            type:'setAdmin',
-            payload: token.administrator
-          })
+        if(pathname !== '/login'){
+          !token ? dispatch(routerRedux.push('/login')) :
+            dispatch({
+              type:'setAdmin',
+              payload: token.administrator
+            })
+        }
       });
     }
   }

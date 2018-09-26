@@ -1,10 +1,15 @@
+import {
+  equalPrev,
+  okHandler,
+  unequalNext,
+  unequalPrev,
+  unequalPrevAndEqualNext } from 'Actions/change-admin-password-form';
 import { connect }          from 'dva';
 import intl                 from 'react-intl-universal';
 import { Modal,Form,Input } from 'antd';
 import { transparency }     from 'Styles/login-form.less';
-import { handleSubmit }     from 'Actions/layout';
+import { changePassword }   from 'Actions/layout';
 import { hideModelHandler } from 'Actions/common-modal';
-import { unequalNext,unequalPrev,unequalPrevAndEqualNext,equalPrev } from 'Actions/change-admin-password-form';
 
 const formItemLayout = {
   labelCol: { xs: { span: 24 },sm: { span: 6 } },
@@ -13,20 +18,26 @@ const formItemLayout = {
 
 const ChangePasswordForm = ({
   id,
+  userID,
   visible,
   dispatch,
   children,
-  form:{getFieldDecorator,validateFields,getFieldValue,validateFieldsAndScroll,resetFields}}) => (
+  form:{
+    getFieldDecorator,
+    validateFields,
+    getFieldValue,
+    validateFieldsAndScroll,
+    resetFields}}) => (
   <Modal
     onCancel={ hideModelHandler.bind(null,dispatch,resetFields,id) }
     title= { intl.get('PWD') }
+    onOk={ okHandler.bind(null,dispatch,getFieldValue,userID,changePassword) }
     visible={ visible[id] }>
-    <Form
-      onSubmit={ handleSubmit.bind(null,dispatch,validateFieldsAndScroll) }>
+    <Form>
       <Form.Item
         {...formItemLayout}
         label={ intl.get('OLDPASSWORD') }>
-        {getFieldDecorator('originalPassword', {
+        { getFieldDecorator('originalPassword', {
           rules: [{ required: true, message: intl.get('INPUTOLDPASSWORD') },
                   { validator: unequalNext.bind(null,validateFields) }],
         })(
@@ -56,7 +67,7 @@ const ChangePasswordForm = ({
         })(
           <Input
             type="password"
-            placeholder={ intl.get('INPUTRENEWPASSWORD') }/>,
+            placeholder={ intl.get('INPUTRENEWPASSWORD') }/>
         )}
       </Form.Item>
     </Form>
@@ -65,7 +76,8 @@ const ChangePasswordForm = ({
 
 function mapStateToProps(state){
   const { visible } = state.commonModal;
-  return { visible }
+  const { administrator:{id} } = state.app;
+  return { visible,userID:id }
 }
 
-export default connect(mapStateToProps)(Form.create()(ChangePasswordForm))
+export default connect(mapStateToProps)(Form.create()(ChangePasswordForm));
