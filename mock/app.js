@@ -11,7 +11,6 @@ const EnumRoleType = {
   DEFAULT: 0,
   DEVELOPER: 1,
 };
-
 const userPermission = {
   DEFAULT: {
     visit: ['1', '2', '21', '7', '5', '51', '52', '53'],
@@ -109,7 +108,7 @@ const adminUsers = [
     avatar: Mock.Random.image('100x100', Mock.Random.color(), '#fff', 'png','J')
   }
 ];
-let database = adminUsers;
+let   database = adminUsers;
 module.exports = {
   // 登录
   [`POST ${apiPrefix}/user/login`] (req, res) {
