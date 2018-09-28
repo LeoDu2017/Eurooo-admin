@@ -17,7 +17,6 @@ export default{
   },
   reducers:{
     setAdmin(state,{payload:administrator}){
-      debugger
       return{ ...state,administrator }
     },
     setCollapsed(state,{payload:collapsed}){
