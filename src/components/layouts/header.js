@@ -1,50 +1,31 @@
 import { connect }          from 'dva';
-import { Icon,Divider,Tooltip,Dropdown,Avatar }        from 'antd';
 import {
-  saveAdminInfo,
-  toggleHandler,
-  handleToggleOpen,
-  handleMouseLeave,
-  saveAdminPassword }  from 'Actions/layout';
+  Icon,Avatar,Divider,
+  Tooltip,Dropdown }        from 'antd';
+import Link                 from 'umi/link';
 import Svg                  from 'Components/Svg';
-
+import { toggleHandler }    from 'Actions/layout';
+import {
+  getNoticeData,
+  getAdminOperations,
+  getLanguageOperations }   from 'Actions/layout/header'
+import {
+  header,trigger,right,
+  action,search,account,
+  avatar_style,name,
+  lang_icon,f_l,f_r }       from 'Styles/layout/header.less';
 import HeaderSearch         from 'Components/layouts/header-search';
 import HeaderNotice         from 'Components/layouts/header-notice';
 import AdminInfoForm        from 'Components/modal/change-admin-info-form';
 import AdminPWDForm         from 'Components/modal/change-admin-password-form';
 
-import Link from 'umi/link';
-import {
-  header,
-  trigger,
-  right,
-  action,
-  search,
-  menu,
-  account,
-  avatar_style,
-  name,
-  lang_icon,
-  selected,
-  m_r_8,f_l,f_r,w_140
-} from 'Styles/layout/header.less';
-
-import {
-  getNoticeData,getLanguageOperations,getAdminOperations} from 'Actions/layout/header'
 
 const HeaderLayout = ({
-                        dispatch,
-                        isMobile,
-                        avatar,
-                        logo,
-                        username,
-                        collapsed,
-                        notifyCount,
-                        onNoticeClear,
-                        fetchingNotices,
-                        onNoticeVisibleChange,
-                        adminOperations,
-                        languageOperations }) => (
+  logo,username,collapsed,
+  dispatch,isMobile,avatar,
+  notifyCount,onNoticeClear,
+  fetchingNotices,adminOperations,
+  onNoticeVisibleChange,languageOperations }) => (
   <div className={ header }>
     {isMobile && [
       <Link to="/" className={ logo} key="logo">
@@ -132,21 +113,17 @@ const HeaderLayout = ({
 );
 
 function mapStateToProps(state){
-  const { collapsed,currentIndex,administrator } = state.app;
+  const { collapsed,administrator } = state.app;
   const { username,avatar,notifyCount } = administrator;
   const { languages } = state.lang;
 
-  // const adminOperations = (
-  //
-  // );
   return {
     collapsed,
     avatar,
     username,
-    currentIndex,
     notifyCount,
     adminOperations:getAdminOperations(),
-    languageOperations:getLanguageOperations(languages)}
+    languageOperations:getLanguageOperations(languages) }
 }
 
 export default connect(mapStateToProps)(HeaderLayout)
