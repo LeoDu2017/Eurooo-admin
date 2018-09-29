@@ -1,109 +1,152 @@
 import { connect }          from 'dva';
-import { Icon,List }        from 'antd';
-import intl                 from 'react-intl-universal';
-
-import {
-  W240,
-  avatar,
-  current,
-  toggleBtn,
-  _toggleBtn,
-  header_wrap,
-  header_item }             from 'Styles/layouts.less';
+import { Icon,Divider,Tooltip,Dropdown,Avatar }        from 'antd';
 import {
   saveAdminInfo,
   toggleHandler,
-  logoutHandeler,
   handleToggleOpen,
   handleMouseLeave,
-  saveAdminPassword,
-  changeInfoHandeler,
-  changePasswordHandeler }  from 'Actions/layout';
-
-
+  saveAdminPassword }  from 'Actions/layout';
 import Svg                  from 'Components/Svg';
-import DropdownMeanu        from 'Components/Dropdown';
+
+import HeaderSearch         from 'Components/layouts/header-search';
+import HeaderNotice         from 'Components/layouts/header-notice';
 import AdminInfoForm        from 'Components/modal/change-admin-info-form';
 import AdminPWDForm         from 'Components/modal/change-admin-password-form';
 
+import Link from 'umi/link';
+import {
+  header,
+  trigger,
+  right,
+  action,
+  search,
+  menu,
+  account,
+  avatar_style,
+  name,
+  lang_icon,
+  selected,
+  m_r_8,f_l,f_r,w_140
+} from 'Styles/layout/header.less';
 
+import {
+  getNoticeData,getLanguageOperations,getAdminOperations} from 'Actions/layout/header'
 
-const HeaderLayout = ({ dispatch,collapsed,systemOperations,currentIndex }) => (
-  <header className={ header_wrap }>
+const HeaderLayout = ({
+                        dispatch,
+                        isMobile,
+                        avatar,
+                        logo,
+                        username,
+                        collapsed,
+                        notifyCount,
+                        onNoticeClear,
+                        fetchingNotices,
+                        onNoticeVisibleChange,
+                        adminOperations,
+                        languageOperations }) => (
+  <div className={ header }>
+    {isMobile && [
+      <Link to="/" className={ logo} key="logo">
+        <img src={logo} alt="logo" width="32" />
+      </Link>,
+      <Divider type="vertical" key="line" />,
+    ]}
     <Icon
-      className={ _toggleBtn }
+      className={ trigger }
       type={ collapsed ? 'menu-unfold' : 'menu-fold'}
       onClick={ toggleHandler.bind(null,dispatch,!collapsed) }/>
-    <List
-      dataSource={ systemOperations }
-      renderItem={ item => (
-        <List.Item
-          onClick={ handleToggleOpen.bind(null,dispatch,item.index,currentIndex) }
-          style={{'float':'left'}}
-          className={ header_item }>
-          <a
-            className={ currentIndex === item.index ? `${current} ${toggleBtn}` : toggleBtn }
-            href="javascript:">
-            { item.avatar &&
-              <img
-                className={ avatar }
-                src={ item.avatar }
-                alt="user avatar"/>
-            }
-            { item.svg && <Svg type={ item.svg } className={ avatar }/> }
-            { item.title }
-          </a>
-          <DropdownMeanu
-            list={ item.source }
-            type={ item.index }
-            dispatch={ dispatch }
-            toggle={ currentIndex === item.index }>
-          </DropdownMeanu>
-        </List.Item>
-      )}/>
+    <div className={ right }>
+      <HeaderSearch
+        className={`${action} ${search}`}
+        placeholder="站内搜索"
+        dataSource={['搜索提示一', '搜索提示二', '搜索提示三']}
+        onSearch={value => {
+          console.log('input', value); // eslint-disable-line
+        }}
+        onPressEnter={value => {
+          console.log('enter', value); // eslint-disable-line
+        }}/>
+      <Tooltip
+        placement="bottom"
+        title="使用文档">
+        <a
+          target="_blank"
+          href="http://pro.ant.design/docs/getting-started"
+          rel="noopener noreferrer"
+          className={ action }
+        >
+          <Icon type="question-circle-o" />
+        </a>
+      </Tooltip>
+      <HeaderNotice
+        className={ action }
+        count={ notifyCount }
+        onItemClick={(item, tabProps) => {
+          console.log(item, tabProps); // eslint-disable-line
+        }}
+        onClear={onNoticeClear}
+        onPopupVisibleChange={onNoticeVisibleChange}
+        loading={fetchingNotices}
+        popupAlign={{ offset: [20, -16] }}>
+        <HeaderNotice.Tab
+          list={getNoticeData['通知']}
+          title="通知"
+          emptyText="你已查看所有通知"
+          emptyImage="https://gw.alipayobjects.com/zos/rmsportal/wAhyIChODzsoKIOBHcBk.svg"
+        />
+        <HeaderNotice.Tab
+          list={getNoticeData['消息']}
+          title="消息"
+          emptyText="您已读完所有消息"
+          emptyImage="https://gw.alipayobjects.com/zos/rmsportal/sAuJeJzSKbUmHfBQRzmZ.svg"
+        />
+        <HeaderNotice.Tab
+          list={getNoticeData['待办']}
+          title="待办"
+          emptyText="你已完成所有待办"
+          emptyImage="https://gw.alipayobjects.com/zos/rmsportal/HsIsxMZiWKrNUavQUXqx.svg"
+        />
+      </HeaderNotice>
+      {
+        username ?
+          <Dropdown
+            overlay={ adminOperations }>
+            <span className={`${action} ${account} ${f_r}`}>
+              <Avatar size="small" className={`${avatar_style} ${f_l}`} src={avatar} />
+              <span className={name}>{username}</span>
+            </span>
+          </Dropdown> :
+          <Spin size="small" style={{ marginLeft: 8 }} />
+      }
+      <Dropdown
+        overlay={ languageOperations }>
+        <span className={`${action} ${account} ${f_r}`}>
+          <Svg type="lang" className={ lang_icon }/>
+        </span>
+      </Dropdown>
+    </div>
     <AdminPWDForm   id="adminPassword"/>
     <AdminInfoForm  id="adminInfo"/>
-  </header>
+  </div>
 );
 
 function mapStateToProps(state){
   const { collapsed,currentIndex,administrator } = state.app;
-  const { username,avatar } = administrator;
+  const { username,avatar,notifyCount } = administrator;
   const { languages } = state.lang;
-  const options = [
-    {
-      index: 2,
-      name: intl.get('PWD'),
-      type: 'xiugaimima',
-      action: changePasswordHandeler
-    },{
-      index: 2,
-      name: intl.get('INO'),
-      type: 'zhanghu',
-      action: changeInfoHandeler
-    },{
-      index: 2,
-      name: intl.get('OUT'),
-      type: 'tuichu',
-      action: logoutHandeler
-    }
-  ];
-  const systemOperations = [
-    {
-      index: 1,
-      title: username ? username : 'username',
-      avatar: avatar ? avatar : require('Assets/user-avatar.png'),
-      svg: null,
-      source: options
-    },{
-      index: 2,
-      title: intl.get('LANG'),
-      avatar: null,
-      svg: 'language',
-      source: languages
-    }
-  ];
-  return { collapsed,systemOperations,currentIndex }
+
+  // const adminOperations = (
+  //
+  // );
+  return {
+    collapsed,
+    avatar,
+    username,
+    currentIndex,
+    notifyCount,
+    adminOperations:getAdminOperations(),
+    languageOperations:getLanguageOperations(languages)}
 }
 
 export default connect(mapStateToProps)(HeaderLayout)

@@ -38,6 +38,7 @@ const adminUsers      = [
     contactNumber: '18512456323',
     userMode:AccountState.ON,
     permissions: userPermission.ADMIN,
+    notifyCount: 12,
     avatar: Mock.Random.image('100x100', Mock.Random.color(), '#fff', 'png','A')
   }, {
     key:1,

@@ -1,27 +1,34 @@
 import { connect } from 'dva';
 import { Layout } from 'antd';
-import { layout,main,left_side,right_side,reset } from 'Styles/layouts.less';
+import {
+  layout,
+  main,
+  left_side,
+  logo,
+  right_side,
+  reset } from "Styles/layouts.less";
 import LeftLayout from 'Components/layouts/left';
 import HeaderLayout from 'Components/layouts/header';
-const { Header,Footer,Sider,Content } = Layout;
+const { Header,Footer,Content } = Layout;
 
-const BasicLayout = ({children,collapsed,location:{pathname}}) => (
+const BasicLayout = ({children,collapsed,isMobile,location:{pathname}}) => (
   <Layout className={layout}>
     {
       pathname === '/login' ?
       <Content> { children } </Content> :
       <Layout>
-        <Sider
-          trigger={null}
-          collapsible
-          collapsed={ collapsed }
-          className={ left_side }>
-          <LeftLayout/>
-        </Sider>
+        <LeftLayout
+          isMobile={ isMobile }
+          logo={ require('Assets/logo.svg') }
+          collapsed={collapsed}
+          location={location}/>
         <Layout className={ right_side }>
-          <Header className={ reset }>
-            <HeaderLayout/>
-          </Header>
+          <header style={{'padding':0}}>
+            <HeaderLayout
+              logo={logo}
+              isMobile={ isMobile }
+              collapsed={collapsed}/>
+          </header>
           <Content className={main}>
             { children }
           </Content>
@@ -34,9 +41,11 @@ const BasicLayout = ({children,collapsed,location:{pathname}}) => (
   </Layout>
 );
 
+
 function mapStateToProps(state){
   const { collapsed } = state.app;
-  return{ collapsed }
+  const isMobile = false;
+  return{ collapsed,isMobile }
 }
 
 export default connect(mapStateToProps)(BasicLayout);

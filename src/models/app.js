@@ -13,6 +13,7 @@ export default{
       avatar:'',
       title:'',
       contactNumber:'',
+      notifyCount: 0,
     }
   },
   reducers:{
