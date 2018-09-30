@@ -9,7 +9,7 @@ import intl   from 'react-intl-universal';
 
 export default () =>
   <Row className={styles.wrap}>
-    <Col span={12} className={styles.wrap}>
+    <Col md={12} sm={24} className={styles.wrap}>
       <Col span={24} className={`${styles.wrap} ${styles.panel}`}>
         <Col span={16}>
           <Col className={`${styles.wrap} ${styles.panelBody}`}>
@@ -26,7 +26,7 @@ export default () =>
         </Col>
       </Col>
     </Col>
-    <Col span={12} className={styles.wrap}>
+    <Col md={12} sm={24} className={styles.wrap}>
       <Col span={24} className={`${styles.wrap} ${styles.panel}`}>
         <Col span={16}>
           <Col className={`${styles.wrap} ${styles.panelBody}`}>
