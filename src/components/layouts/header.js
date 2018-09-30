@@ -123,7 +123,8 @@ function mapStateToProps(state){
     username,
     notifyCount,
     adminOperations:getAdminOperations(),
-    languageOperations:getLanguageOperations(languages) }
+    languageOperations:getLanguageOperations(languages)
+  }
 }
 
 export default connect(mapStateToProps)(HeaderLayout)
