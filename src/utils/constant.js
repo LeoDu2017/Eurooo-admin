@@ -1,8 +1,19 @@
 const intl= require('react-intl-universal');
 console.log(2,intl.get('BRANDSERIAL'));
 module.exports = {
-  menuData:[
-    {
+  menuData:{
+    index:[{
+      name: 'Home',
+      icon: 'home',
+      path: '/',
+      children: []
+    }],
+    spots:[{
+      name: 'home',
+      icon: 'home',
+      path: 'main',
+      children: []
+    },{
       name: 'Pages',
       icon: 'dashboard',
       path: 'dashboard',
@@ -22,8 +33,14 @@ module.exports = {
           // hideInMenu: true,
         },
       ],
-    },
-  ],
+    },],
+    futures:[{
+      name: 'Home',
+      icon: 'home',
+      path: '/',
+      children: []
+    }],
+  },
   notAllowCountry: [
     {
       id: '21',

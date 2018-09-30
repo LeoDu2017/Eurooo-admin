@@ -32,8 +32,9 @@ export default {
     },
   },
   effects:{
-    *getMenu({ payload },{ put }){
-      const data = yield getMenuData();
+    *getMenu({ payload },{ put,select }){
+      const pathname = yield select( state => state['sideMenu'].pathname );
+      const data = yield getMenuData(pathname);
       yield put({
         type: 'setMenu',
         payload: data

@@ -77,9 +77,7 @@ export const formatter            = (data, parentPath = '/', parentAuthority) =>
   return result;
 });
 export const isMainMenu           = (key,menu) => menu.some(item => key && (item.key === key || item.path === key));
-export const getMeunMatcheys      = (flatMenuKeys, path) => flatMenuKeys.filter(item => {
-  return pathToRegexp(item).test(path);
-});
+export const getMeunMatcheys      = (flatMenuKeys, path) => flatMenuKeys.filter(item => pathToRegexp(`/${item}`).test(path));
 export const getSubMenuOrItem     = (item,pathname) => {
   if (item.children && item.children.some(child => child.name)) {
     const childrenItems = getNavMenuItems(item.children);

@@ -7,7 +7,10 @@ import {
   checkPermissionItem } from 'Utils/menu-tools';
 import { menuData }     from 'Utils/constant';
 
-export const getMenuData          = () => formatter(menuData);
+export const getMenuData          = (pathname) => {
+  const menuType = pathname.split('/')[1] ? pathname.split('/')[1] : 'index';
+  return formatter(menuData[menuType],`${menuType}/`)
+};
 export const getFlatMenuKeys      = menus => {
   let keys = [];
   menus.forEach(item => {
@@ -30,7 +33,7 @@ export const getNavMenuItems      = (menusData,Authorized,pathname,isMobile) =>{
       return checkPermissionItem(item.authority, ItemDom,Authorized);
     })
     .filter(item => item);
-}
+};
 export const handleOpenChange     = (dispatch,menu,openKeys) => {
   const lastOpenKey = openKeys[openKeys.length - 1];
   const moreThanOne = openKeys.filter(openKey => isMainMenu(openKey,menu)).length > 1;
@@ -39,12 +42,10 @@ export const handleOpenChange     = (dispatch,menu,openKeys) => {
     payload: moreThanOne ? [lastOpenKey] : [...openKeys]
   });
 };
-export const getSelectedMenuKeys  = (pathname,flatMenuKeys) => {
-  return urlToList(pathname).map(itemPath => getMeunMatcheys(flatMenuKeys, itemPath).pop());
-};
+export const getSelectedMenuKeys  = (pathname,flatMenuKeys) =>
+  urlToList(pathname)
+  .map(itemPath => getMeunMatcheys(flatMenuKeys, itemPath).pop());
 export const getDefaultCollapsedSubMenus = (pathname,flatMenuKeys) =>
   urlToList(pathname)
-  .map(item => {
-    return getMeunMatcheys(flatMenuKeys, item)[0];
-  })
+  .map(item => getMeunMatcheys(flatMenuKeys, item)[0])
   .filter(item => item);

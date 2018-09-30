@@ -18,7 +18,7 @@ export default () =>
                 {intl.get('UPTIPF')}
               </span>
             <Button type="primary" className={styles.annular} icon="upload" htmlType="button">
-              <Link to={`/futures${location.search}`} className={styles.ml10}>
+              <Link to={`/futures/main${location.search}`} className={styles.ml10}>
                 {intl.get('UPTITLEF')}
               </Link>
             </Button>
@@ -35,7 +35,7 @@ export default () =>
                 {intl.get('UPTIPS')}
               </span>
             <Button type="primary" className={styles.annular} icon="upload" htmlType="button">
-              <Link to={`/spots${location.search}`} className={styles.ml10}>
+              <Link to={`/spots/main${location.search}`} className={styles.ml10}>
                 {intl.get('UPTITLES')}
               </Link>
             </Button>
