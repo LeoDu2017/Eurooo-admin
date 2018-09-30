@@ -35,17 +35,16 @@ export const handleOpenChange     = (dispatch,menu,openKeys) => {
   const lastOpenKey = openKeys[openKeys.length - 1];
   const moreThanOne = openKeys.filter(openKey => isMainMenu(openKey,menu)).length > 1;
   dispatch({
-    type:'siderMenu/setOpenKeys',
+    type:'sideMenu/setOpenKeys',
     payload: moreThanOne ? [lastOpenKey] : [...openKeys]
   });
 };
 export const getSelectedMenuKeys  = (pathname,flatMenuKeys) => {
   return urlToList(pathname).map(itemPath => getMeunMatcheys(flatMenuKeys, itemPath).pop());
 };
-export const getDefaultCollapsedSubMenus = (pathname,flatMenuKeys) => {
-  return urlToList(pathname)
-    .map(item => {
-      return getMeunMatcheys(flatMenuKeys, item)[0];
-    })
-    .filter(item => item);
-};
+export const getDefaultCollapsedSubMenus = (pathname,flatMenuKeys) =>
+  urlToList(pathname)
+  .map(item => {
+    return getMeunMatcheys(flatMenuKeys, item)[0];
+  })
+  .filter(item => item);

@@ -9,7 +9,7 @@ import {
   reset } from "Styles/layouts.less";
 import LeftLayout from 'Components/layouts/left';
 import HeaderLayout from 'Components/layouts/header';
-const { Header,Footer,Content } = Layout;
+const { Footer,Content } = Layout;
 
 const BasicLayout = ({children,collapsed,isMobile,location:{pathname}}) => (
   <Layout className={layout}>
@@ -20,8 +20,7 @@ const BasicLayout = ({children,collapsed,isMobile,location:{pathname}}) => (
         <LeftLayout
           isMobile={ isMobile }
           logo={ require('Assets/logo.svg') }
-          collapsed={collapsed}
-          location={location}/>
+          collapsed={collapsed}/>
         <Layout className={ right_side }>
           <header style={{'padding':0}}>
             <HeaderLayout

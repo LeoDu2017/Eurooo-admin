@@ -1,16 +1,15 @@
+import Link             from 'umi/link';
+import styles           from 'Styles/layout/sider.less';
 import { connect }      from 'dva';
 import { Layout,Menu }  from 'antd';
-import Link             from 'umi/link';
 import {
   getMenuData,
   getNavMenuItems,
   getFlatMenuKeys,
   handleOpenChange,
-  getSelectedMenuKeys,
-  getDefaultCollapsedSubMenus} from 'Actions/layout/menu';
-import styles           from 'Styles/layout/sider.less';
+  getSelectedMenuKeys } from 'Actions/layout/menu';
 
-const SiderMenu = ({ dispatch,collapsed,logo,menuProps,pathname,selectedKeys,menu,Authorized,isMobile }) =>
+const SiderMenu = ({dispatch,collapsed,logo,menuProps,selectedKeys,menu,Authorized,pathname,isMobile }) =>
   <Layout.Sider
     trigger={null}
     collapsible
@@ -35,24 +34,13 @@ const SiderMenu = ({ dispatch,collapsed,logo,menuProps,pathname,selectedKeys,men
       { getNavMenuItems(menu,Authorized,pathname,isMobile) }
     </Menu>
   </Layout.Sider>;
+
 function mapStateToProps(state,props){
-  const menu = getMenuData();
-  const flatMenuKeys = getFlatMenuKeys(menu);
-  const { location:{pathname},collapsed,Authorized,isMobile } = props;
-  let { openKeys } = state.siderMenu;
-  if(openKeys.length === 0){
-    openKeys = getDefaultCollapsedSubMenus(pathname,flatMenuKeys);
-  }
+  const { collapsed } = props;
+  const { menu,openKeys,selectedKeys,flatMenuKeys,pathname } = state.sideMenu;
   const menuProps = collapsed ? {} : { openKeys };
 
-
-
-
-  let selectedKeys = getSelectedMenuKeys(pathname,flatMenuKeys);
-  if (!selectedKeys.length) {
-    selectedKeys = [openKeys[openKeys.length - 1]];
-  }
-
-  return { menuProps,menu,flatMenuKeys,selectedKeys,Authorized,pathname,isMobile }
+  return { menuProps,menu,flatMenuKeys,selectedKeys,pathname }
 }
+
 export default connect(mapStateToProps)(SiderMenu)

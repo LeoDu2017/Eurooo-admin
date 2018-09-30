@@ -32,13 +32,21 @@ export default{
     setup({ dispatch,history}){
       return history.listen(({ pathname,query }) => {
         const token = appCookie.load('token');
+        // 设置系统语言
         dispatch({ type:'lang/setLocale',payload:{query} });
+
         if(pathname !== '/login'){
+          // 设置登录状态
           !token ? dispatch(routerRedux.push('/login')) :
             dispatch({
               type:'setAdmin',
               payload: token.administrator
-            })
+            });
+          // 设置导航打开状态
+          dispatch({
+            type:'sideMenu/getAppMenuData',
+            payload:pathname
+          })
         }
       });
     }

@@ -1,11 +1,9 @@
-import { connect } from 'dva';
-import React from 'react';
+import SiderMenu  from 'Components/units/SiderMenu';
 import DrawerMenu from 'rc-drawer-menu';
-import SiderMenu from 'Components/units/SiderMenu';
 import 'rc-drawer-menu/assets/index.css';
 
 
-const SiderMenuWrapper = (props,{ menuData }) =>
+const SiderMenuWrapper = props =>
   props.isMobile ? (
     <DrawerMenu
       parent={null}
@@ -22,7 +20,4 @@ const SiderMenuWrapper = (props,{ menuData }) =>
     <SiderMenu {...props}/>
   );
 
-function mapStateToProps(state){
-  return { }
-}
-export default connect(mapStateToProps)(SiderMenuWrapper);
+export default SiderMenuWrapper;
