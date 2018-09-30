@@ -13,7 +13,7 @@ export default () =>
       <Col span={24} className={`${styles.wrap} ${styles.panel}`}>
         <Col span={16}>
           <Col className={`${styles.wrap} ${styles.panelBody}`}>
-            <Svg className={styles.fs60} type="future"> </Svg>
+            <Svg className={styles.fs60} type="future"/>
             <span className={styles.discription}>
                 {intl.get('UPTIPF')}
               </span>
@@ -30,10 +30,10 @@ export default () =>
       <Col span={24} className={`${styles.wrap} ${styles.panel}`}>
         <Col span={16}>
           <Col className={`${styles.wrap} ${styles.panelBody}`}>
-            <Svg className={styles.fs60} type="spot"> </Svg>
+            <Svg className={styles.fs60} type="spot"/>
             <span className={styles.discription}>
-                {intl.get('UPTIPS')}
-              </span>
+              {intl.get('UPTIPS')}
+            </span>
             <Button type="primary" className={styles.annular} icon="upload" htmlType="button">
               <Link to={`/spots/main${location.search}`} className={styles.ml10}>
                 {intl.get('UPTITLES')}

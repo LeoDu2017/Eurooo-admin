@@ -6,6 +6,7 @@ export default{
   namespace:'app',
   state:{
     collapsed: false,
+    isMobile: true,
     currentIndex: 0,
     administrator: {
       id:'',

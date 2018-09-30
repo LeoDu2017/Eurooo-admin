@@ -27,7 +27,7 @@ const BasicLayout = ({dispatch,children,collapsed,isMobile,location:{pathname}})
         <Layout className={ right_side }>
           <header style={{'padding':0}}>
             <HeaderLayout
-              logo={logo}
+              logo={ require('Assets/logo.svg') }
               isMobile={ isMobile }
               collapsed={collapsed}
               onCollapse={ toggleHandler.bind(null,dispatch) }/>
@@ -46,8 +46,8 @@ const BasicLayout = ({dispatch,children,collapsed,isMobile,location:{pathname}})
 
 
 function mapStateToProps(state){
-  const { collapsed } = state.app;
-  const isMobile = false;
+  const { collapsed,isMobile } = state.app;
+
   return{ collapsed,isMobile }
 }
 

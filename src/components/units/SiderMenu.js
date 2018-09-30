@@ -10,18 +10,18 @@ import {
   handleOpenChange,
   getSelectedMenuKeys } from 'Actions/layout/menu';
 
-const SiderMenu = ({
+const SideMenu = ({
   dispatch,collapsed,
   logo,menu,menuProps,selectedKeys,
   Authorized,pathname,isMobile,onCollapse }) =>
 
   <Layout.Sider
-    trigger={null}
+    trigger={ null }
     collapsible
     collapsed={ collapsed }
     breakpoint="lg"
-    width={256}
     onCollapse={ onCollapse }
+    width={256}
     className={styles.sider}>
     <div className={styles.logo} key="logo">
       <Link to="/">
@@ -33,7 +33,7 @@ const SiderMenu = ({
       key="Menu"
       theme="dark"
       mode="inline"
-      {...menuProps}
+      { ...menuProps }
       onOpenChange={ handleOpenChange.bind(null,dispatch,menu) }
       selectedKeys={ selectedKeys }
       style={{padding: '16px 0', width: '100%'}}>
@@ -49,4 +49,4 @@ function mapStateToProps(state,props){
   return { menuProps,menu,flatMenuKeys,selectedKeys,pathname }
 }
 
-export default connect(mapStateToProps)(SiderMenu)
+export default connect(mapStateToProps)(SideMenu)

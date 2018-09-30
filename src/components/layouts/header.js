@@ -10,6 +10,7 @@ import {
   getAdminOperations,
   getLanguageOperations }   from 'Actions/layout/header'
 import {
+  logo_style,
   header,trigger,right,
   action,search,account,
   avatar_style,name,
@@ -27,16 +28,15 @@ const HeaderLayout = ({
   fetchingNotices,adminOperations,
   onNoticeVisibleChange,languageOperations }) => (
   <div className={ header }>
-    {isMobile && [
-      <Link to="/" className={ logo} key="logo">
-        <img src={logo} alt="logo" width="32" />
+    {isMobile ? [
+      <Link to="/" className={ logo_style } key="logo">
+        <img src={ logo } alt="logo" width="32" />
       </Link>,
       <Divider type="vertical" key="line" />,
-    ]}
-    <Icon
-      className={ trigger }
-      onClick={ onCollapse.bind(null,!collapsed) }
+    ] : <Icon className={ trigger } onClick={ onCollapse.bind(null,!collapsed) }
       type={ collapsed ? 'menu-unfold' : 'menu-fold'}/>
+    }
+
     <div className={ right }>
       <HeaderSearch
         className={`${action} ${search}`}
