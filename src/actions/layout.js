@@ -1,7 +1,7 @@
 import intl         from 'react-intl-universal';
 import router       from 'umi/router';
 import { dispatch } from 'dva';
-
+import { triggerResizeEvent } from 'Actions/layout/menu';
 // 打开选项的下拉框
 export function handleToggleOpen(dispatch,i,n){
   let currentIndex = n === i ? 0 : i;
@@ -20,11 +20,12 @@ export function handleMouseLeave(dispatch){
 }
 
 // 点击侧边栏收起图标展开/收起侧边栏
-export function toggleHandler(dispatch,collapsed){
+export function toggleHandler(dispatch,collapsed,type){
   dispatch({
     type: 'app/setCollapsed',
     payload: collapsed,
   });
+  triggerResizeEvent()
 }
 export function handleToggle(dispatch,min){
   dispatch({

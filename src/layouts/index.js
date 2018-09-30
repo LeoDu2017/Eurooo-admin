@@ -9,9 +9,11 @@ import {
   reset } from "Styles/layouts.less";
 import LeftLayout from 'Components/layouts/left';
 import HeaderLayout from 'Components/layouts/header';
+import { toggleHandler }    from 'Actions/layout';
+
 const { Footer,Content } = Layout;
 
-const BasicLayout = ({children,collapsed,isMobile,location:{pathname}}) => (
+const BasicLayout = ({dispatch,children,collapsed,isMobile,location:{pathname}}) => (
   <Layout className={layout}>
     {
       pathname === '/login' ?
@@ -20,13 +22,15 @@ const BasicLayout = ({children,collapsed,isMobile,location:{pathname}}) => (
         <LeftLayout
           isMobile={ isMobile }
           logo={ require('Assets/logo.svg') }
+          onCollapse={ toggleHandler.bind(null,dispatch) }
           collapsed={collapsed}/>
         <Layout className={ right_side }>
           <header style={{'padding':0}}>
             <HeaderLayout
               logo={logo}
               isMobile={ isMobile }
-              collapsed={collapsed}/>
+              collapsed={collapsed}
+              onCollapse={ toggleHandler.bind(null,dispatch) }/>
           </header>
           <Content className={main}>
             { children }

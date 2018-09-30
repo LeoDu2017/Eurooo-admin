@@ -8,14 +8,14 @@ import {
   changeInfoHandeler,
   changePasswordHandeler }  from 'Actions/layout';
 
-function onLangMenuClick({key}){
+const onLangMenuClick = ({key}) => {
   router.push({
     pathname:'',
     query: {
       lang: key,
     },
   })
-}
+};
 
 export function getNoticeData(notices) {
 

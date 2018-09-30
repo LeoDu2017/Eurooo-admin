@@ -49,3 +49,8 @@ export const getDefaultCollapsedSubMenus = (pathname,flatMenuKeys) =>
   urlToList(pathname)
   .map(item => getMeunMatcheys(flatMenuKeys, item)[0])
   .filter(item => item);
+export const triggerResizeEvent = () => {
+  const event = document.createEvent('HTMLEvents');
+  event.initEvent('resize', true, false);
+  window.dispatchEvent(event);
+};

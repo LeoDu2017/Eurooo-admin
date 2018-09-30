@@ -2,6 +2,7 @@ import Link             from 'umi/link';
 import styles           from 'Styles/layout/sider.less';
 import { connect }      from 'dva';
 import { Layout,Menu }  from 'antd';
+
 import {
   getMenuData,
   getNavMenuItems,
@@ -9,13 +10,18 @@ import {
   handleOpenChange,
   getSelectedMenuKeys } from 'Actions/layout/menu';
 
-const SiderMenu = ({dispatch,collapsed,logo,menuProps,selectedKeys,menu,Authorized,pathname,isMobile }) =>
+const SiderMenu = ({
+  dispatch,collapsed,
+  logo,menu,menuProps,selectedKeys,
+  Authorized,pathname,isMobile,onCollapse }) =>
+
   <Layout.Sider
     trigger={null}
     collapsible
-    collapsed={collapsed}
+    collapsed={ collapsed }
     breakpoint="lg"
     width={256}
+    onCollapse={ onCollapse }
     className={styles.sider}>
     <div className={styles.logo} key="logo">
       <Link to="/">

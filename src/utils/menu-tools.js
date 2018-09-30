@@ -113,7 +113,3 @@ export const checkPermissionItem  = (authority,ItemDom,Authorized) => {
   }
   return ItemDom;
 };
-
-
-
-

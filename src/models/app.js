@@ -1,7 +1,7 @@
 import appCookie                  from 'react-cookies';
 import { routerRedux }            from 'dva/router';
 import { changePasswordService }  from 'Services/app';
-
+import { triggerResizeEvent } from 'Actions/layout/menu';
 export default{
   namespace:'app',
   state:{
@@ -30,6 +30,7 @@ export default{
   effects:{},
   subscriptions:{
     setup({ dispatch,history}){
+      triggerResizeEvent();
       return history.listen(({ pathname,query }) => {
         const token = appCookie.load('token');
         // 设置系统语言

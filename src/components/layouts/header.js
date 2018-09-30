@@ -4,7 +4,7 @@ import {
   Tooltip,Dropdown }        from 'antd';
 import Link                 from 'umi/link';
 import Svg                  from 'Components/Svg';
-import { toggleHandler }    from 'Actions/layout';
+
 import {
   getNoticeData,
   getAdminOperations,
@@ -19,9 +19,9 @@ import HeaderNotice         from 'Components/layouts/header-notice';
 import AdminInfoForm        from 'Components/modal/change-admin-info-form';
 import AdminPWDForm         from 'Components/modal/change-admin-password-form';
 
-
 const HeaderLayout = ({
-  logo,username,collapsed,
+  logo,onCollapse,
+  username,collapsed,
   dispatch,isMobile,avatar,
   notifyCount,onNoticeClear,
   fetchingNotices,adminOperations,
@@ -35,8 +35,8 @@ const HeaderLayout = ({
     ]}
     <Icon
       className={ trigger }
-      type={ collapsed ? 'menu-unfold' : 'menu-fold'}
-      onClick={ toggleHandler.bind(null,dispatch,!collapsed) }/>
+      onClick={ onCollapse.bind(null,!collapsed) }
+      type={ collapsed ? 'menu-unfold' : 'menu-fold'}/>
     <div className={ right }>
       <HeaderSearch
         className={`${action} ${search}`}
