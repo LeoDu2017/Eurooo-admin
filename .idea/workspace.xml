@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce957529-e50a-4792-90ac-21254aa7a8bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/layout/menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/sider-menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/menu-tools.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/pathTools.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layouts/left.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/left.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/layout/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/layout/menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/units/SiderMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/units/SiderMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/constant.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constant.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,17 +61,17 @@
           <entry key="MD" value="188" />
           <entry key="dummy" value="2" />
           <entry key="ejs" value="11" />
-          <entry key="js" value="13599" />
+          <entry key="js" value="13691" />
           <entry key="less" value="492" />
-          <entry key="txt" value="94" />
+          <entry key="txt" value="104" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="EJS" value="11" />
-          <entry key="JavaScript" value="13599" />
+          <entry key="JavaScript" value="13691" />
           <entry key="Less" value="492" />
-          <entry key="PLAIN_TEXT" value="284" />
+          <entry key="PLAIN_TEXT" value="294" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -89,11 +84,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/actions/layout/menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="350">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="e#275#457#0" />
                 <element signature="e#309#626#0" />
@@ -116,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/units/SiderMenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="3" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
+            <state relative-caret-position="625">
+              <caret line="43" column="42" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="42" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -131,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/menu-tools.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="661">
+              <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
                 <element signature="e#352#600#0" />
@@ -157,7 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>w_140</find>
       <find>currentIndex</find>
       <find>username</find>
       <find>collapsed</find>
@@ -169,7 +163,6 @@
       <find>menus</find>
       <find>SubMenu</find>
       <find>reg</find>
-      <find>urlToList</find>
       <find>getMenuItemPath</find>
       <find>conversionPath</find>
       <find>checkPermissionItem</find>
@@ -177,16 +170,18 @@
       <find>isUrl</find>
       <find>pathToRegexp</find>
       <find>isMainMenu</find>
-      <find>selectedKeys</find>
       <find>flatMenuKeys</find>
-      <find>getMeunMatcheys</find>
       <find>menuData</find>
       <find>getMenuData</find>
       <find>getNavMenuItems</find>
       <find>getFlatMenuKeys</find>
-      <find>handleOpenChange</find>
-      <find>openKeys</find>
       <find>getSelectedMenuKeys</find>
+      <find>selectedKeys</find>
+      <find>getMeunMatcheys</find>
+      <find>urlToList</find>
+      <find>getDefaultCollapsedSubMenus</find>
+      <find>openKeys</find>
+      <find>handleOpenChange</find>
     </findStrings>
     <replaceStrings>
       <replace>myBrands</replace>
@@ -249,11 +244,11 @@
         <option value="$PROJECT_DIR$/src/layouts/index.js" />
         <option value="$PROJECT_DIR$/src/components/layouts/left.js" />
         <option value="$PROJECT_DIR$/src/utils/pathTools.js" />
-        <option value="$PROJECT_DIR$/src/utils/menu-tools.js" />
         <option value="$PROJECT_DIR$/src/utils/constant.js" />
         <option value="$PROJECT_DIR$/src/models/sider-menu.js" />
-        <option value="$PROJECT_DIR$/src/actions/layout/menu.js" />
+        <option value="$PROJECT_DIR$/src/utils/menu-tools.js" />
         <option value="$PROJECT_DIR$/src/components/units/SiderMenu.js" />
+        <option value="$PROJECT_DIR$/src/actions/layout/menu.js" />
       </list>
     </option>
   </component>
@@ -424,7 +419,7 @@
       <workItem from="1537238483420" duration="106437000" />
       <workItem from="1537836465293" duration="3024000" />
       <workItem from="1537840103515" duration="64398000" />
-      <workItem from="1538094085354" duration="64521000" />
+      <workItem from="1538094085354" duration="67102000" />
     </task>
     <task id="LOCAL-00001" summary="Layout 设计">
       <created>1537248345534</created>
@@ -629,11 +624,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538210152041</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="内页布局-右侧导航完善">
+      <created>1538273345581</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1538273345583</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238380000" />
+    <option name="totallyTimeSpent" value="240961000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -705,7 +707,8 @@
     <MESSAGE value="内页布局-状态栏修改管理员信息" />
     <MESSAGE value="内页布局-状态栏修改管理员密码接口完善" />
     <MESSAGE value="内页布局-状态栏修改管理员信息接口完善" />
-    <option name="LAST_COMMIT_MESSAGE" value="内页布局-状态栏修改管理员信息接口完善" />
+    <MESSAGE value="内页布局-右侧导航完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="内页布局-右侧导航完善" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1092,8 +1095,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/menu-tools.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="661">
+          <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
             <element signature="e#352#600#0" />
@@ -1116,25 +1119,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/units/SiderMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="43" column="42" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/layout/menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="350">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
           <folding>
             <element signature="e#275#457#0" />
             <element signature="e#309#626#0" />
             <element signature="e#911#1164#0" />
             <element signature="e#1228#1324#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/SiderMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="3" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -43,15 +43,10 @@ export const handleOpenChange     = (dispatch,menu,openKeys) => {
 export const getSelectedMenuKeys  = (pathname,flatMenuKeys) => {
   return urlToList(pathname).map(itemPath => getMeunMatcheys(flatMenuKeys, itemPath).pop());
 };
-
-
-
-
-
-
-
-
-
-
-
-
+export const getDefaultCollapsedSubMenus = (pathname,flatMenuKeys) => {
+  return urlToList(pathname)
+    .map(item => {
+      return getMeunMatcheys(flatMenuKeys, item)[0];
+    })
+    .filter(item => item);
+};

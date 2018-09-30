@@ -6,7 +6,8 @@ import {
   getNavMenuItems,
   getFlatMenuKeys,
   handleOpenChange,
-  getSelectedMenuKeys } from 'Actions/layout/menu';
+  getSelectedMenuKeys,
+  getDefaultCollapsedSubMenus} from 'Actions/layout/menu';
 import styles           from 'Styles/layout/sider.less';
 
 const SiderMenu = ({ dispatch,collapsed,logo,menuProps,pathname,selectedKeys,menu,Authorized,isMobile }) =>
@@ -35,15 +36,23 @@ const SiderMenu = ({ dispatch,collapsed,logo,menuProps,pathname,selectedKeys,men
     </Menu>
   </Layout.Sider>;
 function mapStateToProps(state,props){
-  const { location:{pathname},collapsed,Authorized,isMobile } = props;
-  const { openKeys } = state.siderMenu;
-  const menuProps = collapsed ? {} : { openKeys };
   const menu = getMenuData();
   const flatMenuKeys = getFlatMenuKeys(menu);
+  const { location:{pathname},collapsed,Authorized,isMobile } = props;
+  let { openKeys } = state.siderMenu;
+  if(openKeys.length === 0){
+    openKeys = getDefaultCollapsedSubMenus(pathname,flatMenuKeys);
+  }
+  const menuProps = collapsed ? {} : { openKeys };
+
+
+
+
   let selectedKeys = getSelectedMenuKeys(pathname,flatMenuKeys);
   if (!selectedKeys.length) {
     selectedKeys = [openKeys[openKeys.length - 1]];
   }
+
   return { menuProps,menu,flatMenuKeys,selectedKeys,Authorized,pathname,isMobile }
 }
 export default connect(mapStateToProps)(SiderMenu)
