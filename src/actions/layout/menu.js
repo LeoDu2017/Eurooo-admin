@@ -1,5 +1,4 @@
 import {
-  isUrl,
   urlToList,
   formatter,
   isMainMenu,
