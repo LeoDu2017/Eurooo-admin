@@ -1,9 +1,11 @@
-import 'rc-drawer-menu/assets/index.css';
+import { connect } from 'dva';
 import React from 'react';
 import DrawerMenu from 'rc-drawer-menu';
 import SiderMenu from 'Components/units/SiderMenu';
+import 'rc-drawer-menu/assets/index.css';
 
-const SiderMenuWrapper = props =>
+
+const SiderMenuWrapper = (props,{ menuData }) =>
   props.isMobile ? (
     <DrawerMenu
       parent={null}
@@ -13,12 +15,14 @@ const SiderMenuWrapper = props =>
       onMaskClick={() => {
         props.onCollapse(true);
       }}
-      width="256px"
-    >
+      width="256px">
       <SiderMenu {...props} collapsed={props.isMobile ? false : props.collapsed} />
     </DrawerMenu>
   ) : (
-    <SiderMenu {...props} />
+    <SiderMenu {...props}/>
   );
 
-export default SiderMenuWrapper;
+function mapStateToProps(state){
+  return { }
+}
+export default connect(mapStateToProps)(SiderMenuWrapper);
