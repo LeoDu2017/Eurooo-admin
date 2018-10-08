@@ -7,8 +7,7 @@ import {showAlbums} from 'Actions/albums';
 import {selectImgs,toggleEditable,handleSubmit,FieldsChange} from 'Actions/shop';
 const FormItem = Form.Item;
 const { TextArea } = Input;
-// const Option = Select.Option;
-// const AutoCompleteOption = AutoComplete.Option;
+
 
 const formItemLayout = {
   labelCol: {
@@ -37,10 +36,12 @@ const formItemLayout_3 = {
 
   },
 };
-// function hasErrors(fieldsError) {
-//   return Object.keys(fieldsError).some(field => fieldsError[field]);
-// }
-const infoForm = ({dispatch,editable,shopInfo,originInfo,conpany_types,shop_products,company_countries,form: {getFieldDecorator,validateFieldsAndScroll,resetFields}}) => (
+
+const infoForm = ({
+  dispatch,editable,shopInfo,
+  originInfo,conpany_types,
+  shop_products,company_countries,
+  form: {getFieldDecorator,validateFieldsAndScroll,resetFields}}) => (
   <Col className='g-t-wrap'>
     <Col className='g-t-main'>
       <header className='g-t-header'>
@@ -54,7 +55,7 @@ const infoForm = ({dispatch,editable,shopInfo,originInfo,conpany_types,shop_prod
       </header>
 
       <Col className="g-t-form-wrap">
-        <Form onSubmit={handleSubmit.bind(this,dispatch,validateFieldsAndScroll)}>
+        <Form>
           {/*公司名称*/}
           <FormItem {...formItemLayout} label={intl.get('COMPANYNAME')} className="g-f-item">
             {getFieldDecorator('company_name', {
@@ -181,13 +182,15 @@ const infoForm = ({dispatch,editable,shopInfo,originInfo,conpany_types,shop_prod
         </Form>
         <Albums single={true} callBack={selectImgs}/>
       </Col>
-
       <footer className="g-t-footer">
-        <Button type="primary" htmlType="submit" disabled={editable}>
+        <Button
+          type="primary"
+          htmlType="button"
+          onClick={handleSubmit.bind(null,dispatch,validateFieldsAndScroll)}
+          disabled={editable}>
           {intl.get('SAVE')}
         </Button>
       </footer>
-
     </Col>
   </Col>
 );

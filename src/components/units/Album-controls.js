@@ -4,14 +4,14 @@ import styles                   from 'Styles/components.less';
 import {getPictures}            from 'Actions/albums-pictures';
 
 const Controls = ({dispatch,current,total,length,selected,callBack})=>(
-  <Col className={styles.ctrls}>
+  <Col className="ctrls">
     <Button
-      className={styles.premaryBtn}
+      className="premaryBtn"
       onClick={callBack.bind(null,dispatch,selected)}>
       {intl.get('USESELECTED')} ({length})
     </Button>
     <Pagination
-      className={styles.pages}
+      className="pages"
       total={total}
       current={current}
       onChange={ getPictures.bind(null,dispatch) }

@@ -7,7 +7,17 @@ import {
   saveEditTree,
   selectClassify }        from 'Actions/albums-trees';
 
-const AlbumRanderitems = ({style,tree,subClass,treeLength,currentTree,dispatch,currentEditTree,styles,stop,openFailsTree}) =>
+const AlbumRanderitems = ({
+  style,
+  tree,
+  subClass,
+  treeLength,
+  currentTree,
+  dispatch,
+  currentEditTree,
+  styles,
+  stop,
+  openFailsTree}) =>
   {
     let i = 0;
     return <dd style={style}>
@@ -19,31 +29,31 @@ const AlbumRanderitems = ({style,tree,subClass,treeLength,currentTree,dispatch,c
                                                 'right':'10px',
                                                 'height':item.id === currentTree && item.open ? `${(item.subFolder.length + 1)*28}px` : '28px'}}>
               <dt onClick={selectClassify.bind(null,item.id,item.actions_type,dispatch) }
-                  className={currentTree === item.id ? `${styles.selected} ${subClass}` : subClass }
+                  className={currentTree === item.id ? 'selected subClass' : 'subClass' }
                   id={item.id}>
                   <span onClick={getSubTree.bind(null,item.id,dispatch)}>
-                    <Svg className={item.id === openFailsTree ? `${styles.icon} ${styles.info}` : styles.icon}
+                    <Svg className={item.id === openFailsTree ? 'icon info' : 'icon'}
 
                          type={ item.open ? 'folder-open' : 'folder-close'}>
                     </Svg>
                   </span>
-                  <span className={item.id === currentEditTree ? `${styles.title} ${styles.hide}` : styles.title}
+                  <span className={item.id === currentEditTree ?'title hide' : 'title'}
                         style={item.id === openFailsTree ? {'color':'#F8AC59'} : {}}>
                     <em>{item.name}</em>
                     (<em>{item.picNum}</em>)
                   </span>
                   {
                     item.id !=='0' &&
-                    <Col className={styles.editBox}>
+                    <Col className="editBox">
                       {
                         item.add ? <Input
                           type="text"
-                          className={item.id === currentEditTree ? `${styles.ipt} ${styles.show}` : styles.ipt}
+                          className={item.id === currentEditTree ? 'ipt show' : 'ipt'}
                           name="rename"
                           onClick={stop}
                           placeholder={item.placeholder}/> : <Input
                           type="text"
-                          className={item.id === currentEditTree ? `${styles.ipt} ${styles.show}` : styles.ipt}
+                          className={item.id === currentEditTree ? 'ipt show' : 'ipt'}
                           name="rename"
                           onClick={stop}
                           defaultValue={item.name}/>
@@ -52,11 +62,11 @@ const AlbumRanderitems = ({style,tree,subClass,treeLength,currentTree,dispatch,c
                       {
                         item.add ? (<Button
                           onClick={saveSubTree.bind(this,dispatch,item.parent_id)}
-                          className={item.id === currentEditTree ? `${styles.btn} ${styles.show}` : styles.btn}>
+                          className={item.id === currentEditTree ? 'btn show' : 'btn'}>
                           {intl.get("ADD")}
                         </Button>) : <Button
                           onClick={saveEditTree.bind(this,dispatch,item.id)}
-                          className={item.id === currentEditTree ? `${styles.btn} ${styles.show}` : styles.btn}>
+                          className={item.id === currentEditTree ? 'btn show' : 'btn'}>
                           {intl.get("SAVE")}
                         </Button>
                       }

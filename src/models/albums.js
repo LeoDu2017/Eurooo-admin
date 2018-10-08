@@ -9,10 +9,10 @@ const albums = {
   },
   reducers:{
     setDisplay(state,{payload:display}){
-      return{ ...state,display}
+      return{ ...state,display }
     }
   },
   effects:{ },
-  subscriptions:{}
+  subscriptions:{ }
 };
 export default albums;

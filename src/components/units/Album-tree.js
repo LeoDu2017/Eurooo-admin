@@ -11,7 +11,7 @@ import intl             from 'react-intl-universal';
 import styles           from 'Styles/components.less';
 
 const Tree = ({dispatch,currentTree,openAll,tree,treeLength,currentEditTree,total,actions,openFailsTree}) => (
-    <Col className={styles.left}>
+    <Col className="left">
       <TreeActions
         actions={actions}
         currentTree={currentTree}
@@ -20,16 +20,16 @@ const Tree = ({dispatch,currentTree,openAll,tree,treeLength,currentEditTree,tota
         dispatch={dispatch}/>
 
 
-      <Col className={styles.tree}>
+      <Col className="tree">
         <dl>
           <dt id="-1"
-              className={currentTree === '-1' ? styles.selected : ''}
+              className={currentTree === '-1' ? 'selected': ''}
               onClick={selectClassify.bind(null,'-1','-1',dispatch)}>
                 <span onClick={getSubTree.bind(null,'-1',dispatch)}>
                   <Svg className={styles.icon}
                        type={ openAll ? 'folder-open' : 'folder-close'}> </Svg>
                 </span>
-            <span className={styles.title}>
+            <span className="title">
                   <em>{intl.get('ALL')}</em>(<em>{total}</em>)
                 </span>
           </dt>
@@ -49,10 +49,17 @@ const Tree = ({dispatch,currentTree,openAll,tree,treeLength,currentEditTree,tota
     </Col>
 );
 function mapStateToProps(state){
-  const {display,tree,total,currentTree,openAll,actions,currentEditTree,treeLength,openFailsTree} = state.trees;
+  const {
+    tree,
+    total,
+    currentTree,
+    openAll,
+    actions,
+    currentEditTree,
+    treeLength,
+    openFailsTree } = state.albumsTrees;
   return{
-    loading:state.trees.loading,
-    display,
+    loading:state.albumsTrees.loading,
     tree,
     total,
     currentTree,

@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce957529-e50a-4792-90ac-21254aa7a8bb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/models/albums-pictures.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/layout/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/layout/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/units/SiderMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/units/SiderMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/sider-menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/sider-menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/menu-tools.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/menu-tools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/albums-pictures.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/albums-pictures.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Albums.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Albums.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/units/Album-actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/units/Album-actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/units/Album-controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/units/Album-controls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/units/Album-header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/units/Album-header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/units/Album-imgs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/units/Album-imgs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/units/Album-randeritems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/units/Album-randeritems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/units/Album-tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/units/Album-tree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/units/Album-treeaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/units/Album-treeaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/albums-trees.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/albums-trees.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/albums.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/albums.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/spots/shop/info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/spots/shop/info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,12 +46,12 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="MD" value="5" />
-          <entry key="css" value="3" />
+          <entry key="css" value="4" />
           <entry key="ejs" value="4" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="282" />
+          <entry key="js" value="307" />
           <entry key="json" value="5" />
-          <entry key="less" value="22" />
+          <entry key="less" value="23" />
           <entry key="png" value="1" />
           <entry key="svg" value="1" />
           <entry key="ts" value="1" />
@@ -49,12 +59,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="3" />
+          <entry key="CSS" value="4" />
           <entry key="EJS" value="4" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="282" />
-          <entry key="Less" value="22" />
+          <entry key="JavaScript" value="307" />
+          <entry key="Less" value="23" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="SVG" value="1" />
           <entry key="TypeScript" value="1" />
@@ -63,20 +73,20 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="MD" value="188" />
-          <entry key="css" value="87" />
+          <entry key="css" value="91" />
           <entry key="dummy" value="2" />
           <entry key="ejs" value="11" />
-          <entry key="js" value="17095" />
-          <entry key="less" value="499" />
+          <entry key="js" value="17443" />
+          <entry key="less" value="518" />
           <entry key="txt" value="110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="87" />
+          <entry key="CSS" value="91" />
           <entry key="EJS" value="11" />
-          <entry key="JavaScript" value="17095" />
-          <entry key="Less" value="499" />
+          <entry key="JavaScript" value="17443" />
+          <entry key="Less" value="518" />
           <entry key="PLAIN_TEXT" value="300" />
         </counts>
       </usages-collector>
@@ -91,51 +101,108 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/app.js">
+        <entry file="file://$PROJECT_DIR$/src/components/units/Album-actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="52" column="15" lean-forward="true" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+            <state relative-caret-position="50">
+              <caret line="2" column="44" lean-forward="true" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
               <folding>
-                <element signature="e#0#55#0" expanded="true" />
-                <element signature="e#2096#2509#0" />
-                <element signature="e#2380#2493#0" />
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/layout/menu.js">
+        <entry file="file://$PROJECT_DIR$/src/models/albums-trees.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            <state relative-caret-position="376">
+              <caret line="76" column="17" lean-forward="true" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
               <folding>
-                <element signature="e#0#136#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/menu-tools.js">
+        <entry file="file://$PROJECT_DIR$/src/components/units/Album-controls.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-175">
-              <caret line="59" column="71" lean-forward="true" selection-start-line="59" selection-start-column="71" selection-end-line="59" selection-end-column="71" />
+            <state relative-caret-position="150">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="16" />
               <folding>
-                <element signature="e#843#972#0" />
-                <element signature="e#1038#1628#0" />
+                <element signature="e#0#44#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/units/Album-header.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/models/sider-menu.js">
+        <entry file="file://$PROJECT_DIR$/src/models/albums-pictures.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+            <state relative-caret-position="400">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
-                <element signature="e#0#144#0" expanded="true" />
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/units/Album-randeritems.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-25">
+              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/units/Album-imgs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="46" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/albums-pictures.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/albums-trees.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="99" column="7" lean-forward="true" selection-start-line="99" selection-start-column="7" selection-end-line="99" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/albums.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,18 +219,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getDefaultCollapsedSubMenus</find>
-      <find>openKeys</find>
-      <find>formatter</find>
-      <find>toggleHandler</find>
-      <find>pathToRegexp</find>
-      <find>onCollapse</find>
-      <find>logo</find>
-      <find>collapsed</find>
-      <find>sockjs</find>
-      <find>getMenu</find>
-      <find>padd</find>
-      <find>pictures</find>
       <find>actions/pictures</find>
       <find>albums-albums-trees</find>
       <find>setMenu</find>
@@ -179,9 +234,21 @@
       <find>flatMenuKeys</find>
       <find>setFlatMenuKeys</find>
       <find>getMenuData</find>
-      <find>getFlatMenuKeys</find>
       <find>getSelectedMenuKeys</find>
+      <find>getFlatMenuKeys</find>
       <find>getMeunMatcheys</find>
+      <find>footer</find>
+      <find>formItemLayout_2</find>
+      <find>formItemLayout_3</find>
+      <find>showAlbums</find>
+      <find>albums</find>
+      <find>Albums</find>
+      <find>style</find>
+      <find>getPictures</find>
+      <find>className</find>
+      <find>selectImgs</find>
+      <find>setSelectImgs</find>
+      <find>albumsPictures</find>
     </findStrings>
     <replaceStrings>
       <replace>myBrands</replace>
@@ -199,10 +266,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/models/login.js" />
-        <option value="$PROJECT_DIR$/src/components/modal/change-admin-info-form.js" />
-        <option value="$PROJECT_DIR$/src/styles/layouts.less" />
-        <option value="$PROJECT_DIR$/src/styles/layout/sider.less.js" />
         <option value="$PROJECT_DIR$/src/components/layouts/HeaderSearch.js" />
         <option value="$PROJECT_DIR$/src/components/layouts/index.less" />
         <option value="$PROJECT_DIR$/src/styles/layout/header-search.less" />
@@ -224,32 +287,36 @@
         <option value="$PROJECT_DIR$/src/layouts/index.js" />
         <option value="$PROJECT_DIR$/src/components/layouts/left.js" />
         <option value="$PROJECT_DIR$/src/pages/spots/shop/admin.js" />
-        <option value="$PROJECT_DIR$/src/components/units/Album-actions.js" />
         <option value="$PROJECT_DIR$/src/utils/constant.js" />
         <option value="$PROJECT_DIR$/src/models/shop-info.js" />
         <option value="$PROJECT_DIR$/src/models/shop-admin.js" />
         <option value="$PROJECT_DIR$/src/services/shop.js" />
         <option value="$PROJECT_DIR$/src/models/trees.js" />
         <option value="$PROJECT_DIR$/src/services/albums.js" />
-        <option value="$PROJECT_DIR$/src/global.css" />
-        <option value="$PROJECT_DIR$/src/pages/spots/shop/info.js" />
         <option value="$PROJECT_DIR$/src/components/units/Randeritems.js" />
-        <option value="$PROJECT_DIR$/src/components/Albums.js" />
         <option value="$PROJECT_DIR$/src/pages/.umi/DvaContainer.js" />
-        <option value="$PROJECT_DIR$/src/components/units/Album-tree.js" />
-        <option value="$PROJECT_DIR$/src/components/units/Album-randeritems.js" />
-        <option value="$PROJECT_DIR$/src/components/units/Album-controls.js" />
-        <option value="$PROJECT_DIR$/src/components/units/Album-header.js" />
-        <option value="$PROJECT_DIR$/src/components/units/Album-imgs.js" />
-        <option value="$PROJECT_DIR$/src/components/units/Album-treeaction.js" />
         <option value="$PROJECT_DIR$/src/components/units/index.js" />
         <option value="$PROJECT_DIR$/src/components/Dropdown.js" />
-        <option value="$PROJECT_DIR$/src/models/albums-trees.js" />
         <option value="$PROJECT_DIR$/src/components/units/SiderMenu.js" />
         <option value="$PROJECT_DIR$/src/actions/layout/menu.js" />
         <option value="$PROJECT_DIR$/src/models/app.js" />
         <option value="$PROJECT_DIR$/src/utils/menu-tools.js" />
         <option value="$PROJECT_DIR$/src/models/sider-menu.js" />
+        <option value="$PROJECT_DIR$/src/global.css" />
+        <option value="$PROJECT_DIR$/src/models/albums.js" />
+        <option value="$PROJECT_DIR$/src/pages/spots/shop/info.js" />
+        <option value="$PROJECT_DIR$/src/styles/components.less" />
+        <option value="$PROJECT_DIR$/src/components/Albums.js" />
+        <option value="$PROJECT_DIR$/src/components/units/Album-controls.js" />
+        <option value="$PROJECT_DIR$/src/components/units/Album-header.js" />
+        <option value="$PROJECT_DIR$/src/components/units/Album-tree.js" />
+        <option value="$PROJECT_DIR$/src/components/units/Album-treeaction.js" />
+        <option value="$PROJECT_DIR$/src/components/units/Album-randeritems.js" />
+        <option value="$PROJECT_DIR$/src/components/units/Album-actions.js" />
+        <option value="$PROJECT_DIR$/src/models/albums-trees.js" />
+        <option value="$PROJECT_DIR$/src/components/units/Album-imgs.js" />
+        <option value="$PROJECT_DIR$/src/actions/albums-pictures.js" />
+        <option value="$PROJECT_DIR$/src/models/albums-pictures.js" />
       </list>
     </option>
   </component>
@@ -310,8 +377,14 @@
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="units" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
@@ -323,7 +396,7 @@
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -345,10 +418,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\umilearn\Eurooo_stock\src\models" />
+      <recent name="G:\umilearn\Eurooo_stock\mock" />
       <recent name="G:\umilearn\Eurooo_stock\src\services" />
       <recent name="G:\umilearn\Eurooo_stock\src\actions" />
       <recent name="G:\umilearn\Eurooo_stock\src\styles" />
-      <recent name="G:\umilearn\Eurooo_stock\src\components\units" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -395,7 +468,7 @@
       <workItem from="1537836465293" duration="3024000" />
       <workItem from="1537840103515" duration="64398000" />
       <workItem from="1538094085354" duration="100767000" />
-      <workItem from="1538959774537" duration="28745000" />
+      <workItem from="1538959774537" duration="35892000" />
     </task>
     <task id="LOCAL-00001" summary="Layout 设计">
       <created>1537248345534</created>
@@ -698,11 +771,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538977760666</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="内页布局- 店铺信息">
+      <created>1538991323104</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1538991323104</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303371000" />
+    <option name="totallyTimeSpent" value="310518000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -726,7 +806,7 @@
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.3292683" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.3292683" />
-      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.2361419" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.2361419" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -790,30 +870,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/styles/layout/header-notice.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/layout/notice-list.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/layouts/header-notice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="58" column="8" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/document.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -849,11 +905,6 @@
             <element signature="n#!!block;n#getAdminOperations#0" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/albums-trees.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-900" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/spots/main.js">
@@ -943,13 +994,6 @@
     <entry file="file://$PROJECT_DIR$/src/pages/spots/shop/admin.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/albums.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/constant.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -984,64 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/albums.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/spots/shop/info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="956">
-          <caret line="157" column="18" lean-forward="true" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <element signature="e#1879#2251#0" />
-            <element signature="e#2284#2641#0" />
-            <element signature="e#2674#3366#0" />
-            <element signature="e#3401#4217#0" />
-            <element signature="e#4250#4841#0" />
-            <element signature="e#4872#5571#0" />
-            <element signature="e#5601#5979#0" />
-            <element signature="e#6010#6366#0" />
-            <element signature="e#6397#6674#0" />
-            <element signature="e#6707#7064#0" />
-            <element signature="e#7095#7452#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Albums.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/Album-actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="44" lean-forward="true" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/.umi/DvaContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -1056,82 +1042,6 @@
           <folding>
             <element signature="e#0#30#0" expanded="true" />
             <element signature="e#239#1105#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#1#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/Album-treeaction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#1#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/Album-imgs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-933">
-          <caret line="6" column="56" lean-forward="true" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/Album-header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding>
-            <element signature="e#1#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/Album-controls.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#1#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/Album-randeritems.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1042">
-          <caret line="87" column="9" lean-forward="true" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/Album-tree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/albums-trees.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1169,22 +1079,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/albums.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/units/SiderMenu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/sider-menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="59" column="27" lean-forward="true" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/menu-tools.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-175">
+          <caret line="59" column="71" lean-forward="true" selection-start-line="59" selection-start-column="71" selection-end-line="59" selection-end-column="71" />
+          <folding>
+            <element signature="e#843#972#0" />
+            <element signature="e#1038#1628#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/layout/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#136#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1201,33 +1132,169 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/layout/menu.js">
+    <entry file="file://$PROJECT_DIR$/src/global.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        <state relative-caret-position="337">
+          <caret line="145" column="32" lean-forward="true" selection-start-line="145" selection-start-column="32" selection-end-line="145" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/albums.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/albums.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding>
-            <element signature="e#0#136#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/menu-tools.js">
+    <entry file="file://$PROJECT_DIR$/src/styles/components.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="59" column="71" lean-forward="true" selection-start-line="59" selection-start-column="71" selection-end-line="59" selection-end-column="71" />
+        <state relative-caret-position="134">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
           <folding>
-            <element signature="e#843#972#0" />
-            <element signature="e#1038#1628#0" />
+            <element signature="e#1093#1539#0" />
+            <element signature="e#1547#13328#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/sider-menu.js">
+    <entry file="file://$PROJECT_DIR$/src/components/units/Album-tree.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+        <state relative-caret-position="-557">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
           <folding>
-            <element signature="e#0#144#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/units/Album-treeaction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/spots/shop/info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4650">
+          <caret line="186" column="24" lean-forward="true" selection-start-line="186" selection-start-column="24" selection-end-line="186" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/units/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Albums.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/units/Album-header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/units/Album-controls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/units/Album-actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="44" lean-forward="true" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/albums-trees.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="76" column="17" lean-forward="true" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/albums.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/albums-trees.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="99" column="7" lean-forward="true" selection-start-line="99" selection-start-column="7" selection-end-line="99" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/units/Album-randeritems.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/units/Album-imgs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/albums-pictures.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/albums-pictures.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>

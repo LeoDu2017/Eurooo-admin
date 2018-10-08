@@ -1,12 +1,12 @@
 export function getPictures(dispatch,page){
   dispatch({
-    type:'pictures/getPictures',
+    type:'albumsPictures/getPictures',
     payload:{page}
   })
 }
 export function selectImgs(dispatch,id,single){
   dispatch({
-    type:'pictures/setSelectImgs',
+    type:'albumsPictures/setSelectImgs',
     payload:{id,single}
   })
 }
@@ -14,14 +14,14 @@ export function selectImgs(dispatch,id,single){
 export function removeSelected(dispatch,id,event){
   event.stopPropagation();
   dispatch({
-    type:'pictures/removeSelectImgs',
+    type:'albumsPictures/removeSelectImgs',
     payload:id
   })
 }
 
 export function useSelected(dispatch,selected){
   dispatch({
-    type:'pictures/useSelectImgs',
+    type:'albumsPictures/useSelectImgs',
     payload:selected
   })
 }

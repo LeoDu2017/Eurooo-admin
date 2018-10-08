@@ -75,7 +75,7 @@ const albumsTrees = {
     *getTree({ payload },{select,call, put}){
       const {data} = yield call(getTree);
       yield put({
-        type:'pictures/getPictures',
+        type:'albumsPictures/getPictures',
         payload:1
       });
       const {tree,total} = data;

@@ -6,16 +6,19 @@ import {connect}    from 'dva';
 import {Col,Modal}  from 'antd';
 import styles       from 'Styles/components.less';
 
-const albums = ({display,treeLength,dispatch,currentTree,tree,total,openAll,actions,currentEditTree,single,callBack}) =>(
+const albums = ({
+  display,treeLength,dispatch,
+  currentTree,tree,total,openAll,
+  actions,currentEditTree,single,callBack}) =>(
   <Modal
     visible={ display }
     closable={false}
     footer={null}
     width="1024px"
     height="692px"
-    className={styles.albums}>
+    className="albums">
     <Header dispatch={dispatch} />
-    <Col className={styles.main}>
+    <Col className="main">
       <Tree/>
       <Pictures single={single} callBack={callBack}/>
     </Col>
