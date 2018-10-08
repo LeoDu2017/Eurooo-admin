@@ -55,12 +55,9 @@ const getMenuItemPath             = (item,pathname,isMobile) => {
   );
 };
 
-export const urlToList            = url => {
-  const urllist = url.split('/').filter(i => i);
-  return urllist.map((urlItem, index) => {
-    return `/${urllist.slice(0, index + 1).join('/')}`;
-  });
-};
+export const urlToList            = url =>
+  url.split('/').filter(i => i).map((urlItem, index) =>
+    `/${url.split('/').filter(i => i).slice(0, index + 1).join('/')}`);
 export const formatter            = (data, parentPath = '/', parentAuthority) => data.map(item => {
   let { path } = item;
   if (!isUrl(path)) {
@@ -76,8 +73,10 @@ export const formatter            = (data, parentPath = '/', parentAuthority) =>
   }
   return result;
 });
-export const isMainMenu           = (key,menu) => menu.some(item => key && (item.key === key || item.path === key));
-export const getMeunMatcheys      = (flatMenuKeys, path) => flatMenuKeys.filter(item => pathToRegexp(`/${item}`).test(path));
+export const isMainMenu           = (key,menu) =>
+  menu.some(item => key && (item.key === key || item.path === key));
+export const getMeunMatcheys      = (flatMenuKeys, path) =>
+  flatMenuKeys.filter(item => pathToRegexp(`/${item}`).test(path) );
 export const getSubMenuOrItem     = (item,pathname) => {
   if (item.children && item.children.some(child => child.name)) {
     const childrenItems = getNavMenuItems(item.children);

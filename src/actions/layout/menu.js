@@ -20,11 +20,11 @@ export const getFlatMenuKeys      = menus => {
   });
   return keys;
 };
-export const getNavMenuItems      = (menusData,Authorized,pathname,isMobile) =>{
-  if (!menusData) {
+export const getNavMenuItems      = (menus,Authorized,pathname,isMobile) =>{
+  if (!menus) {
     return [];
   }
-  return menusData
+  return menus
     .filter(item => item.name && !item.hideInMenu)
     .map(item => {
       // make dom
@@ -43,7 +43,9 @@ export const handleOpenChange     = (dispatch,menu,openKeys) => {
 };
 export const getSelectedMenuKeys  = (pathname,flatMenuKeys) =>
   urlToList(pathname)
-  .map(itemPath => getMeunMatcheys(flatMenuKeys, itemPath).pop());
+    .map(itemPath =>getMeunMatcheys(flatMenuKeys, itemPath).pop());
+
+
 export const getDefaultCollapsedSubMenus = (pathname,flatMenuKeys) =>
   urlToList(pathname)
   .map(item => getMeunMatcheys(flatMenuKeys, item)[0])
