@@ -1,8 +1,8 @@
 import _ from "lodash";
 import {getTree,storeSubTree,updateTreeName,getSubTree} from 'Services/albums';
 import { message } from 'antd';
-const trees = {
-  namespace:'trees',
+const albumsTrees = {
+  namespace:'albumsTrees',
   state:{
     currentTree: '-1',    // 当前被选中的文件夹
     currentEditTree:'-1', // 当前被编辑的文件夹
@@ -241,4 +241,4 @@ const trees = {
   }
 };
 
-export default trees;
+export default albumsTrees;

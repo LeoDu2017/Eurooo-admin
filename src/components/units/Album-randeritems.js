@@ -1,8 +1,8 @@
 import {Col,Button,Input} from 'antd';
 import intl from 'react-intl-universal';
 import Svg from 'Components/Svg';
-import {getSubTree,selectClassify,saveSubTree,saveEditTree} from 'Actions/trees';
-const Randeritems = ({style,tree,subClass,treeLength,currentTree,dispatch,currentEditTree,styles,stop,openFailsTree}) =>
+import {getSubTree,selectClassify,saveSubTree,saveEditTree} from 'Actions/albums-trees';
+const AlbumRanderitems = ({style,tree,subClass,treeLength,currentTree,dispatch,currentEditTree,styles,stop,openFailsTree}) =>
   {
     let i = 0;
     return <dd style={style}>
@@ -60,7 +60,7 @@ const Randeritems = ({style,tree,subClass,treeLength,currentTree,dispatch,curren
               </dt>
               {
                 item.subFolder.length > 0
-                && <Randeritems
+                && <AlbumRanderitems
                   tree={item.subFolder}
                   dispatch={dispatch}
                   currentEditTree={currentEditTree}
@@ -84,4 +84,4 @@ const Randeritems = ({style,tree,subClass,treeLength,currentTree,dispatch,curren
   }
 ;
 
-export default Randeritems
+export default AlbumRanderitems

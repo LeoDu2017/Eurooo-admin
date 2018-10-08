@@ -5,7 +5,7 @@ export function stop(event){
 export function getSubTree(id,dispatch,event){
   event.stopPropagation();
   dispatch({
-    type:'trees/getSubTree',
+    type:'albumsTrees/getSubTree',
     payload:id
   })
 }
@@ -37,13 +37,13 @@ export function selectClassify(id,actions_type,dispatch,event){
       actions.showEdit = true;
   };
   dispatch({
-    type:'trees/selectCurrentTree',
+    type:'albumsTrees/selectCurrentTree',
     payload:{currentTree,actions,currentEditTree}
   })
 }
 export function editCurrentTree(id,dispatch){
   dispatch({
-    type:'trees/setCurrentEditTree',
+    type:'albumsTrees/setCurrentEditTree',
     payload:id
   })
 }
@@ -55,7 +55,7 @@ export function saveEditTree(dispatch,id,event){
   let name = input.value;
 
   dispatch({
-    type:'trees/updateTreeName',
+    type:'albumsTrees/updateTreeName',
     payload:{name,id}
   })
 
@@ -106,7 +106,7 @@ export function addSubTree(id,tree,treeLength,dispatch){
 
 
   dispatch({
-    type:'trees/appendSubTree',
+    type:'albumsTrees/appendSubTree',
     payload:{tree,currentEditTree,currentTree,treeLength,actions}
   })
 }
@@ -117,7 +117,7 @@ export function saveSubTree(dispatch,currentTree,event){
   let input = btn.previousElementSibling;
   let name = input.value;
   dispatch({
-    type:'trees/storeSubTree',
+    type:'albumsTrees/storeSubTree',
     payload:{name,parent_id}
   })
 }

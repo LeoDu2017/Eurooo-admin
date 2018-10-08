@@ -1,9 +1,10 @@
-import {Col,Modal} from 'antd';
-import {connect} from 'dva';
-import styles from 'Styles/components.less';
-
-
-import {Header,Pictures,Tree} from './units';
+import {
+  Tree,
+  Header,
+  Pictures }        from './units';
+import {connect}    from 'dva';
+import {Col,Modal}  from 'antd';
+import styles       from 'Styles/components.less';
 
 const albums = ({display,treeLength,dispatch,currentTree,tree,total,openAll,actions,currentEditTree,single,callBack}) =>(
   <Modal

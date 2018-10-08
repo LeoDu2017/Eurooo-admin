@@ -1,17 +1,15 @@
 import {
-
   getFlatMenuKeys,
   getSelectedKeys,
   getSelectedMenuKeys,
   getDefaultCollapsedSubMenus } from 'Actions/layout/menu';
 
-
 export default {
   namespace:'sideMenu',
   state:{
-    openKeys:[],
     flatMenuKeys:[],
     selectedKeys:[],
+    openKeys:[],
     pathname:''
   },
   reducers:{

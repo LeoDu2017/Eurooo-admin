@@ -6,7 +6,7 @@ import Svg from 'Components/Svg';
 import PicActions from './Album-actions';
 import Controls from './Album-controls';
 
-import {selectImgs,removeSelected,viewImg} from 'Actions/pictures';
+import {selectImgs,removeSelected,viewImg} from 'Actions/albums-pictures';
 
 const Pictures = ({dispatch,list,page,total,selected,length,single,callBack}) =>(
   <Col className={styles.right}>

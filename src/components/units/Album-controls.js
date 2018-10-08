@@ -1,7 +1,7 @@
 import intl from 'react-intl-universal';
 import {Col,Button,Pagination} from 'antd';
 import styles from 'Styles/components.less';
-import {getPictures} from 'Actions/pictures';
+import {getPictures} from 'Actions/albums-pictures';
 const Controls = ({dispatch,current,total,length,selected,callBack})=>(
   <Col className={styles.ctrls}>
     <Button

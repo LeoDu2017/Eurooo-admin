@@ -2,9 +2,9 @@ import {connect} from 'dva';
 import intl from 'react-intl-universal';
 import {Col} from 'antd';
 
-import {selectClassify,getSubTree,stop} from 'Actions/trees';
+import {selectClassify,getSubTree,stop} from 'Actions/albums-trees';
 import styles from 'Styles/components.less';
-import Randeritems from './Randeritems';
+import AlbumRanderitems from './Album-randeritems';
 import TreeActions from './Album-treeaction';
 
 import Svg from 'Components/Svg';
@@ -32,7 +32,7 @@ const Tree = ({dispatch,currentTree,openAll,tree,treeLength,currentEditTree,tota
                   <em>{intl.get('ALL')}</em>(<em>{total}</em>)
                 </span>
           </dt>
-          <Randeritems
+          <AlbumRanderitems
             tree={tree}
             treeLength={treeLength}
             dispatch={dispatch}
