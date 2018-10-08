@@ -1,13 +1,14 @@
-import {connect} from 'dva';
-import intl from 'react-intl-universal';
-import {Col} from 'antd';
-
-import {selectClassify,getSubTree,stop} from 'Actions/albums-trees';
-import styles from 'Styles/components.less';
+import {connect}        from 'dva';
+import {Col}            from 'antd';
+import Svg              from 'Components/Svg';
+import TreeActions      from './Album-treeaction';
 import AlbumRanderitems from './Album-randeritems';
-import TreeActions from './Album-treeaction';
-
-import Svg from 'Components/Svg';
+import {
+  stop,
+  getSubTree,
+  selectClassify }      from 'Actions/albums-trees';
+import intl             from 'react-intl-universal';
+import styles           from 'Styles/components.less';
 
 const Tree = ({dispatch,currentTree,openAll,tree,treeLength,currentEditTree,total,actions,openFailsTree}) => (
     <Col className={styles.left}>

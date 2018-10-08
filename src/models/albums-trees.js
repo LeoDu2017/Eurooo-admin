@@ -1,6 +1,11 @@
-import _ from "lodash";
-import {getTree,storeSubTree,updateTreeName,getSubTree} from 'Services/albums';
-import { message } from 'antd';
+import { message }  from 'antd';
+import _            from "lodash";
+import {
+  getTree,
+  getSubTree,
+  storeSubTree,
+  updateTreeName}   from 'Services/albums';
+
 const albumsTrees = {
   namespace:'albumsTrees',
   state:{

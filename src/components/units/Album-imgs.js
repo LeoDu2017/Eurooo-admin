@@ -1,12 +1,14 @@
-import _ from "lodash";
-import {connect} from 'dva';
+import {connect}          from 'dva';
 import {Col,Button,Input} from 'antd';
-import styles from 'Styles/components.less';
-import Svg from 'Components/Svg';
-import PicActions from './Album-actions';
-import Controls from './Album-controls';
-
-import {selectImgs,removeSelected,viewImg} from 'Actions/albums-pictures';
+import _                  from "lodash";
+import Svg                from 'Components/Svg';
+import PicActions         from './Album-actions';
+import Controls           from './Album-controls';
+import styles             from 'Styles/components.less';
+import {
+  viewImg,
+  selectImgs,
+  removeSelected }        from 'Actions/albums-pictures';
 
 const Pictures = ({dispatch,list,page,total,selected,length,single,callBack}) =>(
   <Col className={styles.right}>

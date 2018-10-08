@@ -1,11 +1,12 @@
+import {Col}          from 'antd';
+import Svg            from 'Components/Svg';
+import intl           from 'react-intl-universal';
 import {
   addSubTree,
   editCurrentTree,
   deleteCurrentTree}  from 'Actions/albums-trees';
-import {Col}          from 'antd';
-import Svg            from 'Components/Svg';
-import intl           from 'react-intl-universal';
 import styles         from 'Styles/components.less';
+
 
 const Tree_actions = ({actions,currentTree,tree,treeLength,dispatch}) => (
   <Col className={styles.actions}>

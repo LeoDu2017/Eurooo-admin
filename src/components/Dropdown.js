@@ -1,7 +1,12 @@
-import Link from 'umi/link';
-import { dropdownMenu,open,selected,icon,no } from 'Styles/components.less';
-import Svg from 'Components/Svg';
-import { List } from 'antd';
+import { List }   from 'antd';
+import Link       from 'umi/link';
+import Svg        from 'Components/Svg';
+import {
+  no,
+  icon,
+  open,
+  selected,
+  dropdownMenu }  from 'Styles/components.less';
 
 const DropdownMeanu = ({ dispatch,list,onMouseLeave,toggle }) => (
   <List
