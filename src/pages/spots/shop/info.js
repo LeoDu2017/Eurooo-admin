@@ -41,8 +41,8 @@ const formItemLayout_3 = {
 //   return Object.keys(fieldsError).some(field => fieldsError[field]);
 // }
 const infoForm = ({dispatch,editable,shopInfo,originInfo,conpany_types,shop_products,company_countries,form: {getFieldDecorator,validateFieldsAndScroll,resetFields}}) => (
-  <Col span={24} className='g-t-wrap'>
-    <Col span={24} className='g-t-main'>
+  <Col className='g-t-wrap'>
+    <Col className='g-t-main'>
       <header className='g-t-header'>
           <span className='g-t-title'>
             {intl.get('SHOPINFO')}
@@ -136,6 +136,7 @@ const infoForm = ({dispatch,editable,shopInfo,originInfo,conpany_types,shop_prod
               </Select>
             )}
           </FormItem>
+
           {/*地址*/}
           <FormItem {...formItemLayout_3} className="g-f-item">
             {getFieldDecorator('address', {
@@ -145,6 +146,7 @@ const infoForm = ({dispatch,editable,shopInfo,originInfo,conpany_types,shop_prod
               <TextArea rows={3} disabled={editable} placeholder={intl.get('INPUTCOMPANYADDRESS')}/>
             )}
           </FormItem>
+
           {/*联系人*/}
           <FormItem {...formItemLayout} label={intl.get('ADMINNAME')} className="g-f-item">
             {getFieldDecorator('contact', {
@@ -176,16 +178,16 @@ const infoForm = ({dispatch,editable,shopInfo,originInfo,conpany_types,shop_prod
               }],
             })(<Input disabled={editable} placeholder={intl.get('INPUTEMAIL')}/>)}
           </FormItem>
-
-          <FormItem {...formItemLayout} label= "" className="g-f-item">
-            <Button type="primary" htmlType="submit" disabled={editable}>
-              {intl.get('SAVE')}
-            </Button>
-          </FormItem>
         </Form>
-
         <Albums single={true} callBack={selectImgs}/>
       </Col>
+
+      <footer className="g-t-footer">
+        <Button type="primary" htmlType="submit" disabled={editable}>
+          {intl.get('SAVE')}
+        </Button>
+      </footer>
+
     </Col>
   </Col>
 );

@@ -2,35 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce957529-e50a-4792-90ac-21254aa7a8bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Albums.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/units/Album-actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/units/Album-controls.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/units/Album-header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/units/Album-imgs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/units/Album-tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/units/Album-treeaction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/units/Randeritems.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/units/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/albums.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/shop-admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/shop-info.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/trees.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/spots/shop/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/spots/shop/info.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/albums.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/brand.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/country.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/example.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/shop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/shop.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/layout/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/layout/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/units/SiderMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/units/SiderMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/sider-menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/sider-menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/constant.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/spots/shop/info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/spots/shop/info.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -86,19 +60,19 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="MD" value="188" />
-          <entry key="css" value="66" />
+          <entry key="css" value="87" />
           <entry key="dummy" value="2" />
           <entry key="ejs" value="11" />
-          <entry key="js" value="15944" />
+          <entry key="js" value="15976" />
           <entry key="less" value="499" />
           <entry key="txt" value="104" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="66" />
+          <entry key="CSS" value="87" />
           <entry key="EJS" value="11" />
-          <entry key="JavaScript" value="15944" />
+          <entry key="JavaScript" value="15976" />
           <entry key="Less" value="499" />
           <entry key="PLAIN_TEXT" value="294" />
         </counts>
@@ -203,23 +177,34 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/spots/shop/info.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="45" column="37" lean-forward="true" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+            <state relative-caret-position="181">
+              <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#1879#2251#0" />
+                <element signature="e#2284#2641#0" />
+                <element signature="e#2674#3366#0" />
+                <element signature="e#3401#4217#0" />
+                <element signature="e#4250#4841#0" />
+                <element signature="e#4872#5571#0" />
+                <element signature="e#5601#5979#0" />
+                <element signature="e#6010#6366#0" />
+                <element signature="e#6397#6674#0" />
+                <element signature="e#6707#7064#0" />
+                <element signature="e#7095#7452#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/global.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+            <state relative-caret-position="75">
+              <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -235,7 +220,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>SubMenu</find>
       <find>reg</find>
       <find>isUrl</find>
       <find>urlToList</find>
@@ -265,6 +249,7 @@
       <find>getNavMenuItems</find>
       <find>getMenu</find>
       <find>getMenuData</find>
+      <find>padd</find>
     </findStrings>
     <replaceStrings>
       <replace>myBrands</replace>
@@ -313,7 +298,6 @@
         <option value="$PROJECT_DIR$/src/layouts/index.js" />
         <option value="$PROJECT_DIR$/src/components/layouts/left.js" />
         <option value="$PROJECT_DIR$/src/pages/spots/shop/admin.js" />
-        <option value="$PROJECT_DIR$/src/pages/spots/shop/info.js" />
         <option value="$PROJECT_DIR$/src/components/units/Album-header.js" />
         <option value="$PROJECT_DIR$/src/components/units/Album-actions.js" />
         <option value="$PROJECT_DIR$/src/components/units/Album-controls.js" />
@@ -333,6 +317,7 @@
         <option value="$PROJECT_DIR$/src/models/trees.js" />
         <option value="$PROJECT_DIR$/src/services/albums.js" />
         <option value="$PROJECT_DIR$/src/global.css" />
+        <option value="$PROJECT_DIR$/src/pages/spots/shop/info.js" />
       </list>
     </option>
   </component>
@@ -537,7 +522,7 @@
       <workItem from="1537836465293" duration="3024000" />
       <workItem from="1537840103515" duration="64398000" />
       <workItem from="1538094085354" duration="100767000" />
-      <workItem from="1538959774537" duration="10693000" />
+      <workItem from="1538959774537" duration="12075000" />
     </task>
     <task id="LOCAL-00001" summary="Layout 设计">
       <created>1537248345534</created>
@@ -812,11 +797,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538314704297</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="内页布局-右侧导航完善">
+      <created>1538973124080</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1538973124081</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285319000" />
+    <option name="totallyTimeSpent" value="286701000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1302,20 +1294,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/spots/shop/info.js">
+    <entry file="file://$PROJECT_DIR$/src/global.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="45" column="37" lean-forward="true" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/global.css">
+    <entry file="file://$PROJECT_DIR$/src/pages/spots/shop/info.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+        <state relative-caret-position="181">
+          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#1879#2251#0" />
+            <element signature="e#2284#2641#0" />
+            <element signature="e#2674#3366#0" />
+            <element signature="e#3401#4217#0" />
+            <element signature="e#4250#4841#0" />
+            <element signature="e#4872#5571#0" />
+            <element signature="e#5601#5979#0" />
+            <element signature="e#6010#6366#0" />
+            <element signature="e#6397#6674#0" />
+            <element signature="e#6707#7064#0" />
+            <element signature="e#7095#7452#0" />
+          </folding>
         </state>
       </provider>
     </entry>
