@@ -2,7 +2,7 @@ import Link             from 'umi/link';
 import styles           from 'Styles/layout/sider.less';
 import { connect }      from 'dva';
 import { Layout,Menu }  from 'antd';
-
+import intl from 'react-intl-universal';
 import {
   getMenuData,
   getNavMenuItems,
@@ -43,9 +43,60 @@ const SideMenu = ({
 
 function mapStateToProps(state,props){
   const { collapsed } = props;
-  const { menu,openKeys,selectedKeys,flatMenuKeys,pathname } = state.sideMenu;
+  const { openKeys,selectedKeys,flatMenuKeys,pathname } = state.sideMenu;
   const menuProps = collapsed ? {} : { openKeys };
-
+  const menuData = {
+    index:[{
+      name: intl.get('HOME'),
+      icon: 'home',
+      path: '/',
+      children: []
+    }],
+    spots:[{
+      name: intl.get('HOME'),
+      icon: 'home',
+      path: 'main',
+      children: []
+    },{
+      name: intl.get('SHOP'),
+      icon: 'shop',
+      path: 'shop',
+      children: [{
+        name:intl.get('SHOPINFO'),
+        path:'info'
+      },{
+        name:intl.get('SHOPADMIN'),
+        path:'admin'
+      }]
+    },{
+      name: 'Pages',
+      icon: 'dashboard',
+      path: 'dashboard',
+      children: [
+        {
+          name: '分析页',
+          path: 'analysis',
+        },
+        {
+          name: '监控页',
+          path: 'monitor',
+        },
+        {
+          name: '工作台',
+          path: 'workplace',
+          // hideInBreadcrumb: true,
+          // hideInMenu: true,
+        },
+      ],
+    },],
+    futures:[{
+      name: 'Home',
+      icon: 'home',
+      path: '/',
+      children: []
+    }],
+  };
+  const menu = getMenuData(pathname,menuData);
   return { menuProps,menu,flatMenuKeys,selectedKeys,pathname }
 }
 

@@ -1,9 +1,10 @@
 import {
-  getMenuData,
+
   getFlatMenuKeys,
   getSelectedKeys,
   getSelectedMenuKeys,
   getDefaultCollapsedSubMenus } from 'Actions/layout/menu';
+
 
 export default {
   namespace:'sideMenu',
@@ -11,13 +12,9 @@ export default {
     openKeys:[],
     flatMenuKeys:[],
     selectedKeys:[],
-    menu:[],
     pathname:''
   },
   reducers:{
-    setMenu(state,{payload:menu}){
-      return { ...state,menu}
-    },
     setPathname(state,{payload:pathname}){
       return { ...state,pathname}
     },
@@ -32,14 +29,6 @@ export default {
     },
   },
   effects:{
-    *getMenu({ payload },{ put,select }){
-      const pathname = yield select( state => state['sideMenu'].pathname );
-      const data = yield getMenuData(pathname);
-      yield put({
-        type: 'setMenu',
-        payload: data
-      })
-    },
     *getFlatMenuKeys({ payload },{ put,select }){
       const menu = yield select( state => state['sideMenu'].menu );
       const data = yield getFlatMenuKeys( menu );
@@ -66,7 +55,6 @@ export default {
         type:'setPathname',
         payload
       });
-      yield put({type:'getMenu'}); // 获得导航数据
       yield put({type:'getFlatMenuKeys'}); // 获得一级导航
       yield put({type:'getSelectedAndOpenKeys'}); // 获得选中导航与展开导航
     }

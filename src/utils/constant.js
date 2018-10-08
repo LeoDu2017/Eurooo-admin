@@ -1,46 +1,6 @@
 const intl= require('react-intl-universal');
-console.log(2,intl.get('BRANDSERIAL'));
+console.log(2,intl.get('HOME'));
 module.exports = {
-  menuData:{
-    index:[{
-      name: 'Home',
-      icon: 'home',
-      path: '/',
-      children: []
-    }],
-    spots:[{
-      name: 'home',
-      icon: 'home',
-      path: 'main',
-      children: []
-    },{
-      name: 'Pages',
-      icon: 'dashboard',
-      path: 'dashboard',
-      children: [
-        {
-          name: '分析页',
-          path: 'analysis',
-        },
-        {
-          name: '监控页',
-          path: 'monitor',
-        },
-        {
-          name: '工作台',
-          path: 'workplace',
-          // hideInBreadcrumb: true,
-          // hideInMenu: true,
-        },
-      ],
-    },],
-    futures:[{
-      name: 'Home',
-      icon: 'home',
-      path: '/',
-      children: []
-    }],
-  },
   notAllowCountry: [
     {
       id: '21',

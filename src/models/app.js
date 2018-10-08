@@ -6,7 +6,7 @@ export default{
   namespace:'app',
   state:{
     collapsed: false,
-    isMobile: true,
+    isMobile: false,
     currentIndex: 0,
     administrator: {
       id:'',
@@ -26,7 +26,10 @@ export default{
     },
     setCurrentIndex(state,{payload:currentIndex}){
       return{ ...state,currentIndex }
-    }
+    },
+    setUserAgent(state,{payload:isMobile}){
+      return{ ...state,isMobile }
+    },
   },
   effects:{},
   subscriptions:{
@@ -48,6 +51,12 @@ export default{
           dispatch({
             type:'sideMenu/getAppMenuData',
             payload:pathname
+          });
+          // 设置设备类型
+          let useerAgent = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
+          dispatch({
+            type:'setUserAgent',
+            payload: useerAgent
           })
         }
       });

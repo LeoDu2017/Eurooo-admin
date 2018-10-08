@@ -5,9 +5,8 @@ import {
   getMeunMatcheys,
   getSubMenuOrItem,
   checkPermissionItem } from 'Utils/menu-tools';
-import { menuData }     from 'Utils/constant';
 
-export const getMenuData          = (pathname) => {
+export const getMenuData          = (pathname,menuData) => {
   const menuType = pathname.split('/')[1] ? pathname.split('/')[1] : 'index';
   return formatter(menuData[menuType],`${menuType}/`)
 };
