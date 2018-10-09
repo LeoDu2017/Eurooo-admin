@@ -51,27 +51,45 @@ export default{
               path: '',
               children: []
             }],
-            spots:[{
-              name:'',
-              path:'',
-              children: []
-            },{
-              name: intl.get('HOME'),
-              icon: 'home',
-              path: 'main',
-              children: []
-            },{
-              name: intl.get('SHOP'),
-              icon: 'shop',
-              path: 'shop',
-              children: [{
-                name:intl.get('SHOPINFO'),
-                path:'info'
-              },{
-                name:intl.get('SHOPADMIN'),
-                path:'admin'
-              }]
-            },{
+            spots:[
+              {
+                name:'',
+                path:'',
+                children: []
+              },
+              {
+                name: intl.get('HOME'),
+                icon: 'home',
+                path: 'main',
+                children: []
+              },
+              {
+                name: intl.get('SHOP'),
+                icon: 'shop',
+                path: 'shop',
+                children: [
+                  {
+                    name:intl.get('SHOPINFO'),
+                    path:'info'
+                  },
+                  {
+                    name:intl.get('SHOPADMIN'),
+                    path:'admin'
+                  }
+                ]
+              },
+              {
+                name:intl.get('BRAND'),
+                icon: 'tags',
+                path: 'brand',
+                children:[
+                  {
+                    name:intl.get('BRANDLIST'),
+                    path:'list'
+                  }
+                ]
+              },
+            {
               name: 'Pages',
               icon: 'dashboard',
               path: 'dashboard',

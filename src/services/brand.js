@@ -1,5 +1,5 @@
-import request from 'utils/request';
-import { api } from 'utils/config';
+import request from 'Utils/request';
+import { api } from 'Utils/config';
 
 const { getBrandsListApi,delBrandApi,getBannedApi,udateBannedApi,getAllBrandsApi } = api;
 

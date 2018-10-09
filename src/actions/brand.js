@@ -19,19 +19,20 @@ export function removeBrand(dispatch,id,event){
     },
     onCancel() {
       console.log('close')
-    },
-  });
-
-
-}
-export function saveBanned(dispatch,id){
-  id = id.split('-')[0];
-  dispatch({
-    type:'brand/saveBanned',
-    payload:id
+    }
   })
 }
-export function onChange(dispatch,id,area){
+export function saveBanned(dispatch,id,areas){
+  console.log(areas);
+  const area = areas['areas'].join(',');
+
+  dispatch({
+    type:'brand/saveBanned',
+    payload:{id,area}
+  })
+}
+export function onChange(dispatch,id,areas){
+  console.log(areas.join(','));
   dispatch({
     type:'brand/saveChanged',
     payload:{area,id}
@@ -47,7 +48,7 @@ export function changePageHandel(dispatch,page){
   dispatch(
     routerRedux.push({
       pathname: '/spots/brand/list',
-      query: { page },
+      query: { page }
     })
-  );
+  )
 }
