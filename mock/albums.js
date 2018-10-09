@@ -202,6 +202,23 @@ module.exports = {
       msg:'OK'
     })
   },
+  [`GET ${apiPrefix}/albums/pictures`] (req, res) {
+    const { query } = req;
+    let { pageSize, page, id } = query;
+    pageSize = pageSize || 10;
+    page = page || 1;
+    id = id || -1;
+    let newData;
+    if(id === '-1'){
+      newData = database.pictures;
+    }else{
+      newData = database.pictures.filter(i => i.category_img_id === id)
+    }
+    res.status(200).json({
+      data: newData.slice((page - 1) * pageSize, page * pageSize),
+      total: newData.length,
+    });
+  },
   [`GET ${apiPrefix}/albums/tree/getSubTrees`] (req, res) {
 
     const { parent_id } = req.query;
@@ -213,20 +230,6 @@ module.exports = {
       data: subtree,
       msg:'OK'
     })
-  },
-  [`POST ${apiPrefix}/albums/tree/storeSubTree`] (req, res) {
-    const { parent_id, name } = req.body;
-    const new_tree = {
-      name,
-      parent_id,
-      id:Mock.mock('@id'),
-      subFolder:[],
-      picNum:0,
-      open:false
-    };
-    database.tree.push(new_tree);
-
-    res.status(200).json({success:true,msg:'添加成功'})
   },
   [`POST ${apiPrefix}/albums/tree/update`] (req, res) {
     const { id, name } = req.body;
@@ -249,22 +252,19 @@ module.exports = {
       res.status(200).json({msg: '提交成功' })
     }
   },
-  [`GET ${apiPrefix}/albums/pictures`] (req, res) {
-    const { query } = req;
-    let { pageSize, page, id } = query;
-    pageSize = pageSize || 10;
-    page = page || 1;
-    id = id || -1;
-    let newData;
-    if(id === '-1'){
-      newData = database.pictures;
-    }else{
-      newData = database.pictures.filter(i => i.category_img_id === id)
-    }
-    res.status(200).json({
-      data: newData.slice((page - 1) * pageSize, page * pageSize),
-      total: newData.length,
-    });
+  [`POST ${apiPrefix}/albums/tree/storeSubTree`] (req, res) {
+    const { parent_id, name } = req.body;
+    const new_tree = {
+      name,
+      parent_id,
+      id:Mock.mock('@id'),
+      subFolder:[],
+      picNum:0,
+      open:false
+    };
+    database.tree.push(new_tree);
+
+    res.status(200).json({success:true,msg:'添加成功'})
   },
 };
 
