@@ -39,6 +39,10 @@ export function selectClassify(id,actions_type,dispatch,event){
   dispatch({
     type:'albumsTrees/selectCurrentTree',
     payload:{currentTree,actions,currentEditTree}
+  });
+  dispatch({
+    type:'albumsPictures/getPictures',
+    payload:{ id:currentTree }
   })
 }
 export function editCurrentTree(id,dispatch){
@@ -53,12 +57,10 @@ export function saveEditTree(dispatch,id,event){
   let btn = event.currentTarget;
   let input = btn.previousElementSibling;
   let name = input.value;
-
   dispatch({
     type:'albumsTrees/updateTreeName',
     payload:{name,id}
   })
-
 }
 export function addSubTree(id,tree,treeLength,dispatch){
   const parentId = id;
@@ -103,7 +105,6 @@ export function addSubTree(id,tree,treeLength,dispatch){
     actions.showDelete = true;
     actions.showEdit = true;
   }
-
 
   dispatch({
     type:'albumsTrees/appendSubTree',

@@ -18,8 +18,8 @@ const pictures = {
     }
   },
   effects:{
-    *getPictures({ payload:{page=1}},{select,call, put}){
-      const {data,total} = yield call(getPicture,page);
+    *getPictures({ payload:{page=1,id=-1}},{select,call, put}){
+      const {data,total} = yield call(getPicture,page,id);
       yield put({
         type:'save',
         payload:{

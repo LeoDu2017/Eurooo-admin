@@ -8,7 +8,6 @@ let albumsTreeData = Mock.mock({
     'total':'125',
     'tree':[
       {'name':'\u672a\u5206\u7c7b','parent_id':'-1','subFolder':[],'id': '0','picNum': '0','open':false,'actions_type':'0'},
-
       {'name':'\u9165\u68a8','parent_id':'-1','subFolder':[],'id':'2148384','picNum':'30','open':false,'actions_type':'1'},
       {'name':'\u6cb9\u6843','parent_id':'-1','subFolder':[],'id':'2148407','picNum':'0','open':false,'actions_type':'1'},
       {'name':'\u516c\u53f8\u4fe1\u606f','parent_id':'-1','subFolder':[],'id':'2148411','picNum':'95','open':false,'actions_type':'1'},
@@ -252,12 +251,16 @@ module.exports = {
   },
   [`GET ${apiPrefix}/albums/pictures`] (req, res) {
     const { query } = req;
-    let { pageSize, page } = query;
+    let { pageSize, page, id } = query;
     pageSize = pageSize || 10;
     page = page || 1;
-
-    let newData = database.pictures;
-
+    id = id || -1;
+    let newData;
+    if(id === '-1'){
+      newData = database.pictures;
+    }else{
+      newData = database.pictures.filter(i => i.category_img_id === id)
+    }
     res.status(200).json({
       data: newData.slice((page - 1) * pageSize, page * pageSize),
       total: newData.length,

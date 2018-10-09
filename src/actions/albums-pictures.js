@@ -1,9 +1,10 @@
-export function getPictures(dispatch,page){
+export function getPictures(id,dispatch,page){
   dispatch({
     type:'albumsPictures/getPictures',
-    payload:{page}
+    payload:{page,id}
   })
 }
+
 export function selectImgs(dispatch,id,single){
   dispatch({
     type:'albumsPictures/setSelectImgs',

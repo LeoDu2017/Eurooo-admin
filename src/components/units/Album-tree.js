@@ -6,6 +6,7 @@ import AlbumRanderitems from './Album-randeritems';
 import {
   stop,
   getSubTree,
+  getPictures,
   selectClassify }      from 'Actions/albums-trees';
 import intl             from 'react-intl-universal';
 import styles           from 'Styles/components.less';
@@ -25,11 +26,11 @@ const Tree = ({dispatch,currentTree,openAll,tree,treeLength,currentEditTree,tota
           <dt id="-1"
               className={currentTree === '-1' ? 'selected': ''}
               onClick={selectClassify.bind(null,'-1','-1',dispatch)}>
-                <span onClick={getSubTree.bind(null,'-1',dispatch)}>
+                <span className="iconbox" onClick={getSubTree.bind(null,'-1',dispatch)}>
                   <Svg className={styles.icon}
-                       type={ openAll ? 'folder-open' : 'folder-close'}> </Svg>
+                       type={ openAll ? 'folder-open' : 'folder-close'}/>
                 </span>
-            <span className="title">
+                <span className="title">
                   <em>{intl.get('ALL')}</em>(<em>{total}</em>)
                 </span>
           </dt>
@@ -43,6 +44,7 @@ const Tree = ({dispatch,currentTree,openAll,tree,treeLength,currentEditTree,tota
             openFailsTree={openFailsTree}
             currentTree={currentTree}
             style={openAll ? {'height':`${treeLength*28}px`}:{'height':"0"}}
+            fold={false}
           />
         </dl>
       </Col>

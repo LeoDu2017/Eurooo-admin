@@ -2,7 +2,7 @@ import {Col,Button,Pagination}  from 'antd';
 import intl                     from 'react-intl-universal';
 import {getPictures}            from 'Actions/albums-pictures';
 
-const Controls = ({dispatch,current,total,length,selected,callBack,id})=>(
+const Controls = ({dispatch,current,total,length,selected,callBack,id,currentTree})=>(
   <Col className="ctrls">
     <Button
       className="premaryBtn"
@@ -13,7 +13,7 @@ const Controls = ({dispatch,current,total,length,selected,callBack,id})=>(
       className="pages"
       total={total}
       current={current}
-      onChange={ getPictures.bind(null,dispatch) }
+      onChange={ getPictures.bind(null,id=currentTree,dispatch) }
     />
   </Col>
 );

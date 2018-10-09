@@ -17,6 +17,7 @@ const AlbumRanderitems = ({
   currentEditTree,
   styles,
   stop,
+  fold,
   openFailsTree}) =>
   {
     let i = 0;
@@ -31,12 +32,16 @@ const AlbumRanderitems = ({
               <dt onClick={selectClassify.bind(null,item.id,item.actions_type,dispatch) }
                   className={currentTree === item.id ? 'selected subClass' : 'subClass' }
                   id={item.id}>
-                  <span onClick={getSubTree.bind(null,item.id,dispatch)}>
-                    <Svg className={item.id === openFailsTree ? 'icon info' : 'icon'}
 
-                         type={ item.open ? 'folder-open' : 'folder-close'}>
-                    </Svg>
+                { !fold ? <span className="iconbox" onClick={getSubTree.bind(null,item.id,dispatch)}>
+                            <Svg className={item.id === openFailsTree ? 'icon info' : 'icon'}
+                               type={ item.open ? 'folder-open' : 'folder-close'}/>
+                          </span>
+                  :<span className="iconbox">
+                    <Svg className={item.id === openFailsTree ? 'icon info' : 'icon'}
+                         type="wenjian"/>
                   </span>
+                }
                   <span className={item.id === currentEditTree ?'title hide' : 'title'}
                         style={item.id === openFailsTree ? {'color':'#F8AC59'} : {}}>
                     <em>{item.name}</em>
@@ -86,6 +91,7 @@ const AlbumRanderitems = ({
                   subClass = 'subitem'
                   treeLength = {item.subFolder.length}
                   openFailsTree = {openFailsTree}
+                  fold={true}
                 />
               }
             </dl>;

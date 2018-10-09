@@ -9,7 +9,7 @@ import {
   selectImgs,
   removeSelected }        from 'Actions/albums-pictures';
 
-const Pictures = ({dispatch,list,page,total,selected,length,single,callBack,id}) =>(
+const Pictures = ({dispatch,list,page,total,selected,length,single,callBack,id,currentTree}) =>(
   <Col className="right">
     <PicActions/>
     <Col className="imgs">
@@ -62,18 +62,21 @@ const Pictures = ({dispatch,list,page,total,selected,length,single,callBack,id})
       total={total}
       dispatch={dispatch}
       length={length}
+      currentTree={currentTree}
       selected={selected}/>
   </Col>
 );
 function mapStateToProps(state){
   const {list,page,total,selected} = state.albumsPictures;
+  const { currentTree } = state.albumsTrees;
   const length = selected.length;
   return {
     list,
     page,
     total,
+    length,
     selected,
-    length
+    currentTree
   }
 }
 

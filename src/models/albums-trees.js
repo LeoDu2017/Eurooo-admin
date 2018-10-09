@@ -100,16 +100,17 @@ const albumsTrees = {
         payload:currentEditTree
       });
     },
-    *getSubTree({payload},{select,call,put}){
-      const id = payload;
+    *getSubTree({payload:id},{select,call,put}){
+
       yield put({
         type:'setOpen',
         payload:id
       });
 
       if(id !== '-1'){
-        const {data} = yield call(getSubTree,payload);
-        const {open,tree} = yield select(({trees}) => trees);
+        const {data} = yield call(getSubTree,id);
+
+        const {open,tree} = yield select(({albumsTrees}) => albumsTrees);
 
         let openFailsTree;
         if(data.length === 0){
@@ -124,10 +125,11 @@ const albumsTrees = {
           payload:openFailsTree
         });
 
-        tree.map(i => {
+        yield tree.map(i => {
           if(i.id === openFailsTree){
             i.open =  false;
           }else{
+
             if(i.id === open && !i.open){
                 i.open = true;
                 i.subFolder = data;
@@ -135,13 +137,14 @@ const albumsTrees = {
               i.open =  false;
               i.subFolder = [];
             }
+
           }
           return i;
         });
 
-        const folder = _.find(tree,{'id':open});
-        const subFolder = folder.subFolder;
+        const folder = yield _.find(tree,{'id':open});
 
+        const subFolder = folder.subFolder;
 
         const treeLength = tree.length + subFolder.length;
 
@@ -223,6 +226,7 @@ const albumsTrees = {
     },
     *selectCurrentTree({payload},{select,call,put}){
       const {currentTree,actions,currentEditTree} = payload;
+
       yield put({
         type:'setCurrentTree',
         payload:currentTree

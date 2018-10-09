@@ -36,8 +36,9 @@ export function getSubTree(parent_id) {
   })
 }
 
-export function getPicture (page) {
-  const data = {page};
+export function getPicture (page,id) {
+  const data = {page,id};
+
   return request({
     url: getPictures,
     method: 'get',
