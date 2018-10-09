@@ -17,7 +17,6 @@ const formItemLayout = {
 };
 // okHandler(dispatch,validateFields,callBack,id,noForm)
 const ShowBrandModal = ({
-
         dispatch,children,id,visible,
         content,country,title,banneds,
         countries,areas,Ok,callBack,

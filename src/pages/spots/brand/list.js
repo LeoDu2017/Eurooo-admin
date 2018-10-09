@@ -11,7 +11,7 @@ import intl               from 'react-intl-universal';
 import BrandDetailModal   from 'Components/modal/show-brand-info';
 import SelecteBrandsModal from 'Components/modal/select-brands-form';
 
-
+import { showModelHandler } from 'Actions/common-modal';
 const brandList = ({dispatch,brands,countries,banneds,current,total}) => {
   const columns = [
     {
@@ -91,12 +91,7 @@ const brandList = ({dispatch,brands,countries,banneds,current,total}) => {
           <span className='g-t-title'>{intl.get('MYBRANS')}</span>
           <span>
             <Button.Group size="small">
-              <SelecteBrandsModal
-                title="选择我的品牌"
-              >
-                <Button type='primary' size="small" icon="check">{intl.get('SELECT')}</Button>
-              </SelecteBrandsModal>
-
+              <Button onClick={showModelHandler.bind(null,dispatch,"selectBrands")} type='primary' size="small" icon="check">{intl.get('SELECT')}</Button>
               <Button type='primary' icon="plus">{intl.get('CREATE')}</Button>
             </Button.Group>
           </span>
@@ -114,6 +109,7 @@ const brandList = ({dispatch,brands,countries,banneds,current,total}) => {
             }}/>
         </Col>
       </Col>
+      <SelecteBrandsModal id="selectBrands" title="选择我的品牌" />
     </Col>
   )
 };

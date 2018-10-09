@@ -3,8 +3,7 @@ import { Modal,Steps }  from 'antd';
 import { Component }    from 'react';
 import {
   okHandler,
-  hideModelHandler,
-  showModelHandler }    from 'Actions/common-modal';
+  hideModelHandler }    from 'Actions/common-modal';
 import {
   nextStepHandler,
   selectBrandHandler }  from 'Actions/brand-select';
@@ -43,7 +42,6 @@ class selectBrandsModal extends Component{
     };
     return(
       <span>
-        <span onClick={showModelHandler.bind(null,dispatch,id)}>{ children }</span>
         <Modal
           width="1000px"
           title={ title }

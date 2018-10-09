@@ -25,7 +25,6 @@ class brandsList extends Component{
             {
               getFieldDecorator('userMode')(<Checkbox.Group onChange={ onSelect }>
                 <List
-                  style={{'padding':'20px','paddingBottom':'0'}}
                   grid={{ gutter: 16, column: 4 }}
                   dataSource={ list }
                   renderItem={ item => (
@@ -52,10 +51,8 @@ class brandsList extends Component{
     )
   }
 }
-// function onChange(changedVaule){
-//   console.log(changedVaule)
-// }
-function mapStateToProps(state,props){
+
+function mapStateToProps(state){
   let {list,total,current} = state.brands;
   return {list,total,current}
 }
