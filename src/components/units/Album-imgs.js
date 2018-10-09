@@ -9,7 +9,7 @@ import {
   selectImgs,
   removeSelected }        from 'Actions/albums-pictures';
 
-const Pictures = ({dispatch,list,page,total,selected,length,single,callBack}) =>(
+const Pictures = ({dispatch,list,page,total,selected,length,single,callBack,id}) =>(
   <Col className="right">
     <PicActions/>
     <Col className="imgs">
@@ -55,7 +55,14 @@ const Pictures = ({dispatch,list,page,total,selected,length,single,callBack}) =>
         }
       </ul>
     </Col>
-    <Controls current={page} callBack={callBack} total={total} dispatch={dispatch} length={length} selected={selected}/>
+    <Controls
+      id={id}
+      current={page}
+      callBack={callBack}
+      total={total}
+      dispatch={dispatch}
+      length={length}
+      selected={selected}/>
   </Col>
 );
 function mapStateToProps(state){

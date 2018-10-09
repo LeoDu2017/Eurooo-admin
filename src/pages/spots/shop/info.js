@@ -1,9 +1,8 @@
 import intl from 'react-intl-universal';
 import { connect } from 'dva';
 import { Form,Input,Select,Row,Col,Checkbox,Button,Icon } from 'antd';
-import Albums from 'Components/Albums';
+import Albums from 'Components/modal/albums';
 import styles from 'Styles/shop.less';
-import {showAlbums} from 'Actions/albums';
 import {selectImgs,toggleEditable,handleSubmit,FieldsChange} from 'Actions/shop';
 const FormItem = Form.Item;
 const { TextArea } = Input;
@@ -98,9 +97,9 @@ const infoForm = ({
                 <img alt="LOGO" src={shopInfo.shop_logo ? shopInfo.shop_logo : 'https://api.vtrois.com/image/108x108/f5f5f5/C2C2C2?text=%20EUROOO%20'}/>
                 {
                   !editable &&
-                  <span onClick={showAlbums.bind(null,dispatch,true)}>
+                  <Albums id="logoAlbums" single={true} callBack={selectImgs}>
                     {intl.get('REUPLOAD')}
-                  </span>
+                  </Albums>
                 }
                 <Input type="hidden"/>
               </Col>
@@ -180,7 +179,7 @@ const infoForm = ({
             })(<Input disabled={editable} placeholder={intl.get('INPUTEMAIL')}/>)}
           </FormItem>
         </Form>
-        <Albums single={true} callBack={selectImgs}/>
+        {/*<Albums />*/}
       </Col>
       <footer className="g-t-footer">
         <Button

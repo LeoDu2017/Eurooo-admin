@@ -1,12 +1,11 @@
-import { showAlbums } from 'Actions/albums';
+import { hideModelHandler } from 'Actions/common-modal';
 import Svg            from 'Components/Svg';
 import intl           from 'react-intl-universal';
-import styles         from 'Styles/components.less';
 
-const Header = ({dispatch}) => (
+const Header = ({dispatch,id}) => (
   <header>
     <span>{intl.get("ALBUMS")}</span>
-    <span onClick={showAlbums.bind(null,dispatch,false)}>
+    <span onClick={hideModelHandler.bind(null,dispatch,null,id)}>
       <Svg className="icon" type="close"/>
     </span>
   </header>

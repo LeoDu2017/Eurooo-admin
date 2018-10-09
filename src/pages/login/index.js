@@ -26,7 +26,7 @@ const LoginPage = ({ dispatch,currentIndex,languages,advantages,systemDate,copyR
         <Col className={ styles.lang_box }>
           <Button
             htmlType="button"
-            onClick={ handleClick.bind(null,3,dispatch)}
+            onClick={ handleClick.bind(null,3,dispatch) }
             className={ currentIndex === 3 ? `${styles.title} ${styles.active}` : styles.title}>
             {intl.get('LANG')}
             <Svg type="triangulum" className={styles.icon}/>

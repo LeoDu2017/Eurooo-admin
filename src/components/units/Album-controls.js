@@ -1,13 +1,12 @@
 import {Col,Button,Pagination}  from 'antd';
 import intl                     from 'react-intl-universal';
-import styles                   from 'Styles/components.less';
 import {getPictures}            from 'Actions/albums-pictures';
 
-const Controls = ({dispatch,current,total,length,selected,callBack})=>(
+const Controls = ({dispatch,current,total,length,selected,callBack,id})=>(
   <Col className="ctrls">
     <Button
       className="premaryBtn"
-      onClick={callBack.bind(null,dispatch,selected)}>
+      onClick={ callBack.bind(null,dispatch,selected,id)}>
       {intl.get('USESELECTED')} ({length})
     </Button>
     <Pagination

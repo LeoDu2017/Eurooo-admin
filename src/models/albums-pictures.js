@@ -45,7 +45,7 @@ const pictures = {
       })
     },
     *removeSelectImgs({payload:id},{select,call,put}){
-      let data = yield select(({pictures}) => pictures.selected);
+      let data = yield select(({albumsPictures}) => albumsPictures.selected);
       let selectedImgs = data.filter(item => Number(item.id) !== Number(id));
       yield put({
         type:'saveSelected',

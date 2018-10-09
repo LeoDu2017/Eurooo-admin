@@ -1,9 +1,9 @@
 import { Modal } from 'antd';
 const confirm = Modal.confirm;
-export function selectImgs(dispatch,selected){
+export function selectImgs(dispatch,selected,id){
   dispatch({
-    type:'albums/setDisplay',
-    payload:false
+    type:'commonModal/setVisible',
+    payload:{[id]:false}
   });
   selected.forEach(i => {
     dispatch({
