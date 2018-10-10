@@ -2,19 +2,20 @@ import {
   delBrandService,
   getBannedService,
   saveBannedService,
+  saveMyBrandService,
   getBrandsListService } from 'Services/brand';
 
 const brand = {
   namespace:'brand',
   state:{
-    brands:[],
+    myBrands:[],
     total:0,
     current:1,
     banned:[]
   },
   reducers:{
-    setBrands(state,{payload:brands}){
-      return {...state,brands}
+    setBrands(state,{payload:myBrands}){
+      return {...state,myBrands}
     },
     setCurrent(state,{payload:current}){
       return {...state,current}
@@ -67,16 +68,15 @@ const brand = {
       }
     },
     *saveBanned({payload:{id,area}},{select,call,put}){
-      // const brands = yield select(state => state.brand.brands);
-      // const changed = brands.filter(item => {
-      //   return item.id === id
-      // });
       const result = yield call(saveBannedService,{area,id});
       if(result.success){
         yield put({
           type:'fetchBrands'
         })
       }
+    },
+    *saveMyBrands({payload:myBrands},{select,call, put}){
+      const result = yield call(saveMyBrandService,myBrands);
     }
   },
   subscriptions:{

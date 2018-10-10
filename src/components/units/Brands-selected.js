@@ -29,7 +29,8 @@ class BrandSelected extends Component{
         <Table
           bordered={ true }
           columns ={ columns }
-          dataSource={ selected }/>
+          dataSource={ selected }
+          pagination={{ pageSize: 5 }}/>
       </div>
     )
   }

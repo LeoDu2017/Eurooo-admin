@@ -115,7 +115,7 @@ const brandList = ({dispatch,brands,countries,banneds,current,total}) => {
 };
 
 function mapStateToProps(state){
-  const { brands,banned,total,current } = state.brand;
+  const { myBrands,banned,total,current } = state.brand;
   const countries = [
     {'id':'1','name':'Afghanistan'},
     {'id':'2','name':'Aland Islands'},
@@ -358,7 +358,7 @@ function mapStateToProps(state){
     return {value,label}
   });
 
-  return {brands,countries,banneds,total,current}
+  return {myBrands,countries,banneds,total,current}
 }
 
 export default connect(mapStateToProps)(brandList);

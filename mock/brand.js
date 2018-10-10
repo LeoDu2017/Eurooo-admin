@@ -37,6 +37,10 @@ module.exports = {
       data: newData
     })
   },
+  [`POST ${apiPrefix}/brand/list`] (req, res){
+    const { myBrand } = req.body;
+    console.log(myBrand)
+  },
   [`GET ${apiPrefix}/brand/list`] (req, res) {
     const { query } = req;
     let { pageSize,page } = query;
