@@ -22,15 +22,17 @@ class BrandSelected extends Component{
       title: 'Areas',
       dataIndex: 'areas',
       key: 'areas',
-      render: () => <Checkbox.Group options={ banneds } />
+      render: () => <Checkbox.Group onChange={} options={ banneds } />
     }];
     return(
       <div>
-        <Table
-          bordered={ true }
-          columns ={ columns }
-          dataSource={ selected }
-          pagination={{ pageSize: 5 }}/>
+        <Form>
+          <Table
+            bordered={ true }
+            columns ={ columns }
+            dataSource={ selected }
+            pagination={{ pageSize: 5 }}/>
+        </Form>
       </div>
     )
   }

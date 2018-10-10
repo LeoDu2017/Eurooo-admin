@@ -20,3 +20,8 @@ export function selectBrandHandler(dispatch,selecteds){
     payload:selecteds
   });
 }
+export function saveMyBrands(dispatch){
+  dispatch({
+    type:'brand/saveMyBrands'
+  })
+}

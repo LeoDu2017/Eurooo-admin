@@ -76,7 +76,9 @@ const brand = {
       }
     },
     *saveMyBrands({payload:myBrands},{select,call, put}){
-      const result = yield call(saveMyBrandService,myBrands);
+      const { selectedBrands } = yield select(({ brandSelect }) => brandSelect);
+      debugger
+      const result = yield call(saveMyBrandService,selected);
     }
   },
   subscriptions:{

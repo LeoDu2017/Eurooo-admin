@@ -5,6 +5,7 @@ import {
   okHandler,
   hideModelHandler }    from 'Actions/common-modal';
 import {
+  saveMyBrands,
   nextStepHandler,
   selectBrandHandler }  from 'Actions/brand-select';
 import Brands           from '../units/Brands-list';
@@ -27,8 +28,11 @@ class selectBrandsModal extends Component{
   render(){
     const { dispatch,id,title,visible,onOk,currentStep,next } = this.props;
     const onOkHandler = () =>{
-      if(currentStep > 1){
-        onOk ? okHandler(dispatch,null,onOk,id) : okHandler(dispatch,null,null,id,true)
+      if(currentStep === 1){
+        //okHandler(dispatch,validateFields,callBack,id)
+        saveMyBrands(dispatch);
+        // okHandler(dispatch,null,null,id);
+
       }else{
         const nextStep = currentStep + 1;
         nextStepHandler(dispatch,nextStep)

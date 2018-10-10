@@ -12,7 +12,7 @@ import BrandDetailModal   from 'Components/modal/show-brand-info';
 import SelecteBrandsModal from 'Components/modal/select-brands-form';
 
 import { showModelHandler } from 'Actions/common-modal';
-const brandList = ({dispatch,brands,countries,banneds,current,total}) => {
+const brandList = ({dispatch,myBrands,countries,banneds,current,total}) => {
   const columns = [
     {
       title: intl.get('BRANDSERIAL'),
@@ -98,7 +98,7 @@ const brandList = ({dispatch,brands,countries,banneds,current,total}) => {
         </header>
         <Col className="g-t-form-wrap">
           <Table
-            dataSource={brands}
+            dataSource={myBrands}
             columns={columns}
             pagination={{
               // simple: true,

@@ -52,9 +52,3 @@ export function changePageHandel(dispatch,page){
     })
   )
 }
-export function saveMyBrands(dispatch,myBrands){
-  dispatch({
-    type:'brand/saveMyBrands',
-    payload:myBrands
-  })
-}

@@ -3,6 +3,7 @@ export default{
   state:{
     currentStep:0,
     selected:[],
+    selectedBrands:[],
     next:false
   },
   reducers:{
