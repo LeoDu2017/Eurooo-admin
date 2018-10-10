@@ -12,9 +12,9 @@ const formItemLayout = {
 };
 
 const AdminInfoForm = ({
-  dispatch,
   id,
   visible,
+  dispatch,
   administrator,
   form:{ resetFields,getFieldDecorator,validateFields }}) => (
   <Modal

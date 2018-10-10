@@ -14,9 +14,9 @@ export function pageChangeHandler(dispatch,page){
     payload:{ page }
   })
 }
-export function selectBrandHandler(dispatch,selected){
+export function selectBrandHandler(dispatch,selecteds){
   dispatch({
     type:'brandSelect/setSelected',
-    payload:selected
+    payload:selecteds
   });
 }

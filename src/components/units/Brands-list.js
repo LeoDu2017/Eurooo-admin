@@ -6,24 +6,30 @@ import {
   Checkbox,
   Pagination }                from 'antd';
 import { Component }          from 'react';
-import { pageChangeHandler }  from 'Actions/brand-select';
+import {
+  pageChangeHandler,
+  selectBrandHandler }        from 'Actions/brand-select';
 
 class brandsList extends Component{
   componentDidMount(){
     this.props.onRef(this)
   };
   onReset = () => {
-    const {form:{resetFields}} = this.props;
-    resetFields()
+    const {dispatch,form:{resetFields}} = this.props;
+    resetFields();
+    pageChangeHandler(dispatch,1);
+    selectBrandHandler(dispatch,[]);
   };
   render(){
-    const { dispatch,form:{getFieldDecorator},list,total,current,onSelect } = this.props;
+    const { dispatch,form:{getFieldDecorator},list,total,current,onSelect,selected } = this.props;
     return(
       <div>
         <Form>
           <Form.Item style={{'marginBottom':'0'}}>
             {
-              getFieldDecorator('userMode')(<Checkbox.Group onChange={ onSelect }>
+              getFieldDecorator('userMode',{
+                initialValue:selected,
+              })(<Checkbox.Group onChange={ onSelect }>
                 <List
                   grid={{ gutter: 16, column: 4 }}
                   dataSource={ list }
@@ -31,7 +37,7 @@ class brandsList extends Component{
                     <List.Item>
                       <Card
                         bodyStyle={{'display':'none'}}
-                        extra={<Checkbox value={item.id}/>}
+                        extra={<Checkbox value={item}/>}
                         cover={<img alt="example" style={{'padding':'10px'}} src={`${item.logo}@110h_216w_1e_1c`} />}
                         title={item.name}/>
                     </List.Item>
@@ -41,6 +47,7 @@ class brandsList extends Component{
                     total={total}
                     current={current}
                     pageSize={12}
+                    defaultCurrent={1}
                     onChange={pageChangeHandler.bind(null,dispatch)}/>
                 </List>
               </Checkbox.Group>)
@@ -54,7 +61,8 @@ class brandsList extends Component{
 
 function mapStateToProps(state){
   let {list,total,current} = state.brands;
-  return {list,total,current}
+  const { selected } = state.brandSelect;
+  return {list,total,current,selected}
 }
 
 export default connect(mapStateToProps)(Form.create()(brandsList));

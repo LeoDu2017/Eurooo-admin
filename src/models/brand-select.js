@@ -17,9 +17,10 @@ export default{
     },
   },
   effects:{
-    *setSelected({payload:selected},{select,put,call}){
+    *setSelected({payload:selecteds},{select,put,call}){
+      yield put({type:'saveSelected',payload:selecteds});
+      const { selected } = yield select(({brandSelect}) => brandSelect);
       yield put({type:'setNext',payload: selected.length > 0});
-      yield put({type:'saveSelected',payload: selected });
     }
   }
 }

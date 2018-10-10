@@ -7,10 +7,11 @@ const allBrandsData = require('./json/brands');
 const { apiPrefix,NOTFOUND } = config;
 const { queryArray } = process;
 // Mock.mock('@id')
+
 const brandsListData = Mock.mock({
   data:{
     myBrands:brandsData,
-    allBrands:allBrandsData,
+    allBrands: allBrandsData.map(item => item = {...item,key:item.id }),
     banned:['21','68','69','75','99','166','192','197','198','199','200','201','203','215','216']
   }
 });

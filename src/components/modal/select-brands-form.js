@@ -8,6 +8,7 @@ import {
   nextStepHandler,
   selectBrandHandler }  from 'Actions/brand-select';
 import Brands           from '../units/Brands-list';
+import Selected         from '../units/Brands-selected';
 
 const Step = Steps.Step;
 
@@ -21,10 +22,10 @@ class selectBrandsModal extends Component{
   };
   onSelect = (changedVaule) => {
     const {dispatch} = this.props;
-    selectBrandHandler(dispatch,selectBrandHandler)
+    selectBrandHandler(dispatch,changedVaule)
   };
   render(){
-    const { dispatch,children,id,title,visible,onOk,currentStep,next } = this.props;
+    const { dispatch,id,title,visible,onOk,currentStep,next } = this.props;
     const onOkHandler = () =>{
       if(currentStep > 1){
         onOk ? okHandler(dispatch,null,onOk,id) : okHandler(dispatch,null,null,id,true)
@@ -37,7 +38,8 @@ class selectBrandsModal extends Component{
       if(currentStep === 0){
         hideModelHandler(dispatch,this.resetHandel.bind(this),id)
       }else{
-        hideModelHandler(dispatch,null,id)
+        const nextStep = currentStep - 1;
+        nextStepHandler(dispatch,nextStep)
       }
     };
     return(
@@ -45,12 +47,14 @@ class selectBrandsModal extends Component{
         <Modal
           width="1000px"
           title={ title }
-          okButtonProps={{ disabled: false }}
-          okText = { currentStep < 2 ? '下一步' : '完成' }
+          okButtonProps={{ disabled: !next }}
+          okText = { currentStep < 1 ? '下一步' : '完成' }
+          cancelText = { currentStep < 1 ? '取消' : '上一步' }
           visible={ visible[id] }
           onOk={ onOkHandler }
           onCancel={ onCancelHandler }>
-            { currentStep === 0 && <Brands onRef={this.onRef} onSelect={this.onSelect}/> }
+            { currentStep === 0 && <Brands onRef={this.onRef} onSelect={ selectBrandHandler.bind(null,dispatch)}/> }
+            { currentStep === 1 && <Selected onRef={this.onRef} onSelect={this.onSelect}/> }
         </Modal>
       </span>
     )

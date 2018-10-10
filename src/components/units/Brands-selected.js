@@ -1,121 +1,43 @@
-import { connect }        from 'dva';
-import {
-  Table,Tag,Col,
-  Button,Divider }        from 'antd';
-import {
-  getCountry,
-  saveBanned,
-  removeBrand,
-  changePageHandel }      from 'Actions/brand';
-import intl               from 'react-intl-universal';
-import BrandDetailModal   from 'Components/modal/show-brand-info';
-import SelecteBrandsModal from 'Components/modal/select-brands-form';
+import { connect }              from 'dva';
+import { Form,Checkbox,Table }  from 'antd';
+import { Component }            from 'react';
+import intl                     from "react-intl-universal";
 
-import { showModelHandler } from 'Actions/common-modal';
-const brandList = ({dispatch,brands,countries,banneds,current,total}) => {
-  const columns = [
-    {
-      title: intl.get('BRANDSERIAL'),
-      dataIndex:'serial',
-      key:'serial',
-      render: text => text
-    },{
-      title:intl.get('BRANDLOGO'),
-      dataIndex:'logo',
-      key:'logo',
-      width:70,
-      align:'center',
-      render:(data,record) => <img alt={record.title} src={`${data}@55h_155w_1e_1c`}/>
-    },{
-      title:intl.get('BRANDTITLE'),
-      dataIndex:'title',
-      key:'title',
-      align:'center',
-      render: text => <a href="javascript:">{text}</a>
-    },{
-      title:intl.get('GOOGSMOUNT'),
-      dataIndex:'amount',
-      key:'amount',
-      align:'center',
-      render:text => text
-    },{
-      title:intl.get('NOTALLOWAREA'),
-      dataIndex:'area',
-      key:'area',
-      width:150,
-      render: areas => (
-        <span>
-          {areas.split(',').map( id => <Tag color="red" key={id}>{getCountry(id,countries)}</Tag>)}
-        </span>
-      )
-    },{
-      title:intl.get('BRANDTYPE'),
-      dataIndex:'type',
-      key:'type',
-      align:'center',
-      render: boolean => Number(boolean) ? intl.get('MERCHANTADD') : intl.get('SYSTEM')
-    },{
-      title:intl.get('ACTION'),
-      key: 'action',
-      align:'center',
-      render:(text,record) => (
-        <span>
-          <BrandDetailModal
-            content={record}
-            country={getCountry(record.country_id,countries)}
-            title= {intl.get('BRANDVIEW')}
-            id={record.id}>
-            <a href="javascript:"> {intl.get('VIEW')}</a>
-          </BrandDetailModal>
-          <Divider type="vertical"/>
-          <a href="javascript:" onClick={removeBrand.bind(null,dispatch,record.id)}>{intl.get('DELETE')}</a>
-          <Divider type="vertical"/>
-          <BrandDetailModal
-            content={record}
-            title= {intl.get('EDITBANNED')}
-            banneds={banneds}
-            countries={countries}
-            areas={record.area.split(',')}
-            Ok={true}
-            callBack={saveBanned.bind(null,dispatch,record.id)}
-            id={record.id + '-country'}>
-            <a href="javascript:"> {intl.get('EDITBANNED')} </a>
-          </BrandDetailModal>
-        </span>
-      )
+class BrandSelected extends Component{
+  componentDidMount(){
+    this.props.onRef(this)
+  };
+  onReset = () => {
+    const {form:{resetFields}} = this.props;
+    resetFields()
+  };
+  render(){
+    const { banneds,selected } = this.props;
+    const columns = [{
+      title: 'Logo',
+      dataIndex: 'logo',
+      key: 'logo',
+      render: (logo,record) => <img src={`${logo}@55h_155w_1e_1c`} alt={record.name}/>
+    }, {
+      title: 'Areas',
+      dataIndex: 'areas',
+      key: 'areas',
+      render: () => <Checkbox.Group options={ banneds } />
     }];
-  return (
-    <Col className='g-t-wrap'>
-      <Col className='g-t-main'>
-        <header className='g-t-header'>
-          <span className='g-t-title'>{intl.get('MYBRANS')}</span>
-          <span>
-            <Button.Group size="small">
-              <Button onClick={showModelHandler.bind(null,dispatch,"selectBrands")} type='primary' size="small" icon="check">{intl.get('SELECT')}</Button>
-              <Button type='primary' icon="plus">{intl.get('CREATE')}</Button>
-            </Button.Group>
-          </span>
-        </header>
-        <Col className="g-t-form-wrap">
-          <Table
-            dataSource={brands}
-            columns={columns}
-            pagination={{
-              // simple: true,
-              current: current,
-              total: total,
-              pageSize:2,
-              onChange: changePageHandel.bind(null,dispatch),
-            }}/>
-        </Col>
-      </Col>
-      <SelecteBrandsModal id="selectBrands" title="选择我的品牌" />
-    </Col>
-  )
-};
+    return(
+      <div>
+        <Table
+          bordered={ true }
+          columns ={ columns }
+          dataSource={ selected }/>
+      </div>
+    )
+  }
+}
 
 function mapStateToProps(state){
-  const { brands,banned,total,current } = state.brand;
+  const { selected } = state.brandSelect;
+  const { banned } = state.brand;
   const countries = [
     {'id':'1','name':'Afghanistan'},
     {'id':'2','name':'Aland Islands'},
@@ -357,8 +279,7 @@ function mapStateToProps(state){
     const label = country.name;
     return {value,label}
   });
-
-  return {brands,countries,banneds,total,current}
+  return { selected,banneds }
 }
 
-export default connect(mapStateToProps)(brandList);
+export default connect(mapStateToProps)(Form.create()(BrandSelected));
