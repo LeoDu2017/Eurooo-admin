@@ -25,3 +25,12 @@ export function saveMyBrands(dispatch){
     type:'brand/saveMyBrands'
   })
 }
+export function changeAreaHandler(dispatch,changedValues){
+  const data = changedValues.reverse()[0].split('-');
+  const id = data[0];
+  const a = data[1];
+  dispatch({
+    type:'brand/setMyBrands',
+    payload:{id,a}
+  })
+}

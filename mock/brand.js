@@ -11,7 +11,7 @@ const { queryArray } = process;
 const brandsListData = Mock.mock({
   data:{
     myBrands:brandsData,
-    allBrands: allBrandsData.map(item => item = {...item,key:item.id }),
+    allBrands: allBrandsData.map(item => item = {...item,key:item.id,area:[] }),
     banned:['21','68','69','75','99','166','192','197','198','199','200','201','203','215','216']
   }
 });

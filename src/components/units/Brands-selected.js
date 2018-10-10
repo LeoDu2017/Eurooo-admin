@@ -2,7 +2,8 @@ import { connect }              from 'dva';
 import { Form,Checkbox,Table }  from 'antd';
 import { Component }            from 'react';
 import intl                     from "react-intl-universal";
-
+import { changeAreaHandler }    from 'Actions/brand-select';
+//
 class BrandSelected extends Component{
   componentDidMount(){
     this.props.onRef(this)
@@ -11,8 +12,9 @@ class BrandSelected extends Component{
     const {form:{resetFields}} = this.props;
     resetFields()
   };
+  //
   render(){
-    const { banneds,selected } = this.props;
+    const { form:{getFieldDecorator},banneds,dispatch,selected } = this.props;
     const columns = [{
       title: 'Logo',
       dataIndex: 'logo',
@@ -20,9 +22,15 @@ class BrandSelected extends Component{
       render: (logo,record) => <img src={`${logo}@55h_155w_1e_1c`} alt={record.name}/>
     }, {
       title: 'Areas',
-      dataIndex: 'areas',
-      key: 'areas',
-      render: () => <Checkbox.Group onChange={} options={ banneds } />
+      dataIndex: 'area',
+      key: 'area',
+      render: (areas,record) => getFieldDecorator('userMode',{
+        initialValue: record.area ,
+      })(<Checkbox.Group name={record.name} onChange={ changeAreaHandler.bind(null,dispatch)}>
+        {
+          banneds.map(({value,label}) => <Checkbox key={value} value={`${record.id}-${value}`}>{label}</Checkbox>)
+        }
+      </Checkbox.Group>)
     }];
     return(
       <div>
