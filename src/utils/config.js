@@ -28,7 +28,6 @@ module.exports = {
     resetPasswordApi:`${APIV1}/user/reset`,
 
     getBrandsListApi:`${APIV1}/brand/list`,
-    updateBrandsListApi:`${APIV1}/brand/list`,
     delBrandApi:`${APIV1}/brand/del`,
     getBannedApi:`${APIV1}/brand/banned`,
     getAllBrandsApi:`${APIV1}/brand/all`,

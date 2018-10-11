@@ -368,7 +368,6 @@ function mapStateToProps(state){
     const label = country.name;
     return {value,label}
   });
-
   return {myBrands,countries,banneds,total,current}
 }
 

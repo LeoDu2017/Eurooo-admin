@@ -83,17 +83,25 @@ const brand = {
         yield put({
           type:'fetchBrands'
         });
-        yield put({
-          type:'commonModal/setVisible',
-          payload:{[id]:false}
-        });
       }
     },
     *setMyBrands({payload:{id,a}},{select,call, put}){
       const { selected } = yield select(({ brandSelect }) => brandSelect);
       let { area } = yield _.find(selected,{id});
       !area.includes(a) && area.push(a);
-    }
+    },
+    *uploadBrand({payload:data},{select,call, put}){
+      const result = yield call(saveMyBrandService,[data]);
+      if(result.success){
+        yield put({
+          type:'fetchBrands'
+        });
+        yield put({
+          type:'commonModal/setVisible',
+          payload:{[id]:false}
+        });
+      }
+    },
   },
   subscriptions:{
     setup({ dispatch,history}){

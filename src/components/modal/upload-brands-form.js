@@ -1,12 +1,11 @@
 import intl from "react-intl-universal";
 import { connect } from 'dva';
 import { Form,Modal,Input,Col,Select,Checkbox } from 'antd';
-import {
-  okHandler,
-  hideModelHandler }    from 'Actions/common-modal';
+import { okHandler }  from 'Actions/common-modal';
+
 import { upLogo } from 'Styles/shop.less';
 import Albums from 'Components/modal/albums';
-import { selectImgs } from 'Actions/brand';
+import { selectImgs,hideModelHandler } from 'Actions/brand';
 
 const FormItem = Form.Item;
 const formItemLayout = {
@@ -27,7 +26,7 @@ const UploadBrandForm = ({
         <FormItem
           {...formItemLayout}
           label="品牌名称">
-            {getFieldDecorator('name', {
+            {getFieldDecorator('name',{
               rules: [{ required: true, message: '请输入品牌名称' }],
             })(<Input placeholder="请输入品牌名称"/>)}
         </FormItem>
@@ -35,7 +34,7 @@ const UploadBrandForm = ({
           {...formItemLayout}
           label={intl.get('SHOPLOGO')}
           extra={intl.get('OPTIMUM')}>
-            {getFieldDecorator('logo', {
+            {getFieldDecorator('logo',{
               initialValue:logo,
               rules: [{required: true, message:intl.get('UPLOADSHOPlOGO')}]
             })(

@@ -51,8 +51,11 @@ export function changePageHandel(dispatch,page){
     })
   )
 }
-export function uploadBrandsHandler(dispatch,data){
-  // console.log(data)
+export function uploadBrandsHandler(data){
+  window.g_app._store.dispatch({
+    type:'brand/uploadBrand',
+    payload:data
+  })
 }
 export function selectImgs(dispatch,selected,id){
   dispatch({
@@ -66,3 +69,15 @@ export function selectImgs(dispatch,selected,id){
     })
   })
 }
+export function hideModelHandler(dispatch,resetFields,id){
+  resetFields();
+  dispatch({
+    type:'commonModal/setVisible',
+    payload:{[id]:false}
+  });
+  dispatch({
+    type:'uploadBrand/saveUploadBrand',
+    payload:''
+  });
+}
+
