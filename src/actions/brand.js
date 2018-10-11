@@ -31,7 +31,7 @@ export function saveBanned(dispatch,id,areas){
     payload:{id,area}
   })
 }
-export function onChange(dispatch,id,areas){
+export function onChange(dispatch,id,area){
   dispatch({
     type:'brand/saveChanged',
     payload:{area,id}

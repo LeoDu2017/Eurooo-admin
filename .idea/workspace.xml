@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce957529-e50a-4792-90ac-21254aa7a8bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/models/brand-upload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/brand.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/brand.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modal/albums.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/albums.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modal/upload-brands-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/upload-brands-form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/spots/brand/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/spots/brand/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/spots/shop/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/spots/shop/admin.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,7 +36,7 @@
           <entry key="css" value="4" />
           <entry key="ejs" value="5" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="430" />
+          <entry key="js" value="431" />
           <entry key="json" value="5" />
           <entry key="less" value="24" />
           <entry key="png" value="1" />
@@ -54,7 +50,7 @@
           <entry key="EJS" value="5" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="430" />
+          <entry key="JavaScript" value="431" />
           <entry key="Less" value="24" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="SVG" value="1" />
@@ -67,7 +63,7 @@
           <entry key="css" value="91" />
           <entry key="dummy" value="2" />
           <entry key="ejs" value="11" />
-          <entry key="js" value="22234" />
+          <entry key="js" value="22239" />
           <entry key="less" value="535" />
           <entry key="txt" value="153" />
         </counts>
@@ -76,7 +72,7 @@
         <counts>
           <entry key="CSS" value="91" />
           <entry key="EJS" value="11" />
-          <entry key="JavaScript" value="22234" />
+          <entry key="JavaScript" value="22239" />
           <entry key="Less" value="535" />
           <entry key="PLAIN_TEXT" value="343" />
         </counts>
@@ -91,117 +87,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/modal/upload-brands-form.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/spots/shop/admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="375">
+              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-                <element signature="e#734#959#0" />
-                <element signature="e#1072#1641#0" />
-                <element signature="e#1762#1997#0" />
-                <element signature="e#2057#2292#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/modal/albums.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/units/Album-imgs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="76" column="11" lean-forward="true" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/units/Album-controls.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="52" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/brand-upload.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/actions/brand.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-                <element signature="n#!!block;n#getCountry#0" />
-                <element signature="n#!!block;n#removeBrand#0" />
-                <element signature="n#!!block;n#saveBanned#0" />
-                <element signature="n#!!block;n#onCollection#0" />
-                <element signature="n#!!block;n#changePageHandel#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/albums.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/albums-pictures.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/albums-pictures.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/albums.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#318#2747#0" />
               </folding>
             </state>
           </provider>
@@ -292,7 +185,6 @@
         <option value="$PROJECT_DIR$/src/components/units/Album-controls.js" />
         <option value="$PROJECT_DIR$/src/actions/albums-pictures.js" />
         <option value="$PROJECT_DIR$/mock/albums.js" />
-        <option value="$PROJECT_DIR$/src/pages/spots/shop/admin.js" />
         <option value="$PROJECT_DIR$/src/models/app.js" />
         <option value="$PROJECT_DIR$/src/models/brands.js" />
         <option value="$PROJECT_DIR$/src/components/modal/change-admin-info-form.js" />
@@ -316,6 +208,7 @@
         <option value="$PROJECT_DIR$/src/components/modal/upload-brands-form.js" />
         <option value="$PROJECT_DIR$/src/components/modal/albums.js" />
         <option value="$PROJECT_DIR$/src/actions/brand.js" />
+        <option value="$PROJECT_DIR$/src/pages/spots/shop/admin.js" />
       </list>
     </option>
   </component>
@@ -359,44 +252,28 @@
             <path>
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
-              <item name="mock" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="spots" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="modal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="units" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="spots" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -468,14 +345,7 @@
       <workItem from="1537836465293" duration="3024000" />
       <workItem from="1537840103515" duration="64398000" />
       <workItem from="1538094085354" duration="100767000" />
-      <workItem from="1538959774537" duration="124849000" />
-    </task>
-    <task id="LOCAL-00010" summary="内页布局">
-      <created>1537509674608</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1537509674608</updated>
+      <workItem from="1538959774537" duration="125056000" />
     </task>
     <task id="LOCAL-00011" summary="内页布局-设置登录状态-及退出功能">
       <created>1537517956761</created>
@@ -813,11 +683,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539238746096</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="内页布局- 我的品牌列表 - 从系统品牌库选择">
+      <created>1539246209800</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1539246209800</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="399475000" />
+    <option name="totallyTimeSpent" value="399682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -833,7 +710,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.6898551" visible="true" weight="0.1800948" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6898551" visible="true" weight="0.1800948" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="npm" order="3" sideWeight="0.31114328" side_tool="true" weight="0.1800948" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
@@ -841,7 +718,7 @@
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.3292683" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.3292683" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.20509978" />
+      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.20509978" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -1094,16 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/spots/shop/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="81" column="40" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/brands.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -1335,16 +1202,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/Album-controls.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/albums-pictures.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -1355,12 +1212,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/modal/albums.js">
+    <entry file="file://$PROJECT_DIR$/src/actions/brand.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        <state relative-caret-position="50">
+          <caret line="2" column="41" lean-forward="true" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="n#!!block;n#getCountry#0" />
+            <element signature="n#!!block;n#removeBrand#0" />
+            <element signature="n#!!block;n#saveBanned#0" />
+            <element signature="n#!!block;n#onChange#0" />
+            <element signature="n#!!block;n#onCollection#0" />
+            <element signature="n#!!block;n#changePageHandel#0" />
+            <element signature="n#!!block;n#uploadBrandsHandler#0" />
+            <element signature="n#!!block;n#selectImgs#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/brand-upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/units/Album-controls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="52" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1371,6 +1253,16 @@
           <caret line="76" column="11" lean-forward="true" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="11" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/modal/albums.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1389,24 +1281,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/brand-upload.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/spots/shop/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/brand.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+        <state relative-caret-position="375">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
-            <element signature="n#!!block;n#getCountry#0" />
-            <element signature="n#!!block;n#removeBrand#0" />
-            <element signature="n#!!block;n#saveBanned#0" />
-            <element signature="n#!!block;n#onCollection#0" />
-            <element signature="n#!!block;n#changePageHandel#0" />
+            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#318#2747#0" />
           </folding>
         </state>
       </provider>

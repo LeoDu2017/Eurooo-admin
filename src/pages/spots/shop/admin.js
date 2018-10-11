@@ -88,10 +88,7 @@ const adminTable = ({dispatch,shopAdmins}) => {
 
 function mapStateToProps(state){
   const {shopAdmins} = state.admin;
-
-  return{
-    shopAdmins
-  }
+  return { shopAdmins }
 }
 
 export default connect(mapStateToProps)(adminTable);
