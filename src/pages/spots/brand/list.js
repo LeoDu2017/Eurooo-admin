@@ -6,10 +6,12 @@ import {
   getCountry,
   saveBanned,
   removeBrand,
-  changePageHandel }      from 'Actions/brand';
+  changePageHandel,
+  uploadBrandsHandler}    from 'Actions/brand';
 import intl               from 'react-intl-universal';
 import BrandDetailModal   from 'Components/modal/show-brand-info';
-import SelecteBrandsModal from 'Components/modal/select-brands-form';
+import SelectBrandsModal  from 'Components/modal/select-brands-form';
+import UploadBrandsModal  from 'Components/modal/upload-brands-form';
 
 import { showModelHandler } from 'Actions/common-modal';
 const brandList = ({dispatch,myBrands,countries,banneds,current,total}) => {
@@ -93,8 +95,8 @@ const brandList = ({dispatch,myBrands,countries,banneds,current,total}) => {
           <span className='g-t-title'>{intl.get('MYBRANS')}</span>
           <span>
             <Button.Group size="small">
-              <Button onClick={showModelHandler.bind(null,dispatch,"selectBrands")} type='primary' size="small" icon="check">{intl.get('SELECT')}</Button>
-              <Button type='primary' icon="plus">{intl.get('CREATE')}</Button>
+              <Button onClick={showModelHandler.bind(null,dispatch,"selectBrands")} type='primary' icon="check">{intl.get('SELECT')}</Button>
+              <Button onClick={showModelHandler.bind(null,dispatch,"uploadBrands")} type='primary' icon="plus">{intl.get('CREATE')}</Button>
             </Button.Group>
           </span>
         </header>
@@ -111,7 +113,8 @@ const brandList = ({dispatch,myBrands,countries,banneds,current,total}) => {
             }}/>
         </Col>
       </Col>
-      <SelecteBrandsModal id="selectBrands" title="选择我的品牌" />
+      <SelectBrandsModal id="selectBrands" title="选择我的品牌" />
+      <UploadBrandsModal id="uploadBrands" title="上传新品牌" callBack={ uploadBrandsHandler }/>
     </Col>
   )
 };

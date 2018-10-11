@@ -74,8 +74,7 @@ const UserEditModal = ({dispatch,children,visible,id,add,onOk,record,form:{getFi
           </FormItem>
           <FormItem
             {...formItemLayout}
-            label={intl.get('CONTACT')}
-          >
+            label={intl.get('CONTACT')}>
             {
               getFieldDecorator('contactNumber', {
                 initialValue:record.contactNumber,
@@ -85,8 +84,7 @@ const UserEditModal = ({dispatch,children,visible,id,add,onOk,record,form:{getFi
           </FormItem>
           <FormItem
             {...formItemLayout}
-            label={intl.get('ACCOUNTSTATUS')}
-          >
+            label={intl.get('ACCOUNTSTATUS')}>
             {
               getFieldDecorator('userMode', {
                 initialValue:record.userMode,
@@ -100,8 +98,7 @@ const UserEditModal = ({dispatch,children,visible,id,add,onOk,record,form:{getFi
           </FormItem>
           <FormItem
             {...formItemLayout}
-            label={intl.get('AUTHORIZATION')}
-          >
+            label={intl.get('AUTHORIZATION')}>
             {
               getFieldDecorator('permissions', {
                 initialValue:record.permissions,

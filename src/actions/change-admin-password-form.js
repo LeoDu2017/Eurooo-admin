@@ -6,25 +6,23 @@ export function unequalNext(validateFields,rule,value,callback){
 export function unequalPrevAndEqualNext(validateFields,getFieldValue,errorMsg,rule,value,callback){
   if (value && value === getFieldValue('originalPassword')) {
     validateFields(['renewPassword'],{ force: true });
-    callback(errorMsg);
+    callback(errorMsg)
   } else {
-    callback();
+    callback()
   }
 }
 export function equalPrev(getFieldValue,errorMsg,rule,value,callback){
   if (value && value !== getFieldValue('newPassword')) {
-
-    callback(errorMsg);
+    callback(errorMsg)
   } else {
-    callback();
+    callback()
   }
 }
 export function okHandler(dispatch,getFieldValue,userID,callback){
   const values = {
     id:userID,
     originalPassword:getFieldValue('originalPassword'),
-    newPassword:getFieldValue('newPassword'),
+    newPassword:getFieldValue('newPassword')
   };
-  values && callback(dispatch,values);
-  console.log(values)
+  values && callback(dispatch,values)
 }

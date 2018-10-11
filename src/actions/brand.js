@@ -52,3 +52,6 @@ export function changePageHandel(dispatch,page){
     })
   )
 }
+export function uploadBrandsHandler(dispatch,data){
+  // console.log(data)
+}
