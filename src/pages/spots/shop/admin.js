@@ -87,7 +87,7 @@ const adminTable = ({dispatch,shopAdmins}) => {
 };
 
 function mapStateToProps(state){
-  const {shopAdmins} = state.admin;
+  const  { shopAdmins } = state.admin;
   return { shopAdmins }
 }
 
