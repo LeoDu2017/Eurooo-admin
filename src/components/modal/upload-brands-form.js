@@ -7,6 +7,7 @@ import {
 import { upLogo } from 'Styles/shop.less';
 import Albums from 'Components/modal/albums';
 import { selectImgs } from 'Actions/brand';
+
 const FormItem = Form.Item;
 const formItemLayout = {
   labelCol: { span: 6 },
@@ -14,7 +15,8 @@ const formItemLayout = {
 };
 
 const UploadBrandForm = ({
-  id,dispatch,visible,title,banneds,logo,callBack,countries,form:{validateFields,resetFields,getFieldDecorator}}) => (
+  id,dispatch,visible,title,banneds,logo,callBack,
+  countries,form:{validateFields,resetFields,getFieldDecorator}}) => (
   <span>
     <Modal
       title={ title }
@@ -34,6 +36,7 @@ const UploadBrandForm = ({
           label={intl.get('SHOPLOGO')}
           extra={intl.get('OPTIMUM')}>
             {getFieldDecorator('logo', {
+              initialValue:logo,
               rules: [{required: true, message:intl.get('UPLOADSHOPlOGO')}]
             })(
               <Col className={upLogo}>
