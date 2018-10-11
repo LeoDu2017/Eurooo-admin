@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce957529-e50a-4792-90ac-21254aa7a8bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/modal/upload-brands-form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/brand.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/brand.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/change-admin-password-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/change-admin-password-form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/common-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/common-modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modal/admin-info-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/admin-info-form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/spots/brand/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/spots/brand/list.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -67,7 +62,7 @@
           <entry key="css" value="91" />
           <entry key="dummy" value="2" />
           <entry key="ejs" value="11" />
-          <entry key="js" value="21885" />
+          <entry key="js" value="21887" />
           <entry key="less" value="535" />
           <entry key="txt" value="153" />
         </counts>
@@ -76,7 +71,7 @@
         <counts>
           <entry key="CSS" value="91" />
           <entry key="EJS" value="11" />
-          <entry key="JavaScript" value="21885" />
+          <entry key="JavaScript" value="21887" />
           <entry key="Less" value="535" />
           <entry key="PLAIN_TEXT" value="343" />
         </counts>
@@ -91,101 +86,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/spots/brand/list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="113" column="14" lean-forward="true" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
+            <state relative-caret-position="200">
+              <caret line="107" column="31" lean-forward="true" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
                 <element signature="e#548#2864#0" />
                 <element signature="e#3965#12467#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/brand.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-                <element signature="n#!!block;n#getCountry#0" />
-                <element signature="n#!!block;n#removeBrand#0" />
-                <element signature="n#!!block;n#saveBanned#0" />
-                <element signature="n#!!block;n#onCollection#0" />
-                <element signature="n#!!block;n#changePageHandel#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/modal/upload-brands-form.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-              <folding>
-                <element signature="e#1#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/modal/change-admin-password-form.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="11" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="11" />
-              <folding>
-                <element signature="e#1013#1441#0" />
-                <element signature="e#1448#1914#0" />
-                <element signature="e#1921#2369#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/actions/change-admin-password-form.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="61" lean-forward="true" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/modal/admin-info-form.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/modal/login-form.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/common-modal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="56" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -293,12 +203,12 @@
         <option value="$PROJECT_DIR$/src/models/brand.js" />
         <option value="$PROJECT_DIR$/mock/json/mybrands.js" />
         <option value="$PROJECT_DIR$/src/components/modal/show-brand-info.js" />
-        <option value="$PROJECT_DIR$/src/pages/spots/brand/list.js" />
         <option value="$PROJECT_DIR$/src/actions/brand.js" />
         <option value="$PROJECT_DIR$/src/components/modal/admin-info-form.js" />
         <option value="$PROJECT_DIR$/src/actions/common-modal.js" />
         <option value="$PROJECT_DIR$/src/components/modal/upload-brands-form.js" />
         <option value="$PROJECT_DIR$/src/actions/change-admin-password-form.js" />
+        <option value="$PROJECT_DIR$/src/pages/spots/brand/list.js" />
       </list>
     </option>
   </component>
@@ -454,14 +364,7 @@
       <workItem from="1537836465293" duration="3024000" />
       <workItem from="1537840103515" duration="64398000" />
       <workItem from="1538094085354" duration="100767000" />
-      <workItem from="1538959774537" duration="117279000" />
-    </task>
-    <task id="LOCAL-00008" summary="内页布局">
-      <created>1537425084781</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1537425084781</updated>
+      <workItem from="1538959774537" duration="117349000" />
     </task>
     <task id="LOCAL-00009" summary="内页布局">
       <created>1537433104618</created>
@@ -799,11 +702,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539219751860</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="内页布局- 我的品牌列表 - 从系统品牌库选择">
+      <created>1539238639441</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1539238639441</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="391905000" />
+    <option name="totallyTimeSpent" value="391975000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1306,33 +1216,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/spots/brand/list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="113" column="14" lean-forward="true" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#548#2864#0" />
-            <element signature="e#3965#12467#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/brand.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-            <element signature="n#!!block;n#getCountry#0" />
-            <element signature="n#!!block;n#removeBrand#0" />
-            <element signature="n#!!block;n#saveBanned#0" />
-            <element signature="n#!!block;n#onCollection#0" />
-            <element signature="n#!!block;n#changePageHandel#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/modal/admin-info-form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -1360,13 +1243,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/modal/upload-brands-form.js">
+    <entry file="file://$PROJECT_DIR$/src/actions/change-admin-password-form.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding>
-            <element signature="e#1#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="275">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1382,10 +1262,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/change-admin-password-form.js">
+    <entry file="file://$PROJECT_DIR$/src/components/modal/upload-brands-form.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="61" lean-forward="true" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+        <state relative-caret-position="175">
+          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding>
+            <element signature="e#1#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/brand.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="n#!!block;n#getCountry#0" />
+            <element signature="n#!!block;n#removeBrand#0" />
+            <element signature="n#!!block;n#saveBanned#0" />
+            <element signature="n#!!block;n#onCollection#0" />
+            <element signature="n#!!block;n#changePageHandel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/spots/brand/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="107" column="31" lean-forward="true" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#548#2864#0" />
+            <element signature="e#3965#12467#0" />
+          </folding>
         </state>
       </provider>
     </entry>

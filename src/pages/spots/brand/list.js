@@ -105,7 +105,6 @@ const brandList = ({dispatch,myBrands,countries,banneds,current,total}) => {
             dataSource={myBrands}
             columns={columns}
             pagination={{
-              // simple: true,
               current: current,
               total: total,
               pageSize:2,
