@@ -30,7 +30,7 @@ class selectBrandsModal extends Component{
     const onOkHandler = () =>{
       if(currentStep === 1){
         //okHandler(dispatch,validateFields,callBack,id)
-        saveMyBrands(dispatch);
+        saveMyBrands(dispatch,id);
         // okHandler(dispatch,null,null,id);
 
       }else{

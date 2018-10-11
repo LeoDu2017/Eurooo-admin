@@ -76,21 +76,23 @@ const brand = {
         })
       }
     },
-    *saveMyBrands({payload:myBrands},{select,call, put}){
+    *saveMyBrands({payload:id},{select,call, put}){
       const { selected } = yield select(({ brandSelect }) => brandSelect);
-      console.log(selected);
       const result = yield call(saveMyBrandService,selected);
+      if(result.success){
+        yield put({
+          type:'fetchBrands'
+        });
+        yield put({
+          type:'commonModal/setVisible',
+          payload:{[id]:false}
+        });
+      }
     },
     *setMyBrands({payload:{id,a}},{select,call, put}){
-
       const { selected } = yield select(({ brandSelect }) => brandSelect);
       let { area } = yield _.find(selected,{id});
       !area.includes(a) && area.push(a);
-      // console.log("后",id,area);
-      // yield area.push(a);
-      // const newAreaSet = yield new Set(area);
-      // yield area = Array.from(newAreaSet);
-      // console.log(id,area)
     }
   },
   subscriptions:{

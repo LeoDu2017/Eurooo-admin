@@ -38,9 +38,10 @@ module.exports = {
     })
   },
   [`POST ${apiPrefix}/brand/list`] (req, res){
-    const { myBrand } = req.body;
-    console.log(myBrand)
+    database.myBrands = database.myBrands.concat(req.body);
+    res.status(200).json({status:1,success:true,msg: '添加成功' })
   },
+
   [`GET ${apiPrefix}/brand/list`] (req, res) {
     const { query } = req;
     let { pageSize,page } = query;

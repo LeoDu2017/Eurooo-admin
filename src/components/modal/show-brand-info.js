@@ -32,7 +32,7 @@ const ShowBrandModal = ({
         onCancel={hideModelHandler.bind(null,dispatch,resetFields,id)}>
         <Form>
           <FormItem {...formItemLayout} label='品牌名称' className="g-f-item">
-            <Input disabled={true} value={content.title}/>
+            <Input disabled={true} value={content.name}/>
           </FormItem>
           <FormItem {...formItemLayout} label='品牌logo' className="g-f-item">
             <img src={content.logo}/>

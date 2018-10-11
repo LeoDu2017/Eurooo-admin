@@ -28,8 +28,8 @@ const brandList = ({dispatch,myBrands,countries,banneds,current,total}) => {
       render:(data,record) => <img alt={record.title} src={`${data}@55h_155w_1e_1c`}/>
     },{
       title:intl.get('BRANDTITLE'),
-      dataIndex:'title',
-      key:'title',
+      dataIndex:'name',
+      key:'name',
       align:'center',
       render: text => <a href="javascript:">{text}</a>
     },{
@@ -45,7 +45,9 @@ const brandList = ({dispatch,myBrands,countries,banneds,current,total}) => {
       width:150,
       render: areas => (
         <span>
-          {areas.split(',').map( id => <Tag color="red" key={id}>{getCountry(id,countries)}</Tag>)}
+          {
+            Array.isArray(areas) ? areas.map( id => <Tag color="red" key={id}>{getCountry(id,countries)}</Tag>)
+            : areas.split(',').map( id => <Tag color="red" key={id}>{getCountry(id,countries)}</Tag>)}
         </span>
       )
     },{
@@ -75,7 +77,7 @@ const brandList = ({dispatch,myBrands,countries,banneds,current,total}) => {
             title= {intl.get('EDITBANNED')}
             banneds={banneds}
             countries={countries}
-            areas={record.area.split(',')}
+            areas={ Array.isArray(record.area) ? record.area : record.area.split(',')}
             Ok={true}
             callBack={saveBanned.bind(null,dispatch,record.id)}
             id={record.id + '-country'}>
