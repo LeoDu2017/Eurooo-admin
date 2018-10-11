@@ -23,7 +23,7 @@ const Albums = ({
       width="1024px"
       height="692px"
       className="albums">
-      <Header dispatch={dispatch} id={id} />
+      <Header dispatch={dispatch} id={id}/>
       <Col className="main">
         <Tree/>
         <Pictures id={id} single={single} callBack={callBack}/>

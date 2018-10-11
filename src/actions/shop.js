@@ -32,7 +32,6 @@ export function toggleEditable(dispatch,shopInfo,originInfo,validateFieldsAndScr
       },
     });
   }
-
   dispatch({
     type:'shop/setEditable'
   });

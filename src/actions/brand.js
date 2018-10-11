@@ -32,7 +32,6 @@ export function saveBanned(dispatch,id,areas){
   })
 }
 export function onChange(dispatch,id,areas){
-  console.log(areas.join(','));
   dispatch({
     type:'brand/saveChanged',
     payload:{area,id}
@@ -54,4 +53,16 @@ export function changePageHandel(dispatch,page){
 }
 export function uploadBrandsHandler(dispatch,data){
   // console.log(data)
+}
+export function selectImgs(dispatch,selected,id){
+  dispatch({
+    type:'commonModal/setVisible',
+    payload:{[id]:false}
+  });
+  selected.forEach(i => {
+    dispatch({
+      type:'uploadBrand/saveUploadBrand',
+      payload:i.file
+    })
+  })
 }

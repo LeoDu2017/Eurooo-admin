@@ -112,8 +112,15 @@ const brandList = ({dispatch,myBrands,countries,banneds,current,total}) => {
             }}/>
         </Col>
       </Col>
-      <SelectBrandsModal id="selectBrands" title="选择我的品牌" />
-      <UploadBrandsModal id="uploadBrands" title="上传新品牌" callBack={ uploadBrandsHandler }/>
+      <SelectBrandsModal
+        id="selectBrands"
+        title="选择我的品牌"/>
+      <UploadBrandsModal
+        id="uploadBrands"
+        title="上传新品牌"
+        banneds={ banneds }
+        countries={ countries }
+        callBack={ uploadBrandsHandler }/>
     </Col>
   )
 };
