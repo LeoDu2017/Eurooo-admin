@@ -17,9 +17,10 @@ export function updateShopInfoService(data){
     data,
   })
 }
-export function getShopAdminsService(){
+export function getShopAdminsService(data){
   return request({
     url: usersApi,
+    data,
     method: 'get'
   })
 }

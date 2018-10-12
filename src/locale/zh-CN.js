@@ -195,7 +195,7 @@ export default {
     "EDITBANNED":"编辑禁销国家",
 
 
-
+    "MYPRODUCTS":"我的产品",
     "PRODUCTSERIAL":"产品编号",
     "PRODUCTNAME":"产品名称",
     "PRODUCTMAINIMAGE":"产品主图",

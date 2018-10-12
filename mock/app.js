@@ -197,10 +197,13 @@ module.exports = {
     res.json(response)
   },
   // 管理员列表
-  [`GET ${apiPrefix}/users`]        (req, res) {
+  [`GET ${apiPrefix}/shop/admin`]        (req, res) {
+
+
     const { query } = req;
+    console.log(query);
     let { pageSize, page, ...other } = query;
-    pageSize = pageSize || 10;
+    pageSize = pageSize || 1;
     page = page || 1;
 
     let newData = database;
@@ -235,6 +238,7 @@ module.exports = {
     res.status(200).json({
       data: newData.slice((page - 1) * pageSize, page * pageSize),
       total: newData.length,
+      current: page
     })
   },
   // 删除管理员

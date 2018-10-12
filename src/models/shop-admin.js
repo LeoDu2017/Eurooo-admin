@@ -8,20 +8,33 @@ import {
 const admin = {
   namespace:'admin',
   state:{
-    shopAdmins:[]
+    shopAdmins:[],
+    total:0,
+    current:1,
   },
   reducers:{
     setShopAdmins(state,{payload:shopAdmins}){
       return {...state,shopAdmins}
+    },
+    setTotal(state,{payload:total}){
+      return {...state,total}
+    },
+    setCurrent(state,{payload:current}){
+      return {...state,current}
     }
   },
   effects:{
     *getShopAdmins({payload},{select,call, put}){
-      const shopAdmins = yield call(getShopAdminsService, payload);
+      debugger
+      const {data,total} = yield call(getShopAdminsService, payload);
 
       yield put({
         type:'setShopAdmins',
-        payload:shopAdmins.data
+        payload:data
+      });
+      yield put({
+        type:'setTotal',
+        payload:total
       })
     },
     *deleteShopAdmin({payload},{select,call, put}){
@@ -64,16 +77,23 @@ const admin = {
   },
   subscriptions:{
     setup({ dispatch,history}){
-      return history.listen(({ pathname}) => {
+      return history.listen(({ pathname,query}) => {
         let arr = pathname.split('/');
         let subChildLink = arr[3];
         if(subChildLink === 'admin'){
           dispatch({
-            type:'getShopAdmins'
-          })
+            type:'getShopAdmins',
+            payload:query
+          });
+          dispatch({
+            type:'setCurrent',
+            payload:Number(query.page)
+          });
         }
       });
     }
   }
 };
 export default admin;
+
+

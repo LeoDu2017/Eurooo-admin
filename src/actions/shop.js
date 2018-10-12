@@ -1,4 +1,6 @@
 import { Modal } from 'antd';
+import { routerRedux } from 'dva/router';
+
 const confirm = Modal.confirm;
 export function selectImgs(dispatch,selected,id){
   dispatch({
@@ -100,4 +102,14 @@ export function resetPassword(dispatch,id){
 
     },
   });
+}
+// 翻页
+export function changePageHandel(dispatch,page){
+  debugger
+  dispatch(
+    routerRedux.push({
+      pathname: '/spots/shop/admin',
+      query: { page }
+    })
+  )
 }

@@ -41,7 +41,7 @@ module.exports = {
     userLoginApi: `${APIV1}/user/login`,
     userLogoutApi: `${APIV1}/user/logout`,
     userInfo: `${APIV1}/userInfo`,
-    usersApi: `${APIV1}/users`,
+    usersApi: `${APIV1}/shop/admin`,
     posts: `${APIV1}/posts`,
     // user: `${APIV1}/user/:id`,
     dashboard: `${APIV1}/dashboard`,

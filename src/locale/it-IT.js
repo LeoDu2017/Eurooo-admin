@@ -219,7 +219,7 @@ export default{
 
 
 
-
+    "MYPRODUCTS":"Il mio prodotto",
     "PRODUCTSERIAL":"Identità del prodotto",
     "PRODUCTNAME":"Nome del prodotto",
     "PRODUCTMAINIMAGE":"Miniatura",

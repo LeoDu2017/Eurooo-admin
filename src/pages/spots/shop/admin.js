@@ -1,11 +1,11 @@
 import intl from 'react-intl-universal';
 import { connect } from 'dva';
-import { Table,Divider,Tag,Col,Button,Icon } from 'antd';
-import { deleteAdmin,createAdmin,editHandler,resetPassword } from 'Actions/shop';
+import { Table,Divider,Tag,Col,Button,Icon,Pagination } from 'antd';
+import { deleteAdmin,createAdmin,editHandler,resetPassword,changePageHandel } from 'Actions/shop';
 
 import UserModal from 'Components/modal/admin-info-form';
 
-const adminTable = ({dispatch,shopAdmins}) => {
+const adminTable = ({dispatch,shopAdmins,current,total}) => {
   const columns = [{
     title: intl.get('AVATAR'),
     dataIndex: 'avatar',
@@ -79,16 +79,24 @@ const adminTable = ({dispatch,shopAdmins}) => {
           <Table
             columns={columns}
             dataSource={shopAdmins}
-            pagination={{ pageSize: 7 }}/>
+            pagination={{ hideOnSinglePage:true }}/>
         </Col>
+        <footer className="g-t-footer">
+          <Pagination
+            current={current}
+            total={total}
+            pageSize={1}
+            onChange={changePageHandel.bind(null,dispatch)}
+          />
+        </footer>
       </Col>
     </Col>
   )
 };
 
 function mapStateToProps(state){
-  const  { shopAdmins } = state.admin;
-  return { shopAdmins }
+  const  { shopAdmins,total,current } = state.admin;
+  return { shopAdmins,total,current }
 }
 
 export default connect(mapStateToProps)(adminTable);

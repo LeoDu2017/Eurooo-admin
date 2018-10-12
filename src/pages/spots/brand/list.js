@@ -1,7 +1,7 @@
 import { connect }        from 'dva';
 import {
   Table,Tag,Col,
-  Button,Divider }        from 'antd';
+  Button,Divider,Pagination }        from 'antd';
 import {
   getCountry,
   saveBanned,
@@ -104,13 +104,16 @@ const brandList = ({dispatch,myBrands,countries,banneds,current,total}) => {
           <Table
             dataSource={myBrands}
             columns={columns}
-            pagination={{
-              current: current,
-              total: total,
-              pageSize:2,
-              onChange: changePageHandel.bind(null,dispatch),
-            }}/>
+            pagination={{hideOnSinglePage:true}}/>
         </Col>
+        <footer className="g-t-footer">
+          <Pagination
+            current={current}
+            total={total}
+            pageSize={2}
+            onChange={changePageHandel.bind(null,dispatch)}
+          />
+        </footer>
       </Col>
       <SelectBrandsModal
         id="selectBrands"

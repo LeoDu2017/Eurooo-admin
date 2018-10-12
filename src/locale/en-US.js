@@ -186,7 +186,7 @@ export default {
     "VIEW":"View",
     "EDITBANNED":"Edit banned",
 
-
+    "MYPRODUCTS":"My product",
     "PRODUCTSERIAL":"Product code",
     "PRODUCTNAME":"Product name",
     "PRODUCTMAINIMAGE":"Product main image",
