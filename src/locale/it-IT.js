@@ -192,6 +192,20 @@ export default{
     "INPUTCONTACT":"Inserisci il telefono.",
     "SELECTAUTHORIZATION":"Per favore, La scelta dell'Autorità di gestione",
     "AVATAR":"Avatar",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     "BRANDSERIAL":"Numero di Marca",
     "BRANDLOGO":"IL marchio ICONA",
     "BRANDTITLE":"IL nome del marchio",
@@ -202,5 +216,17 @@ export default{
     "MERCHANTADD":"IL Mercante di aggiungere",
     "VIEW":"Vista",
     "EDITBANNED":"Nazionale di divieto di Pin Editore",
+
+
+
+
+    "PRODUCTSERIAL":"Identità del prodotto",
+    "PRODUCTNAME":"Nome del prodotto",
+    "PRODUCTMAINIMAGE":"Miniatura",
+    "PRODUCTBRAND":"Brand",
+    "PRODUCTPRICE":"Prezzo del prodotto",
+    "PRODUCTAMOUNT":"Quantità",
+    "PRODUCTSTATE":"Stato",
+    "PRODUCTBANNED":"Area non disponibile",
   }
 }

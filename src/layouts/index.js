@@ -36,7 +36,7 @@ const BasicLayout = ({dispatch,children,collapsed,isMobile,location:{pathname}})
             { children }
           </Content>
           <Footer>
-            底部
+            Copyright:©2018 Eurooo.com
           </Footer>
         </Layout>
       </Layout>

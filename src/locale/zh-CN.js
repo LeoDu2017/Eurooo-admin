@@ -52,8 +52,8 @@ export default {
     "ADMIN":"管理员",
     "BRAND":"品牌管理",
     "BRANDLIST":"品牌列表",
-    "PRODUCT":"商品管理",
-    "PRODUCTLIST":"商品列表",
+    "PRODUCT":"产品管理",
+    "PRODUCTLIST":"产品列表",
     "ORDER":"订单管理",
     "ORDERLATEST":"最新订单",
     "ORDERPREVIOUS":"历史订单",
@@ -181,6 +181,7 @@ export default {
     "INPUTCONTACT":"请输入联系电话",
     "SELECTAUTHORIZATION":"请选择操作权限",
     "AVATAR":"头像",
+
     "BRANDSERIAL":"品牌编号",
     "BRANDLOGO":"品牌图标",
     "BRANDTITLE":"品牌名称",
@@ -192,6 +193,17 @@ export default {
     "BRANDVIEW":"查看品牌",
     "VIEW":"查看",
     "EDITBANNED":"编辑禁销国家",
+
+
+
+    "PRODUCTSERIAL":"产品编号",
+    "PRODUCTNAME":"产品名称",
+    "PRODUCTMAINIMAGE":"产品主图",
+    "PRODUCTBRAND":"品牌",
+    "PRODUCTPRICE":"产品价格",
+    "PRODUCTAMOUNT":"数量",
+    "PRODUCTSTATE":"状态",
+    "PRODUCTBANNED":"禁销地区",
 
   }
 }

@@ -138,6 +138,7 @@ html, body, :global(#root) {
 }
 :global(.ant-layout-footer){
   text-align: center;
+  background: none;
 }
 /*:global(.ant-card-body){*/
 /*padding: 5px !important;*/

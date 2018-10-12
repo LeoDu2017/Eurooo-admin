@@ -1,7 +1,7 @@
 import request from 'Utils/request';
 import { api } from 'Utils/config';
 
-const { getBrandsListApi,delBrandApi,getBannedApi,udateBannedApi,getAllBrandsApi,updateBrandsListApi,uploadBrandApi } = api;
+const { getBrandsListApi,delBrandApi,getBannedApi,udateBannedApi,getAllBrandsApi,updateBrandsListApi } = api;
 
 export function getBrandsListService(data){
   return request({
@@ -38,7 +38,6 @@ export function saveBannedService(data){
   })
 }
 export function saveMyBrandService(data){
-  console.log(data);
   return request({
     url: updateBrandsListApi,
     data,

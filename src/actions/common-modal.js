@@ -14,7 +14,6 @@ export function hideModelHandler(dispatch,resetFields,id){
 }
 export function okHandler(dispatch,validateFields,callBack,id){
   if(validateFields){
-
     validateFields({ force: true },(err, values) => {
       console.log(values);
       if (!err) {

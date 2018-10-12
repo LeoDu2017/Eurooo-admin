@@ -22,20 +22,6 @@ export default {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     "INO":"Rectify the account information",
     "OUT":"Sign out",
     "HOME":"Home page",
@@ -199,5 +185,16 @@ export default {
     "BRANDVIEW":"Brand view",
     "VIEW":"View",
     "EDITBANNED":"Edit banned",
+
+
+    "PRODUCTSERIAL":"Product code",
+    "PRODUCTNAME":"Product name",
+    "PRODUCTMAINIMAGE":"Product main image",
+    "PRODUCTBRAND":"Brand",
+    "PRODUCTPRICE":"Product price",
+    "PRODUCTAMOUNT":"Quantity",
+    "PRODUCTSTATE":"Status",
+    "PRODUCTBANNED":"Not Available areas",
+
   }
 }

@@ -200,5 +200,24 @@ export default{
     "MERCHANTADD":"Les commerçants à ajouter",
     "VIEW":"Voir",
     "EDITBANNED":"Édition de la broche de pays interdit",
+
+
+
+
+
+
+
+
+
+
+    "PRODUCTSERIAL":"Identité de produit",
+    "PRODUCTNAME":"Nom de produit",
+    "PRODUCTMAINIMAGE":"Image miniature",
+    "PRODUCTBRAND":"Marque",
+    "PRODUCTPRICE":"Prix de produit",
+    "PRODUCTAMOUNT":"Quantité",
+    "PRODUCTSTATE":"Statut",
+    "PRODUCTBANNED":"Régions non disponibles",
+
   }
 }

@@ -53,7 +53,7 @@ export function changePageHandel(dispatch,page){
 }
 export function uploadBrandsHandler(data){
   window.g_app._store.dispatch({
-    type:'brand/uploadBrand',
+    type:'brand/uploadMyBrand',
     payload:data
   })
 }

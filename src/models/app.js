@@ -89,6 +89,17 @@ export default{
                   }
                 ]
               },
+              {
+                name:intl.get('PRODUCT'),
+                icon: 'shopping-cart',
+                path: 'product',
+                children:[
+                  {
+                    name:intl.get('PRODUCTLIST'),
+                    path:'list'
+                  }
+                ]
+              },
             {
               name: 'Pages',
               icon: 'dashboard',

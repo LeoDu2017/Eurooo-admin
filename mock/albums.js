@@ -20,103 +20,103 @@ let albumsTreeData = Mock.mock({
     'pictures':[
       {
         "id": "1468954",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-06\/5b15df68abb29.jpg",
+        "file": "https://italyclassico.casacdn.com/ojh/app/OJH000027247182/1508340339932.jpg",
         "name": "ph1807-p02432.jpg",
         "category_img_id": "2148407"
       },
       {
         "id": "1468947",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-06\/5b15df2c0c1cf.jpg",
+        "file": "https://italyclassico.casacdn.com/ojh/app/OJH000050873997/1512574547524.jpg",
         "name": "ul2892-0508.jpg",
         "category_img_id": "2148407"
       },
       {
         "id": "1468946",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-06\/5b15df2bbe903.jpg",
+        "file": "https://italyclassico.casacdn.com/ojh/app/OJH000080035681/1529930784621.jpeg",
         "name": "ul1602-5680.jpg",
         "category_img_id": "2148407"
       },
       {
         "id": "1468945",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-06\/5b15df2b7c7ee.jpg",
+        "file": "https://italyclassico.casacdn.com/pd_merchant/image/product/20180601002400.jpg",
         "name": "ul1546-0130.jpg",
         "category_img_id": "2148407"
       },
       {
         "id": "1468944",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-06\/5b15df2b3fe85.jpg",
+        "file": "https://italyclassico.casacdn.com/image/prod/20180809/766108.jpg",
         "name": "ul0847-7477.jpg",
         "category_img_id": "2148407"
       },
       {
         "id": "1468943",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-06\/5b15df2b05023.jpg",
+        "file": "https://italyclassico.casacdn.com/ojh/app/OJH000027237486/1508341829901.jpg",
         "name": "ul0845-1179.jpg",
         "category_img_id": "2148407"
       },
       {
         "id": "1468942",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-06\/5b15df2ab0936.jpg",
+        "file": "https://italyclassico.casacdn.com/pd_merchant/image/product/20180705183443.jpg",
         "name": "ul0465-3500.jpg",
         "category_img_id": "2148407"
       },
       {
         "id": "1468941",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-06\/5b15df2a6ba76.jpg",
+        "file": "https://italyclassico.casacdn.com/ojh/app/OJH000054633995/1513746876903.jpg",
         "name": "ul0277-2570.jpg",
         "category_img_id": "2148407"
       },
       {
         "id": "1458563",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-05\/5b0f4d468912f.jpg",
+        "file": "https://italyclassico.casacdn.com/pd_merchant/image/product/20180412144523.jpg",
         "name": "wu.jpg",
         "category_img_id": "2148411"
       },
       {
         "id": "1458559",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-05\/5b0f4d4559b32.png",
+        "file": "https://italyclassico.casacdn.com/pd_merchant/image/product/20180412164932.jpg",
         "name": "tip.png",
         "category_img_id": "2148411"
       },
       {
         "id": "1458556",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-05\/5b0f4d448cf9c.jpg",
+        "file": "https://italyclassico.casacdn.com/ojh/app/OJH000074996708/oujuhui20180419145213325.png",
         "name": "team2.jpg",
         "category_img_id": "2148411"
       },
       {
         "id": "1458555",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-05\/5b0f4d443c245.jpg",
+        "file": "https://italyclassico.casacdn.com/ojh/app/OJH000027023663/1508341896866.jpg",
         "name": "team1.jpg",
         "category_img_id": "2148411"
       },
       {
         "id": "1458554",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-05\/5b0f4d43e58b1.jpg",
+        "file": "https://italyclassico.casacdn.com/ojh/app/OJH000027023663/1508341899586.jpg",
         "name": "supply4.jpg",
         "category_img_id": "2148411"
       },
       {
         "id": "1458553",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-05\/5b0f4d439e190.jpg",
+        "file": "https://italyclassico.casacdn.com/ojh/app/OJH000027023663/1508341901003.jpg",
         "name": "supply3.jpg",
         "category_img_id": "2148411"
       },
       {
         "id": "1458552",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-05\/5b0f4d4355d7d.jpg",
+        "file": "https://italyclassico.casacdn.com/image/prod/20180809/331629.jpg",
         "name": "supply2.jpg",
         "category_img_id": "2148411"
       },
       {
         "id": "1458551",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-05\/5b0f4d43094de.jpg",
+        "file": "https://italyclassico.casacdn.com/ojh/app/OJH000026549785/1508252412250.jpg",
         "name": "supply1.jpg",
         "category_img_id": "2148411"
       },
       {
         "id": "1458550",
-        "file": "http:\/\/img.supvip.cn\/4d\/a2\/8046600\/2018-05\/5b0f4d42b169c.png",
+        "file": "https://italyclassico.casacdn.com/ojh/app/OJH000026521741/1508342681866.jpg",
         "name": "showAll.png",
         "category_img_id": "2148411"
       },
