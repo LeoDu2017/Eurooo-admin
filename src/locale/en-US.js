@@ -197,6 +197,6 @@ export default {
     "PRODUCTBANNED":"Not Available areas",
     "ONSELL":"On sell",
     "OFFSHELF":"Off the shelf",
-
+    "PRODUCTVIEW":"PREVIEW SPOT PRODUCTS",
   }
 }

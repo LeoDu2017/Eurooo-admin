@@ -220,6 +220,7 @@ export default{
     "PRODUCTBANNED":"Régions non disponibles",
     "ONSELL":"En vente",
     "OFFSHELF":"Retirer de l’ étagère",
+    "PRODUCTVIEW":"PRÉVOIR LES MARCHANDISES EN STOCK",
 
   }
 }

@@ -230,5 +230,6 @@ export default{
     "PRODUCTBANNED":"Area non disponibile",
     "ONSELL":"In vendita",
     "OFFSHELF":"Off the shelf",
+    "PRODUCTVIEW":"ANTEPRIMA DEI PRODOTTI IN STOCK",
   }
 }

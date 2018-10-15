@@ -206,5 +206,6 @@ export default {
     "PRODUCTBANNED":"禁销地区",
     "ONSELL":"上架",
     "OFFSHELF":"下架",
+    "PRODUCTVIEW":"现货产品预览",
   }
 }
