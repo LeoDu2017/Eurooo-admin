@@ -9,10 +9,13 @@ module.exports = [
       images:[
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411164379.jpg',
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411164387.jpg'],
+      sku:[
+        { color:'透明灰', size:'23.4x28.1H', fabric:'聚碳酸酯', stock:3},
+        { color:'透明红', size:'23.4x28.1H', fabric:'聚碳酸酯', stock:1},
+      ],
       brand_id:'39',
       price:'1743.96',
       price_unit:'1',
-      stock:'4',
       status:0
     },{
       serial:'OJH000098667002',
@@ -28,7 +31,11 @@ module.exports = [
       brand_id:'39',
       price:'3012.3',
       price_unit:'0',
-      stock:'4',
+      sku:[
+        { color:'透明银', size:'L50cm W50cm H99cm', fabric:'聚碳酸酯', stock:2},
+        { color:'透明黑', size:'L50cm W50cm H99cm', fabric:'聚碳酸酯', stock:1},
+        { color:'透明黄', size:'L50cm W50cm H99cm', fabric:'聚碳酸酯', stock:1},
+      ],
       status:1
     },{
       serial:'OJH000098667003',
@@ -55,7 +62,11 @@ module.exports = [
       brand_id:'39',
       price:'951.25',
       price_unit:'1',
-      stock:'4',
+      sku:[
+        { color:'透明绿', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:2},
+        { color:'透明粉蓝', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
+        { color:'透明粉红', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
+      ],
       status:1
     },{
       serial:'OJH000098667004',
@@ -69,7 +80,9 @@ module.exports = [
       brand_id:'39',
       price:'3805.01',
       price_unit:'1',
-      stock:'3',
+      sku:[
+        { color:'黑、金', size:'L520cm W20cm H19cm', fabric:'pvc', stock:3}
+      ],
       status:1
     },{
       serial:'OJH000098667005',
@@ -84,7 +97,12 @@ module.exports = [
       brand_id:'39',
       price:'2378.13',
       price_unit:'1',
-      stock:'3',
+      sku:[
+        { color:'透明铜', size:'L57cm W47cm H84cm', fabric:'聚碳酸酯', stock:1},
+        { color:'透明灰', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
+        { color:'透明金', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
+        { color:'透明金', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
+      ],
       status:1
     },{
       serial:'OJH000098667006',
@@ -99,7 +117,12 @@ module.exports = [
       brand_id:'39',
       price:'2219.59',
       price_unit:'1',
-      stock:'3',
+      sku:[
+        { color:'透明白', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:0},
+        { color:'透明黄', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:0},
+        { color:'透明金', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:0},
+        { color:'透明沙', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:1},
+      ],
       status:1
     },{
       serial:'OJH000098667007',
@@ -118,7 +141,10 @@ module.exports = [
       brand_id:'39',
       price:'5390.43',
       price_unit:'1',
-      stock:'3',
+      sku:[
+        { color:'透明', size:'L38.7cm W87.5cm H52.5cm', fabric:'聚碳酸酯', stock:1},
+        { color:'亮橙', size:'L38.7cm W87.5cm H52.5cm', fabric:'聚碳酸酯', stock:3},
+      ],
       status:1
     },{
       serial:'OJH000098667008',
@@ -134,7 +160,10 @@ module.exports = [
       brand_id:'39',
       price:'1585.42',
       price_unit:'1',
-      stock:'2',
+      sku:[
+        { color:'透明橙', size:'L54cm W34.5cm H94cm', fabric:'聚碳酸酯', stock:1},
+        { color:'透明蓝', size:'L54cm W34.5cm H94cm', fabric:'聚碳酸酯', stock:1},
+      ],
       status:1
     },{
       serial:'OJH000098667009',
@@ -149,7 +178,10 @@ module.exports = [
       brand_id:'1347',
       price:'10654.02',
       price_unit:'1',
-      stock:'198',
+      sku:[
+        { color:'黑', size:'L54cm W34.5cm H94cm', fabric:'木、皮革', stock:100},
+        { color:'棕', size:'L54cm W34.5cm H94cm', fabric:'木、皮革', stock:98},
+      ],
       status:1
     }
   ]

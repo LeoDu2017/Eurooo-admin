@@ -67,10 +67,13 @@ const ProductList = ({dispatch,total,current,products,banneds,myBrands,}) => {
       }
     },{
       title:`${intl.get('PRODUCTAMOUNT')}/pc(s)`,
-      dataIndex:'stock',
-      key:'stock',
+      dataIndex:'sku',
+      key:'sku',
       align:'center',
-      render: text => text
+      render: array => array.reduce((sum,i)=>{
+        sum = sum + Number(i.stock);
+        return sum;
+      },0)
     },{
       title:intl.get('PRODUCTSTATE'),
       dataIndex:'status',
@@ -95,7 +98,7 @@ const ProductList = ({dispatch,total,current,products,banneds,myBrands,}) => {
       key: 'action',
       align:'center',
       render:(text,record) => <span>
-        <ProductDetailModal title={intl.get('PRODUCTVIEW')} id="productInfo">
+        <ProductDetailModal myBrands={myBrands} title={intl.get('PRODUCTVIEW')} product={record} id={record.id}>
           <a href="javascript:"> {intl.get('VIEW')}</a>
         </ProductDetailModal>
         <Divider type="vertical"/>
