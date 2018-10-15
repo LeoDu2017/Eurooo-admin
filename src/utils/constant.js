@@ -1,5 +1,4 @@
 const intl= require('react-intl-universal');
-console.log(2,intl.get('HOME'));
 module.exports = {
   notAllowCountry: [
     {

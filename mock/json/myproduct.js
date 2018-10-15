@@ -30,7 +30,7 @@ module.exports = [
       brand:'KARTELL',
       brand_id:'39',
       price:'3012.3',
-      price_unit:'1',
+      price_unit:'0',
       stock:'4',
       banned:'21,68',
       status:1

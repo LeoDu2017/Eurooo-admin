@@ -5,7 +5,7 @@ import {
   Button,Divider }        from 'antd';
 import intl               from 'react-intl-universal';
 import { changePageHandel } from 'Actions/product';
-
+import { formatMoney } from 'Utils/widget';
 const ProductList = ({dispatch,total,current,products}) => {
   const columns = [
     {
@@ -36,11 +36,27 @@ const ProductList = ({dispatch,total,current,products}) => {
       dataIndex:'price',
       key:'price',
       align:'center',
-      render:(text,record) => `${record.price_unit} ${text}`
+      render:(text,record) => {
+        let price,num=formatMoney(Number(text).toFixed(2),true);
+
+        switch (Number(record.price_unit)) {
+          case 0:
+            price = `$ ${num}`;
+            break;
+          case 1:
+            price = `￥ ${num}`;
+            break;
+          case 2:
+            price = `€ ${num}`;
+            break;
+        }
+        return <p style={{'textAlign':'right'}}>{price}</p>
+      }
     },{
       title:`${intl.get('PRODUCTAMOUNT')}/pc(s)`,
       dataIndex:'stock',
       key:'stock',
+      align:'center',
       render: text => text
     },{
       title:intl.get('PRODUCTSTATE'),
@@ -92,3 +108,5 @@ function mapStateToProps(state){
 }
 
 export default connect(mapStateToProps)(ProductList)
+
+

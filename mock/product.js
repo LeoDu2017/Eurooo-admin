@@ -23,5 +23,5 @@ module.exports = {
       data: newData.slice((page - 1) * pageSize, page * pageSize),
       total: newData.length,
     })
-  },
+  }
 };
