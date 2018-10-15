@@ -129,9 +129,16 @@ const brandList = ({dispatch,myBrands,countries,banneds,current,total}) => {
 };
 
 function mapStateToProps(state){
-  const { myBrands,total,current } = state.brand;
-
-
+  const { myBrands,total,current,banned } = state.brand;
+  const { countries } = state.app;
+  let banneds = banned.map(item => {
+    const value = item;
+    const country = countries.find(i => {
+      return i.id === item
+    });
+    const label = country.name;
+    return {value,label}
+  });
   return {myBrands,countries,banneds,total,current}
 }
 

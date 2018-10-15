@@ -14,12 +14,16 @@ const ProductList = ({dispatch,total,current,products,banneds,myBrands,}) => {
       title: intl.get('PRODUCTSERIAL'),
       dataIndex:'serial',
       key:'serial',
-      render: text => text
+      align:'center',
+      render: text => <p style={{'textAlign':'left'}}>{text}</p>
     },{
       title: intl.get('PRODUCTNAME'),
       dataIndex:'name',
       key:'name',
-      render: text => <a href="javascript:">{text}</a>
+      align:'center',
+      render: text => <p style={{'textAlign':'left'}}>
+        <a href="javascript:">{text}</a>
+      </p>
     },{
       title:intl.get('PRODUCTMAINIMAGE'),
       dataIndex:'master_img',
@@ -40,7 +44,6 @@ const ProductList = ({dispatch,total,current,products,banneds,myBrands,}) => {
           {brand.name}
         </a>
       }
-
     },{
       title:intl.get('PRODUCTPRICE'),
       dataIndex:'price',
@@ -90,11 +93,11 @@ const ProductList = ({dispatch,total,current,products,banneds,myBrands,}) => {
       title:intl.get('ACTION'),
       key: 'action',
       align:'center',
-      render:(text,record) => (
-        <span>
-          你好
-        </span>
-      )
+      render:(text,record) => <span>
+        <a href="javascript:"> {intl.get('VIEW')}</a>
+        <Divider type="vertical"/>
+        <a>你好</a>
+      </span>
     }];
   return(
     <Col className='g-t-wrap'>
