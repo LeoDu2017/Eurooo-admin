@@ -34,6 +34,8 @@ module.exports = {
     getAllBrandsApi:`${APIV1}/brand/all`,
     updateBannedApi:`${APIV1}/brand/:id`,
 
+    fetchProductApi:`${APIV1}/product/list`,
+
     getCountryApi:`${APIV1}/country`,
 
     changeUserInfoApi: `${APIV1}/user/changeUserInfo`,

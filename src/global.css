@@ -140,6 +140,10 @@ html, body, :global(#root) {
   text-align: center;
   background: none;
 }
+
+
+
+
 /*:global(.ant-card-body){*/
 /*padding: 5px !important;*/
 /*}*/

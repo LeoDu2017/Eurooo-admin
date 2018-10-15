@@ -1,10 +1,12 @@
 import {connect} from 'dva';
 import {
+  Pagination,
   Table,Tag,Col,
   Button,Divider }        from 'antd';
 import intl               from 'react-intl-universal';
+import { changePageHandel } from 'Actions/product';
 
-const ProductList = ({dispatch}) => {
+const ProductList = ({dispatch,total,current,products}) => {
   const columns = [
     {
       title: intl.get('PRODUCTSERIAL'),
@@ -18,11 +20,11 @@ const ProductList = ({dispatch}) => {
       render: text => <a href="javascript:">{text}</a>
     },{
       title:intl.get('PRODUCTMAINIMAGE'),
-      dataIndex:'image',
-      key:'image',
+      dataIndex:'master_img',
+      key:'master_img',
       width:70,
       align:'center',
-      render:(data,record) => <img alt={record.name} src={`${data}@55h_155w_1e_1c`}/>
+      render:(data,record) => <img alt={record.name} src={`${data}@100h_100w_1e_1c`}/>
     },{
       title:intl.get('PRODUCTBRAND'),
       dataIndex:'brand',
@@ -67,9 +69,16 @@ const ProductList = ({dispatch}) => {
         </header>
         <Col className="g-t-form-wrap">
           <Table
-            columns={columns} />
+            columns={columns}
+            dataSource={products}
+            pagination={{ hideOnSinglePage:true }}/>
         </Col>
         <footer className="g-t-footer">
+          <Pagination
+          total={total}
+          current={current}
+          pageSize={3}
+          onChange={changePageHandel.bind(null,dispatch)}/>
         </footer>
       </Col>
     </Col>
@@ -77,7 +86,9 @@ const ProductList = ({dispatch}) => {
 };
 
 function mapStateToProps(state){
-  return{}
+  const {total,current,products} = state.product;
+
+  return{total,current,products}
 }
 
 export default connect(mapStateToProps)(ProductList)

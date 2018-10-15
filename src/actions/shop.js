@@ -105,7 +105,6 @@ export function resetPassword(dispatch,id){
 }
 // 翻页
 export function changePageHandel(dispatch,page){
-  debugger
   dispatch(
     routerRedux.push({
       pathname: '/spots/shop/admin',

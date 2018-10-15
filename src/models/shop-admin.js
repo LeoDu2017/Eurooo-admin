@@ -25,9 +25,7 @@ const admin = {
   },
   effects:{
     *getShopAdmins({payload},{select,call, put}){
-      debugger
       const {data,total} = yield call(getShopAdminsService, payload);
-
       yield put({
         type:'setShopAdmins',
         payload:data
@@ -87,7 +85,7 @@ const admin = {
           });
           dispatch({
             type:'setCurrent',
-            payload:Number(query.page)
+            payload: query.page ?  Number(query.page) : 1
           });
         }
       });

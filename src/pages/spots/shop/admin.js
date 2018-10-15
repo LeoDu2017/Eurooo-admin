@@ -96,6 +96,7 @@ const adminTable = ({dispatch,shopAdmins,current,total}) => {
 
 function mapStateToProps(state){
   const  { shopAdmins,total,current } = state.admin;
+  console.log(current);
   return { shopAdmins,total,current }
 }
 
