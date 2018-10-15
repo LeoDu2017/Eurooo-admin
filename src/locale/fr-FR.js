@@ -218,6 +218,8 @@ export default{
     "PRODUCTAMOUNT":"Quantité",
     "PRODUCTSTATE":"Statut",
     "PRODUCTBANNED":"Régions non disponibles",
+    "ONSELL":"En vente",
+    "OFFSHELF":"Retirer de l’ étagère",
 
   }
 }

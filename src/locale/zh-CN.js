@@ -204,6 +204,7 @@ export default {
     "PRODUCTAMOUNT":"数量",
     "PRODUCTSTATE":"状态",
     "PRODUCTBANNED":"禁销地区",
-
+    "ONSELL":"上架",
+    "OFFSHELF":"下架",
   }
 }

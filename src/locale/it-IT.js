@@ -228,5 +228,7 @@ export default{
     "PRODUCTAMOUNT":"Quantità",
     "PRODUCTSTATE":"Stato",
     "PRODUCTBANNED":"Area non disponibile",
+    "ONSELL":"In vendita",
+    "OFFSHELF":"Off the shelf",
   }
 }

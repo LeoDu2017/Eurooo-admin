@@ -38,7 +38,6 @@ const ProductList = ({dispatch,total,current,products}) => {
       align:'center',
       render:(text,record) => {
         let price,num=formatMoney(Number(text).toFixed(2),true);
-
         switch (Number(record.price_unit)) {
           case 0:
             price = `$ ${num}`;
@@ -63,7 +62,7 @@ const ProductList = ({dispatch,total,current,products}) => {
       dataIndex:'status',
       key:'status',
       align:'center',
-      render: boolean => Number(boolean) ? intl.get('MERCHANTADD') : intl.get('SYSTEM')
+      render: boolean => Number(boolean) ? intl.get('ONSELL') : intl.get('OFFSHELF')
     },{
       title:intl.get('ACTION'),
       key: 'action',

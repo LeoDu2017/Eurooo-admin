@@ -195,6 +195,8 @@ export default {
     "PRODUCTAMOUNT":"Quantity",
     "PRODUCTSTATE":"Status",
     "PRODUCTBANNED":"Not Available areas",
+    "ONSELL":"On sell",
+    "OFFSHELF":"Off the shelf",
 
   }
 }
