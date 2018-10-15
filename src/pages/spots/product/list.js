@@ -7,6 +7,7 @@ import {
 import intl               from 'react-intl-universal';
 import { changePageHandel } from 'Actions/product';
 import { formatMoney } from 'Utils/widget';
+import ProductDetailModal   from 'Components/modal/show-product-info';
 
 const ProductList = ({dispatch,total,current,products,banneds,myBrands,}) => {
   const columns = [
@@ -94,7 +95,9 @@ const ProductList = ({dispatch,total,current,products,banneds,myBrands,}) => {
       key: 'action',
       align:'center',
       render:(text,record) => <span>
-        <a href="javascript:"> {intl.get('VIEW')}</a>
+        <ProductDetailModal title={intl.get('PRODUCTVIEW')} id="productInfo">
+          <a href="javascript:"> {intl.get('VIEW')}</a>
+        </ProductDetailModal>
         <Divider type="vertical"/>
         <a>你好</a>
       </span>
