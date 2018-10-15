@@ -86,6 +86,28 @@ module.exports =
       type:'0',
       status:'1',
       country_id:'104'
+    },{
+      id:'39',
+      key:'39',
+      serial:'2018101513331456655',
+      logo:'http://italyclassico.casacdn.com/image/brand/KARTELL/704034.jpg',
+      name:'KARTELL',
+      amount:'0',
+      area:'21,199',
+      type:'0',
+      status:'1',
+      country_id:'92'
+    },{
+      id:'1347',
+      key:'1347',
+      serial:'20181015141812399952',
+      logo: 'https://italyclassico.casacdn.com/merchant/image/brand/606004.jpg',
+      name: 'HOUE',
+      amount:'0',
+      area:'21,75,199',
+      type:'0',
+      status:'1',
+      country_id:'192'
     },
   ];
 

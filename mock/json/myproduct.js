@@ -9,12 +9,10 @@ module.exports = [
       images:[
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411164379.jpg',
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411164387.jpg'],
-      brand:'KARTELL',
       brand_id:'39',
       price:'1743.96',
       price_unit:'1',
       stock:'4',
-      banned:'21,68',
       status:0
     },{
       serial:'OJH000098667002',
@@ -27,12 +25,10 @@ module.exports = [
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411154646.jpg',
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411154699.jpg',
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411154652.jpg'],
-      brand:'KARTELL',
       brand_id:'39',
       price:'3012.3',
       price_unit:'0',
       stock:'4',
-      banned:'21,68',
       status:1
     },{
       serial:'OJH000098667003',
@@ -56,12 +52,10 @@ module.exports = [
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411154139.jpg',
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411154131.jpg',
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411154196.jpg'],
-      brand:'KARTELL',
       brand_id:'39',
       price:'951.25',
       price_unit:'1',
       stock:'4',
-      banned:'75,99,166',
       status:1
     },{
       serial:'OJH000098667004',
@@ -72,12 +66,10 @@ module.exports = [
       images:[
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411152530.jpg',
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411152472.jpg'],
-      brand:'KARTELL',
       brand_id:'39',
       price:'3805.01',
       price_unit:'1',
       stock:'3',
-      banned:'198,199,200,201',
       status:1
     },{
       serial:'OJH000098667005',
@@ -89,12 +81,10 @@ module.exports = [
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411151782.jpg',
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411151896.jpg',
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411151894.jpg'],
-      brand:'KARTELL',
       brand_id:'39',
       price:'2378.13',
       price_unit:'1',
       stock:'3',
-      banned:'166,192,197,198,199',
       status:1
     },{
       serial:'OJH000098667006',
@@ -106,12 +96,10 @@ module.exports = [
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180410214387.jpg',
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180410214389.jpg',
         'https://italyclassico.casacdn.com/pd_merchant/image/product/20180410214389.jpg'],
-      brand:'KARTELL',
       brand_id:'39',
       price:'2219.59',
       price_unit:'1',
       stock:'3',
-      banned:'75,99,166',
       status:1
     },{
       serial:'OJH000098667007',
@@ -127,12 +115,10 @@ module.exports = [
         'https://italyclassico.casacdn.com/ojh/app/OJH000074321699/1523289724193.jpg',
         'https://italyclassico.casacdn.com/ojh/app/OJH000074321699/1523289728229.jpg',
         'https://italyclassico.casacdn.com/ojh/app/OJH000074321699/1523289733015.jpg'],
-      brand:'KARTELL',
       brand_id:'39',
       price:'5390.43',
       price_unit:'1',
       stock:'3',
-      banned:'198,199,200',
       status:1
     },{
       serial:'OJH000098667008',
@@ -145,12 +131,25 @@ module.exports = [
         'https://italyclassico.casacdn.com/ojh/app/OJH000074236404/1523285725428.jpg',
         'https://italyclassico.casacdn.com/ojh/app/OJH000074236404/1523285726594.jpg',
         'https://italyclassico.casacdn.com/ojh/app/OJH000074236404/1523285728798.jpg'],
-      brand:'KARTELL',
       brand_id:'39',
       price:'1585.42',
       price_unit:'1',
       stock:'2',
-      banned:'69,75,99,166',
+      status:1
+    },{
+      serial:'OJH000098667009',
+      id:'OJH000098667009',
+      key:'OJH000098667009',
+      name:'HOUE SPÄN LOUNGE休闲椅',
+      master_img:'https://italyclassico.casacdn.com/pd_merchant/image/product/20180424163329.jpg',
+      images:[
+        'https://italyclassico.casacdn.com/pd_merchant/image/product/20180424163329.jpg',
+        'https://italyclassico.casacdn.com/pd_merchant/image/product/20180424163337.jpg',
+        'https://italyclassico.casacdn.com/pd_merchant/image/product/20180424163286.jpg'],      
+      brand_id:'1347',
+      price:'10654.02',
+      price_unit:'1',
+      stock:'198',
       status:1
     }
   ]

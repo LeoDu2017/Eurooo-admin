@@ -37,6 +37,7 @@ module.exports = {
     })
   },
   [`POST ${apiPrefix}/brand/list`] (req, res){
+
     database.myBrands = database.myBrands.concat(req.body);
     res.status(200).json({status:1,success:true,msg: '添加成功' })
   },
@@ -45,14 +46,22 @@ module.exports = {
     const { query } = req;
     let { pageSize,page } = query;
     pageSize = pageSize || 2;
-    page = page || 1;
+
 
     let newData = database.myBrands;
+    if(page === 'all'){
+      res.status(200).json({
+        data: newData,
+        total: newData.length,
+      })
+    }else{
+      page = page || 1;
+      res.status(200).json({
+        data: newData.slice((page - 1) * pageSize, page * pageSize),
+        total: newData.length,
+      })
+    }
 
-    res.status(200).json({
-      data: newData.slice((page - 1) * pageSize, page * pageSize),
-      total: newData.length,
-    })
   },
   [`POST ${apiPrefix}/brand/del`] (req, res) {
     const { id } = req.body;

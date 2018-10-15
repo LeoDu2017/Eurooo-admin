@@ -46,7 +46,14 @@ export default {
           dispatch({
             type:'setCurrent',
             payload:query.page ? Number(query.page) : 1
-          })
+          });
+          dispatch({
+            type:'brand/fetchBrands',
+            payload:{'page':'all'}
+          });
+          dispatch({
+            type:'brand/fetchBanned'
+          });
         }
       })
     }

@@ -1,4 +1,5 @@
 import {connect} from 'dva';
+import _ from 'lodash';
 import {
   Pagination,
   Table,Tag,Col,
@@ -6,7 +7,8 @@ import {
 import intl               from 'react-intl-universal';
 import { changePageHandel } from 'Actions/product';
 import { formatMoney } from 'Utils/widget';
-const ProductList = ({dispatch,total,current,products}) => {
+
+const ProductList = ({dispatch,total,current,products,banneds,myBrands,}) => {
   const columns = [
     {
       title: intl.get('PRODUCTSERIAL'),
@@ -27,10 +29,18 @@ const ProductList = ({dispatch,total,current,products}) => {
       render:(data,record) => <img alt={record.name} src={`${data}@100h_100w_1e_1c`}/>
     },{
       title:intl.get('PRODUCTBRAND'),
-      dataIndex:'brand',
+      dataIndex:'brand_id',
       key:'brand',
       align:'center',
-      render: text => <a href="javascript:">{text}</a>
+      render: id => {
+        const brand = _.find(myBrands,{id});
+        return <a href="javascript:">
+          <img src={`${brand.logo}@50h_100w_1e_1c`} alt={brand.name}/>
+          <br/>
+          {brand.name}
+        </a>
+      }
+
     },{
       title:intl.get('PRODUCTPRICE'),
       dataIndex:'price',
@@ -63,6 +73,19 @@ const ProductList = ({dispatch,total,current,products}) => {
       key:'status',
       align:'center',
       render: boolean => Number(boolean) ? intl.get('ONSELL') : intl.get('OFFSHELF')
+    },{
+      title:intl.get('PRODUCTBANNED'),
+      dataIndex:'brand_id',
+      key:'area',
+      align:'center',
+      render: id => {
+        const area  = Array.isArray(_.find(myBrands,{id}).area) ?
+                      _.find(myBrands,{id:id}).area:
+                      _.find(myBrands,{id:id}).area.split(',');
+        const notAllow =  banneds.filter(banned => area.includes(banned.value));
+        let i = 0;
+        return notAllow.map(a => <Tag color="red" key={i++}>{a.label}</Tag>)
+      }
     },{
       title:intl.get('ACTION'),
       key: 'action',
@@ -102,8 +125,19 @@ const ProductList = ({dispatch,total,current,products}) => {
 
 function mapStateToProps(state){
   const {total,current,products} = state.product;
+  const { countries } = state.app;
+  const {myBrands,banned} = state.brand;
 
-  return{total,current,products}
+  let banneds = banned.map(item => {
+    const value = item;
+    const country = countries.find(i => {
+      return i.id === item
+    });
+    const label = country.name;
+    return {value,label}
+  });
+
+  return{total,current,banneds,myBrands,products}
 }
 
 export default connect(mapStateToProps)(ProductList)

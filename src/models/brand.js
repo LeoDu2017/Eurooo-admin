@@ -116,6 +116,7 @@ const brand = {
         let arr = pathname.split('/');
         let childLink = arr[2];
         let subChildLink = arr[3];
+
         if(childLink === 'brand' && subChildLink === 'list'){
           dispatch({
             type:'fetchBrands',
