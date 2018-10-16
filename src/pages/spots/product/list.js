@@ -9,7 +9,11 @@ import { changePageHandel } from 'Actions/product';
 import { formatMoney } from 'Utils/widget';
 import ProductDetailModal   from 'Components/modal/show-product-info';
 
-const ProductList = ({dispatch,total,current,products,banneds,myBrands,}) => {
+const ProductList = ({
+  dispatch,current,
+  products,banneds,myBrands,
+  productStyles,productSpaces,
+  ProductClassifications,total,}) => {
   const columns = [
     {
       title: intl.get('PRODUCTSERIAL'),
@@ -98,7 +102,14 @@ const ProductList = ({dispatch,total,current,products,banneds,myBrands,}) => {
       key: 'action',
       align:'center',
       render:(text,record) => <span>
-        <ProductDetailModal myBrands={myBrands} title={intl.get('PRODUCTVIEW')} product={record} id={record.id}>
+        <ProductDetailModal
+          productSpaces={productSpaces}
+          productStyles={productStyles}
+          myBrands={myBrands}
+          title={intl.get('PRODUCTVIEW')}
+          product={record}
+          id={record.id}
+          ProductClassifications={ProductClassifications}>
           <a href="javascript:"> {intl.get('VIEW')}</a>
         </ProductDetailModal>
         <Divider type="vertical"/>
@@ -134,7 +145,7 @@ const ProductList = ({dispatch,total,current,products,banneds,myBrands,}) => {
 
 function mapStateToProps(state){
   const {total,current,products} = state.product;
-  const { countries } = state.app;
+  const { countries,productStyles,productSpaces,ProductClassifications } = state.app;
   const {myBrands,banned} = state.brand;
 
   let banneds = banned.map(item => {
@@ -146,7 +157,7 @@ function mapStateToProps(state){
     return {value,label}
   });
 
-  return{total,current,banneds,myBrands,products}
+  return{total,current,banneds,myBrands,products,productStyles,productSpaces,ProductClassifications}
 }
 
 export default connect(mapStateToProps)(ProductList)

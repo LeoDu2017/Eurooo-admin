@@ -231,5 +231,24 @@ export default{
     "ONSELL":"In vendita",
     "OFFSHELF":"Off the shelf",
     "PRODUCTVIEW":"ANTEPRIMA DEI PRODOTTI IN STOCK",
+
+    "MFSTYLE":"现代时尚风格",
+    "NSTYLE":"北欧风格",
+    "CHSTYLE":"中式风格",
+    "RSTYLE":"乡村风格",
+    "ASTYLE":"美式风格",
+    "NSSTYLE":"新古典风格",
+    "CSTYLE":"古典",
+    "MSTYLE":"现代",
+    "PSTYLE":"田园风格",
+
+    "OUTDOOR":"户外家具",
+    "KIDS":"儿童房",
+    "KITCHEN":"厨房",
+    "DINNING":"餐厅",
+    "HOMEOFFICE":"书房",
+    "BATHROOM":"卫浴",
+    "BEDROOM":"卧室",
+    "LIVINGROOM":"客厅",
   }
 }

@@ -22,27 +22,6 @@ export default {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     "INO":"修改账户资料",
     "OUT":"退出",
     "HOME":"首页",
@@ -141,27 +120,6 @@ export default {
     "UAE":"阿拉伯联合酋长国",
     "UK":"英国",
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     "USERNAME":"用户名",
     "NAME":"姓名",
     "TITLE":"职位",
@@ -207,5 +165,26 @@ export default {
     "ONSELL":"上架",
     "OFFSHELF":"下架",
     "PRODUCTVIEW":"现货产品预览",
+
+    "MFSTYLE":"现代时尚风格",
+    "NSTYLE":"北欧风格",
+    "CHSTYLE":"中式风格",
+    "RSTYLE":"乡村风格",
+    "ASTYLE":"美式风格",
+    "NSSTYLE":"新古典风格",
+    "CSTYLE":"古典",
+    "MSTYLE":"现代",
+    "PSTYLE":"田园风格",
+
+    "OUTDOOR":"户外家具",
+    "KIDS":"儿童房",
+    "KITCHEN":"厨房",
+    "DINNING":"餐厅",
+    "HOMEOFFICE":"书房",
+    "BATHROOM":"卫浴",
+    "BEDROOM":"卧室",
+    "LIVINGROOM":"客厅",
+
+
   }
 }

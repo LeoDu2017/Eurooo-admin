@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { Form,Modal,Checkbox,Input,Tabs } from 'antd';
+import { Form,Modal,Checkbox,Input,Tabs,Carousel } from 'antd';
 import { connect } from 'dva';
 import { showModelHandler,hideModelHandler,okHandler } from 'Actions/common-modal';
 import { onChange } from 'Actions/product';
@@ -20,9 +20,9 @@ const formItemLayout = {
 const TabPane = Tabs.TabPane;
 
 const ShowProductModal = ({
-  dispatch,children,id,visible,
-  content,title,banneds,product,
-  countries,Ok,callBack,myBrands,
+  dispatch,children,ProductClassifications,
+  content,title,banneds,product,productSpaces,id,
+  countries,Ok,callBack,myBrands,productStyles,visible,
   form:{resetFields,getFieldDecorator,validateFields}}) => {
   let price,num=formatMoney(Number(product.price).toFixed(2),true);
   const brand = _.find(myBrands,{id:product.brand_id});
@@ -45,6 +45,39 @@ const ShowProductModal = ({
       <td align="center">{item.fabric}</td>
       <td align="center">{item.stock}</td>
     </tr>);
+
+  const productStyle = _.find(productStyles,{id:product.style_id});
+  const productSpace = _.find(productSpaces,{id:product.space_id});
+  const images = product.images.map(img => <img key={i++} src={`${img}@430h_730w_1e_1c`}/>);
+  let classification = [];
+  ProductClassifications.filter(item =>{
+    if (Number(item.id) === product.classification_id){
+      const { children,...reset } = item;
+      classification = [reset]
+    }else{
+      item.children.filter(i => {
+        if (Number(i.id) === product.classification_id){
+          const { children,...reset } = item;
+          const { subChildren,...r } = i;
+          classification = [reset,r]
+        }else{
+          i.subChildren.filter(ii => {
+            if(Number(ii.id) === product.classification_id){
+              const { children,...reset } = item;
+              const { subChildren,...r } = i;
+              classification = [reset,r,ii]
+            }
+          })
+        }
+      })
+    }
+  });
+  const classifications = classification.map(item => <span key={item.id}>{item.name} / </span> );
+  const PARTS = product.parts_list.map(item => <tr key={i++}>
+    <td align="center">{item.name}</td>
+    <td align="center">{item.amount}</td>
+    <td>{item.description}</td>
+  </tr>);
   return (<span>
     <span onClick={showModelHandler.bind(null,dispatch,id)}>
       { children }
@@ -60,16 +93,16 @@ const ShowProductModal = ({
           <TabPane tab="基本信息" key="1">
             <table>
               <tbody>
-              <tr><th>产品名称&nbsp;:&nbsp;</th><td>{product.name}</td></tr>
-              <tr><th>产品编号&nbsp;:&nbsp;</th><td>{product.serial}</td></tr>
-              <tr><th>产品价格&nbsp;:&nbsp;</th><td>{price}</td></tr>
-              <tr><th>所属品牌&nbsp;:&nbsp;</th><td style={{'textAlign':'center'}}><a href="javascript:"><img src={`${brand.logo}@50h_100w_1e_1c`} alt={brand.name}/>
+              <tr><th width="10%">产品名称&nbsp;:&nbsp;</th><td width="90%">{product.name}</td></tr>
+              <tr><th width="10%">产品编号&nbsp;:&nbsp;</th><td width="90%">{product.serial}</td></tr>
+              <tr><th width="10%">产品价格&nbsp;:&nbsp;</th><td width="90%">{price}</td></tr>
+              <tr><th width="10%">所属品牌&nbsp;:&nbsp;</th><td width="90%"><a style={{'textAlign':'center','display':'block','width':'200px'}} href="javascript:"><img src={`${brand.logo}@50h_100w_1e_1c`} alt={brand.name}/>
                 <br/>{brand.name}</a></td></tr>
-              <tr><th>所属分类&nbsp;:&nbsp;</th><td>{product.name}</td></tr>
-              <tr><th>产品状态&nbsp;:&nbsp;</th><td>{Number(product.status) ? intl.get('ONSELL') : intl.get('OFFSHELF')}</td></tr>
-              <tr><th>产品描述&nbsp;:&nbsp;</th><td>{product.description}</td></tr>
-              <tr><th>产品风格&nbsp;:&nbsp;</th><td>{product.style}</td></tr>
-              <tr><th>产品空间&nbsp;:&nbsp;</th><td>{product.space}</td></tr>
+              <tr><th width="10%">所属分类&nbsp;:&nbsp;</th><td width="90%">{classifications}</td></tr>
+              <tr><th width="10%">产品状态&nbsp;:&nbsp;</th><td width="90%">{Number(product.status) ? intl.get('ONSELL') : intl.get('OFFSHELF')}</td></tr>
+              <tr><th width="10%">产品描述&nbsp;:&nbsp;</th><td width="90%">{product.description}</td></tr>
+              <tr><th width="10%">产品风格&nbsp;:&nbsp;</th><td width="90%">{productStyle.name}</td></tr>
+              <tr><th width="10%">产品空间&nbsp;:&nbsp;</th><td width="90%">{productSpace.name}</td></tr>
               </tbody>
             </table>
           </TabPane>
@@ -88,8 +121,29 @@ const ShowProductModal = ({
               </tbody>
             </table>
           </TabPane>
-          <TabPane tab="配件清单" key="4">Content of Tab 3</TabPane>
-          <TabPane tab="产品相册" key="5">Content of Tab 3</TabPane>
+          <TabPane tab="配件清单" key="4">
+            <table style={{'width':'100%'}}>
+              <thead>
+                <tr>
+                  <th style={{'textAlign':'center'}} width="20%">名称</th>
+                  <th style={{'textAlign':'center'}} width="20%">数量</th>
+                  <th style={{'textAlign':'center'}} width="60%">描述</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  product.parts_list.length ?
+                  PARTS :
+                  <tr><td height="150" align="center" colSpan={3}> 该产品没有配件 </td></tr>
+                }
+              </tbody>
+            </table>
+          </TabPane>
+          <TabPane tab="产品相册" key="5">
+            <Carousel autoplay>
+              { images }
+            </Carousel>
+          </TabPane>
         </Tabs>
       </Form>
     </Modal>

@@ -15,7 +15,7 @@ const formItemLayout = {
     sm: { span: 18 },
   },
 };
-// okHandler(dispatch,validateFields,callBack,id,noForm)
+
 const ShowBrandModal = ({
         dispatch,children,id,visible,
         content,country,title,banneds,

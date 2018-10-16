@@ -198,5 +198,24 @@ export default {
     "ONSELL":"On sell",
     "OFFSHELF":"Off the shelf",
     "PRODUCTVIEW":"PREVIEW SPOT PRODUCTS",
+
+    "MFSTYLE":"Modern fashion style",
+    "NSTYLE":"Nordic style",
+    "CHSTYLE":"Chinese style",
+    "RSTYLE":"Rustic style",
+    "ASTYLE":"American style",
+    "NSSTYLE":"Neoclassical style",
+    "CSTYLE":"Classical",
+    "MSTYLE":"Modern",
+    "PSTYLE":"Pastoral style",
+
+    "OUTDOOR":"户外家具",
+    "KIDS":"儿童房",
+    "KITCHEN":"厨房",
+    "DINNING":"餐厅",
+    "HOMEOFFICE":"书房",
+    "BATHROOM":"卫浴",
+    "BEDROOM":"卧室",
+    "LIVINGROOM":"客厅",
   }
 }
