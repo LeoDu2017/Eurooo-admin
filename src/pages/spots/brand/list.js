@@ -13,7 +13,7 @@ import BrandDetailModal   from 'Components/modal/show-brand-info';
 import SelectBrandsModal  from 'Components/modal/select-brands-form';
 import UploadBrandsModal  from 'Components/modal/upload-brands-form';
 
-import { showModelHandler } from 'Actions/common-modal';
+import { show } from 'Actions/common-modal';
 const brandList = ({dispatch,myBrands,countries,banneds,current,total}) => {
   const columns = [
     {
@@ -95,8 +95,8 @@ const brandList = ({dispatch,myBrands,countries,banneds,current,total}) => {
           <span className='g-t-title'>{intl.get('MYBRANS')}</span>
           <span>
             <Button.Group size="small">
-              <Button onClick={showModelHandler.bind(null,dispatch,"selectBrands")} type='primary' icon="check">{intl.get('SELECT')}</Button>
-              <Button onClick={showModelHandler.bind(null,dispatch,"uploadBrands")} type='primary' icon="plus">{intl.get('CREATE')}</Button>
+              <Button onClick={show.bind(null,dispatch,"selectBrands")} type='primary' icon="check">{intl.get('SELECT')}</Button>
+              <Button onClick={show.bind(null,dispatch,"uploadBrands")} type='primary' icon="plus">{intl.get('CREATE')}</Button>
             </Button.Group>
           </span>
         </header>

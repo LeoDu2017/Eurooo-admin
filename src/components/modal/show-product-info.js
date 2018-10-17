@@ -1,29 +1,20 @@
 import _ from 'lodash';
-import { Form,Modal,Checkbox,Input,Tabs,Carousel } from 'antd';
+import { Modal,Tabs,Carousel } from 'antd';
 import { connect } from 'dva';
-import { showModelHandler,hideModelHandler,okHandler } from 'Actions/common-modal';
+import { show,hide,ok } from 'Actions/common-modal';
 import { onChange } from 'Actions/product';
 import { formatMoney } from 'Utils/widget';
 import intl from "react-intl-universal";
 
-const FormItem = Form.Item;
-const formItemLayout = {
-  labelCol: {
-    xs: { span: 24 },
-    sm: { span: 6 },
-  },
-  wrapperCol: {
-    xs: { span: 24 },
-    sm: { span: 18 },
-  },
-};
+
+
 const TabPane = Tabs.TabPane;
 
 const ShowProductModal = ({
   dispatch,children,ProductClassifications,
   content,title,banneds,product,productSpaces,id,
-  countries,Ok,callBack,myBrands,productStyles,visible,
-  form:{resetFields,getFieldDecorator,validateFields}}) => {
+  countries,Ok,callBack,myBrands,productStyles,visible }) => {
+
   let price,num=formatMoney(Number(product.price).toFixed(2),true);
   const brand = _.find(myBrands,{id:product.brand_id});
   switch (Number(product.price_unit)) {
@@ -79,16 +70,15 @@ const ShowProductModal = ({
     <td>{item.description}</td>
   </tr>);
   return (<span>
-    <span onClick={showModelHandler.bind(null,dispatch,id)}>
+    <span onClick={show.bind(null,dispatch,`show-${id}`)}>
       { children }
     </span>
     <Modal
       title={title}
       width={1000}
-      visible={visible[id]}
-      onOk={Ok ? okHandler.bind(null,dispatch,validateFields,callBack,id) : okHandler.bind(null,dispatch,null,null,id,true)}
-      onCancel={hideModelHandler.bind(null,dispatch,resetFields,id)}>
-      <Form>
+      visible={visible[`show-${id}`]}
+      onOk={Ok ? ok.bind(null,dispatch,null,callBack,`show-${id}`) : ok.bind(null,dispatch,null,null,`show-${id}`,true)}
+      onCancel={hide.bind(null,dispatch,null,`show-${id}`)}>
         <Tabs tabPosition="right">
           <TabPane tab="基本信息" key="1">
             <table>
@@ -145,7 +135,6 @@ const ShowProductModal = ({
             </Carousel>
           </TabPane>
         </Tabs>
-      </Form>
     </Modal>
   </span>)
 };
@@ -154,4 +143,4 @@ function mapStateToProps(state){
   const { visible } = state.commonModal;
   return{ visible }
 }
-export default connect(mapStateToProps)(Form.create()(ShowProductModal));
+export default connect(mapStateToProps)(ShowProductModal);

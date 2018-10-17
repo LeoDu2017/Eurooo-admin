@@ -7,7 +7,7 @@ import {
 import intl               from 'react-intl-universal';
 import { changePageHandel } from 'Actions/product';
 import { formatMoney } from 'Utils/widget';
-import ProductDetailModal   from 'Components/modal/show-product-info';
+import ShowProductInfo   from 'Components/modal/show-product-info';
 
 const ProductList = ({
   dispatch,current,
@@ -102,7 +102,7 @@ const ProductList = ({
       key: 'action',
       align:'center',
       render:(text,record) => <span>
-        <ProductDetailModal
+        <ShowProductInfo
           productSpaces={productSpaces}
           productStyles={productStyles}
           myBrands={myBrands}
@@ -111,7 +111,7 @@ const ProductList = ({
           id={record.id}
           ProductClassifications={ProductClassifications}>
           <a href="javascript:"> {intl.get('VIEW')}</a>
-        </ProductDetailModal>
+        </ShowProductInfo>
         <Divider type="vertical"/>
         <a>你好</a>
       </span>

@@ -69,7 +69,7 @@ export function selectImgs(dispatch,selected,id){
     })
   })
 }
-export function hideModelHandler(dispatch,resetFields,id){
+export function hide(dispatch,resetFields,id){
   resetFields();
   dispatch({
     type:'commonModal/setVisible',

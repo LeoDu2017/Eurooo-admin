@@ -1,6 +1,6 @@
 import { connect } from 'dva';
 import { Modal,Col } from 'antd';
-import { showModelHandler,hideModelHandler,okHandler } from 'Actions/common-modal'
+import { show,hide,ok } from 'Actions/common-modal'
 import {
   Tree,
   Header,
@@ -15,7 +15,7 @@ const Albums = ({
     id
   }) =>
   <span>
-    <span onClick={showModelHandler.bind(null, dispatch, id)}>{children}</span>
+    <span onClick={show.bind(null, dispatch, id)}>{children}</span>
     <Modal
       visible={visible[id]}
       closable={false}

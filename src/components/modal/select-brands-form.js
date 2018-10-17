@@ -2,8 +2,8 @@ import { connect }      from 'dva';
 import { Modal,Steps }  from 'antd';
 import { Component }    from 'react';
 import {
-  okHandler,
-  hideModelHandler }    from 'Actions/common-modal';
+  ok,
+  hide }    from 'Actions/common-modal';
 import {
   saveMyBrands,
   nextStepHandler,
@@ -27,11 +27,11 @@ class selectBrandsModal extends Component{
   };
   render(){
     const { dispatch,id,title,visible,onOk,currentStep,next } = this.props;
-    const onOkHandler = () =>{
+    const onok = () =>{
       if(currentStep === 1){
-        //okHandler(dispatch,validateFields,callBack,id)
+        //ok(dispatch,validateFields,callBack,id)
         saveMyBrands(dispatch,id);
-        // okHandler(dispatch,null,null,id);
+        // ok(dispatch,null,null,id);
 
       }else{
         const nextStep = currentStep + 1;
@@ -40,7 +40,7 @@ class selectBrandsModal extends Component{
     };
     const onCancelHandler = () =>{
       if(currentStep === 0){
-        hideModelHandler(dispatch,this.resetHandel.bind(this),id)
+        hide(dispatch,this.resetHandel.bind(this),id)
       }else{
         const nextStep = currentStep - 1;
         nextStepHandler(dispatch,nextStep)
@@ -55,7 +55,7 @@ class selectBrandsModal extends Component{
           okText = { currentStep < 1 ? '下一步' : '完成' }
           cancelText = { currentStep < 1 ? '取消' : '上一步' }
           visible={ visible[id] }
-          onOk={ onOkHandler }
+          onOk={ onok }
           onCancel={ onCancelHandler }>
             { currentStep === 0 && <Brands onRef={this.onRef} onSelect={ selectBrandHandler.bind(null,dispatch)}/> }
             { currentStep === 1 && <Selected onRef={this.onRef} onSelect={this.onSelect}/> }

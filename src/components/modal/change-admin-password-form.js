@@ -1,6 +1,6 @@
 import {
   equalPrev,
-  okHandler,
+  ok,
   unequalNext,
   unequalPrev,
   unequalPrevAndEqualNext } from 'Actions/change-admin-password-form';
@@ -9,7 +9,7 @@ import intl                 from 'react-intl-universal';
 import { Modal,Form,Input } from 'antd';
 import { transparency }     from 'Styles/login-form.less';
 import { changePassword }   from 'Actions/layout';
-import { hideModelHandler } from 'Actions/common-modal';
+import { hide } from 'Actions/common-modal';
 
 const formItemLayout = {
   labelCol: { xs: { span: 24 },sm: { span: 6 } },
@@ -29,9 +29,9 @@ const ChangePasswordForm = ({
     validateFieldsAndScroll,
     resetFields}}) => (
   <Modal
-    onCancel={ hideModelHandler.bind(null,dispatch,resetFields,id) }
+    onCancel={ hide.bind(null,dispatch,resetFields,id) }
     title= { intl.get('PWD') }
-    onOk={ okHandler.bind(null,dispatch,getFieldValue,userID,changePassword) }
+    onOk={ ok.bind(null,dispatch,getFieldValue,userID,changePassword) }
     visible={ visible[id] }>
     <Form>
       <Form.Item

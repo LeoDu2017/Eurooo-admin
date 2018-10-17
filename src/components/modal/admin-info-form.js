@@ -1,7 +1,7 @@
 import intl from 'react-intl-universal';
 import { Modal, Form, Input,Radio } from 'antd';
 import { connect } from 'dva';
-import { showModelHandler,hideModelHandler,okHandler } from 'Actions/common-modal';
+import { show,hide,ok } from 'Actions/common-modal';
 
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
@@ -15,14 +15,14 @@ const formItemLayout = {
 
 const UserEditModal = ({dispatch,children,visible,id,add,onOk,record,form:{getFieldDecorator,validateFields,resetFields}})=> (
   <span>
-      <span onClick={showModelHandler.bind(null,dispatch,id)}>
+      <span onClick={show.bind(null,dispatch,id)}>
         { children }
       </span>
       <Modal
         title= {add ? `${intl.get('ADD')}${intl.get('ADMIN')}` : `${intl.get('EDIT')}${intl.get('ADMIN')}`}
         visible={visible[id]}
-        onOk={okHandler.bind(null,dispatch,validateFields,onOk,id,false)}
-        onCancel={hideModelHandler.bind(null,dispatch,resetFields,id)}
+        onOk={ok.bind(null,dispatch,validateFields,onOk,id,false)}
+        onCancel={hide.bind(null,dispatch,resetFields,id)}
       >
         <Form horizontal="true">
           <FormItem

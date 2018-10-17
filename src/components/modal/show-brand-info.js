@@ -1,6 +1,6 @@
 import { Form,Modal,Checkbox,Input } from 'antd';
 import { connect } from 'dva';
-import { showModelHandler,hideModelHandler,okHandler } from 'Actions/common-modal';
+import { show,hide,ok } from 'Actions/common-modal';
 import { onChange } from 'Actions/brand';
 
 
@@ -22,14 +22,14 @@ const ShowBrandModal = ({
         countries,areas,Ok,callBack,
         form:{resetFields,getFieldDecorator,validateFields}}) => (
     <span>
-      <span onClick={showModelHandler.bind(null,dispatch,id)}>
+      <span onClick={show.bind(null,dispatch,id)}>
         { children }
       </span>
       <Modal
         title={title}
         visible={visible[id]}
-        onOk={Ok ? okHandler.bind(null,dispatch,validateFields,callBack,id) : okHandler.bind(null,dispatch,null,null,id,true)}
-        onCancel={hideModelHandler.bind(null,dispatch,resetFields,id)}>
+        onOk={Ok ? ok.bind(null,dispatch,validateFields,callBack,id) : ok.bind(null,dispatch,null,null,id,true)}
+        onCancel={hide.bind(null,dispatch,resetFields,id)}>
         <Form>
           <FormItem {...formItemLayout} label='品牌名称' className="g-f-item">
             <Input disabled={true} value={content.name}/>

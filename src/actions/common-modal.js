@@ -1,18 +1,18 @@
-export function showModelHandler(dispatch,id,event){
+export function show(dispatch,id,event){
   if (event) event.stopPropagation();
   dispatch({
     type:'commonModal/setVisible',
     payload:{[id]:true}
   })
 }
-export function hideModelHandler(dispatch,resetFields,id){
+export function hide(dispatch,resetFields,id){
   resetFields && resetFields();
   dispatch({
     type:'commonModal/setVisible',
     payload:{[id]:false}
   })
 }
-export function okHandler(dispatch,validateFields,callBack,id){
+export function ok(dispatch,validateFields,callBack,id){
   if(validateFields){
     validateFields({ force: true },(err, values) => {
       console.log(values);

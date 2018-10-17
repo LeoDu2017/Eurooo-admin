@@ -1,6 +1,6 @@
 import {
-  okHandler,
-  hideModelHandler }              from 'Actions/common-modal';
+  ok,
+  hide }              from 'Actions/common-modal';
 import intl                       from 'react-intl-universal';
 import { connect }                from 'dva';
 import { Modal,Form,Input }       from 'antd';
@@ -20,8 +20,8 @@ const AdminInfoForm = ({
   <Modal
     visible={visible[id]}
     title={intl.get('ModifyAdminInfo')}
-    onOk={okHandler.bind(null,dispatch,validateFields,changeAdminInfoHandler,id,false)}
-    onCancel={ hideModelHandler.bind(null,dispatch,resetFields,id) }>
+    onOk={ok.bind(null,dispatch,validateFields,changeAdminInfoHandler,id,false)}
+    onCancel={ hide.bind(null,dispatch,resetFields,id) }>
     <Form>
       <Form.Item
         {...formItemLayout}

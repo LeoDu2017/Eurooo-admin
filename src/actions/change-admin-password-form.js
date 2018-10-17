@@ -18,7 +18,7 @@ export function equalPrev(getFieldValue,errorMsg,rule,value,callback){
     callback()
   }
 }
-export function okHandler(dispatch,getFieldValue,userID,callback){
+export function ok(dispatch,getFieldValue,userID,callback){
   const values = {
     id:userID,
     originalPassword:getFieldValue('originalPassword'),

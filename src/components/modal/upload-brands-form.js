@@ -1,11 +1,11 @@
 import intl from "react-intl-universal";
 import { connect } from 'dva';
 import { Form,Modal,Input,Col,Select,Checkbox } from 'antd';
-import { okHandler }  from 'Actions/common-modal';
+import { ok }  from 'Actions/common-modal';
 
 import { upLogo } from 'Styles/shop.less';
 import Albums from 'Components/modal/albums';
-import { selectImgs,hideModelHandler } from 'Actions/brand';
+import { selectImgs,hide } from 'Actions/brand';
 
 const FormItem = Form.Item;
 const formItemLayout = {
@@ -19,8 +19,8 @@ const UploadBrandForm = ({
   <span>
     <Modal
       title={ title }
-      onOk={ okHandler.bind(null,dispatch,validateFields,callBack,id) }
-      onCancel={ hideModelHandler.bind(null,dispatch,resetFields,id)}
+      onOk={ ok.bind(null,dispatch,validateFields,callBack,id) }
+      onCancel={ hide.bind(null,dispatch,resetFields,id)}
       visible={ visible[id] }>
       <Form>
         <FormItem

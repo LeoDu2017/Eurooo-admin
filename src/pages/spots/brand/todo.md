@@ -221,17 +221,17 @@
     1、设置弹窗编辑内容 在 components\modal 文件夹新建 SelecteBrands.js并设置基础内容:
     import { Modal } from 'antd';
     import { connect } from 'dva';
-    import { showModelHandler,okHandler,hideModelHandler } from 'actions/common-modal';
+    import { show,ok,hide } from 'actions/common-modal';
     
     const selectBrandsModal = ({dispatch,children,id,title,visible,onOk}) => (
       <span>
-        <span onClick={showModelHandler.bind(null,dispatch,id)}>{children}</span>
+        <span onClick={show.bind(null,dispatch,id)}>{children}</span>
         <Modal
           title={title}
           visible={visible[id]}
           width="700px"
-          onOk={onOk ? okHandler.bind(null,dispatch,null,onOk,id) : okHandler.bind(null,dispatch,null,null,id,true)}
-          onCancel={hideModelHandler.bind(null,dispatch,null,id)}
+          onOk={onOk ? ok.bind(null,dispatch,null,onOk,id) : ok.bind(null,dispatch,null,null,id,true)}
+          onCancel={hide.bind(null,dispatch,null,id)}
         >
           品牌库
         </Modal>

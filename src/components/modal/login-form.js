@@ -1,6 +1,6 @@
 import { connect } from 'dva';
 import { Modal,Form,Button,Icon,Input,Checkbox } from 'antd';
-import { showModelHandler,hideModelHandler,okHandler } from 'Actions/common-modal'
+import { show,hide,ok } from 'Actions/common-modal'
 import { loginHandler } from 'Actions/loginpage';
 import { login_form,header,login_form_forgot,login_form_button } from 'Styles/login.less';
 import { transparency,center } from 'Styles/login-form.less';
@@ -13,13 +13,13 @@ const LoginForm = ({
    loginFail,
    form: { getFieldDecorator,validateFieldsAndScroll,resetFields },
  }) => <span>
-    <span onClick={showModelHandler.bind(null, dispatch, id)}>{children}</span>
+    <span onClick={show.bind(null, dispatch, id)}>{children}</span>
     <Modal
       closable={ false }
       footer={ null }
       width="400px"
       visible={ visible[id] }
-      onCancel={ hideModelHandler.bind(null,dispatch,resetFields,id) }>
+      onCancel={ hide.bind(null,dispatch,resetFields,id) }>
       <Form className={ login_form }>
         <h1 className={ `${header} ${center}`}>EUROOO ADMIN</h1>
         <FormItem>
@@ -51,7 +51,7 @@ const LoginForm = ({
             type="primary"
             htmlType="button"
             className={login_form_button}
-            onClick={okHandler.bind(null,dispatch,validateFieldsAndScroll,loginHandler,id,false)}>
+            onClick={ok.bind(null,dispatch,validateFieldsAndScroll,loginHandler,id,false)}>
             Log in
           </Button>
         </FormItem>
