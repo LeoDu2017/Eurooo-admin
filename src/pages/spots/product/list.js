@@ -8,6 +8,7 @@ import intl               from 'react-intl-universal';
 import { changePageHandel } from 'Actions/product';
 import { formatMoney } from 'Utils/widget';
 import ShowProductInfo   from 'Components/modal/show-product-info';
+import EditProductInfo   from 'Components/modal/edit-product-info';
 
 const ProductList = ({
   dispatch,current,
@@ -112,6 +113,12 @@ const ProductList = ({
           ProductClassifications={ProductClassifications}>
           <a href="javascript:"> {intl.get('VIEW')}</a>
         </ShowProductInfo>
+        <Divider type="vertical"/>
+        <EditProductInfo
+          id={record.id}
+          title={intl.get('PRODUCTEDIT')}>
+          <a href="javascript:"> {intl.get('EDIT')}</a>
+        </EditProductInfo>
         <Divider type="vertical"/>
         <a>你好</a>
       </span>

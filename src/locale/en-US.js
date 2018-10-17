@@ -198,6 +198,7 @@ export default {
     "ONSELL":"On sell",
     "OFFSHELF":"Off the shelf",
     "PRODUCTVIEW":"PREVIEW SPOT PRODUCTS",
+    "PRODUCTEDIT":"产品编辑",
 
     "MFSTYLE":"Modern fashion style",
     "NSTYLE":"Nordic style",

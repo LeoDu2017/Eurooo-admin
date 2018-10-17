@@ -231,6 +231,7 @@ export default{
     "ONSELL":"In vendita",
     "OFFSHELF":"Off the shelf",
     "PRODUCTVIEW":"ANTEPRIMA DEI PRODOTTI IN STOCK",
+    "PRODUCTEDIT":"产品编辑",
 
     "MFSTYLE":"现代时尚风格",
     "NSTYLE":"北欧风格",

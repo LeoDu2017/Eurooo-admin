@@ -164,7 +164,8 @@ export default {
     "PRODUCTBANNED":"禁销地区",
     "ONSELL":"上架",
     "OFFSHELF":"下架",
-    "PRODUCTVIEW":"现货产品预览",
+    "PRODUCTVIEW":"产品详情",
+    "PRODUCTEDIT":"产品编辑",
 
     "MFSTYLE":"现代时尚风格",
     "NSTYLE":"北欧风格",
