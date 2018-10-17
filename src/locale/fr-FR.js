@@ -213,6 +213,7 @@ export default{
     "ONSELL":"En vente",
     "OFFSHELF":"Retirer de l’ étagère",
     "PRODUCTVIEW":"PRÉVOIR LES MARCHANDISES EN STOCK",
+    "PRODUCTEDIT":"产品编辑",
 
     "MFSTYLE":"现代时尚风格",
     "NSTYLE":"北欧风格",
