@@ -17,8 +17,10 @@ module.exports = [
     style_id: 1,
     space_id: 9,
     classification_id:155,
-    price:'1743.96',
-    price_unit:'1',
+    price:{
+      sum:'1743.96',
+      currency:'1'
+    },
     status:0,
     parts_list:[]
   },{
@@ -37,8 +39,10 @@ module.exports = [
     style_id: 2,
     space_id: 8,
     classification_id:198,
-    price:'3012.3',
-    price_unit:'0',
+    price:{
+      sum:'3012.3',
+      currency:'2'
+    },
     sku:[
       { color:'透明银', size:'L50cm W50cm H99cm', fabric:'聚碳酸酯', stock:2},
       { color:'透明黑', size:'L50cm W50cm H99cm', fabric:'聚碳酸酯', stock:1},
@@ -73,8 +77,10 @@ module.exports = [
     style_id: 3,
     space_id: 7,
     classification_id:10,
-    price:'951.25',
-    price_unit:'1',
+    price:{
+      sum:'951.25',
+      currency:'0'
+    },
     sku:[
       { color:'透明绿', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:2},
       { color:'透明粉蓝', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
@@ -96,8 +102,10 @@ module.exports = [
     style_id: 4,
     space_id: 6,
     classification_id:175,
-    price:'3805.01',
-    price_unit:'1',
+    price:{
+      sum:'3805.01',
+      currency:'2'
+    },
     sku:[
       { color:'黑、金', size:'L520cm W20cm H19cm', fabric:'pvc', stock:3}
     ],
@@ -118,8 +126,10 @@ module.exports = [
     style_id: 5,
     space_id: 5,
     classification_id:142,
-    price:'2378.13',
-    price_unit:'1',
+    price:{
+      sum:'2378.13',
+      currency:'2'
+    },
     sku:[
       { color:'透明铜', size:'L57cm W47cm H84cm', fabric:'聚碳酸酯', stock:1},
       { color:'透明灰', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
@@ -143,8 +153,10 @@ module.exports = [
     style_id: 6,
     space_id: 3,
     classification_id:177,
-    price:'2219.59',
-    price_unit:'1',
+    price:{
+      sum:'2219.59',
+      currency:'0'
+    },
     sku:[
       { color:'透明白', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:0},
       { color:'透明黄', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:0},
@@ -172,8 +184,10 @@ module.exports = [
     style_id: 7,
     space_id: 4,
     classification_id:139,
-    price:'5390.43',
-    price_unit:'1',
+    price:{
+      sum:'5390.43',
+      currency:'1'
+    },
     sku:[
       { color:'透明', size:'L38.7cm W87.5cm H52.5cm', fabric:'聚碳酸酯', stock:1},
       { color:'亮橙', size:'L38.7cm W87.5cm H52.5cm', fabric:'聚碳酸酯', stock:3},
@@ -196,8 +210,10 @@ module.exports = [
     style_id: 8,
     space_id: 2,
     classification_id:125,
-    price:'1585.42',
-    price_unit:'1',
+    price:{
+      sum:'1585.42',
+      currency:'1'
+    },
     sku:[
       { color:'透明橙', size:'L54cm W34.5cm H94cm', fabric:'聚碳酸酯', stock:1},
       { color:'透明蓝', size:'L54cm W34.5cm H94cm', fabric:'聚碳酸酯', stock:1},
@@ -219,8 +235,10 @@ module.exports = [
     style_id: 9,
     space_id: 1,
     classification_id:322,
-    price:'10654.02',
-    price_unit:'1',
+    price:{
+      sum:'10654.02',
+      currency:'1'
+    },
     sku:[
       { color:'黑', size:'L54cm W34.5cm H94cm', fabric:'木、皮革', stock:100},
       { color:'棕', size:'L54cm W34.5cm H94cm', fabric:'木、皮革', stock:98},
