@@ -4,6 +4,7 @@ import { show,hide,ok } from 'Actions/common-modal';
 import PriceInput from 'Components/units/Price-input';
 import ClassSelete from 'Components/units/Class-selecte';
 import SKUInput from 'Components/units/SKU-input';
+import PartsInput from 'Components/units/Parts-input';
 
 
 const TabPane = Tabs.TabPane;
@@ -35,35 +36,35 @@ const EditProductInfoFrom = ({
         ProductClassifications,id,myBrands,children,
         form:{getFieldValue,setFieldsValue,getFieldDecorator,validateFieldsAndScroll}}) => {
 
-  const remove = (k) => {
+  const remove = (k,keyName) => {
     // can use data-binding to get
-    const keys = getFieldValue('keys');
+    const keys = getFieldValue(keyName);
     // We need at least one passenger
     if (keys.length === 1) { return }
     // can use data-binding to set
     setFieldsValue({
-      keys: keys.filter(key => key !== k)
-    });
-  };
-  const add = () => {
-    const keys = getFieldValue('keys');
-    const nextKeys = keys.concat(keys.length);
-    setFieldsValue({
-      keys: nextKeys,
+      [keyName]: keys.filter(key => key !== k)
     });
   };
 
-  getFieldDecorator('keys', { initialValue: [0] });
-  const keys = getFieldValue('keys');
-  const formItems = keys.map((k, index) => {
+  const add = (keyName) => {
+    const keys = getFieldValue(keyName);
+    const nextKeys = keys.concat(keys.length);
+    setFieldsValue({
+      [keyName]: nextKeys,
+    });
+  };
+
+  getFieldDecorator('skuKeys', { initialValue: [0] });
+  const skuKeys = getFieldValue('skuKeys');
+  const formItems_sku = skuKeys.map((k, index) => {
     return (
       <FormItem
         {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
-        label={index === 0 ? '产品产品规格' : ''}
+        label={index === 0 ? '产品规格' : ''}
         required={false}
         key={k}>
-
-        {getFieldDecorator(`names[${k}]`, {
+        {getFieldDecorator(`skus[${k}]`, {
           validateTrigger: ['onChange', 'onBlur'],
           rules: [{
             required: true,
@@ -73,12 +74,44 @@ const EditProductInfoFrom = ({
         })(
           <SKUInput style={{ width: '94%', marginRight: 8 }} />
         )}
-        {keys.length > 1 ? (
+        {skuKeys.length > 1 ? (
           <Icon
             type="minus-circle-o"
-            disabled={keys.length === 1}
-            onClick={() => remove(k)}
+            disabled={skuKeys.length === 1}
+            onClick={() => remove(k,'skuKeys')}
             style={{cursor:'pointer',marginLeft:10}}/>
+        ) : null}
+      </FormItem>
+    );
+  });
+
+  getFieldDecorator('partsKeys', { initialValue: [0] });
+  const partsKeys = getFieldValue('partsKeys');
+  const formItems_parts = partsKeys.map((k, index) => {
+    return (
+      <FormItem
+        {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
+        label={index === 0 ? '产品配件' : ''}
+        required={false}
+        style={{position:'relative'}}
+        key={k}>
+
+        {getFieldDecorator(`parts[${k}]`, {
+          validateTrigger: ['onChange', 'onBlur'],
+          rules: [{
+            required: true,
+            whitespace: true,
+            message: "Please input passenger's name or delete this field.",
+          }],
+        })(
+          <PartsInput />
+        )}
+        {partsKeys.length > 1 ? (
+          <Icon
+            type="minus-circle-o"
+            disabled={partsKeys.length === 1}
+            style={{marginLeft:15}}
+            onClick={() => remove(k,'partsKeys')}/>
         ) : null}
       </FormItem>
     );
@@ -183,15 +216,20 @@ const EditProductInfoFrom = ({
 
             </TabPane>
             <TabPane tab="产品属性" key="2" style={{height:520,overflow:'hidden',overflowY:'auto'}}>
-              {formItems}
+              {formItems_sku}
               <FormItem {...formItemLayoutWithOutLabel}>
-                <Button type="dashed" onClick={add} style={{ width: '94%' }}>
+                <Button type="dashed" onClick={add.bind(null,'skuKeys')} style={{ width: '94%' }}>
                   <Icon type="plus" /> Add field
                 </Button>
               </FormItem>
             </TabPane>
-            <TabPane tab="配件清单" key="3">
-              3
+            <TabPane tab="配件清单" key="3" style={{height:520,overflow:'hidden',overflowY:'auto'}}>
+              {formItems_parts}
+              <FormItem {...formItemLayoutWithOutLabel}>
+                <Button type="dashed" onClick={add.bind(null,'partsKeys')} style={{ width:487 }}>
+                  <Icon type="plus" /> Add field
+                </Button>
+              </FormItem>
             </TabPane>
             <TabPane tab="产品相册" key="4">
               4
