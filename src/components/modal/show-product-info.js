@@ -6,8 +6,6 @@ import { onChange } from 'Actions/product';
 import { formatMoney } from 'Utils/widget';
 import intl from "react-intl-universal";
 
-
-
 const TabPane = Tabs.TabPane;
 
 const ShowProductModal = ({
@@ -15,9 +13,9 @@ const ShowProductModal = ({
   content,title,banneds,product,productSpaces,id,
   countries,Ok,callBack,myBrands,productStyles,visible }) => {
 
-  let price,num=formatMoney(Number(product.price).toFixed(2),true);
+  let price,num=formatMoney(Number(product.price.sum).toFixed(2),true);
   const brand = _.find(myBrands,{id:product.brand_id});
-  switch (Number(product.price_unit)) {
+  switch (Number(product.price.currency)) {
     case 0:
       price = `$ ${num}`;
       break;
@@ -41,6 +39,7 @@ const ShowProductModal = ({
   const productSpace = _.find(productSpaces,{id:product.space_id});
   const images = product.images.map(img => <img key={i++} src={`${img}@430h_730w_1e_1c`}/>);
   let classification = [];
+
   ProductClassifications.filter(item =>{
     if (Number(item.id) === product.classification_id){
       const { children,...reset } = item;
@@ -111,7 +110,7 @@ const ShowProductModal = ({
               </tbody>
             </table>
           </TabPane>
-          <TabPane tab="配件清单" key="4">
+          <TabPane tab="配件清单" key="3">
             <table style={{'width':'100%'}}>
               <thead>
                 <tr>
@@ -129,7 +128,7 @@ const ShowProductModal = ({
               </tbody>
             </table>
           </TabPane>
-          <TabPane tab="产品相册" key="5">
+          <TabPane tab="产品相册" key="4">
             <Carousel autoplay>
               { images }
             </Carousel>
