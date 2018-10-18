@@ -56,8 +56,8 @@ const ProductList = ({
       key:'price',
       align:'center',
       render:(text,record) => {
-        let price,num=formatMoney(Number(text).toFixed(2),true);
-        switch (Number(record.price_unit)) {
+        let price,num=formatMoney(Number(text.sum).toFixed(2),true);
+        switch (Number(text.currency)) {
           case 0:
             price = `$ ${num}`;
             break;
@@ -116,7 +116,10 @@ const ProductList = ({
         <Divider type="vertical"/>
         <EditProductInfo
           id={record.id}
-          title={intl.get('PRODUCTEDIT')}>
+          title={intl.get('PRODUCTEDIT')}
+          myBrands={myBrands}
+          classID={record.classification_id}
+          ProductClassifications={ProductClassifications}>
           <a href="javascript:"> {intl.get('EDIT')}</a>
         </EditProductInfo>
         <Divider type="vertical"/>
@@ -152,6 +155,7 @@ const ProductList = ({
 
 function mapStateToProps(state){
   const {total,current,products} = state.product;
+
   const { countries,productStyles,productSpaces,ProductClassifications } = state.app;
   const {myBrands,banned} = state.brand;
 

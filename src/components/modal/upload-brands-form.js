@@ -26,6 +26,7 @@ const UploadBrandForm = ({
         <FormItem
           {...formItemLayout}
           label="品牌名称">
+
             {getFieldDecorator('name',{
               rules: [{ required: true, message: '请输入品牌名称' }],
             })(<Input placeholder="请输入品牌名称"/>)}
@@ -34,6 +35,7 @@ const UploadBrandForm = ({
           {...formItemLayout}
           label={intl.get('SHOPLOGO')}
           extra={intl.get('OPTIMUM')}>
+
             {getFieldDecorator('logo',{
               initialValue:logo,
               rules: [{required: true, message:intl.get('UPLOADSHOPlOGO')}]

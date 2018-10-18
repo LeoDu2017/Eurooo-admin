@@ -74,9 +74,8 @@ const EditProductInfoFrom = ({
             <FormItem {...formItemLayout} label="分类">
               {getFieldDecorator('class', {
                 initialValue: classID,
-              })(<ClassSelete ProductClassifications={ProductClassifications}>
-
-              </ClassSelete>)}
+              })(<ClassSelete onChange={ value => console.log(value) }
+                              ProductClassifications={ProductClassifications}/>)}
             </FormItem>
 
 
