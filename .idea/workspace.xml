@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce957529-e50a-4792-90ac-21254aa7a8bb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/units/SKU-input.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/modal/edit-product-info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/edit-product-info.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/spots/product/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/spots/product/list.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,7 +36,7 @@
           <entry key="css" value="8" />
           <entry key="ejs" value="5" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="603" />
+          <entry key="js" value="607" />
           <entry key="json" value="5" />
           <entry key="less" value="25" />
           <entry key="png" value="1" />
@@ -50,7 +50,7 @@
           <entry key="EJS" value="5" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="603" />
+          <entry key="JavaScript" value="607" />
           <entry key="Less" value="25" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="SVG" value="1" />
@@ -63,7 +63,7 @@
           <entry key="css" value="113" />
           <entry key="dummy" value="2" />
           <entry key="ejs" value="11" />
-          <entry key="js" value="32689" />
+          <entry key="js" value="33036" />
           <entry key="less" value="571" />
           <entry key="txt" value="163" />
         </counts>
@@ -72,7 +72,7 @@
         <counts>
           <entry key="CSS" value="113" />
           <entry key="EJS" value="11" />
-          <entry key="JavaScript" value="32689" />
+          <entry key="JavaScript" value="33036" />
           <entry key="Less" value="571" />
           <entry key="PLAIN_TEXT" value="353" />
         </counts>
@@ -90,7 +90,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/spots/product/list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="1650">
               <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -99,21 +99,33 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mock/json/myproduct.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="45" column="7" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/modal/edit-product-info.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="244">
+              <caret line="184" column="95" selection-start-line="184" selection-start-column="95" selection-end-line="184" selection-end-column="95" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
-                <element signature="e#1001#1251#0" />
-                <element signature="e#1265#1631#0" />
-                <element signature="e#1645#2074#0" />
-                <element signature="e#2926#3156#0" />
-                <element signature="e#3430#3773#0" />
-                <element signature="e#3762#4149#0" />
-                <element signature="e#4158#4434#0" />
+                <element signature="e#1090#4886#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/units/SKU-input.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -182,7 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/units/Album-controls.js" />
         <option value="$PROJECT_DIR$/src/actions/albums-pictures.js" />
         <option value="$PROJECT_DIR$/src/models/brands.js" />
         <option value="$PROJECT_DIR$/src/components/modal/change-admin-info-form.js" />
@@ -232,6 +243,7 @@
         <option value="$PROJECT_DIR$/src/components/modal/show-product-info.js" />
         <option value="$PROJECT_DIR$/src/components/units/Class-selecte.js" />
         <option value="$PROJECT_DIR$/src/pages/spots/product/list.js" />
+        <option value="$PROJECT_DIR$/src/components/units/SKU-input.js" />
         <option value="$PROJECT_DIR$/src/components/modal/edit-product-info.js" />
       </list>
     </option>
@@ -399,14 +411,7 @@
       <workItem from="1537840103515" duration="64398000" />
       <workItem from="1538094085354" duration="100767000" />
       <workItem from="1538959774537" duration="228552000" />
-      <workItem from="1539737487334" duration="50464000" />
-    </task>
-    <task id="LOCAL-00035" summary="内页布局-右侧导航完善">
-      <created>1538306330140</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1538306330140</updated>
+      <workItem from="1539737487334" duration="57772000" />
     </task>
     <task id="LOCAL-00036" summary="内页布局-右侧导航完善">
       <created>1538306789393</created>
@@ -744,11 +749,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539842070633</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1539846381542</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1539846381542</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="553642000" />
+    <option name="totallyTimeSpent" value="560950000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -864,13 +876,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/actions/albums-trees.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1019">
-          <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/albums-pictures.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
@@ -1178,13 +1183,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mock/json/myproduct.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="19" column="11" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/units/Brands-list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -1229,13 +1227,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/Price-input.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/units/Class-selecte.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="805">
@@ -1255,7 +1246,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/spots/product/list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="1650">
           <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -1263,19 +1254,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mock/json/myproduct.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="45" column="7" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/units/Price-input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/units/SKU-input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/modal/edit-product-info.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="244">
+          <caret line="184" column="95" selection-start-line="184" selection-start-column="95" selection-end-line="184" selection-end-column="95" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#1001#1251#0" />
-            <element signature="e#1265#1631#0" />
-            <element signature="e#1645#2074#0" />
-            <element signature="e#2926#3156#0" />
-            <element signature="e#3430#3773#0" />
-            <element signature="e#3762#4149#0" />
-            <element signature="e#4158#4434#0" />
+            <element signature="e#1090#4886#0" />
           </folding>
         </state>
       </provider>
