@@ -93,7 +93,7 @@ const infoForm = ({
               initialValue:shopInfo.shop_logo,
               rules: [{required: true, message:intl.get('UPLOADSHOPlOGO')}]
             })(
-              <Col className={styles.upLogo}>
+              <Col className="upLogo">
                 <img alt="LOGO" src={shopInfo.shop_logo ? shopInfo.shop_logo : 'https://api.vtrois.com/image/108x108/f5f5f5/C2C2C2?text=%20EUROOO%20'}/>
                 {
                   !editable &&
