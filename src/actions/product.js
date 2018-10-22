@@ -9,3 +9,7 @@ export function changePageHandel(dispatch,page){
     })
   )
 }
+// 删除商品
+export function deleteHandler(dispatch,id){
+  console.log(id)
+}
