@@ -1,14 +1,14 @@
-import {connect} from 'dva';
-import _ from 'lodash';
 import {
   Pagination,
   Table,Tag,Col,
-  Button,Divider }        from 'antd';
-import intl               from 'react-intl-universal';
+  Button,Divider }          from 'antd';
+import {connect}            from 'dva';
+import _                    from 'lodash';
+import intl                 from 'react-intl-universal';
 import { changePageHandel } from 'Actions/product';
-import { formatMoney } from 'Utils/widget';
-import ShowProductInfo   from 'Components/modal/show-product-info';
-import EditProductInfo   from 'Components/modal/edit-product-info';
+import { formatMoney }      from 'Utils/widget';
+import ShowProductInfo      from 'Components/modal/show-product-info';
+import EditProductInfo      from 'Components/modal/edit-product-info';
 
 const ProductList = ({
   dispatch,current,
@@ -55,7 +55,7 @@ const ProductList = ({
       dataIndex:'price',
       key:'price',
       align:'center',
-      render:(text,record) => {
+      render:(text) => {
         let price,num=formatMoney(Number(text.sum).toFixed(2),true);
         switch (Number(text.currency)) {
           case 0:
@@ -125,7 +125,16 @@ const ProductList = ({
           <a href="javascript:"> {intl.get('EDIT')}</a>
         </EditProductInfo>
         <Divider type="vertical"/>
-        <a>你好</a>
+        {
+          Number(record.status) ?
+          <a href="javascript:">{intl.get('OFFSHELF')}</a> :
+          <a href="javascript:">{intl.get('ONSELL')}</a>
+        }
+        <Divider type="vertical"/>
+        {
+          !Number(record.status) &&
+          <a href="javascript:">{intl.get('DELETE')}</a>
+        }
       </span>
     }];
   return(
