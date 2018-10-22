@@ -1486,6 +1486,23 @@ export default {
                 ],
               },
               {
+                name: '订单管理',
+                icon: 'file-text',
+                path: 'order',
+                children: [
+                  {
+                    name: '最新订单',
+                    path: 'new',
+                  },{
+                    name: '历史订单',
+                    path: 'old',
+                  },{
+                    name: '进行中订单',
+                    path: 'progress',
+                  }
+                ],
+              },
+              {
                 name: 'Pages',
                 icon: 'dashboard',
                 path: 'dashboard',
