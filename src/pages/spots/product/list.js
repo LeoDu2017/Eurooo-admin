@@ -1,11 +1,11 @@
 import {
-  Pagination,
+  Pagination,Popconfirm,
   Table,Tag,Col,
   Button,Divider }          from 'antd';
 import {connect}            from 'dva';
 import _                    from 'lodash';
 import intl                 from 'react-intl-universal';
-import { changePageHandel } from 'Actions/product';
+import { changePageHandel,deleteHandler } from 'Actions/product';
 import { formatMoney }      from 'Utils/widget';
 import ShowProductInfo      from 'Components/modal/show-product-info';
 import EditProductInfo      from 'Components/modal/edit-product-info';
@@ -130,10 +130,15 @@ const ProductList = ({
           <a href="javascript:">{intl.get('OFFSHELF')}</a> :
           <a href="javascript:">{intl.get('ONSELL')}</a>
         }
-        <Divider type="vertical"/>
         {
-          !Number(record.status) &&
-          <a href="javascript:">{intl.get('DELETE')}</a>
+          !Number(record.status) && <span>
+            <Divider type="vertical"/>
+            <Popconfirm
+              title="您确定要删除该商品吗?"
+              onConfirm={deleteHandler.bind(null,dispatch,record.id)}>
+              <a href="javascript:">{intl.get('DELETE')}</a>
+            </Popconfirm>
+          </span>
         }
       </span>
     }];
