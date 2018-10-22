@@ -27,7 +27,7 @@ class SKUInput extends React.Component {
     const state = this.state;
     return (
       <span>
-        配件名称 &nbsp;&nbsp;<Input placeholder="配件名称" style={{ width:150}}/>
+        配件名称 &nbsp;&nbsp;<Input placeholder="配件名称" style={{ width:234}}/>
         &nbsp;&nbsp;&nbsp;&nbsp;
         配件数量 &nbsp;&nbsp;<InputNumber min={0} placeholder="配件数量" style={{ width:100}}/>
         <br/>
