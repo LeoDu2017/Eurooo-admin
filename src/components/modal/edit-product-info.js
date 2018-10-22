@@ -1,11 +1,13 @@
 import { connect } from 'dva';
-import { Modal,Tabs,Form,Input,Select,Button,Radio,Card,Checkbox,Icon } from 'antd';
+import { Modal,Tabs,Form,Input,Select,Button,Radio,Card,Checkbox,Icon,Col } from 'antd';
 import { show,hide,ok } from 'Actions/common-modal';
 import PriceInput from 'Components/units/Price-input';
 import ClassSelete from 'Components/units/Class-selecte';
 import SKUInput from 'Components/units/SKU-input';
 import PartsInput from 'Components/units/Parts-input';
-
+import intl from "react-intl-universal";
+import Albums from 'Components/modal/albums';
+import { selectImgs } from 'Actions/shop';
 
 const TabPane = Tabs.TabPane;
 const FormItem = Form.Item;
@@ -110,9 +112,47 @@ const EditProductInfoFrom = ({
           <Icon
             type="minus-circle-o"
             disabled={partsKeys.length === 1}
-            style={{marginLeft:15}}
+            style={{marginLeft:15,cursor:'pointer'}}
             onClick={() => remove(k,'partsKeys')}/>
         ) : null}
+      </FormItem>
+    );
+  });
+// ,width:200,float:'left'
+  getFieldDecorator('imagesKeys', { initialValue: [0] });
+  const imagesKeys = getFieldValue('imagesKeys');
+  const formItems_images = imagesKeys.map((k, index) => {
+    return (
+      <FormItem
+        required={false}
+        key={k}
+        style={{display:'inline-block',width: 120}}>
+        {getFieldDecorator(`images[${k}]`, {
+          validateTrigger: ['onChange', 'onBlur'],
+          rules: [{
+            required: true,
+            whitespace: true,
+            message: "Please input passenger's name or delete this field.",
+          }],
+        })(
+          <Col
+            style={{position:'relative'}}
+            className="upLogo">
+            <img alt="LOGO" src='https://italyclassico.casacdn.com/pd_merchant/image/product/20180411164379.jpg@100h_100w_1e_1c'/>
+            <Albums callBack={selectImgs} id="logoAlbums" single={false}>
+              {intl.get('REUPLOAD')}
+            </Albums>
+            <Input type="hidden"/>
+            {imagesKeys.length > 1 ? (
+              <Icon
+                type="minus-circle-o"
+                disabled={imagesKeys.length === 1}
+                style={{marginLeft:15,cursor:'pointer',position:'absolute',top:5,right:5}}
+                onClick={() => remove(k,'imagesKeys')}/>
+            ) : null}
+          </Col>
+        )}
+
       </FormItem>
     );
   });
@@ -231,8 +271,18 @@ const EditProductInfoFrom = ({
                 </Button>
               </FormItem>
             </TabPane>
-            <TabPane tab="产品相册" key="4">
-              4
+            <TabPane tab="产品相册" key="4" style={{
+              height:520,
+              overflow:'hidden',
+              overflowY:'auto'}}>
+              <div style={{ display:'flex', justifyContent:'space-around',width:imagesKeys.length*170}}>
+                {formItems_images}
+              </div>
+              <FormItem {...formItemLayoutWithOutLabel} style={{display:imagesKeys.length >= 5 ? 'none' : 'block'}}>
+                <Button type="dashed" onClick={add.bind(null,'imagesKeys')} style={{ width:487 }}>
+                  <Icon type="plus" /> Add field
+                </Button>
+              </FormItem>
             </TabPane>
           </Tabs>
         </Form>
