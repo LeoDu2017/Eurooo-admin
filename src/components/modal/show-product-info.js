@@ -36,7 +36,7 @@ const ShowProductModal = ({
     </tr>);
 
   const productStyle = _.find(productStyles,{id:product.style_id});
-  const productSpace = _.find(productSpaces,{id:product.space_id});
+  const productSpace = product.space_id.map(i => _.find(productSpaces,{id:i}));
   const images = product.images.map(img => <img key={i++} src={`${img}@430h_730w_1e_1c`}/>);
   let classification = [];
 
@@ -91,7 +91,8 @@ const ShowProductModal = ({
               <tr><th width="10%">产品状态&nbsp;:&nbsp;</th><td width="90%">{Number(product.status) ? intl.get('ONSELL') : intl.get('OFFSHELF')}</td></tr>
               <tr><th width="10%">产品描述&nbsp;:&nbsp;</th><td width="90%">{product.description}</td></tr>
               <tr><th width="10%">产品风格&nbsp;:&nbsp;</th><td width="90%">{productStyle.name}</td></tr>
-              <tr><th width="10%">产品空间&nbsp;:&nbsp;</th><td width="90%">{productSpace.name}</td></tr>
+              <tr><th width="10%">产品空间&nbsp;:&nbsp;</th><td width="90%">{
+                productSpace.map(item => item.name)}</td></tr>
               </tbody>
             </table>
           </TabPane>
