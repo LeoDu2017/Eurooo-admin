@@ -34,7 +34,7 @@ const formItemLayoutWithOutLabel = {
 
 const EditProductInfoFrom = ({
         productSpaces,productStyles,
-        title,visible,dispatch,classID,
+        title,visible,dispatch,classID,product,
         ProductClassifications,id,myBrands,children,
         form:{getFieldValue,setFieldsValue,getFieldDecorator,validateFieldsAndScroll}}) => {
 
@@ -59,6 +59,7 @@ const EditProductInfoFrom = ({
 
   getFieldDecorator('skuKeys', { initialValue: [0] });
   const skuKeys = getFieldValue('skuKeys');
+
   const formItems_sku = skuKeys.map((k, index) => {
     return (
       <FormItem
@@ -156,7 +157,8 @@ const EditProductInfoFrom = ({
       </FormItem>
     );
   });
-
+  const { name,price } = product;
+  console.log(product);
   return (
     <span>
       <span onClick={show.bind(null,dispatch,`edit-${id}`)}>{ children }</span>
@@ -170,13 +172,14 @@ const EditProductInfoFrom = ({
             <TabPane tab="基本信息" key="1" style={{height:520,overflow:'hidden',overflowY:'auto'}}>
               <FormItem {...formItemLayout} label="产品名称">
                 {getFieldDecorator('name',{
+                  initialValue:name,
                   rules: [{ required: true, message: '请输入产品名称' }],
                 })(<Input style={{'width':'200px'}} placeholder="请输入产品名称"/>)}
               </FormItem>
 
               <FormItem {...formItemLayout} label="产品价格">
                 {getFieldDecorator('price', {
-                  initialValue: { sum: 0,currency: '0' },
+                  initialValue: price,
                   rules: [{ required: true, message: '请输入产品价格' }],
                   // rules: [{ validator: this.checkPrice }],
                 })(<PriceInput onChange={ value => console.log(value) }/>)}
