@@ -15,7 +15,7 @@ module.exports = [
     description:'Kartell 的作品非常与众不同，她们功能多样、方便耐用、色彩明艳、神态精灵、通体透明、造型奇异,拥有独一无二的魅力，在任何场所出现都是空间中最耀眼的明星。Kartell 吸引了国际上最权威的设计大师与之合作，教父级的Philippe Starck、Ron Arad、Antonio Citterio都是Kartell 的设计主力。而近年来如日中天的设计红人，如Patricia Urquiola、Marcel Wanders、Bouroullec兄弟以及Tokujin Yoshioka（吉冈德仁）等人都为 Kartell 贡献了绝佳的设计作品，令每一件新产品都艳惊四座。',
     brand_id:'39',
     style_id: 1,
-    space_id: 9,
+    space_id: [9],
     classification_id:155,
     price:{
       sum:'1743.96',
@@ -38,7 +38,7 @@ module.exports = [
     description:'Kartell的塑料民用家具、办公家具、工程配套家具、室内装饰品和灯饰充分体现了时尚与实用的完美结合，且独一无二，品种繁多，功能性强，价格适中。KARTELL本着一丝不苟的作风，追求新材料和形态的研发，给人们带来了独创的美感，使世界各地的时尚人士有机会将设计大师的作品搬回自己的家。 KARTELL75%的产品通过遍布全球60个国家和地区的全球分销机构出口到世界各地，因而每年有上百万件产品以60000个左右航次发送货物，成为了全球塑料家具行业中的佼佼者。',
     brand_id:'39',
     style_id: 2,
-    space_id: 8,
+    space_id: [8],
     classification_id:198,
     price:{
       sum:'3012.3',
@@ -77,7 +77,7 @@ module.exports = [
     description:'如果说意大利人与中国人有什么共通之处，那一定是对于家族关系的尊重和传承。在意大利，不论时尚圈还是设计圈，以家族企业形式延续着DNA的品牌占了大多数，而Kartell就是设计界的明星家族。1949年，Kartell用塑料这种新奇的材料“攻陷”了整个意大利。如今，它依然保持创新活力，与天才设计师合作之余，还将玻璃纤维等新兴材质融入设计。',
     brand_id:'39',
     style_id: 3,
-    space_id: 7,
+    space_id: [7],
     classification_id:10,
     price:{
       sum:'951.25',
@@ -103,7 +103,7 @@ module.exports = [
     description:'Federico Luti的祖父母Giulio Castelli和Anna Castelli Ferrieri于1949年一手创建了Kartell品牌，他的父亲Claudio Luti于1988年开始执掌公司。Federico从经济学专业毕业之后，就加入了家族企业，如今是公司的商务总监。窗边的红色Pilastro墩由Ettore Sottsass于2007年为Kartell设计。椭圆形餐桌是Federico Luti的祖母Anna Castelli和Ignazio Gardella在1969年共同设计。桌上的玻璃花瓶在慕拉诺岛制作，花瓶一旁的“Ming”香支由Ferruccio Laviani设计。',
     brand_id:'39',
     style_id: 4,
-    space_id: 6,
+    space_id: [6],
     classification_id:175,
     price:{
       sum:'3805.01',
@@ -128,7 +128,7 @@ module.exports = [
     description:'Federico Luti的祖父母Giulio Castelli和Anna Castelli Ferrieri于1949年一手创建了Kartell品牌，他的父亲Claudio Luti于1988年开始执掌公司。Federico从经济学专业毕业之后，就加入了家族企业，如今是公司的商务总监。窗边的红色Pilastro墩由Ettore Sottsass于2007年为Kartell设计。椭圆形餐桌是Federico Luti的祖母Anna Castelli和Ignazio Gardella在1969年共同设计。桌上的玻璃花瓶在慕拉诺岛制作，花瓶一旁的“Ming”香支由Ferruccio Laviani设计。',
     brand_id:'39',
     style_id: 5,
-    space_id: 5,
+    space_id: [5],
     classification_id:142,
     price:{
       sum:'2378.13',
@@ -156,7 +156,7 @@ module.exports = [
     description:'Federico Luti的祖父母Giulio Castelli和Anna Castelli Ferrieri于1949年一手创建了Kartell品牌，他的父亲Claudio Luti于1988年开始执掌公司。Federico从经济学专业毕业之后，就加入了家族企业，如今是公司的商务总监。窗边的红色Pilastro墩由Ettore Sottsass于2007年为Kartell设计。椭圆形餐桌是Federico Luti的祖母Anna Castelli和Ignazio Gardella在1969年共同设计。桌上的玻璃花瓶在慕拉诺岛制作，花瓶一旁的“Ming”香支由Ferruccio Laviani设计。',
     brand_id:'39',
     style_id: 6,
-    space_id: 3,
+    space_id: [3],
     classification_id:177,
     price:{
       sum:'2219.59',
@@ -188,7 +188,7 @@ module.exports = [
     description:'Federico Luti的祖父母Giulio Castelli和Anna Castelli Ferrieri于1949年一手创建了Kartell品牌，他的父亲Claudio Luti于1988年开始执掌公司。Federico从经济学专业毕业之后，就加入了家族企业，如今是公司的商务总监。窗边的红色Pilastro墩由Ettore Sottsass于2007年为Kartell设计。椭圆形餐桌是Federico Luti的祖母Anna Castelli和Ignazio Gardella在1969年共同设计。桌上的玻璃花瓶在慕拉诺岛制作，花瓶一旁的“Ming”香支由Ferruccio Laviani设计。',
     brand_id:'39',
     style_id: 7,
-    space_id: 4,
+    space_id: [4],
     classification_id:139,
     price:{
       sum:'5390.43',
@@ -215,7 +215,7 @@ module.exports = [
     description:'Federico Luti的祖父母Giulio Castelli和Anna Castelli Ferrieri于1949年一手创建了Kartell品牌，他的父亲Claudio Luti于1988年开始执掌公司。Federico从经济学专业毕业之后，就加入了家族企业，如今是公司的商务总监。窗边的红色Pilastro墩由Ettore Sottsass于2007年为Kartell设计。椭圆形餐桌是Federico Luti的祖母Anna Castelli和Ignazio Gardella在1969年共同设计。桌上的玻璃花瓶在慕拉诺岛制作，花瓶一旁的“Ming”香支由Ferruccio Laviani设计。',
     brand_id:'39',
     style_id: 8,
-    space_id: 2,
+    space_id: [2],
     classification_id:125,
     price:{
       sum:'1585.42',
@@ -241,7 +241,7 @@ module.exports = [
     description:'FLOAT takes its inspiration from the delicate Water Strider insect that can be seen defying gravity when it walks across the surface of ponds and streams. This table is both elegant and very sturdy. Comes in 3 different sizes with table top in laminate or linoleum with black painted edges. Legs in powder coated black metal.',
     brand_id:'1347',
     style_id: 9,
-    space_id: 1,
+    space_id: [1],
     classification_id:322,
     price:{
       sum:'10654.02',

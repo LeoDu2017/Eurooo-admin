@@ -157,7 +157,8 @@ const EditProductInfoFrom = ({
       </FormItem>
     );
   });
-  const { name,price,special_offer,brand_id,classification_id } = product;
+  const { name,price,special_offer,brand_id,classification_id,space_id } = product;
+
   return (
     <span>
       <span onClick={show.bind(null,dispatch,`edit-${id}`)}>{ children }</span>
@@ -212,7 +213,7 @@ const EditProductInfoFrom = ({
                   }
                 </RadioGroup>)}
               </FormItem>
-
+              {/*分类*/}
               <FormItem {...formItemLayout} label="分类">
                 {getFieldDecorator('class', {
                   initialValue: classification_id,
@@ -222,7 +223,8 @@ const EditProductInfoFrom = ({
 
               <FormItem {...formItemLayout} label="空间">
                 {getFieldDecorator('space', {
-                  rules: [{ required: true, message: '请输入品牌名称' }]
+                  initialValue:space_id,
+                  rules: [{ required: true, message: '请选择空间' }]
                 })(<CheckboxGroup>
                   {
                     productSpaces.map(space => <Checkbox value={space.id} key={space.id}>{space.name}</Checkbox>)
