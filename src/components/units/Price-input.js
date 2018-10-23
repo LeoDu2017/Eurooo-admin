@@ -35,7 +35,7 @@ class PriceInput extends React.Component {
   handleCurrencyChange = (currency) => {
     this.setState({ currency });
     let symbol = this.set_currency_symbol(currency);
-    this.setState({ symbol })
+    this.setState({ symbol });
     this.triggerChange({ currency });
   };
 

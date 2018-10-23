@@ -158,7 +158,7 @@ const EditProductInfoFrom = ({
     );
   });
   const { name,price } = product;
-  console.log(product);
+
   return (
     <span>
       <span onClick={show.bind(null,dispatch,`edit-${id}`)}>{ children }</span>
@@ -170,13 +170,14 @@ const EditProductInfoFrom = ({
         <Form>
           <Tabs tabPosition="right">
             <TabPane tab="基本信息" key="1" style={{height:520,overflow:'hidden',overflowY:'auto'}}>
+              {/*产品名称*/}
               <FormItem {...formItemLayout} label="产品名称">
                 {getFieldDecorator('name',{
                   initialValue:name,
                   rules: [{ required: true, message: '请输入产品名称' }],
                 })(<Input style={{'width':'200px'}} placeholder="请输入产品名称"/>)}
               </FormItem>
-
+              {/*产品价格*/}
               <FormItem {...formItemLayout} label="产品价格">
                 {getFieldDecorator('price', {
                   initialValue: price,
