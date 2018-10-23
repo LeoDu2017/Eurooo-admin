@@ -56,9 +56,25 @@ const EditProductInfoFrom = ({
       [keyName]: nextKeys,
     });
   };
+  const {
+    name,
+    price,
+    special_offer,
+    brand_id,
+    classification_id,
+    space_id,
+    style_id,
+    description,
+    status,
+    sku} = product;
 
-  getFieldDecorator('skuKeys', { initialValue: [0] });
+  getFieldDecorator('skuKeys', { initialValue: sku });
+  getFieldDecorator('partsKeys', { initialValue: [0] });
+  getFieldDecorator('imagesKeys', { initialValue: [0] });
+
   const skuKeys = getFieldValue('skuKeys');
+  const partsKeys = getFieldValue('partsKeys');
+  const imagesKeys = getFieldValue('imagesKeys');
 
   const formItems_sku = skuKeys.map((k, index) => {
     return (
@@ -66,8 +82,9 @@ const EditProductInfoFrom = ({
         {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
         label={index === 0 ? '产品规格' : ''}
         required={false}
-        key={k}>
-        {getFieldDecorator(`skus[${k}]`, {
+        key={index}>
+        {getFieldDecorator(`skus[${index}]`, {
+          initialValue:k,
           validateTrigger: ['onChange', 'onBlur'],
           rules: [{
             required: true,
@@ -87,9 +104,6 @@ const EditProductInfoFrom = ({
       </FormItem>
     );
   });
-
-  getFieldDecorator('partsKeys', { initialValue: [0] });
-  const partsKeys = getFieldValue('partsKeys');
   const formItems_parts = partsKeys.map((k, index) => {
     return (
       <FormItem
@@ -119,9 +133,6 @@ const EditProductInfoFrom = ({
       </FormItem>
     );
   });
-// ,width:200,float:'left'
-  getFieldDecorator('imagesKeys', { initialValue: [0] });
-  const imagesKeys = getFieldValue('imagesKeys');
   const formItems_images = imagesKeys.map((k, index) => {
     return (
       <FormItem
@@ -157,7 +168,8 @@ const EditProductInfoFrom = ({
       </FormItem>
     );
   });
-  const { name,price,special_offer,brand_id,classification_id,space_id } = product;
+
+
 
   return (
     <span>
@@ -220,7 +232,7 @@ const EditProductInfoFrom = ({
                 })(<ClassSelete onChange={ value => console.log(value) }
                                 ProductClassifications={ProductClassifications}/>)}
               </FormItem>
-
+              {/*空间*/}
               <FormItem {...formItemLayout} label="空间">
                 {getFieldDecorator('space', {
                   initialValue:space_id,
@@ -231,9 +243,10 @@ const EditProductInfoFrom = ({
                   }
                 </CheckboxGroup>)}
               </FormItem>
-
+              {/*风格*/}
               <FormItem {...formItemLayout} label="风格">
                 {getFieldDecorator('style', {
+                  initialValue: style_id,
                   rules: [{ required: true, message: '请输入品牌名称' }]
                 })(<Select style={{ width:250}}>
                   {
@@ -241,25 +254,24 @@ const EditProductInfoFrom = ({
                   }
                 </Select>)}
               </FormItem>
-
+              {/*产品描述*/}
               <FormItem {...formItemLayout} label="产品描述">
-                {getFieldDecorator('description', { })(
+                {getFieldDecorator('description', {
+                  initialValue:description
+                })(
                   <TextArea placeholder="Autosize height with minimum and maximum number of lines"
                             autosize={{ minRows: 2, maxRows: 6 }} />
                 )}
               </FormItem>
-
+              {/*产品状态*/}
               <FormItem {...formItemLayout} label="产品状态">
                 {getFieldDecorator('status', {
-                  initialValue: 0,
-                  // rules: [{ required: true, message: '请输入产品价格' }],
-                  // rules: [{ validator: this.checkPrice }],
+                  initialValue: status
                 })(<RadioGroup>
                   <Radio value={0}>下架</Radio>
                   <Radio value={1}>上架</Radio>
                 </RadioGroup>)}
               </FormItem>
-
             </TabPane>
             <TabPane tab="产品属性" key="2" style={{height:520,overflow:'hidden',overflowY:'auto'}}>
               {formItems_sku}
