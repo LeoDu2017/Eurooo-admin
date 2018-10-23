@@ -59,10 +59,10 @@ const ProductList = ({
         let price,num=formatMoney(Number(text.sum).toFixed(2),true);
         switch (Number(text.currency)) {
           case 0:
-            price = `$ ${num}`;
+            price = `￥ ${num}`;
             break;
           case 1:
-            price = `￥ ${num}`;
+            price = `$ ${num}`;
             break;
           case 2:
             price = `€ ${num}`;
