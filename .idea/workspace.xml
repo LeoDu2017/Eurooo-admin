@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce957529-e50a-4792-90ac-21254aa7a8bb" name="Default Changelist" comment="" />
+    <list default="true" id="ce957529-e50a-4792-90ac-21254aa7a8bb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/spots/product/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/spots/product/list.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -22,19 +25,19 @@
           <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.7" value="3" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.open.time.7" value="4" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="MD" value="5" />
-          <entry key="css" value="8" />
+          <entry key="css" value="9" />
           <entry key="ejs" value="5" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="608" />
+          <entry key="js" value="615" />
           <entry key="json" value="5" />
-          <entry key="less" value="25" />
+          <entry key="less" value="27" />
           <entry key="png" value="1" />
           <entry key="svg" value="1" />
           <entry key="ts" value="1" />
@@ -42,12 +45,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="8" />
+          <entry key="CSS" value="9" />
           <entry key="EJS" value="5" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="608" />
-          <entry key="Less" value="25" />
+          <entry key="JavaScript" value="615" />
+          <entry key="Less" value="27" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="SVG" value="1" />
           <entry key="TypeScript" value="1" />
@@ -59,8 +62,8 @@
           <entry key="css" value="113" />
           <entry key="dummy" value="2" />
           <entry key="ejs" value="11" />
-          <entry key="js" value="33492" />
-          <entry key="less" value="571" />
+          <entry key="js" value="34368" />
+          <entry key="less" value="573" />
           <entry key="txt" value="163" />
         </counts>
       </usages-collector>
@@ -68,8 +71,8 @@
         <counts>
           <entry key="CSS" value="113" />
           <entry key="EJS" value="11" />
-          <entry key="JavaScript" value="33492" />
-          <entry key="Less" value="571" />
+          <entry key="JavaScript" value="34368" />
+          <entry key="Less" value="573" />
           <entry key="PLAIN_TEXT" value="353" />
         </counts>
       </usages-collector>
@@ -82,64 +85,59 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/spots/product/list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+            <state relative-caret-position="415">
+              <caret line="120" column="17" selection-start-line="120" selection-start-column="10" selection-end-line="120" selection-end-column="17" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#91#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mock/json/myproduct.js">
+        <entry file="file://$PROJECT_DIR$/src/models/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="45" column="7" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/modal/edit-product-info.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2162">
-              <caret line="228" column="93" selection-start-line="228" selection-start-column="93" selection-end-line="228" selection-end-column="93" />
+            <state relative-caret-position="271">
+              <caret line="1489" column="34" lean-forward="true" selection-start-line="1500" selection-start-column="27" selection-end-line="1500" selection-end-column="35" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
-                <element signature="e#2935#3193#0" />
-                <element signature="e#3021#3107#0" />
-                <element signature="e#3209#3587#0" />
-                <element signature="e#3603#4050#0" />
-                <element signature="e#4066#4773#0" />
-                <element signature="e#4789#5100#0" />
-                <element signature="e#5116#5519#0" />
-                <element signature="e#5535#5941#0" />
-                <element signature="e#5957#6269#0" />
-                <element signature="e#6285#6724#0" />
+                <element signature="e#1819#13333#0" />
+                <element signature="e#13360#14264#0" />
+                <element signature="e#14291#15125#0" />
+                <element signature="e#15161#45643#0" />
+                <element signature="e#15257#27700#0" />
+                <element signature="e#27810#39179#0" />
+                <element signature="e#39291#45616#0" />
+                <element signature="e#46597#47009#0" />
+                <element signature="e#47025#47315#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/units/Parts-input.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-175">
-              <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/pages/spots/order/progress.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/units/SKU-input.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/spots/order/new.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/spots/order/old.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/product.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-419">
-              <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="225">
+              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -155,9 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>banned</find>
-      <find>KART</find>
-      <find>BrandDetailModal</find>
       <find>其他</find>
       <find>classifications_id</find>
       <find>55</find>
@@ -185,6 +180,9 @@
       <find>Option</find>
       <find>formItems_parts</find>
       <find>names</find>
+      <find>selectImgs</find>
+      <find>imagesKeys</find>
+      <find>deleteHandler</find>
     </findStrings>
     <replaceStrings>
       <replace>myBrands</replace>
@@ -208,11 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/models/brands.js" />
-        <option value="$PROJECT_DIR$/src/components/modal/change-admin-info-form.js" />
-        <option value="$PROJECT_DIR$/src/models/brand-select.js" />
-        <option value="$PROJECT_DIR$/src/components/units/Brands-list.js" />
-        <option value="$PROJECT_DIR$/src/components/units/Brands-selected.js" />
         <option value="$PROJECT_DIR$/src/actions/brand-select.js" />
         <option value="$PROJECT_DIR$/src/components/modal/select-brands-form.js" />
         <option value="$PROJECT_DIR$/src/components/modal/admin-info-form.js" />
@@ -228,11 +221,8 @@
         <option value="$PROJECT_DIR$/src/actions/shop.js" />
         <option value="$PROJECT_DIR$/src/pages/spots/shop/admin.js" />
         <option value="$PROJECT_DIR$/src/models/shop-admin.js" />
-        <option value="$PROJECT_DIR$/src/global.css" />
-        <option value="$PROJECT_DIR$/src/styles/layouts.less" />
         <option value="$PROJECT_DIR$/src/utils/config.js" />
         <option value="$PROJECT_DIR$/src/services/product.js" />
-        <option value="$PROJECT_DIR$/src/actions/product.js" />
         <option value="$PROJECT_DIR$/mock/product.js" />
         <option value="$PROJECT_DIR$/src/utils/constant.js" />
         <option value="$PROJECT_DIR$/src/utils/widget.js" />
@@ -244,7 +234,6 @@
         <option value="$PROJECT_DIR$/mock/json/brands.js" />
         <option value="$PROJECT_DIR$/src/components/modal/show-brand-info.js" />
         <option value="$PROJECT_DIR$/mock/json/productStyle.js" />
-        <option value="$PROJECT_DIR$/src/models/app.js" />
         <option value="$PROJECT_DIR$/src/actions/common-modal.js" />
         <option value="$PROJECT_DIR$/src/locale/zh-CN.js" />
         <option value="$PROJECT_DIR$/src/locale/it-IT.js" />
@@ -255,10 +244,19 @@
         <option value="$PROJECT_DIR$/mock/json/myproduct.js" />
         <option value="$PROJECT_DIR$/src/components/modal/show-product-info.js" />
         <option value="$PROJECT_DIR$/src/components/units/Class-selecte.js" />
-        <option value="$PROJECT_DIR$/src/pages/spots/product/list.js" />
         <option value="$PROJECT_DIR$/src/components/units/SKU-input.js" />
-        <option value="$PROJECT_DIR$/src/components/modal/edit-product-info.js" />
         <option value="$PROJECT_DIR$/src/components/units/Parts-input.js" />
+        <option value="$PROJECT_DIR$/src/pages/spots/shop/info.js" />
+        <option value="$PROJECT_DIR$/src/styles/shop.less" />
+        <option value="$PROJECT_DIR$/src/global.css" />
+        <option value="$PROJECT_DIR$/src/styles/layouts.less" />
+        <option value="$PROJECT_DIR$/src/components/modal/edit-product-info.js" />
+        <option value="$PROJECT_DIR$/src/actions/product.js" />
+        <option value="$PROJECT_DIR$/src/models/app.js" />
+        <option value="$PROJECT_DIR$/src/pages/spots/order/new.js" />
+        <option value="$PROJECT_DIR$/src/pages/spots/order/old.js" />
+        <option value="$PROJECT_DIR$/src/pages/spots/order/progress.js" />
+        <option value="$PROJECT_DIR$/src/pages/spots/product/list.js" />
       </list>
     </option>
   </component>
@@ -302,56 +300,20 @@
             <path>
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
-              <item name="mock" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
-              <item name="mock" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
               <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="modal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="units" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="locale" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Eurooo_stock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Eurooo_stock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="spots" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -426,97 +388,7 @@
       <workItem from="1538094085354" duration="100767000" />
       <workItem from="1538959774537" duration="228552000" />
       <workItem from="1539737487334" duration="68294000" />
-    </task>
-    <task id="LOCAL-00038" summary="内页布局-右侧导航完善">
-      <created>1538307785125</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1538307785125</updated>
-    </task>
-    <task id="LOCAL-00039" summary="内页布局-右侧导航完善">
-      <created>1538314704297</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1538314704297</updated>
-    </task>
-    <task id="LOCAL-00040" summary="内页布局-右侧导航完善">
-      <created>1538973124080</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1538973124081</updated>
-    </task>
-    <task id="LOCAL-00041" summary="内页布局- 店铺信息">
-      <created>1538974453413</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1538974453413</updated>
-    </task>
-    <task id="LOCAL-00042" summary="内页布局- 店铺信息">
-      <created>1538976605702</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1538976605702</updated>
-    </task>
-    <task id="LOCAL-00043" summary="内页布局- 店铺信息">
-      <created>1538977760666</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1538977760666</updated>
-    </task>
-    <task id="LOCAL-00044" summary="内页布局- 店铺信息">
-      <created>1538991323104</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1538991323104</updated>
-    </task>
-    <task id="LOCAL-00045" summary="内页布局- 店铺信息 - 图册弹窗">
-      <created>1538998780221</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1538998780221</updated>
-    </task>
-    <task id="LOCAL-00046" summary="内页布局- 店铺信息 - 图册弹窗">
-      <created>1539046031709</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1539046031709</updated>
-    </task>
-    <task id="LOCAL-00047" summary="内页布局- 店铺信息 - 图册弹窗">
-      <created>1539065279969</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1539065279969</updated>
-    </task>
-    <task id="LOCAL-00048" summary="内页布局- 店铺信息 - 图册弹窗">
-      <created>1539065689485</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1539065689485</updated>
-    </task>
-    <task id="LOCAL-00049" summary="内页布局- 店铺管理员">
-      <created>1539069793196</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1539069793196</updated>
-    </task>
-    <task id="LOCAL-00050" summary="内页布局- 店铺管理员 - 编辑禁销国家">
-      <created>1539083924475</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1539083924476</updated>
+      <workItem from="1540170044654" duration="26308000" />
     </task>
     <task id="LOCAL-00051" summary="内页布局- 我的品牌列表 - 从系统品牌库选择">
       <created>1539086550211</created>
@@ -770,11 +642,102 @@
       <option name="project" value="LOCAL" />
       <updated>1539867164882</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1540170101662</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1540170101662</updated>
+    </task>
+    <task id="LOCAL-00088" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1540191400271</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1540191400271</updated>
+    </task>
+    <task id="LOCAL-00089" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1540191438247</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1540191438247</updated>
+    </task>
+    <task id="LOCAL-00090" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1540191462241</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1540191462241</updated>
+    </task>
+    <task id="LOCAL-00091" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1540191488724</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1540191488724</updated>
+    </task>
+    <task id="LOCAL-00092" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1540191517488</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1540191517488</updated>
+    </task>
+    <task id="LOCAL-00093" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1540191552433</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1540191552433</updated>
+    </task>
+    <task id="LOCAL-00094" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1540201720700</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1540201720700</updated>
+    </task>
+    <task id="LOCAL-00095" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1540201746864</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1540201746864</updated>
+    </task>
+    <task id="LOCAL-00096" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1540201779878</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1540201779878</updated>
+    </task>
+    <task id="LOCAL-00097" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1540201804046</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1540201804047</updated>
+    </task>
+    <task id="LOCAL-00098" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1540201814536</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1540201814536</updated>
+    </task>
+    <task id="LOCAL-00099" summary="内页布局- 我的品牌列表 - 产品列表">
+      <created>1540201835464</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1540201835464</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="571472000" />
+    <option name="totallyTimeSpent" value="597780000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -790,7 +753,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6898551" visible="true" weight="0.17798841" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.6898551" visible="true" weight="0.17798841" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="npm" order="3" sideWeight="0.31114328" side_tool="true" weight="0.1800948" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
@@ -798,7 +761,7 @@
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.3292683" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.3292683" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.24390244" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.24390244" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -886,64 +849,28 @@
           <line>28</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/models/app.js</url>
+          <line>1476</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/models/app.js</url>
+          <line>1465</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/models/app.js</url>
+          <line>1450</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/actions/albums.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/brand.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="41" />
-          <folding>
-            <element signature="n#!!block;n#getCountry#0" />
-            <element signature="n#!!block;n#removeBrand#0" />
-            <element signature="n#!!block;n#saveBanned#0" />
-            <element signature="n#!!block;n#onChange#0" />
-            <element signature="n#!!block;n#onCollection#0" />
-            <element signature="n#!!block;n#selectImgs#0" />
-            <element signature="n#!!block;n#hideModelHandler#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mock/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="203" column="21" selection-start-line="203" selection-start-column="21" selection-end-line="203" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/spots/shop/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="81" column="50" lean-forward="true" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/layouts.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="211" column="20" selection-start-line="211" selection-start-column="19" selection-end-line="211" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="135" column="38" lean-forward="true" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/shop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="46" column="4" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/shop-admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
@@ -982,13 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="105" selection-start-line="105" selection-end-line="113" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1061,9 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <element signature="e#617#900#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1172,13 +1089,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/modal/select-brands-form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/modal/show-product-info.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1194,43 +1105,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="37" column="22" lean-forward="true" selection-start-line="37" selection-start-column="22" selection-end-line="41" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/units/Brands-selected.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/mock/json/mybrands.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="81" column="10" selection-start-line="81" selection-start-column="6" selection-end-line="81" selection-end-column="10" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="379" column="32" lean-forward="true" selection-start-line="379" selection-start-column="32" selection-end-line="379" selection-end-column="32" />
-          <folding>
-            <element signature="e#1819#13333#0" />
-            <element signature="e#13360#14264#0" />
-            <element signature="e#14291#15125#0" />
-            <element signature="e#15257#27700#0" />
-            <element signature="e#27810#39179#0" />
-            <element signature="e#39291#45616#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1251,12 +1135,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/spots/product/list.js">
+    <entry file="file://$PROJECT_DIR$/src/components/units/Price-input.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+        <state relative-caret-position="350">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/units/SKU-input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/units/Parts-input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/layouts.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="202" column="13" lean-forward="true" selection-start-line="202" selection-start-column="13" selection-end-line="202" selection-end-column="13" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#4468#5031#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/shop.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/spots/shop/info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="103" column="38" lean-forward="true" selection-start-line="99" selection-start-column="56" selection-end-line="99" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/modal/edit-product-info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="47" column="46" lean-forward="true" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#1745#2557#0" />
+            <element signature="e#2927#4019#0" />
+            <element signature="e#3857#7769#0" />
+            <element signature="e#7782#8176#0" />
+            <element signature="e#8320#8561#0" />
           </folding>
         </state>
       </provider>
@@ -1268,44 +1212,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/Price-input.js">
+    <entry file="file://$PROJECT_DIR$/src/models/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/modal/edit-product-info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2162">
-          <caret line="228" column="93" selection-start-line="228" selection-start-column="93" selection-end-line="228" selection-end-column="93" />
+        <state relative-caret-position="271">
+          <caret line="1489" column="34" lean-forward="true" selection-start-line="1500" selection-start-column="27" selection-end-line="1500" selection-end-column="35" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#2935#3193#0" />
-            <element signature="e#3021#3107#0" />
-            <element signature="e#3209#3587#0" />
-            <element signature="e#3603#4050#0" />
-            <element signature="e#4066#4773#0" />
-            <element signature="e#4789#5100#0" />
-            <element signature="e#5116#5519#0" />
-            <element signature="e#5535#5941#0" />
-            <element signature="e#5957#6269#0" />
-            <element signature="e#6285#6724#0" />
+            <element signature="e#1819#13333#0" />
+            <element signature="e#13360#14264#0" />
+            <element signature="e#14291#15125#0" />
+            <element signature="e#15161#45643#0" />
+            <element signature="e#15257#27700#0" />
+            <element signature="e#27810#39179#0" />
+            <element signature="e#39291#45616#0" />
+            <element signature="e#46597#47009#0" />
+            <element signature="e#47025#47315#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/Parts-input.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/spots/order/progress.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/spots/order/new.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/spots/order/old.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/product.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="225">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/units/SKU-input.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/spots/product/list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-419">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="415">
+          <caret line="120" column="17" selection-start-line="120" selection-start-column="10" selection-end-line="120" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#91#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

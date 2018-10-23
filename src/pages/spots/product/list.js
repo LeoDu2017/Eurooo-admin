@@ -118,6 +118,7 @@ const ProductList = ({
           id={record.id}
           title={intl.get('PRODUCTEDIT')}
           myBrands={myBrands}
+          product={record}
           productSpaces={productSpaces}
           productStyles={productStyles}
           classID={record.classification_id}
