@@ -8,7 +8,7 @@ class PriceInput extends React.Component {
     this.state = {
       sum: sum || 0,
       currency: currency || '0',
-      symbol:'￥'
+      symbol: this.set_currency_symbol(currency) || '￥'
     };
   }
   set_currency_symbol = (currency) => {
@@ -24,8 +24,9 @@ class PriceInput extends React.Component {
         symbol = '€';
         break;
     }
-    this.setState({ symbol })
+    return symbol;
   };
+
   handleNumberChange = (sum) => {
     this.setState({ sum });
     this.triggerChange({ sum });
@@ -33,7 +34,8 @@ class PriceInput extends React.Component {
 
   handleCurrencyChange = (currency) => {
     this.setState({ currency });
-    this.set_currency_symbol(currency);
+    let symbol = this.set_currency_symbol(currency);
+    this.setState({ symbol })
     this.triggerChange({ currency });
   };
 
