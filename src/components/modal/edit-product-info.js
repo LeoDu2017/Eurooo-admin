@@ -157,7 +157,7 @@ const EditProductInfoFrom = ({
       </FormItem>
     );
   });
-  const { name,price,special_offer,brand_id } = product;
+  const { name,price,special_offer,brand_id,classification_id } = product;
   return (
     <span>
       <span onClick={show.bind(null,dispatch,`edit-${id}`)}>{ children }</span>
@@ -215,7 +215,7 @@ const EditProductInfoFrom = ({
 
               <FormItem {...formItemLayout} label="分类">
                 {getFieldDecorator('class', {
-                  initialValue: classID,
+                  initialValue: classification_id,
                 })(<ClassSelete onChange={ value => console.log(value) }
                                 ProductClassifications={ProductClassifications}/>)}
               </FormItem>
