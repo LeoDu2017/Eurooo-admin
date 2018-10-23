@@ -4,9 +4,10 @@ const Option = Select.Option;
 class PriceInput extends React.Component {
   constructor(props) {
     super(props);
+    const { value:{sum,currency} } = props;
     this.state = {
-      sum: 0,
-      currency: '0',
+      sum: sum || 0,
+      currency: currency || '0',
       symbol:'￥'
     };
   }
