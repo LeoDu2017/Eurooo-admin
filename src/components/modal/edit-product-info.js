@@ -157,8 +157,7 @@ const EditProductInfoFrom = ({
       </FormItem>
     );
   });
-  const { name,price,special_offer } = product;
-console.log('special_offer:',special_offer)
+  const { name,price,special_offer,brand_id } = product;
   return (
     <span>
       <span onClick={show.bind(null,dispatch,`edit-${id}`)}>{ children }</span>
@@ -185,7 +184,7 @@ console.log('special_offer:',special_offer)
                   // rules: [{ validator: this.checkPrice }],
                 })(<PriceInput onChange={ value => console.log(value) }/>)}
               </FormItem>
-
+              {/*特价活动*/}
               <FormItem {...formItemLayout} label="特价活动">
                 {getFieldDecorator('special_offer', {
                   initialValue:special_offer,
@@ -196,10 +195,11 @@ console.log('special_offer:',special_offer)
                   <Radio value={1}>开启</Radio>
                 </RadioGroup>)}
               </FormItem>
-
+              {/*品牌*/}
               <FormItem {...formItemLayout} label="品牌">
                 {getFieldDecorator('brand', {
-                  initialValue: 0,
+                  initialValue:brand_id,
+                  rules: [{ required: true, message: '请选择品牌' }],
                 })(<RadioGroup >
                   {
                     myBrands.map( brand => <Card
