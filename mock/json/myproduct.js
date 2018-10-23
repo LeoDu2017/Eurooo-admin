@@ -22,7 +22,8 @@ module.exports = [
       currency:'1'
     },
     status:0,
-    parts_list:[]
+    parts_list:[],
+    special_offer:0
   },{
     serial:'OJH000098667002',
     id:'OJH000098667002',
@@ -49,7 +50,8 @@ module.exports = [
       { color:'透明黄', size:'L50cm W50cm H99cm', fabric:'聚碳酸酯', stock:1},
     ],
     status:1,
-    parts_list:[]
+    parts_list:[],
+    special_offer:0
   },{
     serial:'OJH000098667003',
     id:'OJH000098667003',
@@ -87,7 +89,8 @@ module.exports = [
       { color:'透明粉红', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
     ],
     status:1,
-    parts_list:[]
+    parts_list:[],
+    special_offer:0
   },{
     serial:'OJH000098667004',
     id:'OJH000098667004',
@@ -110,7 +113,8 @@ module.exports = [
       { color:'黑、金', size:'L520cm W20cm H19cm', fabric:'pvc', stock:3}
     ],
     status:1,
-    parts_list:[]
+    parts_list:[],
+    special_offer:0
   },{
     serial:'OJH000098667005',
     id:'OJH000098667005',
@@ -137,7 +141,8 @@ module.exports = [
       { color:'透明金', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
     ],
     status:1,
-    parts_list:[]
+    parts_list:[],
+    special_offer:0
   },{
     serial:'OJH000098667006',
     id:'OJH000098667006',
@@ -164,7 +169,8 @@ module.exports = [
       { color:'透明沙', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:1},
     ],
     status:1,
-    parts_list:[]
+    parts_list:[],
+    special_offer:0
   },{
     serial:'OJH000098667007',
     id:'OJH000098667007',
@@ -193,7 +199,8 @@ module.exports = [
       { color:'亮橙', size:'L38.7cm W87.5cm H52.5cm', fabric:'聚碳酸酯', stock:3},
     ],
     status:1,
-    parts_list:[]
+    parts_list:[],
+    special_offer:0
   },{
     serial:'OJH000098667008',
     id:'OJH000098667008',
@@ -219,7 +226,8 @@ module.exports = [
       { color:'透明蓝', size:'L54cm W34.5cm H94cm', fabric:'聚碳酸酯', stock:1},
     ],
     status:1,
-    parts_list:[]
+    parts_list:[],
+    special_offer:0
   },{
     serial:'OJH000098667009',
     id:'OJH000098667009',
@@ -254,6 +262,7 @@ module.exports = [
         amount:1,
         description:'健康时尚,风格多样'
       },
-    ]
+    ],
+    special_offer:0
   }
 ];

@@ -157,8 +157,8 @@ const EditProductInfoFrom = ({
       </FormItem>
     );
   });
-  const { name,price } = product;
-
+  const { name,price,special_offer } = product;
+console.log('special_offer:',special_offer)
   return (
     <span>
       <span onClick={show.bind(null,dispatch,`edit-${id}`)}>{ children }</span>
@@ -188,7 +188,7 @@ const EditProductInfoFrom = ({
 
               <FormItem {...formItemLayout} label="特价活动">
                 {getFieldDecorator('special_offer', {
-                  initialValue: 0,
+                  initialValue:special_offer,
                   // rules: [{ required: true, message: '请输入产品价格' }],
                   // rules: [{ validator: this.checkPrice }],
                 })(<RadioGroup>
