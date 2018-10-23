@@ -3,8 +3,12 @@ import { InputNumber,Input } from 'antd';
 class SKUInput extends React.Component {
   constructor(props) {
     super(props);
+    const { value:{color,size,fabric,stock}} = props;
     this.state = {
-      sum: 0
+      color: color || '',
+      size: size || '',
+      fabric: fabric || '',
+      stock: stock || 0
     };
   }
 
@@ -23,23 +27,30 @@ class SKUInput extends React.Component {
   };
 
   render() {
-    const state = this.state;
+    const {color,size,fabric,stock} = this.state;
     return (
       <span>
         <span>
-          颜色&nbsp;:&nbsp;<Input placeholder="颜色" style={{ width:120,marginRight:15}}/>
+          颜色&nbsp;:&nbsp;<Input
+          placeholder="颜色"
+          defaultValue={color}
+          style={{ width:120,marginRight:15}}/>
         </span>
         <span>
-          尺寸&nbsp;:&nbsp;<Input placeholder="尺寸" style={{ width:120,marginRight:15}}/>
+          尺寸&nbsp;:&nbsp;<Input
+          defaultValue={size}
+          placeholder="尺寸" style={{ width:120,marginRight:15}}/>
         </span>
         <span>
-          材质&nbsp;:&nbsp;<Input placeholder="材质" style={{ width:120,marginRight:15}}/>
+          材质&nbsp;:&nbsp;<Input
+          defaultValue={fabric}
+          placeholder="材质" style={{ width:120,marginRight:15}}/>
         </span>
         <span>
           库存&nbsp;:&nbsp;<InputNumber
             min={0}
             placeholder="库存"
-            // defaultValue={ state.sum }
+            defaultValue={stock}
             style={{ width:'120px'}} />
         </span>
       </span>
