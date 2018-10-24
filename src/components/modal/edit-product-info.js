@@ -38,31 +38,43 @@ const EditProductInfoFrom = ({
         ProductClassifications,id,myBrands,children,
         form:{getFieldValue,setFieldsValue,getFieldDecorator,validateFieldsAndScroll}}) => {
 
-  const remove = (index,keyName) => {
+  const remove = (k,keyName) => {
     // can use data-binding to get
     const keys = getFieldValue(keyName);
-
     // We need at least one passenger
     if (keys.length === 1) { return }
     // can use data-binding to set
     setFieldsValue({
-      [keyName]: keys.filter((item,i) => {
-        console.log(50,i,index);
-        return i !== index
-      })
+      [keyName]: keys.filter(key => Number(key.key) !== Number(k.key))
     });
-
     // Object.assign({}, keys);
   };
 
   const add = (keyName) => {
+    let num="";
+    for(let i=0;i<4;i++){
+      num+=Math.floor(Math.random()*10)
+    }
     const keys = getFieldValue(keyName);
-    const nextKeys = keys.concat({key:keys.length,stock:keys.length});
+
+    const nextKeys = keys.concat({key:num,stock:num});
+
     setFieldsValue({
       [keyName]: nextKeys,
     });
   };
-
+  const edit = (keyName,k,attr,value) => {
+    const keys = getFieldValue(keyName);
+    const nextKeys = keys.map(item => {
+      if(Number(item.key) === Number(k.key)){
+        item[attr] = value
+      }
+      return item
+    });
+    setFieldsValue({
+      [keyName]: nextKeys,
+    });
+  };
   const {
     name,
     price,
@@ -84,6 +96,7 @@ const EditProductInfoFrom = ({
   const imagesKeys = getFieldValue('imagesKeys');
 
   const formItems_sku = skuKeys.map((k, index) => {
+    console.log(k);
     return (
       <FormItem
         {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
@@ -98,14 +111,12 @@ const EditProductInfoFrom = ({
             whitespace: true,
             message: "Please input passenger's name or delete this field.",
           }],
-        })(
-          <SKUInput style={{ width: '94%', marginRight: 8 }} />
-        )}
+        })(<SKUInput edit={edit.bind(null,'skuKeys',k)} />)}
         {skuKeys.length > 1 ? (
           <Icon
             type="minus-circle-o"
             disabled={skuKeys.length === 1}
-            onClick={() => remove(index,'skuKeys')}
+            onClick={() => remove(k,'skuKeys')}
             style={{cursor:'pointer',marginLeft:10}}/>
         ) : null}
       </FormItem>
