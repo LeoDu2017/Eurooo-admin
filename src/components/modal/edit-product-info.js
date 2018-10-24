@@ -38,24 +38,31 @@ const EditProductInfoFrom = ({
         ProductClassifications,id,myBrands,children,
         form:{getFieldValue,setFieldsValue,getFieldDecorator,validateFieldsAndScroll}}) => {
 
-  const remove = (k,keyName) => {
+  const remove = (index,keyName) => {
     // can use data-binding to get
     const keys = getFieldValue(keyName);
+
     // We need at least one passenger
     if (keys.length === 1) { return }
     // can use data-binding to set
     setFieldsValue({
-      [keyName]: keys.filter(key => key !== k)
+      [keyName]: keys.filter((item,i) => {
+        console.log(50,i,index);
+        return i !== index
+      })
     });
+
+    // Object.assign({}, keys);
   };
 
   const add = (keyName) => {
     const keys = getFieldValue(keyName);
-    const nextKeys = keys.concat(keys.length);
+    const nextKeys = keys.concat({key:keys.length,stock:keys.length});
     setFieldsValue({
       [keyName]: nextKeys,
     });
   };
+
   const {
     name,
     price,
@@ -98,7 +105,7 @@ const EditProductInfoFrom = ({
           <Icon
             type="minus-circle-o"
             disabled={skuKeys.length === 1}
-            onClick={() => remove(k,'skuKeys')}
+            onClick={() => remove(index,'skuKeys')}
             style={{cursor:'pointer',marginLeft:10}}/>
         ) : null}
       </FormItem>

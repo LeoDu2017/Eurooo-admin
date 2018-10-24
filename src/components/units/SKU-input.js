@@ -9,7 +9,7 @@ class SKUInput extends React.Component {
       size: size || '',
       fabric: fabric || '',
       stock: stock || 0
-    };
+    }
   }
 
   handleCurrencyChange = (currency) => {

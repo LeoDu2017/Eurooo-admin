@@ -9,8 +9,8 @@ module.exports = [
       'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411164379.jpg',
       'https://italyclassico.casacdn.com/pd_merchant/image/product/20180411164387.jpg'],
     sku:[
-      { color:'透明灰', size:'23.4x28.1H', fabric:'聚碳酸酯', stock:3},
-      { color:'透明红', size:'23.4x28.1H', fabric:'聚碳酸酯', stock:1},
+      { color:'透明灰', size:'23.4x28.1H', fabric:'聚碳酸酯', stock:3,key:0},
+      { color:'透明红', size:'23.4x28.1H', fabric:'聚碳酸酯', stock:1,key:1},
     ],
     description:'Kartell 的作品非常与众不同，她们功能多样、方便耐用、色彩明艳、神态精灵、通体透明、造型奇异,拥有独一无二的魅力，在任何场所出现都是空间中最耀眼的明星。Kartell 吸引了国际上最权威的设计大师与之合作，教父级的Philippe Starck、Ron Arad、Antonio Citterio都是Kartell 的设计主力。而近年来如日中天的设计红人，如Patricia Urquiola、Marcel Wanders、Bouroullec兄弟以及Tokujin Yoshioka（吉冈德仁）等人都为 Kartell 贡献了绝佳的设计作品，令每一件新产品都艳惊四座。',
     brand_id:'39',
@@ -45,9 +45,10 @@ module.exports = [
       currency:'2'
     },
     sku:[
-      { color:'透明银', size:'L50cm W50cm H99cm', fabric:'聚碳酸酯', stock:2},
-      { color:'透明黑', size:'L50cm W50cm H99cm', fabric:'聚碳酸酯', stock:1},
-      { color:'透明黄', size:'L50cm W50cm H99cm', fabric:'聚碳酸酯', stock:1},
+      { color:'透明蓝', size:'L50cm W50cm H99cm', fabric:'聚碳酸酯', stock:2,key:0},
+      { color:'透明银', size:'L50cm W50cm H99cm', fabric:'聚碳酸酯', stock:2,key:1},
+      { color:'透明黑', size:'L50cm W50cm H99cm', fabric:'聚碳酸酯', stock:1,key:2},
+      { color:'透明黄', size:'L50cm W50cm H99cm', fabric:'聚碳酸酯', stock:1,key:3},
     ],
     status:1,
     parts_list:[],
@@ -84,9 +85,9 @@ module.exports = [
       currency:'0'
     },
     sku:[
-      { color:'透明绿', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:2},
-      { color:'透明粉蓝', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
-      { color:'透明粉红', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
+      { color:'透明绿', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:2,key:0},
+      { color:'透明粉蓝', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1,key:1},
+      { color:'透明粉红', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1,key:2},
     ],
     status:1,
     parts_list:[],
@@ -110,7 +111,7 @@ module.exports = [
       currency:'2'
     },
     sku:[
-      { color:'黑、金', size:'L520cm W20cm H19cm', fabric:'pvc', stock:3}
+      { color:'黑、金', size:'L520cm W20cm H19cm', fabric:'pvc', stock:3,key:0}
     ],
     status:1,
     parts_list:[],
@@ -135,10 +136,10 @@ module.exports = [
       currency:'2'
     },
     sku:[
-      { color:'透明铜', size:'L57cm W47cm H84cm', fabric:'聚碳酸酯', stock:1},
-      { color:'透明灰', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
-      { color:'透明金', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
-      { color:'透明金', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1},
+      { color:'透明铜', size:'L57cm W47cm H84cm', fabric:'聚碳酸酯', stock:1,key:0},
+      { color:'透明灰', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1,key:1},
+      { color:'透明金', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1,key:2},
+      { color:'透明金', size:'L40cm W37cm H63cm', fabric:'聚碳酸酯', stock:1,key:3},
     ],
     status:1,
     parts_list:[],
@@ -163,10 +164,10 @@ module.exports = [
       currency:'0'
     },
     sku:[
-      { color:'透明白', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:0},
-      { color:'透明黄', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:0},
-      { color:'透明金', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:0},
-      { color:'透明沙', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:1},
+      { color:'透明白', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:0,key:0},
+      { color:'透明黄', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:0,key:1},
+      { color:'透明金', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:0,key:2},
+      { color:'透明沙', size:'L38cm W47cm H110cm', fabric:'聚碳酸酯', stock:1,key:3},
     ],
     status:1,
     parts_list:[],
@@ -195,8 +196,8 @@ module.exports = [
       currency:'1'
     },
     sku:[
-      { color:'透明', size:'L38.7cm W87.5cm H52.5cm', fabric:'聚碳酸酯', stock:1},
-      { color:'亮橙', size:'L38.7cm W87.5cm H52.5cm', fabric:'聚碳酸酯', stock:3},
+      { color:'透明', size:'L38.7cm W87.5cm H52.5cm', fabric:'聚碳酸酯', stock:1,key:0},
+      { color:'亮橙', size:'L38.7cm W87.5cm H52.5cm', fabric:'聚碳酸酯', stock:3,key:1},
     ],
     status:1,
     parts_list:[],
@@ -222,8 +223,8 @@ module.exports = [
       currency:'1'
     },
     sku:[
-      { color:'透明橙', size:'L54cm W34.5cm H94cm', fabric:'聚碳酸酯', stock:1},
-      { color:'透明蓝', size:'L54cm W34.5cm H94cm', fabric:'聚碳酸酯', stock:1},
+      { color:'透明橙', size:'L54cm W34.5cm H94cm', fabric:'聚碳酸酯', stock:1,key:0},
+      { color:'透明蓝', size:'L54cm W34.5cm H94cm', fabric:'聚碳酸酯', stock:1,key:1},
     ],
     status:1,
     parts_list:[],
@@ -248,8 +249,8 @@ module.exports = [
       currency:'1'
     },
     sku:[
-      { color:'黑', size:'L54cm W34.5cm H94cm', fabric:'木、皮革', stock:100},
-      { color:'棕', size:'L54cm W34.5cm H94cm', fabric:'木、皮革', stock:98},
+      { color:'黑', size:'L54cm W34.5cm H94cm', fabric:'木、皮革', stock:100,key:0},
+      { color:'棕', size:'L54cm W34.5cm H94cm', fabric:'木、皮革', stock:98,key:1},
     ],
     status:1,
     parts_list:[
