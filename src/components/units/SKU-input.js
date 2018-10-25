@@ -31,7 +31,7 @@ class SKUInput extends React.Component {
         min={0}
         onChange={(event) => edit('stock',event.target.value)}
         placeholder="库存"
-        defaultValue={ stock || ''}
+        value={ stock || ''}
         style={{ width:'120px'}} />
       </span>
     );

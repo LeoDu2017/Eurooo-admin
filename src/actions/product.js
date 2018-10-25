@@ -40,7 +40,7 @@ const remove = (k,keyName,getFieldValue,setFieldsValue) => {
   });
 };
 // 编辑功能
-const edit = (keyName,k,attr,value) => {
+const edit = (keyName,getFieldValue,setFieldsValue,k,attr,value) => {
   const keys = getFieldValue(keyName);
   const nextKeys = keys.map(item => {
     if(Number(item.key) === Number(k.key)){

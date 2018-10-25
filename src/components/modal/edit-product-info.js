@@ -10,13 +10,13 @@ import Albums from 'Components/modal/albums';
 import { selectImgs } from 'Actions/shop';
 import { add,remove,edit } from 'Actions/product';
 import { formItemLayout,formItemLayoutWithOutLabel } from 'Utils/constant';
+
 const TabPane = Tabs.TabPane;
 const FormItem = Form.Item;
 const Option = Select.Option;
 const RadioGroup = Radio.Group;
 const CheckboxGroup = Checkbox.Group;
 const { TextArea } = Input;
-
 
 const EditProductInfoFrom = ({
   productSpaces,productStyles,
@@ -30,37 +30,7 @@ const EditProductInfoFrom = ({
   getFieldDecorator('partsKeys', { initialValue: [0] });
   getFieldDecorator('imagesKeys', { initialValue: [0] });
 
-  const skuKeys = getFieldValue('skuKeys');
-  const partsKeys = getFieldValue('partsKeys');
-  const imagesKeys = getFieldValue('imagesKeys');
-
-  const formItems_sku = skuKeys.map((k, index) => {
-    return (
-      <FormItem
-        {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
-        label={index === 0 ? '产品规格' : ''}
-        required={false}
-        key={index}>
-        {getFieldDecorator(`skus[${index}]`, {
-          initialValue:k,
-          validateTrigger: ['onChange', 'onBlur'],
-          rules: [{
-            required: true,
-            whitespace: true,
-            message: "Please input passenger's name or delete this field.",
-          }],
-        })(<SKUInput edit={edit.bind(null,'skuKeys',k)} />)}
-        {skuKeys.length > 1 ? (
-          <Icon
-            type="minus-circle-o"
-            disabled={skuKeys.length === 1}
-            onClick={() => remove(k,'skuKeys',getFieldValue,setFieldsValue)}
-            style={{cursor:'pointer',marginLeft:10}}/>
-        ) : null}
-      </FormItem>
-    );
-  });
-  const formItems_parts = partsKeys.map((k, index) => {
+  const formItems_parts = getFieldValue('partsKeys').map((k, index) => {
     return (
       <FormItem
         {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
@@ -89,7 +59,7 @@ const EditProductInfoFrom = ({
       </FormItem>
     );
   });
-  const formItems_images = imagesKeys.map((k, index) => {
+  const formItems_images = getFieldValue('imagesKeys').map((k, index) => {
     return (
       <FormItem
         required={false}
@@ -228,7 +198,34 @@ const EditProductInfoFrom = ({
               </FormItem>
             </TabPane>
             <TabPane tab="产品属性" key="2" style={{height:520,overflow:'hidden',overflowY:'auto'}}>
-              {formItems_sku}
+              {
+                getFieldValue('skuKeys').map((k, index) => {
+                  return (
+                    <FormItem
+                      {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
+                      label={index === 0 ? '产品规格' : ''}
+                      required={false}
+                      key={index}>
+                      {getFieldDecorator(`skus[${index}]`, {
+                        initialValue:k,
+                        validateTrigger: ['onChange', 'onBlur'],
+                        rules: [{
+                          required: true,
+                          whitespace: true,
+                          message: "Please input passenger's name or delete this field.",
+                        }],
+                      })(<SKUInput edit={edit.bind(null,'skuKeys',getFieldValue,setFieldsValue,k)} />)}
+                      {skuKeys.length > 1 ? (
+                        <Icon
+                          type="minus-circle-o"
+                          disabled={skuKeys.length === 1}
+                          onClick={() => remove(k,'skuKeys',getFieldValue,setFieldsValue)}
+                          style={{cursor:'pointer',marginLeft:10}}/>
+                      ) : null}
+                    </FormItem>
+                  );
+                })
+              }
               <FormItem {...formItemLayoutWithOutLabel}>
                 <Button type="dashed" onClick={add.bind(null,'skuKeys',getFieldValue,setFieldsValue)} style={{ width: '94%' }}>
                   <Icon type="plus" /> Add field
@@ -243,10 +240,7 @@ const EditProductInfoFrom = ({
                 </Button>
               </FormItem>
             </TabPane>
-            <TabPane tab="产品相册" key="4" style={{
-              height:520,
-              overflow:'hidden',
-              overflowY:'auto'}}>
+            <TabPane tab="产品相册" key="4" style={{height:520,overflow:'hidden',overflowY:'auto'}}>
               <div style={{ display:'flex', justifyContent:'space-around',width:imagesKeys.length*170}}>
                 {formItems_images}
               </div>
