@@ -167,8 +167,9 @@ const EditProductInfoFrom = ({
                   label={index === 0 ? '产品配件' : ''}
                   required={false}
                   style={{position:'relative'}}
-                  key={k}>
-                  {getFieldDecorator(`parts[${k}]`, {
+                  key={index}>
+                  {getFieldDecorator(`parts[${index}]`, {
+                    initialValue:k,
                     validateTrigger: ['onChange', 'onBlur'],
                     rules: [{
                       required: true,
@@ -176,7 +177,7 @@ const EditProductInfoFrom = ({
                       message: "Please input passenger's name or delete this field.",
                     }],
                   })(
-                    <PartsInput />
+                    <PartsInput edit={edit.bind(null,'partsKeys',getFieldValue,setFieldsValue,k)} />
                   )}
                   {list.length > 1 ? (
                     <Icon
