@@ -8,84 +8,23 @@ import PartsInput from 'Components/units/Parts-input';
 import intl from "react-intl-universal";
 import Albums from 'Components/modal/albums';
 import { selectImgs } from 'Actions/shop';
-
+import { add,remove,edit } from 'Actions/product';
+import { formItemLayout,formItemLayoutWithOutLabel } from 'Utils/constant';
 const TabPane = Tabs.TabPane;
 const FormItem = Form.Item;
 const Option = Select.Option;
 const RadioGroup = Radio.Group;
 const CheckboxGroup = Checkbox.Group;
 const { TextArea } = Input;
-const formItemLayout = {
-  labelCol: {
-    xs: { span: 24 },
-    sm: { span: 3 },
-  },
-  wrapperCol: {
-    xs: { span: 24 },
-    sm: { span: 21 },
-  },
-};
-const formItemLayoutWithOutLabel = {
-  wrapperCol: {
-    xs: { span: 24, offset: 0 },
-    sm: { span: 21, offset: 3 },
-  },
-};
+
 
 const EditProductInfoFrom = ({
-        productSpaces,productStyles,
-        title,visible,dispatch,classID,product,
-        ProductClassifications,id,myBrands,children,
-        form:{getFieldValue,setFieldsValue,getFieldDecorator,validateFieldsAndScroll}}) => {
-
-  const remove = (k,keyName) => {
-    // can use data-binding to get
-    const keys = getFieldValue(keyName);
-    // We need at least one passenger
-    if (keys.length === 1) { return }
-    // can use data-binding to set
-    setFieldsValue({
-      [keyName]: keys.filter(key => Number(key.key) !== Number(k.key))
-    });
-    // Object.assign({}, keys);
-  };
-
-  const add = (keyName) => {
-    let num="";
-    for(let i=0;i<4;i++){
-      num+=Math.floor(Math.random()*10)
-    }
-    const keys = getFieldValue(keyName);
-
-    const nextKeys = keys.concat({key:num,stock:num});
-
-    setFieldsValue({
-      [keyName]: nextKeys,
-    });
-  };
-  const edit = (keyName,k,attr,value) => {
-    const keys = getFieldValue(keyName);
-    const nextKeys = keys.map(item => {
-      if(Number(item.key) === Number(k.key)){
-        item[attr] = value
-      }
-      return item
-    });
-    setFieldsValue({
-      [keyName]: nextKeys,
-    });
-  };
-  const {
-    name,
-    price,
-    special_offer,
-    brand_id,
-    classification_id,
-    space_id,
-    style_id,
-    description,
-    status,
-    sku} = product;
+  productSpaces,productStyles,
+  title,visible,dispatch,classID,
+  ProductClassifications,id,myBrands,children,
+  form:{getFieldValue,setFieldsValue,getFieldDecorator,validateFieldsAndScroll},
+  product:{name,price,special_offer,brand_id,classification_id,space_id,style_id,description,status,sku}
+  }) => {
 
   getFieldDecorator('skuKeys', { initialValue: sku });
   getFieldDecorator('partsKeys', { initialValue: [0] });
@@ -96,7 +35,6 @@ const EditProductInfoFrom = ({
   const imagesKeys = getFieldValue('imagesKeys');
 
   const formItems_sku = skuKeys.map((k, index) => {
-    console.log(k);
     return (
       <FormItem
         {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
@@ -116,7 +54,7 @@ const EditProductInfoFrom = ({
           <Icon
             type="minus-circle-o"
             disabled={skuKeys.length === 1}
-            onClick={() => remove(k,'skuKeys')}
+            onClick={() => remove(k,'skuKeys',getFieldValue,setFieldsValue)}
             style={{cursor:'pointer',marginLeft:10}}/>
         ) : null}
       </FormItem>
@@ -146,7 +84,7 @@ const EditProductInfoFrom = ({
             type="minus-circle-o"
             disabled={partsKeys.length === 1}
             style={{marginLeft:15,cursor:'pointer'}}
-            onClick={() => remove(k,'partsKeys')}/>
+            onClick={() => remove(k,'partsKeys',getFieldValue,setFieldsValue)}/>
         ) : null}
       </FormItem>
     );
@@ -178,7 +116,7 @@ const EditProductInfoFrom = ({
                 type="minus-circle-o"
                 disabled={imagesKeys.length === 1}
                 style={{marginLeft:15,cursor:'pointer',position:'absolute',top:5,right:5}}
-                onClick={() => remove(k,'imagesKeys')}/>
+                onClick={() => remove(k,'imagesKeys',getFieldValue,setFieldsValue)}/>
             ) : null}
           </Col>
         )}
@@ -186,8 +124,6 @@ const EditProductInfoFrom = ({
       </FormItem>
     );
   });
-
-
 
   return (
     <span>
@@ -294,7 +230,7 @@ const EditProductInfoFrom = ({
             <TabPane tab="产品属性" key="2" style={{height:520,overflow:'hidden',overflowY:'auto'}}>
               {formItems_sku}
               <FormItem {...formItemLayoutWithOutLabel}>
-                <Button type="dashed" onClick={add.bind(null,'skuKeys')} style={{ width: '94%' }}>
+                <Button type="dashed" onClick={add.bind(null,'skuKeys',getFieldValue,setFieldsValue)} style={{ width: '94%' }}>
                   <Icon type="plus" /> Add field
                 </Button>
               </FormItem>
@@ -302,7 +238,7 @@ const EditProductInfoFrom = ({
             <TabPane tab="配件清单" key="3" style={{height:520,overflow:'hidden',overflowY:'auto'}}>
               {formItems_parts}
               <FormItem {...formItemLayoutWithOutLabel}>
-                <Button type="dashed" onClick={add.bind(null,'partsKeys')} style={{ width:487 }}>
+                <Button type="dashed" onClick={add.bind(null,'partsKeys',getFieldValue,setFieldsValue)} style={{ width:487 }}>
                   <Icon type="plus" /> Add field
                 </Button>
               </FormItem>
@@ -315,7 +251,7 @@ const EditProductInfoFrom = ({
                 {formItems_images}
               </div>
               <FormItem {...formItemLayoutWithOutLabel} style={{display:imagesKeys.length >= 5 ? 'none' : 'block'}}>
-                <Button type="dashed" onClick={add.bind(null,'imagesKeys')} style={{ width:487 }}>
+                <Button type="dashed" onClick={add.bind(null,'imagesKeys',getFieldValue,setFieldsValue)} style={{ width:487 }}>
                   <Icon type="plus" /> Add field
                 </Button>
               </FormItem>

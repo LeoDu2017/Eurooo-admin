@@ -65,5 +65,21 @@ module.exports = {
       id: '216',
       name: 'United Kingdom',
     },
-  ]
+  ],
+  formItemLayout:{
+    labelCol: {
+      xs: { span: 24 },
+      sm: { span: 3 },
+    },
+    wrapperCol: {
+      xs: { span: 24 },
+      sm: { span: 21 },
+    },
+  },
+  formItemLayoutWithOutLabel:{
+    wrapperCol: {
+      xs: { span: 24, offset: 0 },
+      sm: { span: 21, offset: 3 },
+    },
+  }
 };
