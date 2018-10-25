@@ -30,71 +30,6 @@ const EditProductInfoFrom = ({
   getFieldDecorator('partsKeys', { initialValue: [0] });
   getFieldDecorator('imagesKeys', { initialValue: [0] });
 
-  const formItems_parts = getFieldValue('partsKeys').map((k, index) => {
-    return (
-      <FormItem
-        {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
-        label={index === 0 ? '产品配件' : ''}
-        required={false}
-        style={{position:'relative'}}
-        key={k}>
-
-        {getFieldDecorator(`parts[${k}]`, {
-          validateTrigger: ['onChange', 'onBlur'],
-          rules: [{
-            required: true,
-            whitespace: true,
-            message: "Please input passenger's name or delete this field.",
-          }],
-        })(
-          <PartsInput />
-        )}
-        {partsKeys.length > 1 ? (
-          <Icon
-            type="minus-circle-o"
-            disabled={partsKeys.length === 1}
-            style={{marginLeft:15,cursor:'pointer'}}
-            onClick={() => remove(k,'partsKeys',getFieldValue,setFieldsValue)}/>
-        ) : null}
-      </FormItem>
-    );
-  });
-  const formItems_images = getFieldValue('imagesKeys').map((k, index) => {
-    return (
-      <FormItem
-        required={false}
-        key={k}
-        style={{display:'inline-block',width: 120}}>
-        {getFieldDecorator(`images[${k}]`, {
-          validateTrigger: ['onChange', 'onBlur'],
-          rules: [{
-            required: true,
-            whitespace: true,
-            message: "Please input passenger's name or delete this field.",
-          }],
-        })(
-          <Col
-            style={{position:'relative'}}
-            className="upLogo">
-            <img alt="LOGO" src='https://italyclassico.casacdn.com/pd_merchant/image/product/20180411164379.jpg@100h_100w_1e_1c'/>
-            <Albums callBack={selectImgs} id="logoAlbums" single={false}>
-              {intl.get('REUPLOAD')}
-            </Albums>
-            <Input type="hidden"/>
-            {imagesKeys.length > 1 ? (
-              <Icon
-                type="minus-circle-o"
-                disabled={imagesKeys.length === 1}
-                style={{marginLeft:15,cursor:'pointer',position:'absolute',top:5,right:5}}
-                onClick={() => remove(k,'imagesKeys',getFieldValue,setFieldsValue)}/>
-            ) : null}
-          </Col>
-        )}
-
-      </FormItem>
-    );
-  });
-
   return (
     <span>
       <span onClick={show.bind(null,dispatch,`edit-${id}`)}>{ children }</span>
@@ -198,34 +133,28 @@ const EditProductInfoFrom = ({
               </FormItem>
             </TabPane>
             <TabPane tab="产品属性" key="2" style={{height:520,overflow:'hidden',overflowY:'auto'}}>
-              {
-                getFieldValue('skuKeys').map((k, index) => {
-                  return (
-                    <FormItem
-                      {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
-                      label={index === 0 ? '产品规格' : ''}
-                      required={false}
-                      key={index}>
-                      {getFieldDecorator(`skus[${index}]`, {
-                        initialValue:k,
-                        validateTrigger: ['onChange', 'onBlur'],
-                        rules: [{
-                          required: true,
-                          whitespace: true,
-                          message: "Please input passenger's name or delete this field.",
-                        }],
-                      })(<SKUInput edit={edit.bind(null,'skuKeys',getFieldValue,setFieldsValue,k)} />)}
-                      {skuKeys.length > 1 ? (
-                        <Icon
-                          type="minus-circle-o"
-                          disabled={skuKeys.length === 1}
-                          onClick={() => remove(k,'skuKeys',getFieldValue,setFieldsValue)}
-                          style={{cursor:'pointer',marginLeft:10}}/>
-                      ) : null}
-                    </FormItem>
-                  );
-                })
-              }
+              {getFieldValue('skuKeys').map((k, index, list) => <FormItem
+                {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
+                label={index === 0 ? '产品规格' : ''}
+                required={false}
+                key={index}>
+                {getFieldDecorator(`skus[${index}]`, {
+                  initialValue:k,
+                  validateTrigger: ['onChange', 'onBlur'],
+                  rules: [{
+                    required: true,
+                    whitespace: true,
+                    message: "Please input passenger's name or delete this field.",
+                  }],
+                })(<SKUInput edit={edit.bind(null,'skuKeys',getFieldValue,setFieldsValue,k)} />)}
+                {list.length > 1 ? (
+                  <Icon
+                    type="minus-circle-o"
+                    disabled={list.length === 1}
+                    onClick={() => remove(k,'skuKeys',getFieldValue,setFieldsValue)}
+                    style={{cursor:'pointer',marginLeft:10}}/>
+                ) : null}
+              </FormItem>)}
               <FormItem {...formItemLayoutWithOutLabel}>
                 <Button type="dashed" onClick={add.bind(null,'skuKeys',getFieldValue,setFieldsValue)} style={{ width: '94%' }}>
                   <Icon type="plus" /> Add field
@@ -233,7 +162,31 @@ const EditProductInfoFrom = ({
               </FormItem>
             </TabPane>
             <TabPane tab="配件清单" key="3" style={{height:520,overflow:'hidden',overflowY:'auto'}}>
-              {formItems_parts}
+              {getFieldValue('partsKeys').map((k, index, list) => <FormItem
+                  {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
+                  label={index === 0 ? '产品配件' : ''}
+                  required={false}
+                  style={{position:'relative'}}
+                  key={k}>
+
+                  {getFieldDecorator(`parts[${k}]`, {
+                    validateTrigger: ['onChange', 'onBlur'],
+                    rules: [{
+                      required: true,
+                      whitespace: true,
+                      message: "Please input passenger's name or delete this field.",
+                    }],
+                  })(
+                    <PartsInput />
+                  )}
+                  {list.length > 1 ? (
+                    <Icon
+                      type="minus-circle-o"
+                      disabled={list.length === 1}
+                      style={{marginLeft:15,cursor:'pointer'}}
+                      onClick={() => remove(k,'partsKeys',getFieldValue,setFieldsValue)}/>
+                  ) : null}
+                </FormItem>)}
               <FormItem {...formItemLayoutWithOutLabel}>
                 <Button type="dashed" onClick={add.bind(null,'partsKeys',getFieldValue,setFieldsValue)} style={{ width:487 }}>
                   <Icon type="plus" /> Add field
@@ -241,10 +194,39 @@ const EditProductInfoFrom = ({
               </FormItem>
             </TabPane>
             <TabPane tab="产品相册" key="4" style={{height:520,overflow:'hidden',overflowY:'auto'}}>
-              <div style={{ display:'flex', justifyContent:'space-around',width:imagesKeys.length*170}}>
-                {formItems_images}
+              <div style={{ display:'flex', justifyContent:'space-around',width:getFieldValue('imagesKeys').length*170}}>
+                {getFieldValue('imagesKeys').map((k, index, list) => <FormItem
+                    required={false}
+                    key={k}
+                    style={{display:'inline-block',width: 120}}>
+                    {getFieldDecorator(`images[${k}]`, {
+                      validateTrigger: ['onChange', 'onBlur'],
+                      rules: [{
+                        required: true,
+                        whitespace: true,
+                        message: "Please input passenger's name or delete this field.",
+                      }],
+                    })(
+                      <Col
+                        style={{position:'relative'}}
+                        className="upLogo">
+                        <img alt="LOGO" src='https://italyclassico.casacdn.com/pd_merchant/image/product/20180411164379.jpg@100h_100w_1e_1c'/>
+                        <Albums callBack={selectImgs} id="logoAlbums" single={false}>
+                          {intl.get('REUPLOAD')}
+                        </Albums>
+                        <Input type="hidden"/>
+                        {list.length > 1 ? (
+                          <Icon
+                            type="minus-circle-o"
+                            disabled={list.length === 1}
+                            style={{marginLeft:15,cursor:'pointer',position:'absolute',top:5,right:5}}
+                            onClick={() => remove(k,'imagesKeys',getFieldValue,setFieldsValue)}/>
+                        ) : null}
+                      </Col>
+                    )}
+                  </FormItem>)}
               </div>
-              <FormItem {...formItemLayoutWithOutLabel} style={{display:imagesKeys.length >= 5 ? 'none' : 'block'}}>
+              <FormItem {...formItemLayoutWithOutLabel} style={{display:getFieldValue('imagesKeys').length >= 5 ? 'none' : 'block'}}>
                 <Button type="dashed" onClick={add.bind(null,'imagesKeys',getFieldValue,setFieldsValue)} style={{ width:487 }}>
                   <Icon type="plus" /> Add field
                 </Button>
