@@ -1,12 +1,9 @@
-import { InputNumber,Input } from 'antd';
-
 class SKUInput extends React.Component {
   constructor(props) {
     super(props)
   }
   render() {
     const {value:{color,size,fabric,stock},edit} = this.props;
-
     return (
       <span>
         颜色&nbsp;:&nbsp;<input

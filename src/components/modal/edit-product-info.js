@@ -23,12 +23,12 @@ const EditProductInfoFrom = ({
   title,visible,dispatch,classID,
   ProductClassifications,id,myBrands,children,
   form:{getFieldValue,setFieldsValue,getFieldDecorator,validateFieldsAndScroll},
-  product:{name,price,special_offer,brand_id,classification_id,space_id,style_id,description,status,sku}
+  product:{name,price,special_offer,brand_id,classification_id,space_id,style_id,description,status,sku,parts_list,images}
   }) => {
 
   getFieldDecorator('skuKeys', { initialValue: sku });
-  getFieldDecorator('partsKeys', { initialValue: [0] });
-  getFieldDecorator('imagesKeys', { initialValue: [0] });
+  getFieldDecorator('partsKeys', { initialValue: parts_list });
+  getFieldDecorator('imagesKeys', { initialValue: images });
 
   return (
     <span>
@@ -168,7 +168,6 @@ const EditProductInfoFrom = ({
                   required={false}
                   style={{position:'relative'}}
                   key={k}>
-
                   {getFieldDecorator(`parts[${k}]`, {
                     validateTrigger: ['onChange', 'onBlur'],
                     rules: [{
