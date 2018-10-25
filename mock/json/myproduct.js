@@ -257,11 +257,13 @@ module.exports = [
       {
         name:'座套',
         amount:2,
-        description:'强弹力，自由调节不拖地，抗皱不变形。'
+        description:'强弹力，自由调节不拖地，抗皱不变形。',
+        key:0
       },{
         name:'椅垫',
         amount:1,
-        description:'健康时尚,风格多样'
+        description:'健康时尚,风格多样',
+        key:1
       },
     ],
     special_offer:0
