@@ -188,7 +188,7 @@ const EditProductInfoFrom = ({
                   ) : null}
                 </FormItem>)}
               <FormItem {...formItemLayoutWithOutLabel}>
-                <Button type="dashed" onClick={add.bind(null,'partsKeys',getFieldValue,setFieldsValue)} style={{ width:487 }}>
+                <Button type="dashed" onClick={add.bind(null,'partsKeys',getFieldValue,setFieldsValue)} style={{ width:693 }}>
                   <Icon type="plus" /> Add field
                 </Button>
               </FormItem>
@@ -227,7 +227,8 @@ const EditProductInfoFrom = ({
                   </FormItem>)}
               </div>
               <FormItem {...formItemLayoutWithOutLabel} style={{display:getFieldValue('imagesKeys').length >= 5 ? 'none' : 'block'}}>
-                <Button type="dashed" onClick={add.bind(null,'imagesKeys',getFieldValue,setFieldsValue)} style={{ width:487 }}>
+                <Button type="dashed" onClick={add.bind(null,'imagesKeys',getFieldValue,setFieldsValue)}
+                        style={{ width:120,height:120 }}>
                   <Icon type="plus" /> Add field
                 </Button>
               </FormItem>

@@ -12,7 +12,7 @@ class SKUInput extends React.Component {
           value={name}
           placeholder="配件名称"
           onChange={(event) => edit('name',event.target.value)}
-          style={{ width:234}}/>
+          style={{ width:438}}/>
         &nbsp;&nbsp;&nbsp;&nbsp;
         配件数量 &nbsp;&nbsp;
         <input
@@ -30,7 +30,7 @@ class SKUInput extends React.Component {
           value={description}
           placeholder="配件描述"
           onChange={(event) => edit('description',event.target.value)}
-          style={{ width:420,marginLeft:4,marginTop:4}}/>
+          style={{ width:625,marginLeft:4,marginTop:4}}/>
       </span>
     );
   }
